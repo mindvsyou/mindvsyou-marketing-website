@@ -5,8 +5,8 @@
 // ---- CONFIG: EDIT THESE ----
 const CONFIG = {
   productName:    "MindVsYou",          // ← Change your product name here
-  tagline:        "CBSE Board Prep on WhatsApp",
-  whatsappLink:   "https://wa.me/917905574323?text=Hi",  // ← Your WhatsApp number
+  tagline:        "CBSE Board Prep, Online",
+  appLink:        "https://quiz.mindvsyou.io",  // ← Your web app
   contactEmail:   "hello@mindvsyou.in",
   contactPhone:   "+91 84489 70354",
   LinkedinLink:    "https://www.linkedin.com/company/mindvsyou-ai",
@@ -23,7 +23,7 @@ function renderNav(activePage) {
     { label: "About",     href: "about.html" },
     { label: "Blog",      href: "blog.html" },
     { label: "FAQ",       href: "faq.html" },
-    { label: "Try it Free ↗", href: CONFIG.whatsappLink, cta: true },
+    { label: "Practice Now ↗", href: CONFIG.appLink, cta: true },
   ];
   const links = pages.map(p =>
     `<li><a href="${p.href}" class="${p.cta ? 'nav-cta' : ''}">${p.label}</a></li>`
@@ -49,14 +49,14 @@ function renderFooter() {
     <div class="footer-inner">
       <div class="footer-brand">
         <a class="logo" href="index.html">${CONFIG.productName.replace(/(\w+)$/, '<span>$1</span>')}</a>
-        <p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp — no app download needed.</p>
+        <p>Practice CBSE Class 10 MCQs and case-based questions online — no app download needed.</p>
       </div>
       <div class="footer-col">
         <h4>Product</h4>
         <ul>
           <li><a href="students.html">For Students</a></li>
           <li><a href="schools.html">For Schools</a></li>
-          <li><a href="${CONFIG.whatsappLink}">Try Free</a></li>
+          <li><a href="${CONFIG.appLink}">Try Free</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
       </div>
@@ -72,7 +72,6 @@ function renderFooter() {
       <div class="footer-col">
         <h4>Connect</h4>
         <ul>
-          <li><a href="${CONFIG.whatsappLink}">WhatsApp</a></li>
           <li><a href="${CONFIG.LinkedinLink}">Linkedin</a></li>
           <li><a href="${CONFIG.instagramLink}">Instagram</a></li>
           <li><a href="mailto:${CONFIG.contactEmail}">Email Us</a></li>
