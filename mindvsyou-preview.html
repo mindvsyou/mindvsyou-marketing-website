@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindVsYou — Preview (All Pages)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #25D366; --green-dark: #1AAE54; --orange: #FF6B2B;
+      --navy: #0D1B2A; --white: #FFFFFF; --off-white: #F5F7FA;
+      --text-dark: #0D1B2A; --text-mid: #4A5568; --text-light: #718096;
+      --border: #E2E8F0; --font-display: 'Poppins', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --max-width: 1140px; --section-pad: 80px 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-dark); background: var(--white); line-height: 1.6; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    /* PAGE SWITCHER */
+    .page-switcher {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 6px; background: var(--navy); border-radius: 100px;
+      padding: 8px 12px; z-index: 9999; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      flex-wrap: wrap; justify-content: center; max-width: 95vw;
+    }
+    .page-switcher button {
+      background: none; border: none; color: rgba(255,255,255,0.6);
+      font-family: var(--font-body); font-size: 0.78rem; font-weight: 600;
+      padding: 6px 12px; border-radius: 100px; cursor: pointer; transition: all 0.2s;
+    }
+    .page-switcher button:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+    .page-switcher button.active { background: var(--green); color: var(--white); }
+
+    /* PAGES */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 0 24px; }
+    .nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--text-dark); text-decoration: none; }
+    .nav-logo span { color: var(--green); }
+    .nav-links { display: flex; gap: 22px; list-style: none; }
+    .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--text-mid); text-decoration: none; transition: color 0.2s; cursor: pointer; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { background: var(--green) !important; color: var(--white) !important; padding: 7px 16px !important; border-radius: 8px; font-weight: 600 !important; }
+
+    /* BUTTONS */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 10px; font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: transform 0.15s, box-shadow 0.15s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+    .btn-green { background: var(--green); color: var(--white); }
+    .btn-green:hover { background: var(--green-dark); }
+    .btn-outline { background: transparent; color: var(--green); border: 2px solid var(--green); }
+    .btn-outline:hover { background: var(--green); color: var(--white); }
+    .btn-white { background: var(--white); color: var(--navy); }
+
+    /* EYEBROW */
+    .eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+
+    /* HERO */
+    .hero { background: var(--navy); color: var(--white); padding: 90px 24px 70px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 60% 0%, rgba(37,211,102,0.18) 0%, transparent 60%), radial-gradient(ellipse at 10% 80%, rgba(255,107,43,0.15) 0%, transparent 50%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(37,211,102,0.15); border: 1px solid rgba(37,211,102,0.3); color: var(--green); padding: 6px 16px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; margin-bottom: 24px; position: relative; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.1; margin-bottom: 18px; position: relative; }
+    .hero h1 .accent { color: var(--green); }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 32px; position: relative; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+    /* STATS */
+    .stats-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 28px 24px; }
+    .stats-inner { max-width: var(--max-width); margin: 0 auto; display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--green); }
+    .stat-label { font-size: 0.82rem; color: var(--text-light); margin-top: 2px; }
+
+    /* HOW IT WORKS */
+    .how { padding: var(--section-pad); background: var(--off-white); }
+    .how h2 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; margin-bottom: 40px; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .step { background: var(--white); border-radius: 16px; padding: 24px 20px; border: 1px solid var(--border); }
+    .step-num { width: 38px; height: 38px; border-radius: 10px; background: var(--green); color: var(--white); font-family: var(--font-display); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 1rem; }
+    .step h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 6px; }
+    .step p { font-size: 0.87rem; color: var(--text-mid); }
+
+    /* FEATURES */
+    .features { padding: var(--section-pad); }
+    .features h2 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; margin-bottom: 10px; }
+    .features .sub { color: var(--text-mid); margin-bottom: 40px; }
+    .feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .feat-card { border: 1px solid var(--border); border-radius: 16px; padding: 24px 20px; transition: box-shadow 0.2s, transform 0.2s; }
+    .feat-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-3px); }
+    .feat-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .feat-card h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 7px; }
+    .feat-card p { font-size: 0.87rem; color: var(--text-mid); }
+
+    /* CTA BANNER */
+    .cta-banner { background: var(--navy); color: var(--white); padding: 64px 24px; text-align: center; position: relative; overflow: hidden; }
+    .cta-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(37,211,102,0.2) 0%, transparent 70%); pointer-events: none; }
+    .cta-banner h2 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; margin-bottom: 10px; position: relative; }
+    .cta-banner p { color: rgba(255,255,255,0.7); margin-bottom: 24px; position: relative; }
+    .cta-banner .btn { position: relative; }
+
+    /* TESTIMONIALS */
+    .testimonials { padding: var(--section-pad); background: var(--off-white); }
+    .testimonials h2 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; margin-bottom: 36px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .testi-card { background: var(--white); border-radius: 16px; padding: 24px 20px; border: 1px solid var(--border); }
+    .testi-stars { color: #F6C90E; margin-bottom: 10px; }
+    .testi-text { font-size: 0.92rem; color: var(--text-mid); margin-bottom: 18px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar { width: 38px; height: 38px; border-radius: 50%; background: var(--green); color: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .testi-name { font-weight: 700; font-size: 0.88rem; }
+    .testi-role { font-size: 0.78rem; color: var(--text-light); }
+
+    /* FAQ */
+    .faq-section { padding: var(--section-pad); }
+    .faq-section h2 { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; margin-bottom: 10px; }
+    .faq-section .sub { color: var(--text-mid); margin-bottom: 36px; }
+    .faq-list { max-width: 720px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 18px 22px; font-family: var(--font-body); font-size: 0.93rem; font-weight: 600; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.15s; }
+    .faq-q:hover { background: var(--off-white); }
+    .faq-q .arrow { transition: transform 0.25s; color: var(--green); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 22px 18px; color: var(--text-mid); font-size: 0.9rem; line-height: 1.7; }
+    .faq-a.open { display: block; }
+
+    /* FOOTER */
+    footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 52px 24px 28px; }
+    .footer-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 36px; }
+    .footer-brand .logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; color: var(--white); text-decoration: none; display: block; margin-bottom: 10px; }
+    .footer-brand .logo span { color: var(--green); }
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; }
+    .footer-col h4 { color: var(--white); font-size: 0.8rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 8px; }
+    .footer-col a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; cursor: pointer; }
+    .footer-col a:hover { color: var(--green); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 22px; text-align: center; font-size: 0.8rem; }
+
+    /* ABOUT */
+    .about-hero { background: var(--navy); color: var(--white); padding: 72px 24px; text-align: center; }
+    .about-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 14px; }
+    .about-hero p { color: rgba(255,255,255,0.72); max-width: 520px; margin: 0 auto; font-size: 1rem; }
+    .mission { padding: var(--section-pad); }
+    .mission-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; max-width: var(--max-width); margin: 0 auto; }
+    .mission h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; margin-bottom: 14px; }
+    .mission p { color: var(--text-mid); margin-bottom: 14px; font-size: 0.95rem; }
+    .mission-visual { background: var(--off-white); border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 20px; }
+    .m-stat { display: flex; align-items: center; gap: 14px; }
+    .m-stat-icon { font-size: 1.8rem; }
+    .m-stat-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--green); }
+    .m-stat-label { font-size: 0.82rem; color: var(--text-mid); }
+    .team-section { padding: var(--section-pad); background: var(--off-white); }
+    .team-section h2 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; margin-bottom: 36px; text-align: center; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; max-width: var(--max-width); margin: 0 auto; }
+    .team-card { background: var(--white); border-radius: 16px; padding: 24px 18px; text-align: center; border: 1px solid var(--border); }
+    .team-avatar { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--white); }
+    .team-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 3px; }
+    .team-card p { font-size: 0.82rem; color: var(--text-mid); }
+
+    /* CONTACT */
+    .contact-hero { background: var(--navy); color: var(--white); padding: 72px 24px; text-align: center; }
+    .contact-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 14px; }
+    .contact-hero p { color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto; }
+    .contact-body { padding: var(--section-pad); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; max-width: var(--max-width); margin: 0 auto; align-items: start; }
+    .contact-info h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin-bottom: 14px; }
+    .contact-info p { color: var(--text-mid); margin-bottom: 24px; font-size: 0.93rem; }
+    .contact-links { display: flex; flex-direction: column; gap: 14px; }
+    .contact-link { display: flex; align-items: center; gap: 12px; color: var(--text-dark); text-decoration: none; font-weight: 500; font-size: 0.93rem; }
+    .contact-link-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--off-white); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-form { background: var(--off-white); border-radius: 20px; padding: 32px; }
+    .contact-form h2 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; margin-bottom: 22px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; margin-bottom: 5px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1.5px solid var(--border); font-family: var(--font-body); font-size: 0.92rem; background: var(--white); outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; padding: 13px; background: var(--green); color: var(--white); border: none; border-radius: 10px; font-family: var(--font-body); font-size: 0.97rem; font-weight: 600; cursor: pointer; }
+
+    /* BLOG */
+    .blog-hero { background: var(--navy); color: var(--white); padding: 72px 24px; text-align: center; }
+    .blog-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 14px; }
+    .blog-hero p { color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto; }
+    .blog-grid-section { padding: var(--section-pad); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: var(--max-width); margin: 0 auto; }
+    .blog-card { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+    .blog-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-3px); }
+    .blog-thumb { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 2.6rem; }
+    .blog-body { padding: 22px; }
+    .blog-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--green); background: rgba(37,211,102,0.1); border-radius: 6px; padding: 3px 9px; margin-bottom: 9px; }
+    .blog-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 7px; line-height: 1.4; }
+    .blog-card p { font-size: 0.85rem; color: var(--text-mid); margin-bottom: 14px; }
+    .blog-meta { font-size: 0.78rem; color: var(--text-light); }
+    .blog-read { font-size: 0.85rem; font-weight: 600; color: var(--green); text-decoration: none; }
+
+    /* PRESS */
+    .press-hero { background: var(--navy); color: var(--white); padding: 72px 24px; text-align: center; }
+    .press-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 14px; }
+    .press-hero p { color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto; }
+    .press-section { padding: var(--section-pad); }
+    .press-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: var(--max-width); margin: 0 auto; }
+    .press-card { border: 1px solid var(--border); border-radius: 16px; padding: 24px 20px; }
+    .press-logo { font-family: var(--font-display); font-size: 1rem; font-weight: 800; color: var(--text-light); margin-bottom: 12px; }
+    .press-quote { font-size: 0.92rem; color: var(--text-mid); font-style: italic; margin-bottom: 14px; line-height: 1.7; }
+    .press-date { font-size: 0.78rem; color: var(--text-light); }
+    .press-link { font-size: 0.82rem; font-weight: 600; color: var(--green); text-decoration: none; }
+    .press-contact { background: var(--off-white); padding: var(--section-pad); text-align: center; }
+    .press-contact h2 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; margin-bottom: 10px; }
+    .press-contact p { color: var(--text-mid); margin-bottom: 22px; }
+
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .mission-inner, .contact-inner { grid-template-columns: 1fr; }
+      .nav-links { gap: 14px; }
+    }
+    @media (max-width: 560px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== SHARED NAV ===================== -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">Mind<span>VsYou</span></a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('students')">Students</a></li>
+      <li><a onclick="showPage('schools')">Schools</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('blog')">Blog</a></li>
+      <li><a onclick="showPage('faq')">FAQ</a></li>
+      <li><a class="nav-cta" href="https://wa.me/917905574323?text=Hi">Try Free ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===================== PAGE: HOME ===================== -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">🎓 Built for CBSE Class 10 Board Students</div>
+      <h1>Board Exam Prep,<br><span class="accent">Right on WhatsApp</span></h1>
+      <p>Practice CBSE-specific MCQs and case-based questions on WhatsApp — no app download, no login. Just say <strong style="color:var(--green)">Hi</strong> and start practicing.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/917905574323?text=Hi" class="btn btn-green">💬 Try on WhatsApp — It's Free</a>
+        <a onclick="showPage('students')" class="btn btn-outline" style="cursor:pointer">See Student Features</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <!-- ✏️ EDIT: Beta program messaging — update once you have more users -->
+      <div class="stat"><div class="stat-num">First 100</div><div class="stat-label">Beta Users — All Free</div></div>
+      <div class="stat"><div class="stat-num">Maths & Science</div><div class="stat-label">CBSE Class 10</div></div>
+      <div class="stat"><div class="stat-num">PYQ + MCQs</div><div class="stat-label">Practice Formats</div></div>
+      <div class="stat"><div class="stat-num">Zero</div><div class="stat-label">App Downloads Needed</div></div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="container">
+      <span class="eyebrow">How It Works</span>
+      <h2>Start practicing in 3 steps</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Open WhatsApp</h3><p>No app download. No registration. Just open WhatsApp on any phone.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Say "Hi"</h3><p>Send a simple "Hi" and the bot starts your practice session instantly.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Pick your subject</h3><p>Choose Maths or Science — and get CBSE-aligned MCQs and case-based questions.</p></div>
+        <div class="step"><div class="step-num">4</div><h3>Get instant feedback</h3><p>See the correct answer and explanation right after each question.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <span class="eyebrow">For Students</span>
+      <h2>Everything you need to ace your boards</h2>
+      <p class="sub">Designed specifically for Class 10 CBSE students preparing for board exams.</p>
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-icon">📱</div><h3>On WhatsApp — No App Needed</h3><p>Practice directly in WhatsApp. No extra app, no account, no password to remember.</p></div>
+        <div class="feat-card"><div class="feat-icon">📝</div><h3>CBSE MCQs & Case-Based Questions</h3><p>Questions are aligned with the CBSE syllabus and board exam pattern for Class 10.</p></div>
+        <div class="feat-card"><div class="feat-icon">⚡</div><h3>Instant Answer & Explanation</h3><p>Get the correct answer with a clear explanation right after you respond.</p></div>
+        <div class="feat-card"><div class="feat-icon">🎯</div><h3>Subject-wise Practice</h3><p>Pick any CBSE Class 10 subject and practice at your own pace, anytime.</p></div>
+        <div class="feat-card"><div class="feat-icon">🔁</div><h3>Practice Anytime, Anywhere</h3><p>On the bus, after dinner, between classes — whenever you have a few free minutes.</p></div>
+        <div class="feat-card"><div class="feat-icon">🗂️</div><h3>PYQ Practice + Auto-Revision</h3><p>Practice previous year board questions for Maths and Science. We track every correct and incorrect answer, so you can revise all your mistakes anytime.</p></div>
+        <div class="feat-card"><div class="feat-icon">🆓</div><h3>Free to Start</h3><p>Just say Hi and start practicing. No credit card, no trial period — just learning.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to start practicing?</h2>
+      <p>Be one of our first 100 beta users — every feature is free for you.</p>
+      <a href="https://wa.me/917905574323?text=Hi" class="btn btn-green">💬 Try Free on WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <span class="eyebrow">What Students Say</span>
+      <h2>Early feedback from our users</h2>
+      <div class="testi-grid">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I just say Hi every morning and do 10 questions while having breakfast. My Maths score jumped 15 marks in mocks!"</p><div class="testi-author"><div class="testi-avatar">AR</div><div><div class="testi-name">Aryan Raj</div><div class="testi-role">Class 10, Delhi</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The case-based questions are exactly like the board paper. No other app had this type of practice."</p><div class="testi-author"><div class="testi-avatar">PS</div><div><div class="testi-name">Priya Sharma</div><div class="testi-role">Class 10, Mumbai</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Our students already spend time on WhatsApp. MindVsYou turns that time into productive study."</p><div class="testi-author"><div class="testi-avatar">MK</div><div><div class="testi-name">Mrs. Meena Kapoor</div><div class="testi-role">Science Teacher, Jaipur</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp — no app download needed.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li><li><a href="#">Try Free</a></li><li><a onclick="showPage('faq')">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('press')">Press</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="https://www.linkedin.com/company/mindvsyou-ai">LinkedIn</a></li><li><a href="#">Instagram</a></li><li><a href="#">Email Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved. Made with ❤️ for CBSE students.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: STUDENTS ===================== -->
+<div class="page" id="page-students">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">🎓 Made for Class 10 CBSE Students</div>
+      <h1>Stop scrolling.<br><span class="accent">Start scoring.</span></h1>
+      <p>Practice CBSE MCQs and case-based questions on WhatsApp — in between classes, on the bus, anytime. No app needed.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/917905574323?text=Hi" class="btn btn-green">💬 Start Practicing Free</a>
+        <a onclick="showPage('faq')" class="btn btn-outline" style="cursor:pointer">See FAQs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <span class="eyebrow">Student Features</span>
+      <h2>Built for how you actually study</h2>
+      <p class="sub">Not another app to forget. Just WhatsApp — the one you already use.</p>
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-icon">💬</div><h3>Works on WhatsApp — Always</h3><p>Your parents use it. Your friends use it. Now use it to ace your boards. No installation, no signup.</p></div>
+        <div class="feat-card"><div class="feat-icon">📚</div><h3>Maths & Science — CBSE Class 10</h3><p>Choose Mathematics or Science and get questions from the latest CBSE Class 10 syllabus.</p></div>
+        <div class="feat-card"><div class="feat-icon">🧩</div><h3>Case-Based Questions</h3><p>The new CBSE board pattern has more case-based questions. We drill you on exactly these formats.</p></div>
+        <div class="feat-card"><div class="feat-icon">🗂️</div><h3>PYQ Practice + Auto-Revision</h3><p>Practice actual previous year board questions for Maths and Science. We quietly track every answer you get right or wrong, so you can come back anytime and revise only the questions you got wrong.</p></div>
+        <div class="feat-card"><div class="feat-icon">💡</div><h3>Explanation with Every Answer</h3><p>Get a clear explanation with every answer — understand the concept, not just the option.</p></div>
+        <div class="feat-card"><div class="feat-icon">⏱️</div><h3>5-Minute Practice Mode</h3><p>Even 5 minutes a day adds up. Practice between tuition and dinner — every question counts.</p></div>
+        <div class="feat-card"><div class="feat-icon">📈</div><h3>Track Your Progress</h3><p>See how many questions you have practiced and which subjects need attention — right in the chat.</p></div>
+        <div class="feat-card"><div class="feat-icon">🔔</div><h3>Daily Practice Reminders</h3><p>Opt in for a daily WhatsApp reminder so you never miss a session close to boards.</p></div>
+        <div class="feat-card"><div class="feat-icon">🆓</div><h3>Free to Start — Always</h3><p>No credit card, no hidden limit to get you hooked. Start and practice right away.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="container">
+      <span class="eyebrow">Subjects</span>
+      <h2>Subjects available now</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">📐</div><h3>Mathematics</h3><p>Algebra, Geometry, Trigonometry, Statistics — full Class 10 syllabus covered with MCQs and case-based questions.</p></div>
+        <div class="step"><div class="step-num">🔬</div><h3>Science</h3><p>Physics, Chemistry, Biology — all three sections with MCQs and case-based scenarios.</p></div>
+        <div class="step"><div class="step-num">📝</div><h3>Chapter-wise MCQ Practice</h3><p>Pick a chapter in Maths or Science and practice CBSE-style MCQs and case-based questions.</p></div>
+        <div class="step"><div class="step-num">🗂️</div><h3>PYQ Bank + Revision</h3><p>Practice real previous year board questions. Every right and wrong answer is saved so you can revise your mistakes later.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <span class="eyebrow">Student Stories</span>
+      <h2>Hear from students already using it</h2>
+      <div class="testi-grid">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"I do 10 questions every morning on the school bus. My Science score went up by 18 marks in the first mock."</p><div class="testi-author"><div class="testi-avatar">SR</div><div><div class="testi-name">Sneha Rawat</div><div class="testi-role">Class 10, Lucknow</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The case-based questions section saved me. I had no idea how to approach them before. Now I feel confident."</p><div class="testi-author"><div class="testi-avatar">VK</div><div><div class="testi-name">Vikram Kumar</div><div class="testi-role">Class 10, Bhopal</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"My parents were happy I was using WhatsApp for studying instead of chatting. The explanations are so clear!"</p><div class="testi-author"><div class="testi-avatar">DP</div><div><div class="testi-name">Divya Pandey</div><div class="testi-role">Class 10, Kanpur</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Your boards are closer than you think. 🎯</h2>
+      <p>Start your first practice session right now — just say Hi.</p>
+      <a href="https://wa.me/917905574323?text=Hi" class="btn btn-green">💬 Start Free on WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li><li><a href="#">Try Free</a></li><li><a onclick="showPage('faq')">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('press')">Press</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="https://www.linkedin.com/company/mindvsyou-ai">LinkedIn</a></li><li><a href="#">Instagram</a></li><li><a href="#">Email Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: SCHOOLS ===================== -->
+<div class="page" id="page-schools">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">🏫 For Schools, Teachers & Coaching Institutes</div>
+      <h1>Give every student<br><span class="accent">daily practice — automatically.</span></h1>
+      <p>Your students are already on WhatsApp. MindVsYou turns that time into daily CBSE practice — with zero IT setup and live tracking for teachers.</p>
+      <div class="hero-btns">
+        <a onclick="showPage('contact')" class="btn btn-green" style="cursor:pointer">Request a School Demo</a>
+        <a href="https://wa.me/917905574323?text=Hi" class="btn btn-outline">💬 Try it Yourself First</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <span class="eyebrow">School Features</span>
+      <h2>Built for busy teachers and school leaders</h2>
+      <p class="sub">No new software to learn. No parent meetings about screen time. Just results.</p>
+      <div class="feat-grid">
+        <div class="feat-card"><div class="feat-icon">🔗</div><h3>One Link, Whole Class</h3><p>Share a single WhatsApp link or QR code. Students join in seconds — no registration forms.</p></div>
+        <div class="feat-card"><div class="feat-icon">📊</div><h3>Teacher Dashboard</h3><p>See how many questions each student practiced, which subjects are weak, and who needs a nudge.</p></div>
+        <div class="feat-card"><div class="feat-icon">📋</div><h3>CBSE Syllabus Aligned</h3><p>Every question is mapped to the official CBSE Class 10 syllabus. No irrelevant content.</p></div>
+        <div class="feat-card"><div class="feat-icon">🔔</div><h3>Automated Daily Reminders</h3><p>Students get WhatsApp reminders to practice daily. You set the schedule — the bot reminds.</p></div>
+        <div class="feat-card"><div class="feat-icon">🏆</div><h3>Weekly Class Leaderboard</h3><p>A friendly leaderboard motivates students without adding extra exam-style pressure.</p></div>
+        <div class="feat-card"><div class="feat-icon">📱</div><h3>Zero Tech Infrastructure</h3><p>Works on any phone. No school Wi-Fi required. No lab booking needed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <span class="eyebrow">From Teachers & Principals</span>
+      <h2>Schools that tried it first</h2>
+      <div class="testi-grid">
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"We didn't have to train anyone. Teachers shared a link in the class WhatsApp group and 90% of students joined in the first week."</p><div class="testi-author"><div class="testi-avatar">AV</div><div><div class="testi-name">Mrs. Anita Verma</div><div class="testi-role">Vice Principal, Delhi</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"The dashboard showed me exactly which chapter each student was struggling with. I could plan revision around actual data."</p><div class="testi-author"><div class="testi-avatar">RS</div><div><div class="testi-name">Mr. Ramesh Singh</div><div class="testi-role">Maths Teacher, Agra</div></div></div></div>
+        <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Our class average went up by 12 marks in the pre-boards compared to last year. We are definitely continuing."</p><div class="testi-author"><div class="testi-avatar">NK</div><div><div class="testi-name">Mrs. Nisha Khanna</div><div class="testi-role">Principal, Jaipur</div></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Help your students score better this board season.</h2>
+      <p>Book a free 20-minute demo and see it live.</p>
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative;">
+        <a onclick="showPage('contact')" class="btn btn-green" style="cursor:pointer">Request a School Demo</a>
+        <a href="#" class="btn btn-white">Email Us Directly</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li><li><a href="#">Try Free</a></li><li><a onclick="showPage('faq')">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('press')">Press</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="https://www.linkedin.com/company/mindvsyou-ai">LinkedIn</a></li><li><a href="#">Instagram</a></li><li><a href="#">Email Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: ABOUT ===================== -->
+<div class="page" id="page-about">
+  <section class="about-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">Our Story</span>
+      <h1>Built for the student who already has a phone</h1>
+      <p>We believe every Class 10 student deserves great board exam prep — not just those who can afford coaching centers or study apps.</p>
+    </div>
+  </section>
+  <section class="mission">
+    <div class="mission-inner">
+      <div>
+        <span class="eyebrow">Why I Built This</span>
+        <!-- ✏️ EDIT: Your personal story -->
+        <h2>The problem I saw</h2>
+        <p>Millions of Class 10 CBSE students prepare for the most important exam of their early lives with limited support. Quality coaching costs money. Study apps are distracting. Physical books are expensive.</p>
+        <p>But almost every student — even in smaller cities — already has WhatsApp on their phone.</p>
+        <p>So I built a practice bot that meets students where they already are. No app to download. No new habit to build. Just say Hi and start practicing CBSE-aligned MCQs, case-based questions, and previous year board questions for Maths and Science.</p>
+        <p>I am building this in India, starting small and listening closely to early users to make this genuinely useful before scaling up.</p>
+      </div>
+      <div class="mission-visual">
+        <!-- ✏️ EDIT: Beta program stats — update as you grow -->
+        <div class="m-stat"><div class="m-stat-icon">🚀</div><div><div class="m-stat-num">Beta</div><div class="m-stat-label">Currently in early testing</div></div></div>
+        <div class="m-stat"><div class="m-stat-icon">🎟️</div><div><div class="m-stat-num">100</div><div class="m-stat-label">Free beta spots open — all features included</div></div></div>
+        <div class="m-stat"><div class="m-stat-icon">📐</div><div><div class="m-stat-num">2 Subjects</div><div class="m-stat-label">Maths & Science, Class 10 CBSE</div></div></div>
+        <div class="m-stat"><div class="m-stat-icon">🗂️</div><div><div class="m-stat-num">PYQ Bank</div><div class="m-stat-label">With auto-tracked revision</div></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Want to work with us or partner up?</h2>
+      <p>We are always open to conversations with schools, teachers, investors, and content creators.</p>
+      <a onclick="showPage('contact')" class="btn btn-green" style="cursor:pointer">Get in Touch</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: FAQ ===================== -->
+<div class="page" id="page-faq">
+  <section class="about-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">FAQ</span>
+      <h1>Got questions? We have answers.</h1>
+      <p>Everything you need to know about practicing on MindVsYou.</p>
+    </div>
+  </section>
+  <section class="faq-section">
+    <div class="container">
+      <span class="eyebrow">General</span>
+      <h2>About MindVsYou</h2>
+      <p class="sub">The basics — what it is and how it works.</p>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q">What is MindVsYou? <span class="arrow">▼</span></button><div class="faq-a">MindVsYou is a WhatsApp-based practice bot for CBSE Class 10 students. You send a "Hi" on WhatsApp and the bot starts sending you CBSE-aligned MCQs and case-based questions. No app download, no account creation needed.</div></div>
+        <div class="faq-item"><button class="faq-q">Which class and board is this for? <span class="arrow">▼</span></button><div class="faq-a">Right now, MindVsYou is designed specifically for Class 10 CBSE students preparing for their board exams. We plan to expand to Class 9 and other boards in the future.</div></div>
+        <div class="faq-item"><button class="faq-q">Do I need to download an app? <span class="arrow">▼</span></button><div class="faq-a">No. MindVsYou works entirely on WhatsApp, which you already have. There is no separate app to download, no website to log in to, and no form to fill out. Just open WhatsApp and say Hi.</div></div>
+        <div class="faq-item"><button class="faq-q">Is MindVsYou free? <span class="arrow">▼</span></button><div class="faq-a">Yes — MindVsYou is currently in beta, and the first 100 students get full access to every feature for free, including MCQ practice, case-based questions, and the PYQ revision bank. No credit card required.</div></div>
+        <div class="faq-item"><button class="faq-q">Which subjects are available? <span class="arrow">▼</span></button><div class="faq-a">Currently we cover Mathematics and Science for CBSE Class 10 — including chapter-wise MCQs, case-based questions, and a dedicated Previous Year Questions (PYQ) bank with revision tracking. More subjects will be added soon.</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="faq-section" style="padding-top:0">
+    <div class="container">
+      <span class="eyebrow">Using the Bot</span>
+      <h2>How to practice</h2>
+      <p class="sub">Step by step — so you know exactly what to expect.</p>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q">How do I start? <span class="arrow">▼</span></button><div class="faq-a">Click the "Try on WhatsApp" button. It opens WhatsApp with our number already added. Just send "Hi" and follow the prompts — you will be practicing within 60 seconds.</div></div>
+        <div class="faq-item"><button class="faq-q">How do I answer a question? <span class="arrow">▼</span></button><div class="faq-a">The bot sends you a multiple-choice question with options labeled A, B, C, D. Simply reply with the letter of your choice. The bot immediately tells you if you are right or wrong and explains the answer.</div></div>
+        <div class="faq-item"><button class="faq-q">Can I change the subject mid-session? <span class="arrow">▼</span></button><div class="faq-a">Yes. At any point during your practice session, you can type "Menu" to go back to the subject selection screen.</div></div>
+        <div class="faq-item"><button class="faq-q">What is a case-based question? <span class="arrow">▼</span></button><div class="faq-a">Case-based questions give you a short passage or scenario and ask multiple questions based on it. These now make up a significant portion of the CBSE board paper. MindVsYou drills you on these formats specifically.</div></div>
+        <div class="faq-item"><button class="faq-q">What is the PYQ practice and revision feature? <span class="arrow">▼</span></button><div class="faq-a">PYQ stands for Previous Year Questions — actual questions from past CBSE Class 10 board exams for Maths and Science. The bot quietly tracks every question you get right or wrong, so you can type "Revise" anytime to practice only the ones you got wrong before.</div></div>
+        <div class="faq-item"><button class="faq-q">Is my number safe? Will I get spam? <span class="arrow">▼</span></button><div class="faq-a">Your phone number is only used to identify your practice session. We do not share, sell, or misuse your number. You can unsubscribe at any time by typing "Stop".</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Still have a question?</h2>
+      <p>We are happy to help. Reach out and we will reply quickly.</p>
+      <a onclick="showPage('contact')" class="btn btn-green" style="cursor:pointer">Contact Us</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: BLOG ===================== -->
+<div class="page" id="page-blog">
+  <section class="blog-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">Blog</span>
+      <h1>Tips, guides & CBSE insights</h1>
+      <p>Practical advice for Class 10 students and school educators preparing for board exams.</p>
+    </div>
+  </section>
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="blog-grid">
+        <div class="blog-card"><div class="blog-thumb" style="background:#E8F8EF">📚</div><div class="blog-body"><span class="blog-tag">Study Tips</span><h3>How to practice case-based questions for CBSE Class 10 boards</h3><p>Case-based questions are now 30% of your paper. Here is exactly how to approach them.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="blog-meta">5 min read · Jan 2025</span><a href="#" class="blog-read">Read →</a></div></div></div>
+        <div class="blog-card"><div class="blog-thumb" style="background:#FFF3EC">📱</div><div class="blog-body"><span class="blog-tag">WhatsApp Learning</span><h3>Why WhatsApp is the most underrated study tool for Indian students</h3><p>Every student has it. Few use it for studying. Here is why that needs to change before boards.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="blog-meta">4 min read · Feb 2025</span><a href="#" class="blog-read">Read →</a></div></div></div>
+        <div class="blog-card"><div class="blog-thumb" style="background:#EEF2FF">🎯</div><div class="blog-body"><span class="blog-tag">CBSE Pattern</span><h3>CBSE Class 10 2025 paper pattern explained — what changed and what to expect</h3><p>A breakdown of the latest CBSE marking scheme, section weights, and time management strategy.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="blog-meta">6 min read · Mar 2025</span><a href="#" class="blog-read">Read →</a></div></div></div>
+        <div class="blog-card"><div class="blog-thumb" style="background:#FEF3C7">⏱️</div><div class="blog-body"><span class="blog-tag">Time Management</span><h3>The 15-minute daily practice rule that top-scoring students swear by</h3><p>Consistent short sessions are what actually moves the needle before boards.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="blog-meta">3 min read · Apr 2025</span><a href="#" class="blog-read">Read →</a></div></div></div>
+        <div class="blog-card"><div class="blog-thumb" style="background:#FCE7F3">🏫</div><div class="blog-body"><span class="blog-tag">For Schools</span><h3>How schools can build a daily practice culture without extra burden on teachers</h3><p>A practical guide for school leaders who want better results without overloading staff.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="blog-meta">7 min read · May 2025</span><a href="#" class="blog-read">Read →</a></div></div></div>
+        <div class="blog-card"><div class="blog-thumb" style="background:#E0F2F1">🔬</div><div class="blog-body"><span class="blog-tag">Subject Guide</span><h3>Science MCQs for Class 10 boards — the 20 concepts tested every year</h3><p>We analysed 5 years of CBSE question papers to find the most frequently appearing concepts.</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px"><span class="blog-meta">8 min read · Jun 2025</span><a href="#" class="blog-read">Read →</a></div></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to start practicing?</h2>
+      <p>Reading about boards is good. Actually practicing is better.</p>
+      <a href="https://wa.me/917905574323?text=Hi" class="btn btn-green">💬 Try on WhatsApp — Free</a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: CONTACT ===================== -->
+<div class="page" id="page-contact">
+  <section class="contact-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">Contact</span>
+      <h1>Let's talk</h1>
+      <p>For school partnerships, media queries, support, or just to say hi — we are easy to reach.</p>
+    </div>
+  </section>
+  <section class="contact-body">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="eyebrow">Reach Us</span>
+        <h2>We usually respond within a few hours.</h2>
+        <p>Whether you are a student with a question, a school looking to onboard, an investor, or a journalist — drop us a message.</p>
+        <div class="contact-links">
+          <div class="contact-link"><div class="contact-link-icon">📧</div><div><div style="font-size:0.78rem;color:var(--text-light);margin-bottom:2px">Email</div>hello@mindvsyou.in</div></div>
+          <div class="contact-link"><div class="contact-link-icon">📞</div><div><div style="font-size:0.78rem;color:var(--text-light);margin-bottom:2px">Phone</div>+91 XXXXX XXXXX</div></div>
+          <div class="contact-link"><div class="contact-link-icon">💬</div><div><div style="font-size:0.78rem;color:var(--text-light);margin-bottom:2px">WhatsApp</div>Message us directly</div></div>
+          <div class="contact-link"><div class="contact-link-icon">📸</div><div><div style="font-size:0.78rem;color:var(--text-light);margin-bottom:2px">Instagram</div>@mindvsyou</div></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h2>Send us a message</h2>
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Rahul Sharma" /></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="rahul@gmail.com" /></div>
+        <div class="form-group"><label>I am a…</label><select><option>Student</option><option>Parent</option><option>Teacher / School</option><option>Investor</option><option>Journalist / Media</option><option>Other</option></select></div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell us what's on your mind..."></textarea></div>
+        <button class="form-submit">Send Message →</button>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE: PRESS ===================== -->
+<div class="page" id="page-press">
+  <section class="press-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">Press & Media</span>
+      <h1>MindVsYou in the news</h1>
+      <p>Media coverage, press mentions, and resources for journalists covering EdTech in India.</p>
+    </div>
+  </section>
+  <section class="press-section">
+    <div class="container">
+      <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:800;margin-bottom:36px">What people are saying</h2>
+      <div class="press-grid">
+        <div class="press-card"><div class="press-logo">YourStory</div><p class="press-quote">"A Lucknow-based startup is helping Class 10 students practice CBSE questions directly on WhatsApp — no app download required."</p><div style="display:flex;justify-content:space-between"><span class="press-date">Coming soon</span><a href="#" class="press-link">Read →</a></div></div>
+        <div class="press-card"><div class="press-logo">EdTech Review</div><p class="press-quote">"MindVsYou is solving the access problem in Indian board exam prep by meeting students on the platform they already use every day."</p><div style="display:flex;justify-content:space-between"><span class="press-date">Coming soon</span><a href="#" class="press-link">Read →</a></div></div>
+        <div class="press-card"><div class="press-logo">Inc42</div><p class="press-quote">"The WhatsApp-first approach removes the biggest barrier in EdTech adoption — the need to download yet another app."</p><div style="display:flex;justify-content:space-between"><span class="press-date">Coming soon</span><a href="#" class="press-link">Read →</a></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="press-contact">
+    <div class="container">
+      <span class="eyebrow">Media Enquiries</span>
+      <h2>Want to cover MindVsYou?</h2>
+      <p>We are happy to arrange founder interviews, product demos, and background briefings. Response within 24 hours guaranteed.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="#" class="btn btn-green">📧 press@mindvsyou.in</a>
+        <a onclick="showPage('contact')" class="btn btn-outline" style="cursor:pointer">Fill Contact Form</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><a class="logo" href="#">Mind<span>VsYou</span></a><p>Practice CBSE Class 10 MCQs and case-based questions directly on WhatsApp.</p></div>
+      <div class="footer-col"><h4>Product</h4><ul><li><a onclick="showPage('students')">For Students</a></li><li><a onclick="showPage('schools')">For Schools</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a onclick="showPage('about')">About Us</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 MindVsYou. All rights reserved.</p></div>
+  </footer>
+</div>
+
+<!-- ===================== PAGE SWITCHER BAR ===================== -->
+<div class="page-switcher">
+  <button class="active" onclick="showPage('home')">🏠 Home</button>
+  <button onclick="showPage('students')">🎓 Students</button>
+  <button onclick="showPage('schools')">🏫 Schools</button>
+  <button onclick="showPage('about')">👥 About</button>
+  <button onclick="showPage('blog')">📝 Blog</button>
+  <button onclick="showPage('faq')">❓ FAQ</button>
+  <button onclick="showPage('contact')">📞 Contact</button>
+  <button onclick="showPage('press')">🗞️ Press</button>
+</div>
+
+<script>
+  function showPage(name) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.page-switcher button').forEach(b => b.classList.remove('active'));
+    document.getElementById('page-' + name).classList.add('active');
+    document.querySelectorAll('.page-switcher button').forEach(b => {
+      if (b.textContent.toLowerCase().includes(name)) b.classList.add('active');
+    });
+    window.scrollTo(0, 0);
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.onclick = () => {
+        const ans = btn.nextElementSibling;
+        const isOpen = btn.classList.contains('open');
+        document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('open'); if(b.nextElementSibling) b.nextElementSibling.classList.remove('open'); });
+        if (!isOpen) { btn.classList.add('open'); ans.classList.add('open'); }
+      };
+    });
+  }
+
+  // init FAQ on load
+  showPage('home');
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# MindVsYou — robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /mindvsyou-preview.html
+
+# AI crawlers — explicitly welcomed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://mindvsyou.io/sitemap.xml

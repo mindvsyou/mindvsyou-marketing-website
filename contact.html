@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — MindVsYou</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar"></nav>
+
+  <section class="contact-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">Contact</span>
+      <!-- ✏️ EDIT -->
+      <h1>Let's talk</h1>
+      <p>For school partnerships, media queries, support, or just to say hi — we are easy to reach.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT BODY
+       ============================================================ -->
+  <section class="contact-body">
+    <div class="contact-inner">
+
+      <!-- LEFT: contact info -->
+      <div class="contact-info">
+        <span class="eyebrow">Reach Us</span>
+        <!-- ✏️ EDIT -->
+        <h2>We usually respond within a few hours.</h2>
+        <p>Whether you are a student with a question, a school looking to onboard, an investor, or a journalist — drop us a message.</p>
+
+        <div class="contact-links">
+          <!-- ✏️ EDIT email, phone, WhatsApp link -->
+          <a href="mailto:hello@mindvsyou.in" class="contact-link">
+            <div class="contact-link-icon">📧</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">Email</div>
+              hello@mindvsyou.in
+            </div>
+          </a>
+          <a href="tel:+917905574323" class="contact-link">
+            <div class="contact-link-icon">📞</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">Phone</div>
+              +91 79055 74323
+            </div>
+          </a>
+          <a href="https://wa.me/917905574323?text=Hi" class="contact-link">
+            <div class="contact-link-icon">💬</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">WhatsApp</div>
+              Message us directly
+            </div>
+          </a>
+          <a href="https://instagram.com/mindvsyou" class="contact-link">
+            <div class="contact-link-icon">📸</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">Instagram</div>
+              @mindvsyou
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: contact form -->
+      <div class="contact-form">
+        <!-- ✏️ EDIT -->
+        <h2>Send us a message</h2>
+
+        <!-- Form submits to Formspree via JavaScript (below) so we can
+             redirect visitors to our own thank-you banner instead of
+             Formspree's default page. -->
+        <form id="contact-form">
+
+          <input type="hidden" name="_subject" value="New MindVsYou Contact Form Submission" />
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Rahul Sharma" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="rahul@gmail.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="type">I am a…</label>
+            <select id="type" name="type">
+              <!-- ✏️ EDIT options -->
+              <option>Student</option>
+              <option>Parent</option>
+              <option>Teacher / School</option>
+              <option>Investor</option>
+              <option>Journalist / Media</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message →</button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="main.js"></script>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch('https://formspree.io/f/mgojngdw', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = 'https://mindvsyou.io/contact.html?sent=true';
+        } else {
+          alert('Something went wrong. Please try again or email us directly at hello@mindvsyou.in');
+        }
+      }).catch(() => {
+        alert('Something went wrong. Please try again or email us directly at hello@mindvsyou.in');
+      });
+    });
+
+    if (window.location.search.includes('sent=true')) {
+      const banner = document.createElement('div');
+      banner.id = 'formspree-success-banner';
+      banner.textContent = "✅ Thanks! Your message has been sent — we'll get back to you soon.";
+      banner.style.cssText = "background-color:#e6f7ec !important;color:#1a7a3d !important;padding:14px 20px !important;text-align:center !important;font-weight:500 !important;border-bottom:1px solid #b8e6c8 !important;";
+      document.body.prepend(banner);
+    }
+  </script>
+
+</body>
+</html>

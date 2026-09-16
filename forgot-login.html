@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forgot Student ID / PIN — MindVsYou</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar"></nav>
+
+  <section class="contact-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--green);">Account Help</span>
+      <!-- ✏️ EDIT -->
+      <h1>Forgot your Student ID or PIN?</h1>
+      <p>No worries — fill this out and we'll help you get back into your account within a few hours.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT BODY
+       ============================================================ -->
+  <section class="contact-body">
+    <div class="contact-inner">
+
+      <!-- LEFT: help info -->
+      <div class="contact-info">
+        <span class="eyebrow">Quick Tips</span>
+        <!-- ✏️ EDIT -->
+        <h2>Before you submit</h2>
+        <p>A few things that speed up how fast we can help you:</p>
+
+        <div class="contact-links">
+          <div class="contact-link" style="cursor:default;">
+            <div class="contact-link-icon">🆔</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">Student ID</div>
+              If you remember it (e.g. MVY0042), include it — it helps us find you instantly
+            </div>
+          </div>
+          <div class="contact-link" style="cursor:default;">
+            <div class="contact-link-icon">📱</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">WhatsApp Number</div>
+              Use the same number you practice with on our WhatsApp bot
+            </div>
+          </div>
+          <a href="https://wa.me/918448970354?text=Hi%2C%20I%20forgot%20my%20Student%20ID%2FPIN" class="contact-link">
+            <div class="contact-link-icon">💬</div>
+            <div>
+              <div style="font-size:0.8rem;color:var(--text-light);margin-bottom:2px;">Prefer WhatsApp?</div>
+              Message us directly instead
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: forgot login form -->
+      <div class="contact-form">
+        <!-- ✏️ EDIT -->
+        <h2>Account recovery form</h2>
+
+        <form id="forgot-login-form">
+
+          <input type="hidden" name="_subject" value="MindVsYou — Forgot Student ID/PIN Request" />
+          <input type="text" name="_gotcha" style="display:none" />
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Rahul Sharma" required />
+          </div>
+
+          <div class="form-group">
+            <label for="class">Class</label>
+            <input type="text" id="class" name="class" placeholder="e.g. 10th" required />
+          </div>
+
+          <div class="form-group">
+            <label for="studentId">Student ID <span style="color:var(--text-light); font-weight:400;">(if you remember it)</span></label>
+            <input type="text" id="studentId" name="studentId" placeholder="e.g. MVY0042" />
+          </div>
+
+          <div class="form-group">
+            <label for="whatsappNumber">WhatsApp Number used with our bot</label>
+            <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="e.g. 98765 43210" required />
+          </div>
+
+          <div class="form-group">
+            <label for="issue">What's the issue?</label>
+            <select id="issue" name="issue">
+              <option>Forgot Student ID</option>
+              <option>Forgot PIN</option>
+              <option>Forgot both Student ID and PIN</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional details <span style="color:var(--text-light); font-weight:400;">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Anything else that helps us find your account..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Submit Request →</button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="main.js"></script>
+
+  <script>
+    const form = document.getElementById('forgot-login-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch('https://formspree.io/f/mlgyzqlp', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = 'https://mindvsyou.io/forgot-login.html?sent=true';
+        } else {
+          alert('Something went wrong. Please try again or WhatsApp us directly at +91 84489 70354.');
+        }
+      }).catch(() => {
+        alert('Something went wrong. Please try again or WhatsApp us directly at +91 84489 70354.');
+      });
+    });
+
+    if (window.location.search.includes('sent=true')) {
+      const banner = document.createElement('div');
+      banner.id = 'formspree-success-banner';
+      banner.textContent = "✅ Thanks! We received your request — we'll help you within a few hours.";
+      banner.style.cssText = "background-color:#e6f7ec !important;color:#1a7a3d !important;padding:14px 20px !important;text-align:center !important;font-weight:500 !important;border-bottom:1px solid #b8e6c8 !important;";
+      document.body.prepend(banner);
+    }
+  </script>
+
+</body>
+</html>
