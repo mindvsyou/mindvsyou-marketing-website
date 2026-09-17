@@ -20,3 +20,11 @@
 - [About](https://mindvsyou.io/about.html): Mission and founding story.
 - [Blog](https://mindvsyou.io/blog.html): CBSE Class 10 study tips and exam-pattern guides.
 - [Contact](https://mindvsyou.io/contact.html): Support and partnership contact form.
+
+## Blog posts
+- [How to practice case-based questions for CBSE Class 10 boards](https://mindvsyou.io/case-based-questions-cbse-class-10.html)
+- [Why online practice beats cramming from textbooks alone](https://mindvsyou.io/online-practice-vs-textbook-cramming.html)
+- [CBSE Class 10 board exam pattern explained](https://mindvsyou.io/cbse-class-10-exam-pattern-explained.html)
+- [The 15-minute daily practice rule that top-scoring students swear by](https://mindvsyou.io/15-minute-daily-practice-rule.html)
+- [How schools can build a daily practice culture without extra burden on teachers](https://mindvsyou.io/how-schools-build-daily-practice-culture.html)
+- [Science MCQs for Class 10 boards — the concepts you cannot skip](https://mindvsyou.io/science-mcq-important-concepts-class-10.html)

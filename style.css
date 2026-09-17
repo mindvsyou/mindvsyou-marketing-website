@@ -375,6 +375,32 @@ footer {
 .page-header { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 12px 24px; }
 .breadcrumb { max-width: var(--max-width); margin: 0 auto; font-size: 0.82rem; color: var(--text-light); }
 .breadcrumb a { color: var(--green); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ---- BLOG POST / ARTICLE ---- */
+.post-hero { background: var(--navy); color: var(--white); padding: 56px 24px 48px; }
+.post-hero .container { max-width: 760px; }
+.post-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4.5vw, 2.5rem); font-weight: 800; line-height: 1.22; letter-spacing: -0.01em; margin-bottom: 16px; }
+.post-meta { color: rgba(255,255,255,0.62); font-size: 0.85rem; }
+.post-body { padding: var(--section-pad); }
+.post-body .container { max-width: 760px; }
+.post-body h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; margin: 40px 0 16px; letter-spacing: -0.01em; }
+.post-body > .container > h2:first-child { margin-top: 0; }
+.post-body h3 { font-size: 1.12rem; font-weight: 700; margin: 26px 0 10px; }
+.post-body p { color: var(--text-mid); margin-bottom: 16px; font-size: 1.02rem; line-height: 1.75; }
+.post-body ul, .post-body ol { color: var(--text-mid); margin: 0 0 16px 22px; font-size: 1.02rem; line-height: 1.75; }
+.post-body li { margin-bottom: 8px; }
+.post-body strong { color: var(--text-dark); }
+.post-lede { font-size: 1.12rem !important; color: var(--text-dark) !important; }
+.post-cta { background: var(--off-white); border-radius: 20px; padding: 32px; text-align: center; margin-top: 32px; }
+.post-cta h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-bottom: 10px; }
+.post-cta p { color: var(--text-mid); margin-bottom: 20px; }
+.related-posts { padding: 0 24px 80px; }
+.related-posts .container { max-width: 760px; }
+.related-posts h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 800; margin-bottom: 14px; }
+.related-posts ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.related-posts a { color: var(--green); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.related-posts a:hover { text-decoration: underline; }
 
 /* ---- MOBILE ---- */
 @media (max-width: 768px) {
