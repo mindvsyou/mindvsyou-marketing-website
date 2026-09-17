@@ -1,0 +1,22 @@
+# MindVsYou
+
+> MindVsYou is a browser-based CBSE Class 10 board exam practice platform. Students log in at quiz.mindvsyou.io with a Student ID and PIN — no app install required — and practice MCQs, case-based questions, and real Previous Year Questions (PYQs) for CBSE Class 10 Science (Mathematics coming soon), with instant answer explanations and progress tracking.
+
+## Key facts
+- Product: quiz.mindvsyou.io (the practice app). mindvsyou.io (this marketing site).
+- Audience: CBSE Class 10 students; also schools and coaching institutes enrolling their students.
+- Pricing: Free during beta for the first 100 students. No credit card required.
+- Subjects available: Science (live). Mathematics (in development, not yet available).
+- Practice formats: MCQs, case-based questions, VSA/SA/LA written-answer questions, full past-year board paper PDF downloads with official answer keys.
+- Guests can try a few questions without registering; registration (Student ID + 4-digit PIN, no email/password) unlocks saved progress and a revision dashboard.
+- Registered students get 50 new PYQ questions per day; guests are unlimited but won't repeat questions already seen in that browser.
+- Contact: hello@mindvsyou.in
+
+## Pages
+- [Home](https://mindvsyou.io/): Product overview and how it works.
+- [For Students](https://mindvsyou.io/students.html): Full feature list for students.
+- [For Schools](https://mindvsyou.io/schools.html): Features, pricing and onboarding for schools and coaching institutes.
+- [FAQ](https://mindvsyou.io/faq.html): Detailed answers on pricing, registration, PYQ practice, progress tracking, and data privacy.
+- [About](https://mindvsyou.io/about.html): Mission and founding story.
+- [Blog](https://mindvsyou.io/blog.html): CBSE Class 10 study tips and exam-pattern guides.
+- [Contact](https://mindvsyou.io/contact.html): Support and partnership contact form.

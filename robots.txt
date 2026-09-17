@@ -27,3 +27,6 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://mindvsyou.io/sitemap.xml
+
+# LLM/AI-agent context file — https://llmstxt.org
+# https://mindvsyou.io/llms.txt
