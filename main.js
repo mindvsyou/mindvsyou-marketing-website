@@ -93,9 +93,33 @@ function initFAQ() {
   });
 }
 
+// ---- SCROLL NUDGE ----
+function initScrollNudge() {
+  const nudge = document.getElementById('scrollNudge');
+  const DISMISS_KEY = 'mvy_scroll_nudge_dismissed';
+  if (sessionStorage.getItem(DISMISS_KEY)) { nudge.remove(); return; }
+
+  function dismiss() {
+    nudge.classList.remove('show');
+    sessionStorage.setItem(DISMISS_KEY, '1');
+  }
+  document.getElementById('scrollNudgeClose').addEventListener('click', dismiss);
+  nudge.querySelector('.btn').addEventListener('click', dismiss);
+
+  function onScroll() {
+    const scrolledPast = window.scrollY + window.innerHeight;
+    if (scrolledPast > document.documentElement.scrollHeight * 0.4) {
+      nudge.classList.add('show');
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 // ---- INIT ----
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('navbar'))  renderNav();
   if (document.getElementById('footer'))  renderFooter();
   if (document.querySelector('.faq-list')) initFAQ();
+  if (document.getElementById('scrollNudge')) initScrollNudge();
 });
