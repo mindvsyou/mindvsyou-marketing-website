@@ -79,7 +79,7 @@ function renderFooter() {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ${CONFIG.year} ${CONFIG.productName}. All rights reserved. Made with ❤️ for CBSE students.</p>
+      <p>© ${CONFIG.year} ${CONFIG.productName}, a product of Sparqity Private Limited. All rights reserved. Made with ❤️ for CBSE students.</p>
     </div>`;
 }
 
