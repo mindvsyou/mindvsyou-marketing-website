@@ -19,7 +19,6 @@ function renderNav(activePage) {
   const pages = [
     { label: "Home",      href: "index.html" },
     { label: "Students",  href: "students.html" },
-    { label: "Schools",   href: "schools.html" },
     { label: "About",     href: "about.html" },
     { label: "Blog",      href: "blog.html" },
     { label: "FAQ",       href: "faq.html" },
@@ -55,7 +54,6 @@ function renderFooter() {
         <h4>Product</h4>
         <ul>
           <li><a href="students.html">For Students</a></li>
-          <li><a href="schools.html">For Schools</a></li>
           <li><a href="${CONFIG.appLink}">Try Free</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
