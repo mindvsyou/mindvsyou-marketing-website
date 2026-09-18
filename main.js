@@ -7,7 +7,7 @@ const CONFIG = {
   productName:    "MindVsYou",          // ← Change your product name here
   tagline:        "CBSE Board Prep, Online",
   appLink:        "https://quiz.mindvsyou.io",  // ← Your web app
-  contactEmail:   "hello@mindvsyou.in",
+  contactEmail:   "hello@mindvsyou.io",
   contactPhone:   "+91 84489 70354",
   LinkedinLink:    "https://www.linkedin.com/company/mindvsyou-ai",
   instagramLink:  "https://instagram.com/mindvsyou",

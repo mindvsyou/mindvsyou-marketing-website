@@ -10,7 +10,7 @@
 - Practice formats: MCQs, case-based questions, VSA/SA/LA written-answer questions, full past-year board paper PDF downloads with official answer keys.
 - Guests can try a few questions without registering; registration (Student ID + 4-digit PIN, no email/password) unlocks saved progress and a revision dashboard.
 - Registered students get 50 new PYQ questions per day; guests are unlimited but won't repeat questions already seen in that browser.
-- Contact: hello@mindvsyou.in
+- Contact: hello@mindvsyou.io
 
 ## Pages
 - [Home](https://mindvsyou.io/): Product overview and how it works.
