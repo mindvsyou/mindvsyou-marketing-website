@@ -54,6 +54,7 @@ function renderFooter() {
         <h4>Product</h4>
         <ul>
           <li><a href="students.html">For Students</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
           <li><a href="${CONFIG.appLink}">Try Free</a></li>
           <li><a href="faq.html">FAQ</a></li>
         </ul>
