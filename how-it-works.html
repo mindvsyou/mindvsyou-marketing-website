@@ -166,47 +166,305 @@
     ]
   }
   </script>
+
+
+
+
+  <style id="hiw-css">
+    :root {
+      --hiw-blue: #3B82F6;   --hiw-blue-soft: #EAF2FF;
+      --hiw-purple: #8B5CF6; --hiw-purple-soft: #F1EBFF;
+      --hiw-amber: #F59E0B;  --hiw-amber-soft: #FEF3DC;
+      --hiw-green-soft: #E7F9EE;
+      --hiw-orange-soft: #FFEDE3;
+    }
+    .hiw-wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+    .hiw-section { padding: 88px 0; }
+    .hiw-head { text-align: center; max-width: 720px; margin: 0 auto 52px; }
+    .hiw-head h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 14px; }
+    .hiw-head p { color: var(--text-mid); font-size: 1.05rem; }
+    .hiw-head .eyebrow { margin-bottom: 16px; }
+
+    /* ---------- HERO ---------- */
+    .hiw-hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; padding: 84px 0 96px; }
+    .hiw-hero::before { content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse at 75% 20%, rgba(37,211,102,0.22), transparent 55%),
+                  radial-gradient(ellipse at 5% 90%, rgba(255,107,43,0.16), transparent 50%); }
+    .hiw-hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .5;
+      background-image: radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px); background-size: 26px 26px;
+      -webkit-mask-image: linear-gradient(to bottom, #000, transparent 85%); mask-image: linear-gradient(to bottom, #000, transparent 85%); }
+    .hiw-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+    .hiw-hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; line-height: 1.06; letter-spacing: -0.025em; margin-bottom: 22px; }
+    .hiw-hero h1 .accent { color: var(--green); }
+    .hiw-hero-lead { font-size: 1.15rem; color: rgba(255,255,255,0.78); max-width: 540px; margin-bottom: 32px; }
+    .hiw-hero .btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px; }
+    .hiw-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hiw-chip { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 100px; font-size: .82rem; font-weight: 600;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); color: rgba(255,255,255,.9); }
+    .hiw-chip b { color: var(--green); font-weight: 800; }
+
+    /* phone mockup */
+    .hiw-phone-stage { position: relative; display: flex; justify-content: center; padding: 10px 0; }
+    .hiw-phone { width: 300px; background: #fff; color: var(--text-dark); border-radius: 38px; padding: 12px; position: relative;
+      box-shadow: 0 0 0 8px #1b2b3d, 0 40px 80px rgba(0,0,0,.5); transform: rotate(2.5deg); }
+    .hiw-phone-top { display: flex; align-items: center; gap: 10px; padding: 12px 12px 10px; border-bottom: 1px solid var(--border); }
+    .hiw-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-weight: 800; font-family: var(--font-display); font-size: .9rem; }
+    .hiw-phone-top strong { display: block; font-size: .85rem; line-height: 1.2; }
+    .hiw-phone-top span { font-size: .7rem; color: var(--text-light); }
+    .hiw-chat { padding: 14px 8px 8px; display: flex; flex-direction: column; gap: 10px; background: #F7F9FB; border-radius: 0 0 26px 26px; min-height: 392px; }
+    .hiw-bubble { max-width: 92%; padding: 10px 13px; border-radius: 16px; font-size: .8rem; line-height: 1.45; }
+    .hiw-bubble.q { background: #fff; border: 1px solid var(--border); border-top-left-radius: 4px; }
+    .hiw-bubble.q small { display: block; color: var(--orange); font-weight: 700; font-size: .66rem; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 4px; }
+    .hiw-opts { display: grid; gap: 6px; }
+    .hiw-opt { display: flex; gap: 8px; align-items: center; padding: 8px 12px; border-radius: 12px; border: 1.5px solid var(--border); background: #fff; font-size: .78rem; font-weight: 600; }
+    .hiw-opt i { font-style: normal; width: 20px; height: 20px; border-radius: 50%; background: var(--off-white); display: grid; place-items: center; font-size: .68rem; font-weight: 800; color: var(--text-mid); flex: none; }
+    .hiw-opt.ok { border-color: var(--green); background: var(--hiw-green-soft); }
+    .hiw-opt.ok i { background: var(--green); color: #fff; }
+    .hiw-bubble.a { background: var(--navy); color: #fff; align-self: flex-end; border-top-right-radius: 4px; }
+    .hiw-bubble.fb { background: var(--hiw-green-soft); border: 1px solid #b9ecd0; border-top-left-radius: 4px; }
+    .hiw-bubble.fb b { color: var(--green-dark); }
+    .hiw-float { position: absolute; background: #fff; color: var(--text-dark); border-radius: 16px; padding: 12px 14px; box-shadow: 0 18px 40px rgba(0,0,0,.35); font-size: .76rem; z-index: 2; animation: hiw-float 5s ease-in-out infinite; }
+    .hiw-float strong { display: block; font-size: .78rem; margin-bottom: 6px; }
+    .hiw-phone-box { position: relative; }
+    .hiw-float.f1 { left: -122px; top: 250px; width: 150px; }
+    .hiw-float.f2 { right: -104px; top: 34px; width: 140px; animation-delay: -2.4s; }
+    .hiw-bar { height: 6px; border-radius: 6px; background: var(--border); margin-top: 6px; overflow: hidden; }
+    .hiw-bar span { display: block; height: 100%; border-radius: 6px; }
+    .hiw-float small { color: var(--text-light); font-size: .68rem; }
+    @keyframes hiw-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+    /* ---------- STATS ---------- */
+    .hiw-stats { margin-top: -44px; position: relative; z-index: 3; }
+    .hiw-stats-card { background: #fff; border: 1px solid var(--border); border-radius: 24px; box-shadow: 0 20px 50px rgba(13,27,42,.12); display: grid; grid-template-columns: repeat(4, 1fr); }
+    .hiw-stat { padding: 26px 20px; text-align: center; border-right: 1px solid var(--border); }
+    .hiw-stat:last-child { border-right: none; }
+    .hiw-stat b { display: block; font-family: var(--font-display); font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+    .hiw-stat:nth-child(1) b { color: var(--green); } .hiw-stat:nth-child(2) b { color: var(--orange); }
+    .hiw-stat:nth-child(3) b { color: var(--hiw-blue); } .hiw-stat:nth-child(4) b { color: var(--hiw-purple); }
+    .hiw-stat span { font-size: .82rem; color: var(--text-light); }
+
+    /* ---------- WHAT IT IS ---------- */
+    .hiw-two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .hiw-big { border-radius: 28px; padding: 36px 32px; position: relative; overflow: hidden; }
+    .hiw-big .ico { width: 60px; height: 60px; border-radius: 18px; background: #fff; display: grid; place-items: center; font-size: 1.7rem; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(0,0,0,.07); }
+    .hiw-big h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.01em; }
+    .hiw-big p { color: var(--text-mid); }
+    .hiw-big.g { background: var(--hiw-green-soft); } .hiw-big.o { background: var(--hiw-orange-soft); }
+    .hiw-big::after { content: attr(data-n); position: absolute; right: 22px; top: 6px; font-family: var(--font-display); font-weight: 800; font-size: 6rem; line-height: 1; color: rgba(13,27,42,.05); }
+    .hiw-lede { text-align: center; max-width: 780px; margin: 0 auto 44px; font-size: 1.12rem; color: var(--text-mid); }
+    .hiw-lede strong { color: var(--text-dark); }
+
+    /* ---------- STEPS ---------- */
+    .hiw-alt { background: var(--off-white); }
+    .hiw-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; position: relative; counter-reset: s; }
+    .hiw-steps::before { content: ''; position: absolute; left: 10%; right: 10%; top: 34px; height: 3px; border-radius: 3px; background: repeating-linear-gradient(90deg, var(--border) 0 8px, transparent 8px 16px); }
+    .hiw-step { position: relative; text-align: center; }
+    .hiw-step .dot { width: 68px; height: 68px; border-radius: 50%; margin: 0 auto 18px; display: grid; place-items: center; font-size: 1.6rem; position: relative; z-index: 1;
+      background: #fff; border: 3px solid var(--c, var(--green)); box-shadow: 0 10px 24px rgba(13,27,42,.1); }
+    .hiw-step .dot em { position: absolute; top: -6px; right: -6px; width: 24px; height: 24px; border-radius: 50%; background: var(--c, var(--green)); color: #fff; font-style: normal; font-size: .72rem; font-weight: 800; display: grid; place-items: center; font-family: var(--font-display); }
+    .hiw-step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .hiw-step p { font-size: .87rem; color: var(--text-mid); }
+
+    /* ---------- MODES ---------- */
+    .hiw-tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: start; }
+    .hiw-track { border-radius: 26px; background: #fff; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 10px 30px rgba(13,27,42,.06); }
+    .hiw-track header { padding: 22px 24px 18px; background: var(--tsoft); border-bottom: 3px solid var(--tc); }
+    .hiw-track header span { font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--tc); }
+    .hiw-track header h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-top: 2px; }
+    .hiw-track header p { font-size: .85rem; color: var(--text-mid); margin-top: 4px; }
+    .hiw-mode { display: flex; gap: 14px; padding: 18px 24px; border-top: 1px solid var(--border); }
+    .hiw-mode:first-of-type { border-top: none; }
+    .hiw-mode .mi { width: 42px; height: 42px; flex: none; border-radius: 12px; background: var(--tsoft); display: grid; place-items: center; font-size: 1.2rem; }
+    .hiw-mode h4 { font-size: .95rem; font-weight: 700; margin-bottom: 3px; }
+    .hiw-mode p { font-size: .85rem; color: var(--text-mid); line-height: 1.5; }
+    .t-green { --tc: var(--green); --tsoft: var(--hiw-green-soft); }
+    .t-orange { --tc: var(--orange); --tsoft: var(--hiw-orange-soft); }
+    .t-blue { --tc: var(--hiw-blue); --tsoft: var(--hiw-blue-soft); }
+    .hiw-closing { margin: 40px auto 0; max-width: 820px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); background: #fff; }
+    .hiw-closing div { padding: 18px 20px; font-size: .88rem; color: var(--text-mid); border-right: 1px solid var(--border); }
+    .hiw-closing div:last-child { border-right: none; }
+    .hiw-closing b { display: block; font-size: .95rem; margin-bottom: 2px; }
+
+    /* ---------- BENTO ---------- */
+    .hiw-bento { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+    .hiw-tile { border-radius: 26px; padding: 30px 28px; position: relative; overflow: hidden; }
+    .hiw-tile .tag { display: inline-block; font-size: .7rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 5px 11px; border-radius: 100px; background: rgba(255,255,255,.75); margin-bottom: 16px; }
+    .hiw-tile h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 8px; }
+    .hiw-tile p { color: var(--text-mid); font-size: .93rem; }
+    .hiw-tile .bg { position: absolute; right: -6px; bottom: -22px; font-size: 6.5rem; opacity: .12; line-height: 1; }
+    .hiw-tile.s3 { grid-column: span 3; } .hiw-tile.s2 { grid-column: span 2; } .hiw-tile.s6 { grid-column: span 6; }
+    .hiw-tile.tg { background: var(--hiw-green-soft); } .hiw-tile.to { background: var(--hiw-orange-soft); }
+    .hiw-tile.tb { background: var(--hiw-blue-soft); } .hiw-tile.tp { background: var(--hiw-purple-soft); }
+    .hiw-tile.dark { background: var(--navy); color: #fff; display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
+    .hiw-tile.dark p { color: rgba(255,255,255,.75); }
+    .hiw-tile.dark h3 { font-size: 1.6rem; }
+    .hiw-tile.dark .tag { background: rgba(37,211,102,.15); color: var(--green); }
+    .hiw-why { display: grid; gap: 12px; }
+    .hiw-why div { display: flex; gap: 12px; align-items: center; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 12px 14px; font-size: .88rem; font-weight: 600; }
+    .hiw-why span { font-size: 1.2rem; }
+
+    /* ---------- VERSUS ---------- */
+    .hiw-vs { display: grid; grid-template-columns: 1fr 1.15fr; gap: 22px; max-width: 960px; margin: 0 auto; align-items: stretch; }
+    .hiw-vs-card { border-radius: 26px; padding: 30px 28px; }
+    .hiw-vs-card h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+    .hiw-vs-card ul { list-style: none; display: grid; gap: 12px; }
+    .hiw-vs-card li { display: flex; gap: 12px; font-size: .92rem; align-items: flex-start; line-height: 1.45; }
+    .hiw-vs-card li small { display: block; font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; opacity: .6; margin-bottom: 1px; }
+    .hiw-vs-card li::before { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: .72rem; font-weight: 800; margin-top: 2px; }
+    .hiw-vs-card.no { background: #fff; border: 1.5px dashed #cbd5e1; color: var(--text-mid); }
+    .hiw-vs-card.no li::before { content: '✕'; background: #f1f5f9; color: #94a3b8; }
+    .hiw-vs-card.yes { background: var(--navy); color: #fff; box-shadow: 0 24px 50px rgba(13,27,42,.25); position: relative; }
+    .hiw-vs-card.yes li::before { content: '✓'; background: var(--green); color: #fff; }
+    .hiw-vs-card.yes h3 { color: var(--green); }
+    .hiw-vs-card.yes::after { content: 'Better way'; position: absolute; top: 20px; right: 22px; background: var(--orange); color: #fff; font-size: .68rem; font-weight: 800; padding: 5px 11px; border-radius: 100px; letter-spacing: .05em; text-transform: uppercase; }
+
+    /* ---------- PERSONAS ---------- */
+    .hiw-personas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .hiw-persona { background: #fff; border: 1px solid var(--border); border-radius: 26px; padding: 30px 26px 28px; position: relative; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+    .hiw-persona:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(13,27,42,.1); }
+    .hiw-persona::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--pc); }
+    .hiw-persona .who { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .hiw-persona .who i { font-style: normal; width: 52px; height: 52px; border-radius: 16px; background: var(--ps); display: grid; place-items: center; font-size: 1.6rem; }
+    .hiw-persona h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 800; }
+    .hiw-persona q { display: block; quotes: none; font-weight: 700; font-size: 1rem; color: var(--pc); margin-bottom: 8px; line-height: 1.35; }
+    .hiw-persona p { color: var(--text-mid); font-size: .92rem; }
+    .p1 { --pc: var(--green); --ps: var(--hiw-green-soft); } .p2 { --pc: var(--orange); --ps: var(--hiw-orange-soft); } .p3 { --pc: var(--hiw-purple); --ps: var(--hiw-purple-soft); }
+
+    /* ---------- FAQ ---------- */
+    .hiw-faqs { max-width: 820px; margin: 0 auto; display: grid; gap: 12px; }
+    .hiw-faq { background: #fff; border: 1px solid var(--border); border-radius: 18px; transition: box-shadow .2s, border-color .2s; }
+    .hiw-faq[open] { border-color: var(--green); box-shadow: 0 10px 28px rgba(37,211,102,.12); }
+    .hiw-faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; }
+    .hiw-faq summary::-webkit-details-marker { display: none; }
+    .hiw-faq summary h3 { font-size: 1rem; font-weight: 700; line-height: 1.35; }
+    .hiw-faq-icon { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--hiw-green-soft); color: var(--green-dark); display: grid; place-items: center; font-size: 1.2rem; font-weight: 700; transition: transform .25s, background .2s; }
+    .hiw-faq[open] .hiw-faq-icon { transform: rotate(45deg); background: var(--green); color: #fff; }
+    .hiw-faq p { padding: 0 22px 20px; color: var(--text-mid); font-size: .95rem; line-height: 1.7; }
+
+    /* ---------- CTA ---------- */
+    .hiw-cta-note { display: inline-block; margin-bottom: 22px; padding: 7px 16px; border-radius: 100px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); font-size: .82rem; font-weight: 700; color: #fff; position: relative; }
+
+    /* ---------- REVEAL ---------- */
+    .js .hiw-r { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .js .hiw-r.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .hiw-float { animation: none; } .js .hiw-r { opacity: 1; transform: none; transition: none; } }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 980px) {
+      .hiw-hero-grid { grid-template-columns: 1fr; gap: 44px; }
+      .hiw-phone-stage { order: 2; }
+      .hiw-steps { grid-template-columns: 1fr; gap: 26px; max-width: 460px; margin: 0 auto; }
+      .hiw-steps::before { left: 34px; right: auto; top: 20px; bottom: 20px; width: 3px; height: auto; background: repeating-linear-gradient(180deg, var(--border) 0 8px, transparent 8px 16px); }
+      .hiw-step { display: grid; grid-template-columns: 68px 1fr; gap: 18px; text-align: left; align-items: start; }
+      .hiw-step .dot { margin: 0; }
+      .hiw-tracks, .hiw-personas { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+      .hiw-bento { grid-template-columns: 1fr 1fr; }
+      .hiw-tile.s3, .hiw-tile.s2 { grid-column: span 1; }
+      .hiw-tile.s6 { grid-column: span 2; }
+      .hiw-tile.dark { grid-template-columns: 1fr; }
+      .hiw-vs { grid-template-columns: 1fr; }
+      .hiw-stats-card { grid-template-columns: 1fr 1fr; }
+      .hiw-stat:nth-child(2) { border-right: none; }
+      .hiw-stat:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+    }
+    @media (max-width: 640px) {
+      .hiw-section { padding: 64px 0; }
+      .hiw-two { grid-template-columns: 1fr; }
+      .hiw-bento { grid-template-columns: 1fr; }
+      .hiw-tile.s3, .hiw-tile.s2, .hiw-tile.s6 { grid-column: span 1; }
+      .hiw-closing { grid-template-columns: 1fr; }
+      .hiw-closing div { border-right: none; border-bottom: 1px solid var(--border); }
+      .hiw-closing div:last-child { border-bottom: none; }
+      .hiw-float { display: none; }
+      .hiw-phone { width: 270px; }
+      .hiw-hero { padding: 60px 0 84px; }
+    }
+  </style>
 </head>
 <body>
 
   <nav id="navbar"></nav>
 
-  <!-- ============================================================
-       HERO
-       ============================================================ -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge">🎓 CBSE Class 10 Science · PYQ Practice</div>
-      <h1>How <span class="accent">MindVsYou</span> Works</h1>
-      <p>
-        CBSE Class 10 Science previous year questions, organised by chapter and subtopic, with instant feedback and a record of what you still need to revise.
-      </p>
-      <div class="hero-btns">
-        <a href="https://quiz.mindvsyou.io" class="btn btn-green">🖥️ Start Practising Free</a>
-        <a href="faq.html" class="btn btn-outline">See FAQs</a>
+  <!-- ============ HERO ============ -->
+  <section class="hiw-hero">
+    <div class="hiw-wrap hiw-hero-grid">
+      <div>
+        <div class="hero-badge">🎓 CBSE Class 10 Science · PYQ Practice</div>
+        <h1>How <span class="accent">MindVsYou</span> Works</h1>
+        <p class="hiw-hero-lead">CBSE Class 10 Science previous year questions, organised by chapter and subtopic, with instant feedback and a record of what you still need to revise.</p>
+        <div class="btns">
+          <a href="https://quiz.mindvsyou.io" class="btn btn-green">🖥️ Start Practising Free</a>
+          <a href="#modes" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.35);">See the 7 modes</a>
+        </div>
+        <div class="hiw-chips">
+          <span class="hiw-chip">✅ <b>No app</b> to install</span>
+          <span class="hiw-chip">📅 <b>2022–2025</b> board papers</span>
+          <span class="hiw-chip">🆓 Try as a <b>guest</b></span>
+        </div>
       </div>
-      <p style="margin-top:14px; font-size:14px; opacity:0.8;">Class 10 Science · Try it without an account</p>
+
+      <div class="hiw-phone-stage" aria-hidden="true">
+        <div class="hiw-phone-box">
+        <div class="hiw-float f1">
+          <strong>📈 Chapter-wise progress</strong>
+          <small>Acids, Bases and Salts</small>
+          <div class="hiw-bar"><span style="width:78%;background:var(--green)"></span></div>
+          <small style="display:block;margin-top:8px;">Metals and Non-metals</small>
+          <div class="hiw-bar"><span style="width:44%;background:var(--orange)"></span></div>
+          <small style="display:block;margin-top:6px;opacity:.7;">Sample view</small>
+        </div>
+        <div class="hiw-phone">
+          <div class="hiw-phone-top">
+            <div class="hiw-avatar">M</div>
+            <div><strong>MindVsYou</strong><span>Class 10 Science · PYQ Practice</span></div>
+          </div>
+          <div class="hiw-chat">
+            <div class="hiw-bubble q"><small>Acids, Bases and Salts · MCQ</small>Which gas is released when dilute hydrochloric acid reacts with zinc?</div>
+            <div class="hiw-opts">
+              <div class="hiw-opt"><i>A</i> Oxygen</div>
+              <div class="hiw-opt ok"><i>B</i> Hydrogen</div>
+              <div class="hiw-opt"><i>C</i> Carbon dioxide</div>
+              <div class="hiw-opt"><i>D</i> Chlorine</div>
+            </div>
+            <div class="hiw-bubble a">B</div>
+            <div class="hiw-bubble fb"><b>✓ Correct!</b> Zinc displaces hydrogen from the acid, so hydrogen gas is released.</div>
+          </div>
+        </div>
+        <div class="hiw-float f2">
+          <strong>🔁 To revise</strong>
+          <small>Missed questions come back so mistakes turn into progress.</small>
+        </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       WHAT IT IS
-       ============================================================ -->
-  <section class="features">
-    <div class="container">
-      <span class="eyebrow">What MindVsYou Is</span>
-      <h2>Real board questions, turned into practice that remembers you</h2>
-      <p class="sub">
-        MindVsYou is an online practice platform for CBSE students, currently focused on Class 10 Science. It turns CBSE previous year questions (PYQs) from a stack of PDFs into an organised, interactive practice experience at quiz.mindvsyou.io.
-      </p>
-      <div class="feat-grid" style="max-width:860px;">
-        <div class="feat-card">
-          <div class="feat-icon">🗂️</div>
+  <!-- ============ STATS ============ -->
+  <div class="hiw-stats hiw-wrap">
+    <div class="hiw-stats-card hiw-r">
+      <div class="hiw-stat"><b>2022–25</b><span>Years of real CBSE PYQs</span></div>
+      <div class="hiw-stat"><b>5</b><span>Question formats</span></div>
+      <div class="hiw-stat"><b>7</b><span>Ways to practise</span></div>
+      <div class="hiw-stat"><b>0</b><span>Apps to download</span></div>
+    </div>
+  </div>
+
+  <!-- ============ WHAT IT IS ============ -->
+  <section class="hiw-section">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">What MindVsYou Is</span>
+        <h2>Real board questions, turned into practice that remembers you</h2>
+      </div>
+      <p class="hiw-lede hiw-r"><strong>MindVsYou</strong> is an online practice platform for CBSE students, currently focused on <strong>Class 10 Science</strong>. It turns CBSE previous year questions (PYQs) from a stack of PDFs into an organised, interactive practice experience at quiz.mindvsyou.io.</p>
+      <div class="hiw-two">
+        <div class="hiw-big g hiw-r" data-n="01">
+          <div class="ico">🗂️</div>
           <h3>A structured PYQ bank</h3>
           <p>Real CBSE previous year questions, sorted by chapter, subtopic and question type, covering 2022–2025 board papers.</p>
         </div>
-        <div class="feat-card">
-          <div class="feat-icon">🧭</div>
+        <div class="hiw-big o hiw-r" data-n="02">
+          <div class="ico">🧭</div>
           <h3>Practice that keeps track of you</h3>
           <p>See how you're doing chapter by chapter, and what needs another look, without keeping a notebook of mistakes.</p>
         </div>
@@ -214,258 +472,208 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       HOW IT WORKS
-       ============================================================ -->
-  <section class="how">
-    <div class="container">
-      <span class="eyebrow">How It Works</span>
-      <h2>Five steps from chapter to confidence</h2>
-      <p class="sub" style="text-align:center; margin-bottom:48px;">A simple, chat-style flow that feels like working with a tutor, not sitting a test.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Choose a chapter</h3>
-          <p>Pick any Class 10 Science chapter, and narrow it to a subtopic if you want to focus.</p>
+  <!-- ============ STEPS ============ -->
+  <section class="hiw-section hiw-alt">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">How It Works</span>
+        <h2>Five steps from chapter to confidence</h2>
+        <p>A simple, chat-style flow that feels like working with a tutor, not sitting a test.</p>
+      </div>
+      <div class="hiw-steps">
+        <div class="hiw-step hiw-r" style="--c:var(--green)"><div class="dot">📚<em>1</em></div><div><h3>Choose a chapter</h3><p>Pick any Class 10 Science chapter, and narrow it to a subtopic if you want to focus.</p></div></div>
+        <div class="hiw-step hiw-r" style="--c:var(--orange)"><div class="dot">💬<em>2</em></div><div><h3>Practise question by question</h3><p>Questions arrive one at a time, so you stay focused on the one in front of you.</p></div></div>
+        <div class="hiw-step hiw-r" style="--c:var(--hiw-blue)"><div class="dot">⚡<em>3</em></div><div><h3>Get feedback immediately</h3><p>Objective questions are marked instantly with an explanation. For written questions, attempt first, then compare with the model answer.</p></div></div>
+        <div class="hiw-step hiw-r" style="--c:var(--hiw-purple)"><div class="dot">📈<em>4</em></div><div><h3>See where you stand</h3><p>Your practice builds a chapter-wise picture of your accuracy, so you know which chapters are strong.</p></div></div>
+        <div class="hiw-step hiw-r" style="--c:var(--hiw-amber)"><div class="dot">🔁<em>5</em></div><div><h3>Fix what you missed</h3><p>Questions you got wrong come back for revision, so mistakes become the next thing you practise.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEVEN MODES ============ -->
+  <section class="hiw-section" id="modes">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">Practice Modes</span>
+        <h2>Seven ways to practise PYQs</h2>
+        <p>Different days call for different kinds of practice. MindVsYou gives you a mode for each.</p>
+      </div>
+      <div class="hiw-tracks">
+        <div class="hiw-track t-green hiw-r">
+          <header><span>On screen</span><h3>Practise</h3><p>Instant feedback and tracking.</p></header>
+          <div class="hiw-mode"><div class="mi">🧠</div><div><h4>MCQ Practice</h4><p>Answer board MCQs one by one and get instant marking with explanations. Your accuracy is tracked chapter by chapter.</p></div></div>
+          <div class="hiw-mode"><div class="mi">✏️</div><div><h4>Subjective Practice</h4><p>Attempt written questions (very short, short, long and case-based), reveal the model answer, then rate yourself honestly. Your self-ratings are tracked.</p></div></div>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Practise question by question</h3>
-          <p>Questions arrive one at a time, so you stay focused on the one in front of you.</p>
+        <div class="hiw-track t-orange hiw-r">
+          <header><span>Fix mistakes</span><h3>Revise</h3><p>Go back over what you missed.</p></header>
+          <div class="hiw-mode"><div class="mi">🔁</div><div><h4>Revise Wrong Answers (MCQ)</h4><p>Go back over the MCQs you got wrong, and revisit them until they stick.</p></div></div>
+          <div class="hiw-mode"><div class="mi">📖</div><div><h4>Revise Wrong Answers (Subjective)</h4><p>Revisit the written questions you rated as missed or only partly right.</p></div></div>
         </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Get feedback immediately</h3>
-          <p>Objective questions are marked instantly with an explanation. For written questions, attempt your own answer first, then compare it with the model answer.</p>
+        <div class="hiw-track t-blue hiw-r">
+          <header><span>On paper</span><h3>Print &amp; download</h3><p>Practise away from the screen.</p></header>
+          <div class="hiw-mode"><div class="mi">📄</div><div><h4>Whole Paper (PDF)</h4><p>A complete previous year paper, exactly as it appeared in the exam, with its answer key.</p></div></div>
+          <div class="hiw-mode"><div class="mi">📝</div><div><h4>MCQ as PDF</h4><p>A printable set of MCQs for a chapter or subtopic, with an answer key at the end.</p></div></div>
+          <div class="hiw-mode"><div class="mi">✍️</div><div><h4>Subjective Questions (PDF)</h4><p>A printable set of written questions for a chapter or subtopic, with model answers at the end.</p></div></div>
         </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>See where you stand</h3>
-          <p>Your practice builds a chapter-wise picture of your accuracy, so you know which chapters are strong and which need work.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">5</div>
-          <h3>Fix what you missed</h3>
-          <p>Questions you got wrong come back for revision, so mistakes become the next thing you practise.</p>
+      </div>
+      <div class="hiw-closing hiw-r">
+        <div><b>🖥️ On screen</b>when you want instant feedback and tracking.</div>
+        <div><b>🖨️ On paper</b>print or download when you want paper.</div>
+        <div><b>🔁 Revise</b>when you're ready to fix your mistakes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUESTION TYPES ============ -->
+  <section class="hiw-section hiw-alt">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">Question Types</span>
+        <h2>Every kind of question the board asks</h2>
+        <p>Practised the way they appear in the paper.</p>
+      </div>
+      <div class="hiw-bento">
+        <div class="hiw-tile tg s3 hiw-r"><span class="tag">MCQ</span><h3>Objective questions</h3><p>Quick, focused practice with instant marking and explanations.</p><span class="bg">🧠</span></div>
+        <div class="hiw-tile to s3 hiw-r"><span class="tag">VSA · SA · LA</span><h3>Very short, short and long answer</h3><p>Organised by marks, just like the paper.</p><span class="bg">✏️</span></div>
+        <div class="hiw-tile tb s3 hiw-r"><span class="tag">Case-based</span><h3>Passage-driven questions</h3><p>The four-mark case-based questions, practised on their own.</p><span class="bg">📚</span></div>
+        <div class="hiw-tile tp s3 hiw-r"><span class="tag">Full papers</span><h3>Previous year papers</h3><p>Downloadable papers with answers, when you want a full-paper attempt.</p><span class="bg">📄</span></div>
+        <div class="hiw-tile dark s6 hiw-r">
+          <div>
+            <span class="tag">Why PYQs</span>
+            <h3>The closest thing to the real exam</h3>
+            <p>PYQs show the board's language, its question patterns and its difficulty level. MindVsYou adds what a PDF can't: questions sorted by topic, instant feedback and a record of your progress.</p>
+          </div>
+          <div class="hiw-why">
+            <div><span>🗣️</span> The board's own language</div>
+            <div><span>🧩</span> Real question patterns</div>
+            <div><span>🎯</span> The actual difficulty level</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       SEVEN WAYS TO PRACTISE PYQs
-       ============================================================ -->
-  <section class="features">
-    <div class="container">
-      <span class="eyebrow">Practice Modes</span>
-      <h2>Seven ways to practise PYQs</h2>
-      <p class="sub">Different days call for different kinds of practice. MindVsYou gives you a mode for each.</p>
-      <div class="feat-grid">
-        <div class="feat-card">
-          <div class="feat-icon">🧠</div>
-          <h3>MCQ Practice</h3>
-          <p>Answer board MCQs one by one and get instant marking with explanations. Your accuracy is tracked chapter by chapter.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">✏️</div>
-          <h3>Subjective Practice</h3>
-          <p>Attempt written questions (very short, short, long and case-based), reveal the model answer, then rate yourself honestly. Your self-ratings are tracked.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🔁</div>
-          <h3>Revise Wrong Answers (MCQ)</h3>
-          <p>Go back over the MCQs you got wrong, and revisit them until they stick.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📖</div>
-          <h3>Revise Wrong Answers (Subjective)</h3>
-          <p>Revisit the written questions you rated as missed or only partly right.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📄</div>
-          <h3>Whole Paper (PDF)</h3>
-          <p>A complete previous year paper, exactly as it appeared in the exam, with its answer key.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📝</div>
-          <h3>MCQ as PDF</h3>
-          <p>A printable set of MCQs for a chapter or subtopic, with an answer key at the end. It's for practising on paper instead of on a screen.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">✍️</div>
-          <h3>Subjective Questions (PDF)</h3>
-          <p>A printable set of written questions for a chapter or subtopic, with model answers at the end.</p>
-        </div>
+  <!-- ============ VERSUS ============ -->
+  <section class="hiw-section">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">Compare</span>
+        <h2>MindVsYou vs. a PDF of PYQs</h2>
+        <p>A PDF is a document. MindVsYou is a practice partner.</p>
       </div>
-      <p class="sub" style="margin-top:32px; margin-bottom:0; text-align:center;">
-        Practise on screen when you want instant feedback and tracking. Print or download when you want paper. Revise when you're ready to fix your mistakes.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       QUESTION TYPES + WHY PYQ
-       ============================================================ -->
-  <section class="how">
-    <div class="container">
-      <span class="eyebrow">Question Types</span>
-      <h2>Every kind of question the board asks</h2>
-      <p class="sub" style="text-align:center; margin-bottom:48px;">Practised the way they appear in the paper.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">🧠</div>
-          <h3>Objective (MCQ)</h3>
-          <p>Quick, focused practice with instant marking and explanations.</p>
+      <div class="hiw-vs">
+        <div class="hiw-vs-card no hiw-r">
+          <h3>📄 A PDF of PYQs</h3>
+          <ul>
+            <li><span><small>Finding questions</small>Scroll through a whole paper</span></li>
+            <li><span><small>Feedback</small>Check the answer key later</span></li>
+            <li><span><small>Your progress</small>Not tracked</span></li>
+            <li><span><small>Your mistakes</small>Flip back and hunt for them</span></li>
+            <li><span><small>Written answers</small>Self-check with no record</span></li>
+          </ul>
         </div>
-        <div class="step">
-          <div class="step-num">✏️</div>
-          <h3>Very short, short and long answer</h3>
-          <p>Organised by marks, just like the paper.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">📚</div>
-          <h3>Case-based</h3>
-          <p>The passage-driven, four-mark questions, practised on their own.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">📄</div>
-          <h3>Full papers</h3>
-          <p>Downloadable previous year papers with answers, when you want a full-paper attempt.</p>
-        </div>
-      </div>
-      <p class="sub" style="margin-top:40px; margin-bottom:0; text-align:center; max-width:720px; margin-left:auto; margin-right:auto;">
-        <strong>Why previous year questions?</strong> PYQs are the closest thing to the real exam. They show the board's language, its question patterns and its difficulty level. MindVsYou adds what a PDF can't: questions sorted by topic, instant feedback and a record of your progress.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       COMPARISON
-       ============================================================ -->
-  <section class="features" style="background:var(--off-white);">
-    <div class="container">
-      <span class="eyebrow">Compare</span>
-      <h2>MindVsYou vs. a PDF of PYQs</h2>
-      <p class="sub">A PDF is a document. MindVsYou is a practice partner.</p>
-      <div style="max-width:860px; margin:0 auto; overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; font-size:0.95rem;">
-          <thead>
-            <tr style="background:var(--off-white); text-align:left;">
-              <th style="padding:14px 18px;"></th>
-              <th style="padding:14px 18px;">A PDF of PYQs</th>
-              <th style="padding:14px 18px; color:var(--green);">MindVsYou</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-top:1px solid var(--border);"><td style="padding:14px 18px; font-weight:700;">Finding questions</td><td style="padding:14px 18px;">Scroll through a whole paper</td><td style="padding:14px 18px;">Choose by chapter and subtopic</td></tr>
-            <tr style="border-top:1px solid var(--border);"><td style="padding:14px 18px; font-weight:700;">Feedback</td><td style="padding:14px 18px;">Check the answer key later</td><td style="padding:14px 18px;">Instant, question by question</td></tr>
-            <tr style="border-top:1px solid var(--border);"><td style="padding:14px 18px; font-weight:700;">Your progress</td><td style="padding:14px 18px;">Not tracked</td><td style="padding:14px 18px;">Visible chapter by chapter</td></tr>
-            <tr style="border-top:1px solid var(--border);"><td style="padding:14px 18px; font-weight:700;">Your mistakes</td><td style="padding:14px 18px;">Flip back and hunt for them</td><td style="padding:14px 18px;">Brought back for revision</td></tr>
-            <tr style="border-top:1px solid var(--border);"><td style="padding:14px 18px; font-weight:700;">Written answers</td><td style="padding:14px 18px;">Self-check with no record</td><td style="padding:14px 18px;">Model answer comparison and self-rating</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       WHO IT'S FOR
-       ============================================================ -->
-  <section class="features">
-    <div class="container">
-      <span class="eyebrow">Who It's For</span>
-      <h2>Clarity for students, parents and teachers</h2>
-      <div class="feat-grid" style="max-width:960px;">
-        <div class="feat-card">
-          <div class="feat-icon">🎓</div>
-          <h3>Students</h3>
-          <p>Clarity and momentum. You always know which chapter to work on and which mistakes to fix, and you can see your accuracy improve.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">👨‍👩‍👧</div>
-          <h3>Parents</h3>
-          <p>A way to see real effort and progress without hovering: which chapters are going well and which need support.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🍎</div>
-          <h3>Teachers</h3>
-          <p>A clearer view of where students struggle, chapter by chapter. A focused PYQ practice resource to recommend for board exam preparation.</p>
+        <div class="hiw-vs-card yes hiw-r">
+          <h3>🚀 MindVsYou</h3>
+          <ul>
+            <li><span><small>Finding questions</small>Choose by chapter and subtopic</span></li>
+            <li><span><small>Feedback</small>Instant, question by question</span></li>
+            <li><span><small>Your progress</small>Visible chapter by chapter</span></li>
+            <li><span><small>Your mistakes</small>Brought back for revision</span></li>
+            <li><span><small>Written answers</small>Model answer comparison and self-rating</span></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FAQ
-       ============================================================ -->
-  <section class="faq-section" style="background:var(--off-white);">
-    <div class="container">
-      <span class="eyebrow">FAQ</span>
-      <h2>Frequently asked questions</h2>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">What is MindVsYou?</h3>
-          <div class="faq-a open">MindVsYou is an online CBSE exam-practice platform, currently for Class 10 Science. Students practise real previous year board questions (PYQs) chapter by chapter at quiz.mindvsyou.io, get instant feedback, and see which chapters and questions need more revision.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Is MindVsYou free?</h3>
-          <div class="faq-a open">Yes. MindVsYou is currently in beta, and the first 100 students get full access to every feature for free. No credit card required. You can also try it as a guest with no account.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Which class and subject does MindVsYou cover?</h3>
-          <div class="faq-a open">CBSE Class 10 Science, using real previous year board questions. Mathematics is coming soon.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Do I need to download an app?</h3>
-          <div class="faq-a open">No. MindVsYou works in any browser on any device at quiz.mindvsyou.io. There is nothing to install.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Which years of previous year questions are covered?</h3>
-          <div class="faq-a open">MindVsYou currently covers CBSE Class 10 Science previous year questions from 2022 to 2025.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Does MindVsYou include case-based questions?</h3>
-          <div class="faq-a open">Yes. Case-based questions are practised alongside MCQs and very short, short and long answer questions, the way they appear in the CBSE paper.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Can I download previous year papers or practise on paper?</h3>
-          <div class="faq-a open">Yes. You can download a whole previous year paper with its answer key, and chapter-wise printable sets of MCQs and written questions with answers, for practising on paper instead of a screen.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">How is MindVsYou different from a PDF of previous year questions?</h3>
-          <div class="faq-a open">A PDF is a static document. MindVsYou organises questions by chapter and subtopic, marks objective questions instantly with explanations, lets you compare written answers with a model answer, tracks your progress chapter by chapter, and brings the questions you missed back for revision.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Is MindVsYou good for CBSE board exam revision?</h3>
-          <div class="faq-a open">Yes. Chapter-wise PYQ practice, instant feedback and revision of your mistakes are built for CBSE board exam preparation. It works alongside your textbook, school and teachers.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Can parents use MindVsYou to follow a child&#x27;s progress?</h3>
-          <div class="faq-a open">MindVsYou shows chapter-wise accuracy and the questions that still need revision, which helps parents see which chapters are going well and where their child needs support.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Can teachers recommend MindVsYou to students?</h3>
-          <div class="faq-a open">Yes. Teachers can recommend it as a focused PYQ practice resource for CBSE Class 10 Science. Students can try it free, with no account needed.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Is Mathematics available on MindVsYou?</h3>
-          <div class="faq-a open">Not yet. MindVsYou currently covers CBSE Class 10 Science, and Mathematics is coming soon.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">How do I report a wrong question?</h3>
-          <div class="faq-a open">You can flag any question in one tap from the practice screen, and it will be reviewed and fixed.</div>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-q" style="cursor:default; font-size:inherit; margin:0;">Who is behind MindVsYou?</h3>
-          <div class="faq-a open">MindVsYou is operated by Sparqity Private Limited. You can reach the team at hello@mindvsyou.io.</div>
-        </div>
+  <!-- ============ PERSONAS ============ -->
+  <section class="hiw-section hiw-alt">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">Who It's For</span>
+        <h2>Clarity for students, parents and teachers</h2>
+      </div>
+      <div class="hiw-personas">
+        <div class="hiw-persona p1 hiw-r"><div class="who"><i>🎓</i><h3>Students</h3></div><q>Always know what to fix next.</q><p>Clarity and momentum. You always know which chapter to work on and which mistakes to fix, and you can see your accuracy improve.</p></div>
+        <div class="hiw-persona p2 hiw-r"><div class="who"><i>👨‍👩‍👧</i><h3>Parents</h3></div><q>See real effort, without hovering.</q><p>A way to see real effort and progress: which chapters are going well and which need support.</p></div>
+        <div class="hiw-persona p3 hiw-r"><div class="who"><i>🍎</i><h3>Teachers</h3></div><q>Spot where students struggle.</q><p>A clearer view of where students struggle, chapter by chapter. A focused PYQ practice resource to recommend for board exam preparation.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BANNER -->
+  <!-- ============ FAQ ============ -->
+  <section class="hiw-section">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently asked questions</h2>
+        <p>Quick answers about MindVsYou and CBSE Class 10 Science PYQ practice.</p>
+      </div>
+      <div class="hiw-faqs">
+        <details class="hiw-faq" open>
+          <summary><h3>What is MindVsYou?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>MindVsYou is an online CBSE exam-practice platform, currently for Class 10 Science. Students practise real previous year board questions (PYQs) chapter by chapter at quiz.mindvsyou.io, get instant feedback, and see which chapters and questions need more revision.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Is MindVsYou free?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>Yes. MindVsYou is currently in beta, and the first 100 students get full access to every feature for free. No credit card required. You can also try it as a guest with no account.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Which class and subject does MindVsYou cover?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>CBSE Class 10 Science, using real previous year board questions. Mathematics is coming soon.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Do I need to download an app?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>No. MindVsYou works in any browser on any device at quiz.mindvsyou.io. There is nothing to install.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Which years of previous year questions are covered?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>MindVsYou currently covers CBSE Class 10 Science previous year questions from 2022 to 2025.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Does MindVsYou include case-based questions?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>Yes. Case-based questions are practised alongside MCQs and very short, short and long answer questions, the way they appear in the CBSE paper.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Can I download previous year papers or practise on paper?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>Yes. You can download a whole previous year paper with its answer key, and chapter-wise printable sets of MCQs and written questions with answers, for practising on paper instead of a screen.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>How is MindVsYou different from a PDF of previous year questions?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>A PDF is a static document. MindVsYou organises questions by chapter and subtopic, marks objective questions instantly with explanations, lets you compare written answers with a model answer, tracks your progress chapter by chapter, and brings the questions you missed back for revision.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Is MindVsYou good for CBSE board exam revision?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>Yes. Chapter-wise PYQ practice, instant feedback and revision of your mistakes are built for CBSE board exam preparation. It works alongside your textbook, school and teachers.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Can parents use MindVsYou to follow a child&#x27;s progress?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>MindVsYou shows chapter-wise accuracy and the questions that still need revision, which helps parents see which chapters are going well and where their child needs support.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Can teachers recommend MindVsYou to students?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>Yes. Teachers can recommend it as a focused PYQ practice resource for CBSE Class 10 Science. Students can try it free, with no account needed.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Is Mathematics available on MindVsYou?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>Not yet. MindVsYou currently covers CBSE Class 10 Science, and Mathematics is coming soon.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>How do I report a wrong question?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>You can flag any question in one tap from the practice screen, and it will be reviewed and fixed.</p>
+        </details>
+        <details class="hiw-faq">
+          <summary><h3>Who is behind MindVsYou?</h3><span class="hiw-faq-icon" aria-hidden="true">+</span></summary>
+          <p>MindVsYou is operated by Sparqity Private Limited. You can reach the team at hello@mindvsyou.io.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
   <section class="cta-banner">
     <div class="container">
+      <span class="hiw-cta-note">🎟️ Free for the first 100 students</span>
       <h2>Stop scrolling through PDFs. Start practising with purpose. 🎯</h2>
       <p>Pick a chapter and see where you stand.</p>
       <a href="https://quiz.mindvsyou.io" class="btn btn-green">🖥️ Start Practising Free</a>
@@ -474,6 +682,17 @@
 
   <footer id="footer"></footer>
 
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.hiw-r');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e, i) { e.style.transitionDelay = (i % 3) * 80 + 'ms'; io.observe(e); });
+    })();
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
