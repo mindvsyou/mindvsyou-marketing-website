@@ -18,13 +18,39 @@
 - [How It Works](https://mindvsyou.io/how-it-works.html): Chapter-wise PYQ practice, the seven practice modes, question types covered, and who it is for.
 - [FAQ](https://mindvsyou.io/faq.html): Detailed answers on pricing, registration, PYQ practice, progress tracking, and data privacy.
 - [About](https://mindvsyou.io/about.html): Mission and founding story.
-- [Blog](https://mindvsyou.io/blog.html): CBSE Class 10 study tips and exam-pattern guides.
+- [Blog](https://mindvsyou.io/blog.html): CBSE Class 10 Science guides on PYQs, MCQs, case-based and Assertion-Reason questions, revision and board preparation.
 - [Contact](https://mindvsyou.io/contact.html): Support and partnership contact form.
 
-## Blog posts
-- [How to practice case-based questions for CBSE Class 10 boards](https://mindvsyou.io/case-based-questions-cbse-class-10.html)
-- [Why online practice beats cramming from textbooks alone](https://mindvsyou.io/online-practice-vs-textbook-cramming.html)
-- [CBSE Class 10 board exam pattern explained](https://mindvsyou.io/cbse-class-10-exam-pattern-explained.html)
-- [The 15-minute daily practice rule that top-scoring students swear by](https://mindvsyou.io/15-minute-daily-practice-rule.html)
-- [How schools can build a daily practice culture without extra burden on teachers](https://mindvsyou.io/how-schools-build-daily-practice-culture.html)
-- [Science MCQs for Class 10 boards — the concepts you cannot skip](https://mindvsyou.io/science-mcq-important-concepts-class-10.html)
+## Blog guides (CBSE Class 10 Science)
+
+### PYQ practice
+- [CBSE Class 10 Science PYQs: what they are, why they matter and how to use them](https://mindvsyou.io/cbse-class-10-science-pyq.html): What CBSE Class 10 Science PYQs are, how they help board preparation, how many to solve and how to practise them chapter by chapter with instant feedback.
+- [How to practise Class 10 Science PYQs: a step-by-step method](https://mindvsyou.io/how-to-practise-class-10-science-pyqs.html): A practical 6-step method to practise CBSE Class 10 Science PYQs: attempt first, review every mistake, revisit wrong answers and move to full papers at the right time.
+- [How many years of PYQs should you solve for CBSE Class 10 Science?](https://mindvsyou.io/how-many-years-of-pyqs-should-you-solve.html): How many years of CBSE Class 10 Science PYQs are enough? A practical answer: 3 to 5 board years, weighted towards recent papers. Here is how to plan them.
+- [Chapter-wise vs full-paper PYQ practice: which is better for CBSE Class 10 Science?](https://mindvsyou.io/chapter-wise-vs-full-paper-pyq-practice.html): Should you practise CBSE Class 10 Science PYQs chapter-wise or as full papers? Both, in the right order. Here is when to use each and how to switch.
+- [8 common PYQ practice mistakes that quietly cost Class 10 Science students marks](https://mindvsyou.io/common-pyq-practice-mistakes.html): The most common mistakes students make when practising CBSE Class 10 Science PYQs, from peeking at answers to skipping review, with a simple fix for each.
+
+### Mcq practice
+- [CBSE Class 10 Science MCQ practice: how to prepare and what to focus on](https://mindvsyou.io/cbse-class-10-science-mcq-practice.html): How to prepare for CBSE Class 10 Science MCQs: what they test, a 5-step practice method, how much to practise and how to track accuracy chapter by chapter.
+- [Important Class 10 Science MCQ concepts, chapter by chapter](https://mindvsyou.io/science-mcq-important-concepts-class-10.html): The Class 10 Science concepts that show up again and again in MCQs and case-based questions, chapter by chapter across Chemistry, Physics and Biology.
+- [Common Class 10 Science MCQ mistakes, and how to improve your accuracy](https://mindvsyou.io/common-science-mcq-mistakes.html): The most common CBSE Class 10 Science MCQ mistakes, from misreading NOT/EXCEPT to unit slips and diagram errors, and 7 ways to improve MCQ accuracy.
+
+### Case-based questions
+- [Case-based questions in CBSE Class 10 Science: what they are and how to solve them](https://mindvsyou.io/case-based-questions-cbse-class-10.html): What case-based questions are in CBSE Class 10 Science, a 5-step method to solve them, and how to practise them so passages stop feeling unfamiliar.
+- [Common case-based question mistakes in Class 10 Science (and how to avoid them)](https://mindvsyou.io/common-case-based-question-mistakes.html): The most common mistakes students make in CBSE Class 10 Science case-based questions, from skipping the passage to over-writing, and a simple fix for each.
+
+### Assertion-reason questions
+- [Assertion-Reason questions in Class 10 Science: how to solve them and practise well](https://mindvsyou.io/assertion-reason-questions-class-10-science.html): What Assertion-Reason questions are in CBSE Class 10 Science, a 3-step method to solve them, the four options decoded, common mistakes and a practice strategy.
+
+### Board preparation
+- [How to prepare for CBSE Class 10 Science boards: a practical plan](https://mindvsyou.io/how-to-prepare-class-10-science-for-boards.html): A practical plan to prepare CBSE Class 10 Science for the board exam: cover the syllabus, start PYQs early, revise with practice, fix weak chapters and run timed papers.
+- [How to revise Class 10 Science: combine revision and practice for boards](https://mindvsyou.io/how-to-revise-class-10-science.html): How to revise CBSE Class 10 Science effectively: why rereading fails, a weekly revise-then-test loop, and how to combine revision with PYQ practice.
+- [How to find your weak areas in Class 10 Science and use practice data to improve](https://mindvsyou.io/how-to-find-weak-areas-class-10-science.html): How to identify weak chapters and topics in CBSE Class 10 Science using practice data: chapter-wise accuracy, error types and a simple weekly review that improves marks.
+- [CBSE Class 10 Science exam pattern explained: sections, marks and question types](https://mindvsyou.io/cbse-class-10-exam-pattern-explained.html): CBSE Class 10 Science exam pattern explained: sections, marks, MCQ, Assertion-Reason, short, long and case-based questions, internal assessment and how to prepare.
+
+### Practice & learning
+- [Why active practice beats passive reading (and how repetition builds retention)](https://mindvsyou.io/online-practice-vs-textbook-cramming.html): Why answering questions beats rereading for CBSE Class 10 Science, how repeated, spaced practice improves retention, and how to apply it before boards.
+- [How to build a daily Science practice routine with the 15-minute rule](https://mindvsyou.io/15-minute-daily-practice-rule.html): How to build a daily CBSE Class 10 Science practice routine with the 15-minute rule: what to do each day, how to make it stick and how to scale it before boards.
+
+### For schools
+- [How schools can build a daily practice culture without extra burden on teachers](https://mindvsyou.io/how-schools-build-daily-practice-culture.html): A practical guide for school leaders who want better results without overloading their staff.

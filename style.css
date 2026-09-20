@@ -450,3 +450,42 @@ footer {
   .stats-inner { gap: 24px; }
   .scroll-nudge { left: 16px; right: 16px; bottom: 16px; width: auto; }
 }
+
+/* ---- BLOG ARTICLE COMPONENTS (quick answer, TOC, FAQ, cluster hub) ---- */
+.quick-answer { background: #E7F9EE; border-left: 4px solid var(--green); border-radius: 12px; padding: 18px 22px; margin: 0 0 28px; }
+.quick-answer .qa-label { display: block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 6px; }
+.post-body .quick-answer p { color: var(--text-dark); margin-bottom: 0; font-size: 1.02rem; }
+.post-toc { background: var(--off-white); border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin: 0 0 32px; }
+.post-toc h2 { font-size: 0.85rem !important; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin: 0 0 10px !important; }
+.post-body .post-toc ol { margin: 0 0 0 20px; font-size: 0.95rem; }
+.post-body .post-toc li { margin-bottom: 4px; }
+.post-toc a { color: var(--text-mid); text-decoration: none; }
+.post-toc a:hover { color: var(--green-dark); text-decoration: underline; }
+.post-body a { color: var(--green-dark); font-weight: 600; }
+.post-body a.btn { color: var(--white); font-weight: 700; }
+.post-body table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 0.95rem; }
+.post-body th, .post-body td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; color: var(--text-mid); vertical-align: top; }
+.post-body th { background: var(--off-white); color: var(--text-dark); }
+.post-callout { background: #FFF7ED; border-left: 4px solid var(--orange); border-radius: 12px; padding: 16px 20px; margin: 0 0 20px; }
+.post-body .post-callout p { margin-bottom: 0; }
+.post-faq { margin-top: 8px; }
+.post-faq details { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 10px; background: var(--white); }
+.post-faq summary { cursor: pointer; padding: 14px 18px; font-weight: 700; font-size: 1rem; list-style: none; }
+.post-faq summary::-webkit-details-marker { display: none; }
+.post-faq summary::after { content: '+'; float: right; color: var(--green); font-size: 1.2rem; line-height: 1; }
+.post-faq details[open] summary::after { content: '\2212'; }
+.post-body .post-faq p { padding: 0 18px 14px; margin: 0; font-size: 0.98rem; }
+.post-cta .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.post-cta .cta-sub { font-size: 0.85rem; margin: 14px 0 0; }
+.post-cta .cta-sub a { color: var(--green-dark); font-weight: 600; }
+.related-posts .cluster-link { display: inline-block; margin-top: 14px; font-size: 0.88rem; color: var(--text-light); }
+.blog-cluster { max-width: var(--max-width); margin: 0 auto 56px; }
+.blog-cluster-head { margin-bottom: 20px; }
+.blog-cluster-head h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
+.blog-cluster-head p { color: var(--text-mid); max-width: 720px; margin-top: 6px; }
+.blog-cluster .blog-grid { margin: 0; }
+.blog-card.pillar { border-color: var(--green); box-shadow: 0 6px 24px rgba(37,211,102,0.12); }
+.blog-start { max-width: var(--max-width); margin: 0 auto 56px; background: var(--navy); color: var(--white); border-radius: 20px; padding: 32px 36px; }
+.blog-start h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+.blog-start p { color: rgba(255,255,255,0.75); margin-bottom: 18px; max-width: 640px; }
+.blog-start .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
