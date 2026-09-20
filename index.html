@@ -21,6 +21,13 @@
   <meta name="twitter:description" content="Practice CBSE Class 10 Science MCQs, case-based questions and PYQs online — free, no app download needed." />
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hiw.css" />
+  <style>
+    .hm-steps3 { grid-template-columns: repeat(3, 1fr); }
+    .hm-steps3::before { left: 16.6%; right: 16.6%; }
+    .hm-actions { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 40px; }
+    @media (max-width: 980px) { .hm-steps3 { grid-template-columns: 1fr; } .hm-steps3::before { left: 34px; right: auto; } }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -53,247 +60,165 @@
 </head>
 <body>
 
-  <!-- NAVBAR (auto-generated) -->
   <nav id="navbar"></nav>
 
-  <!-- ============================================================
-       HERO SECTION
-       ✏️ EDIT anything between the tags below
-       ============================================================ -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge">
-        <!-- ✏️ EDIT: Small badge text at top -->
-        🎓 Built for CBSE Class 10 Board Students
+  <!-- ============ HERO ============ -->
+  <section class="hiw-hero">
+    <div class="hiw-wrap hiw-hero-grid">
+      <div>
+        <div class="hero-badge">🎓 Built for CBSE Class 10 Board Students</div>
+        <h1>Board Exam Prep,<br><span class="accent">Right in Your Browser</span></h1>
+        <p class="hiw-hero-lead">Practise real CBSE Class 10 Science previous year questions chapter by chapter, get instant answers with explanations, and let MindVsYou bring your mistakes back until they stick.</p>
+        <div class="btns">
+          <a href="https://quiz.mindvsyou.io" class="btn btn-green">🖥️ Practice on Web — It's Free</a>
+          <a href="how-it-works.html" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.35);">See How It Works</a>
+        </div>
+        <div class="hiw-chips">
+          <span class="hiw-chip">✅ <b>No app</b> to install</span>
+          <span class="hiw-chip">📅 <b>2022–2025</b> board papers</span>
+          <span class="hiw-chip">🆓 <b>Free</b> for the first 100</span>
+        </div>
       </div>
-      <h1>
-        <!-- ✏️ EDIT: Main headline -->
-        Board Exam Prep,<br>
-        <span class="accent">Right in Your Browser</span>
-      </h1>
-      <p>
-        <!-- ✏️ EDIT: Subheadline description -->
-        Practice CBSE-specific MCQs and case-based questions online — no app download needed. Sign in and start practicing in seconds.
-      </p>
-      <div class="hero-btns">
-  <!-- ✏️ EDIT: Button text and links -->
-  <a href="https://quiz.mindvsyou.io" class="btn btn-green">
-    🖥️ Practice on Web — It's Free
-  </a>
-  <a href="students.html" class="btn btn-outline">See Student Features</a>
-</div>
-    </div>
-  </section>
 
-  <!-- ============================================================
-       STATS BAR
-       ✏️ EDIT: Numbers and labels below
-       ============================================================ -->
-  <section class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat">
-        <div class="stat-num">First 100</div>  <!-- ✏️ EDIT -->
-        <div class="stat-label">Beta Users — All Free</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">Science</div>  <!-- ✏️ EDIT -->
-        <div class="stat-label">CBSE Class 10 (Maths coming soon)</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">PYQ + MCQs</div>  <!-- ✏️ EDIT -->
-        <div class="stat-label">Practice Formats</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">Zero</div>  <!-- ✏️ EDIT -->
-        <div class="stat-label">App Downloads Needed</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       HOW IT WORKS
-       ✏️ EDIT: Steps below
-       ============================================================ -->
-  <section class="how">
-    <div class="container">
-      <span class="eyebrow">How It Works</span>
-      <h2>Start practicing in 3 steps</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <!-- ✏️ EDIT step title and description -->
-          <h3>Go to quiz.mindvsyou.io</h3>
-          <p>No app download. No installation. Just open the link in any browser.</p>
+      <div class="hiw-phone-stage" aria-hidden="true">
+        <div class="hiw-phone-box">
+        <div class="hiw-float f1">
+          <strong>🔁 Revision queue</strong>
+          <small>Electricity · 4 missed</small>
+          <div class="hiw-bar"><span style="width:60%;background:var(--orange)"></span></div>
+          <small style="display:block;margin-top:8px;">Life Processes · 2 missed</small>
+          <div class="hiw-bar"><span style="width:30%;background:var(--green)"></span></div>
+          <small style="display:block;margin-top:6px;opacity:.7;">Sample view</small>
         </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Sign in</h3>
-          <p>Log in with your Student ID and PIN and your practice session starts instantly.</p>
+        <div class="hiw-phone">
+          <div class="hiw-phone-top">
+            <div class="hiw-avatar">M</div>
+            <div><strong>MindVsYou</strong><span>Revise Wrong Answers · MCQ</span></div>
+          </div>
+          <div class="hiw-chat">
+            <div class="hiw-bubble fb" style="background:var(--hiw-orange-soft);border-color:#ffd2b8;"><b style="color:var(--orange);">🔁 Revising a missed question</b> You got this one wrong last time. Try it again!</div>
+            <div class="hiw-bubble q"><small>Electricity · MCQ</small>If the resistance of a conductor is halved and the potential difference stays the same, the current becomes:</div>
+            <div class="hiw-opts">
+              <div class="hiw-opt"><i>A</i> Half</div>
+              <div class="hiw-opt ok"><i>B</i> Double</div>
+              <div class="hiw-opt"><i>C</i> Unchanged</div>
+            </div>
+            <div class="hiw-bubble a">B</div>
+            <div class="hiw-bubble fb"><b>✓ Fixed!</b> Current = V ÷ R, so halving R doubles the current.</div>
+          </div>
         </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Pick your subject</h3>
-          <p>Start with Science — CBSE-aligned MCQs, case-based and written-answer questions. Maths is coming soon.</p>
+        <div class="hiw-float f2">
+          <strong>✅ Mistake fixed</strong>
+          <small>Missed questions come back until they stick.</small>
         </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Get instant feedback</h3>
-          <p>See the correct answer and explanation right after each question. Learn as you practice.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FEATURES — STUDENTS
-       ============================================================ -->
-  <section class="features">
-    <div class="container">
-      <span class="eyebrow">For Students</span>
-      <!-- ✏️ EDIT heading and subtext -->
-      <h2>Everything you need to ace your boards</h2>
-      <p class="sub">Designed specifically for Class 10 CBSE students preparing for board exams.</p>
-      <div class="feat-grid">
-        <!-- ✏️ EDIT: Each card below — icon, title, description -->
-        <div class="feat-card">
-          <div class="feat-icon">🖥️</div>
-          <h3>Online — No App Needed</h3>
-          <p>Practice directly in your browser. No extra app to install — just your Student ID and PIN.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📝</div>
-          <h3>CBSE MCQs & Case-Based Questions</h3>
-          <p>Questions are aligned with the CBSE syllabus and board exam pattern for Class 10.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">⚡</div>
-          <h3>Instant Answer & Explanation</h3>
-          <p>Get the correct answer with a clear explanation right after you respond — learn in real time.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🎯</div>
-          <h3>Chapter-wise PYQ Practice</h3>
-          <p>Pick a chapter and practice real previous year board questions at your own pace, anytime.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🔁</div>
-          <h3>Practice Anytime, Anywhere</h3>
-          <p>On the bus, after dinner, between classes — practice whenever you have a few free minutes.</p>
-        </div>
-        <div class="feat-card">
-          <!-- ✏️ EDIT -->
-          <div class="feat-icon">🗂️</div>
-          <h3>PYQ Practice + Auto-Revision</h3>
-          <p>Practice previous year board questions for Maths and Science. We track every correct and incorrect answer, so you can revise all your mistakes anytime.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🆓</div>
-          <h3>Free to Start</h3>
-          <p>Log in and start practicing right away. No credit card, no trial period — just learning.</p>
-        </div>
+  <!-- ============ STATS ============ -->
+  <div class="hiw-stats hiw-wrap">
+    <div class="hiw-stats-card hiw-r">
+      <div class="hiw-stat"><b>First 100</b><span>Beta students, all free</span></div>
+      <div class="hiw-stat"><b>Science</b><span>CBSE Class 10 (Maths coming soon)</span></div>
+      <div class="hiw-stat"><b>2022–25</b><span>Years of real board PYQs</span></div>
+      <div class="hiw-stat"><b>0</b><span>Apps to download</span></div>
+    </div>
+  </div>
+
+  <!-- ============ BENEFITS ============ -->
+  <section class="hiw-section">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">For Students</span>
+        <h2>Everything you need to ace your boards</h2>
+        <p>Designed specifically for CBSE Class 10 students preparing for the board exam.</p>
       </div>
-      <div style="margin-top:36px;">
-        <a href="students.html" class="btn btn-green">See All Student Features</a>
+      <div class="hiw-bento">
+        <div class="hiw-tile tg s3 hiw-r"><span class="tag">PYQ Practice</span><h3>Chapter-wise board questions</h3><p>Pick a chapter or subtopic and practise real CBSE previous year questions at your own pace, MCQs and case-based questions included.</p><span class="bg">🎯</span></div>
+        <div class="hiw-tile to s3 hiw-r"><span class="tag">Instant feedback</span><h3>Answer and explanation, right away</h3><p>Know straight away whether you got it right, with a clear explanation so you learn while you practise.</p><span class="bg">⚡</span></div>
+        <div class="hiw-tile tb s2 hiw-r"><span class="tag">Auto-revision</span><h3>Mistakes come back</h3><p>Every wrong answer is tracked, so you can revise all your mistakes anytime.</p><span class="bg">🔁</span></div>
+        <div class="hiw-tile tp s2 hiw-r"><span class="tag">Print &amp; download</span><h3>Practise on paper too</h3><p>Download whole papers and chapter-wise MCQ and written sets with answers.</p><span class="bg">📄</span></div>
+        <div class="hiw-tile to s2 hiw-r"><span class="tag">Anywhere</span><h3>Works in any browser</h3><p>On the bus, after dinner or between classes. Just open quiz.mindvsyou.io on your phone or laptop.</p><span class="bg">📱</span></div>
+        <div class="hiw-tile dark s6 hiw-r">
+          <div>
+            <span class="tag">Free to start</span>
+            <h3>Start free. No credit card, no app.</h3>
+            <p>MindVsYou is in beta and every feature is free for our first 100 students. See all seven practice modes and how a session works before you begin.</p>
+            <a href="how-it-works.html" class="btn btn-green" style="margin-top:18px;">See How It Works</a>
+          </div>
+          <div class="hiw-why">
+            <div><span>🗂️</span> Organised by chapter and subtopic</div>
+            <div><span>📈</span> Chapter-wise accuracy tracking</div>
+            <div><span>🧭</span> Seven ways to practise PYQs</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       CTA BANNER
-       ============================================================ -->
-  <section class="cta-banner">
-    <div class="container">
-      <!-- ✏️ EDIT: Banner text and button -->
-      <h2>Ready to start practicing?</h2>
-      <p>Be one of our first 100 beta users — every feature is free for you.</p>
-      <a href="https://quiz.mindvsyou.io" class="btn btn-green">
-  🖥️ Practice on Web — Free
-</a>
+  <!-- ============ 3 STEPS ============ -->
+  <section class="hiw-section hiw-alt">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">Get Started</span>
+        <h2>Start practising in 3 steps</h2>
+        <p>From opening the link to your first explained answer in under a minute.</p>
+      </div>
+      <div class="hiw-steps hm-steps3">
+        <div class="hiw-step hiw-r" style="--c:var(--green)"><div class="dot">🖥️<em>1</em></div><div><h3>Open quiz.mindvsyou.io</h3><p>No download, no installation. Just open the link in any browser.</p></div></div>
+        <div class="hiw-step hiw-r" style="--c:var(--orange)"><div class="dot">📚<em>2</em></div><div><h3>Pick your chapter</h3><p>Start with Class 10 Science. Choose a chapter and the type of question you want. Maths is coming soon.</p></div></div>
+        <div class="hiw-step hiw-r" style="--c:var(--hiw-blue)"><div class="dot">⚡<em>3</em></div><div><h3>Get instant feedback</h3><p>See the correct answer and explanation after every question, and revise your mistakes later.</p></div></div>
+      </div>
+      <div class="hm-actions hiw-r">
+        <a href="https://quiz.mindvsyou.io" class="btn btn-green">🖥️ Practice on Web — Free</a>
+        <a href="how-it-works.html" class="btn btn-outline">Explore the 5-step flow</a>
+      </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FOR SCHOOLS TEASER
-       ============================================================ -->
-  <section class="features" style="background:var(--off-white);">
-    <div class="container">
-      <span class="eyebrow">For Schools & Teachers</span>
-      <!-- ✏️ EDIT -->
-      <h2>Help your students practice at scale</h2>
-      <p class="sub">Give your entire Class 10 batch access to daily online practice without extra infrastructure.</p>
-      <div class="feat-grid">
-        <div class="feat-card">
-          <div class="feat-icon">🏫</div>
-          <h3>Bulk Student Onboarding</h3>
-          <p>Enroll your entire class in minutes with a simple shared link or QR code.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">📊</div>
-          <h3>Practice Reports</h3>
-          <p>Track how many questions each student has attempted and identify gaps early.</p>
-        </div>
-        <div class="feat-card">
-          <div class="feat-icon">🔧</div>
-          <h3>No IT Setup Required</h3>
-          <p>Students use their own phones or computers. Zero tech barrier for your school.</p>
-        </div>
+  <!-- ============ SCHOOLS ============ -->
+  <section class="hiw-section">
+    <div class="hiw-wrap">
+      <div class="hiw-head hiw-r">
+        <span class="eyebrow">For Schools &amp; Teachers</span>
+        <h2>Help your students practise at scale</h2>
+        <p>Give your entire Class 10 batch access to daily online practice without extra infrastructure.</p>
       </div>
-      <div style="margin-top:36px; display:flex; gap:14px; flex-wrap:wrap;">
+      <div class="hiw-personas">
+        <div class="hiw-persona p1 hiw-r"><div class="who"><i>🏫</i><h3>Bulk Student Onboarding</h3></div><q>Your whole class, in minutes.</q><p>Enrol an entire Class 10 batch with a simple shared link or QR code.</p></div>
+        <div class="hiw-persona p2 hiw-r"><div class="who"><i>📊</i><h3>Practice Reports</h3></div><q>Spot gaps early.</q><p>Track how many questions each student has attempted and see where they need support.</p></div>
+        <div class="hiw-persona p3 hiw-r"><div class="who"><i>🔧</i><h3>No IT Setup Required</h3></div><q>Zero tech barrier.</q><p>Students practise on their own phones or computers, so there is nothing for your school to install.</p></div>
+      </div>
+      <div class="hm-actions hiw-r">
         <a href="contact.html" class="btn btn-green">Request a Demo</a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       TESTIMONIALS
-       ✏️ EDIT: Each testimonial card
-       ============================================================ -->
-  <section class="testimonials">
+  <!-- ============ CTA ============ -->
+  <section class="cta-banner">
     <div class="container">
-      <span class="eyebrow">What Students Say</span>
-      <h2>Early feedback from our users</h2>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <!-- ✏️ EDIT: Quote, name, role -->
-          <p class="testi-text">"I just log in every morning and do 10 questions while having breakfast. My Science score jumped 15 marks in mocks!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar">AR</div>
-            <div>
-              <div class="testi-name">Aryan Raj</div>
-              <div class="testi-role">Class 10 Student, Delhi</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"The case-based questions are exactly like the board paper. No other app had this type of practice."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">PS</div>
-            <div>
-              <div class="testi-name">Priya Sharma</div>
-              <div class="testi-role">Class 10 Student, Mumbai</div>
-            </div>
-          </div>
-        </div>
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-text">"Our students already spend time on their phones. MindVsYou turns that time into productive study. Brilliant idea."</p>
-          <div class="testi-author">
-            <div class="testi-avatar">MK</div>
-            <div>
-              <div class="testi-name">Mrs. Meena Kapoor</div>
-              <div class="testi-role">Science Teacher, Jaipur</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <span class="hiw-cta-note">🎟️ Free for the first 100 students</span>
+      <h2>Ready to start practising? 🎯</h2>
+      <p>Pick a chapter and see where you stand. Every feature is free for our first 100 beta students.</p>
+      <a href="https://quiz.mindvsyou.io" class="btn btn-green">🖥️ Practice on Web — Free</a>
     </div>
   </section>
 
-  <!-- FOOTER (auto-generated) -->
   <footer id="footer"></footer>
 
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.hiw-r');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      els.forEach(function (e, i) { e.style.transitionDelay = (i % 3) * 80 + 'ms'; io.observe(e); });
+    })();
+  </script>
   <script src="main.js"></script>
 </body>
 </html>
