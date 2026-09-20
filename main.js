@@ -14,73 +14,20 @@ const CONFIG = {
   year:           new Date().getFullYear(),
 };
 
-// ---- NAV TEMPLATE ----
-function renderNav(activePage) {
-  const pages = [
-    { label: "Home",      href: "index.html" },
-    { label: "Students",  href: "students.html" },
-    { label: "How It Works", href: "how-it-works.html" },
-    { label: "About",     href: "about.html" },
-    { label: "Blog",      href: "blog.html" },
-    { label: "FAQ",       href: "faq.html" },
-    { label: "Practice Now ↗", href: CONFIG.appLink, cta: true },
-  ];
-  const links = pages.map(p =>
-    `<li><a href="${p.href}" class="${p.cta ? 'nav-cta' : ''}">${p.label}</a></li>`
-  ).join('');
-
-  document.getElementById('navbar').innerHTML = `
-    <div class="nav-inner">
-      <a class="nav-logo" href="index.html">${CONFIG.productName.replace(/(\w+)$/, '<span>$1</span>')}</a>
-      <ul class="nav-links" id="navLinks">${links}</ul>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>`;
-
-  document.getElementById('hamburger').addEventListener('click', () => {
+// ---- NAV / FOOTER ----
+// Markup is written directly into each page's HTML so crawlers that don't run
+// JavaScript still see every internal link. Keep the nav/footer identical across pages.
+function initNav() {
+  const btn = document.getElementById('hamburger');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
   });
 }
 
-// ---- FOOTER TEMPLATE ----
-function renderFooter() {
-  document.getElementById('footer').innerHTML = `
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a class="logo" href="index.html">${CONFIG.productName.replace(/(\w+)$/, '<span>$1</span>')}</a>
-        <p>Practice CBSE Class 10 MCQs and case-based questions online — no app download needed.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Product</h4>
-        <ul>
-          <li><a href="students.html">For Students</a></li>
-          <li><a href="how-it-works.html">How It Works</a></li>
-          <li><a href="${CONFIG.appLink}">Try Free</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="press.html">Press</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="${CONFIG.LinkedinLink}">Linkedin</a></li>
-          <li><a href="${CONFIG.instagramLink}">Instagram</a></li>
-          <li><a href="mailto:${CONFIG.contactEmail}">Email Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© ${CONFIG.year} ${CONFIG.productName}, a product of Sparqity Private Limited. All rights reserved. Made with ❤️ for CBSE students.</p>
-    </div>`;
+function initFooterYear() {
+  const el = document.getElementById('footerYear');
+  if (el) el.textContent = CONFIG.year;
 }
 
 // ---- FAQ ACCORDION ----
@@ -120,8 +67,8 @@ function initScrollNudge() {
 
 // ---- INIT ----
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('navbar'))  renderNav();
-  if (document.getElementById('footer'))  renderFooter();
+  initNav();
+  initFooterYear();
   if (document.querySelector('.faq-list')) initFAQ();
   if (document.getElementById('scrollNudge')) initScrollNudge();
 });
