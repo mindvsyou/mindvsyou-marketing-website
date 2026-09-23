@@ -65,9 +65,35 @@ function initScrollNudge() {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+// ---- CTA CONVERSION TRACKING ----
+// Sends a GA4 "cta_click" event for every link into the web app. Mark
+// cta_click as a key event in GA4 (Admin → Events) to count it as a conversion.
+// GA4 sends events with sendBeacon, so the hit survives the page navigating away.
+function ctaLocation(link) {
+  if (link.closest('nav')) return 'nav';
+  if (link.closest('footer')) return 'footer';
+  if (link.closest('#scrollNudge')) return 'scroll_nudge';
+  const section = link.closest('section');
+  if (section) return section.id || section.classList[0] || 'section';
+  return 'body';
+}
+
+function initCtaTracking() {
+  document.addEventListener('click', e => {
+    const link = e.target.closest('a[href^="' + CONFIG.appLink + '"]');
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', 'cta_click', {
+      cta_text: link.textContent.replace(/\s+/g, ' ').trim(),
+      cta_location: ctaLocation(link),
+      link_url: link.href,
+    });
+  });
+}
+
 // ---- INIT ----
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initCtaTracking();
   initFooterYear();
   if (document.querySelector('.faq-list')) initFAQ();
   if (document.getElementById('scrollNudge')) initScrollNudge();
