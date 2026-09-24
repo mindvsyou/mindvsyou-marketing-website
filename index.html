@@ -4,6 +4,10 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM406K6TT0"></script>
   <script>
+    // Show /index.html as / so GA reports the homepage as one page
+    if (location.pathname === '/index.html') {
+      history.replaceState(null, '', '/' + location.search + location.hash);
+    }
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
