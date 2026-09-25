@@ -34,7 +34,7 @@
 .hm-hero h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.3rem, 5.4vw, 4.1rem); line-height: 1.06; letter-spacing: -0.035em; max-width: 920px; margin: 0 auto 22px; }
 .hm-mark { position: relative; white-space: nowrap; z-index: 0; }
 .hm-mark::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: .04em; height: .34em; background: rgba(37,211,102,.38); border-radius: 6px; z-index: -1; transform: rotate(-1deg); }
-.hm-lead { font-size: 1.15rem; color: var(--text-mid); max-width: 640px; margin: 0 auto 32px; }
+.hm-lead { font-size: 1.15rem; color: var(--text-mid); max-width: 640px; margin: 0 auto 72px; }
 .hm-cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
 .hm-ghost { background: #fff; color: var(--text-dark); border: 2px solid var(--border); }
 .hm-ghost:hover { border-color: var(--text-dark); background: #fff; color: var(--text-dark); }
@@ -89,7 +89,9 @@
 .hm-brow .hm-b { max-width: calc(100% - 46px); }
 .hm-chips-in { padding-left: 44px; }
 .hm-step .ic .mindy { width: 46px; }
-.hm-final-m { width: 100px; margin: 0 auto 8px; position: relative; filter: drop-shadow(0 10px 18px rgba(13,27,42,.25)); }
+.hm-sitbtn { position: relative; }
+.hm-sitter { position: absolute; right: 26px; bottom: calc(100% - 12px); width: 78px; pointer-events: none; filter: drop-shadow(0 8px 12px rgba(13,27,42,.22)); }
+.hm-final-card .hm-sitbtn { margin-top: 56px; }
 
 /* hero chat plays as a short conversation */
 .hm-seq .hm-m { animation: hm-msg .5s ease both; max-height: 300px; overflow: hidden; }
