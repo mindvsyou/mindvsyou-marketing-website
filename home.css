@@ -54,7 +54,7 @@
 
 .hm-chat { background: #fff; border-radius: 26px 26px 0 0; border: 1px solid var(--border); border-bottom: none; box-shadow: 0 -10px 60px rgba(13,27,42,.10), 0 30px 80px rgba(13,27,42,.14); text-align: left; overflow: hidden; }
 .hm-chat-top { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--border); background: #fff; }
-.hm-av { width: 38px; height: 38px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; flex: none; }
+.hm-av { width: 40px; height: 40px; border-radius: 50%; background: var(--hm-mint); overflow: hidden; flex: none; } .hm-av svg { display: block; width: 100%; height: 100%; }
 .hm-chat-top strong { display: block; font-size: .92rem; line-height: 1.2; }
 .hm-chat-top span { display: flex; align-items: center; gap: 6px; font-size: .74rem; color: var(--text-light); }
 .hm-chat-top span i { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
@@ -80,6 +80,16 @@
 @keyframes hm-blink { 0%,80%,100% { opacity: .3; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
 .hm-chatcard .hm-msgs { background: transparent; padding: 0; min-height: 0; }
 .hm-chatcard .hm-m:first-child { margin-top: 0; }
+
+/* Mindy, the chat buddy */
+.mindy { display: block; width: 100%; height: auto; overflow: visible; }
+.hm-mascot { position: absolute; left: -175px; top: 260px; width: 150px; filter: drop-shadow(0 14px 22px rgba(13,27,42,.18)); animation: hm-bob 6s ease-in-out infinite; }
+.hm-brow { display: flex; align-items: flex-end; gap: 8px; max-width: 100%; }
+.hm-brow .mini { width: 36px; flex: none; }
+.hm-brow .hm-b { max-width: calc(100% - 46px); }
+.hm-chips-in { padding-left: 44px; }
+.hm-step .ic .mindy { width: 46px; }
+.hm-final-m { width: 100px; margin: 0 auto 8px; position: relative; filter: drop-shadow(0 10px 18px rgba(13,27,42,.25)); }
 
 /* hero chat plays as a short conversation */
 .hm-seq .hm-m { animation: hm-msg .5s ease both; max-height: 300px; overflow: hidden; }
@@ -171,7 +181,7 @@
 /* ---------- REVEAL ---------- */
 .js .hm-r { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
 .js .hm-r.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .hm-track, .hm-chip-float { animation: none; } .hm-seq .hm-m, .hm-seq .hm-opt.pick { animation: none; } .hm-seq .hm-typing { display: none; } .hm-seq .hm-opt.pick { border-color: var(--green); background: var(--hm-mint); } .js .hm-r { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-track, .hm-chip-float, .hm-mascot { animation: none; } .hm-seq .hm-m, .hm-seq .hm-opt.pick { animation: none; } .hm-seq .hm-typing { display: none; } .hm-seq .hm-opt.pick { border-color: var(--green); background: var(--hm-mint); } .js .hm-r { opacity: 1; transform: none; transition: none; } }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 980px) {
@@ -180,7 +190,7 @@
   .hm-split { grid-template-columns: 1fr; gap: 40px; }
   .hm-band-in { grid-template-columns: 1fr 1fr; row-gap: 30px; }
   .hm-num:nth-child(2) { border-right: none; }
-  .hm-chip-float { display: none; }
+  .hm-chip-float, .hm-mascot { display: none; }
 }
 @media (max-width: 640px) {
   .hm-section { padding: 64px 0; }

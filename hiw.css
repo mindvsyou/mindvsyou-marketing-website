@@ -36,6 +36,7 @@
   box-shadow: 0 0 0 8px #1b2b3d, 0 40px 80px rgba(0,0,0,.5); transform: rotate(2.5deg); }
 .hiw-phone-top { display: flex; align-items: center; gap: 10px; padding: 12px 12px 10px; border-bottom: 1px solid var(--border); }
 .hiw-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; font-weight: 800; font-family: var(--font-display); font-size: .9rem; }
+.hiw-avatar { background: #EAFBF1; overflow: hidden; } .hiw-avatar svg { width: 100%; height: 100%; }
 .hiw-phone-top strong { display: block; font-size: .85rem; line-height: 1.2; }
 .hiw-phone-top span { font-size: .7rem; color: var(--text-light); }
 .hiw-chat { padding: 14px 8px 8px; display: flex; flex-direction: column; gap: 10px; background: #F7F9FB; border-radius: 0 0 26px 26px; min-height: 392px; }
