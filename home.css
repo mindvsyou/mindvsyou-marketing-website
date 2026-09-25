@@ -82,14 +82,11 @@
 .hm-chatcard .hm-m:first-child { margin-top: 0; }
 
 /* Mindy, the chat buddy */
-.mindy { display: block; width: 100%; height: auto; overflow: visible; }
 .hm-brow { display: flex; align-items: flex-end; gap: 8px; max-width: 100%; }
 .hm-brow .mini { width: 36px; flex: none; }
 .hm-brow .hm-b { max-width: calc(100% - 46px); }
 .hm-chips-in { padding-left: 44px; }
-.hm-sitbtn { position: relative; }
-.hm-sitter { position: absolute; right: 26px; bottom: calc(100% - 12px); width: 78px; pointer-events: none; filter: drop-shadow(0 8px 12px rgba(13,27,42,.22)); }
-.hm-final-card .hm-sitbtn { margin-top: 56px; }
+.hm-final-card .sitbtn { margin-top: 56px; }
 
 /* hero chat plays as a short conversation */
 .hm-seq .hm-m { animation: hm-msg .5s ease both; max-height: 300px; overflow: hidden; }
