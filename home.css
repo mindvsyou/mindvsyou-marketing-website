@@ -83,12 +83,10 @@
 
 /* Mindy, the chat buddy */
 .mindy { display: block; width: 100%; height: auto; overflow: visible; }
-.hm-mascot { position: absolute; left: -175px; top: 260px; width: 150px; filter: drop-shadow(0 14px 22px rgba(13,27,42,.18)); animation: hm-bob 6s ease-in-out infinite; }
 .hm-brow { display: flex; align-items: flex-end; gap: 8px; max-width: 100%; }
 .hm-brow .mini { width: 36px; flex: none; }
 .hm-brow .hm-b { max-width: calc(100% - 46px); }
 .hm-chips-in { padding-left: 44px; }
-.hm-step .ic .mindy { width: 46px; }
 .hm-sitbtn { position: relative; }
 .hm-sitter { position: absolute; right: 26px; bottom: calc(100% - 12px); width: 78px; pointer-events: none; filter: drop-shadow(0 8px 12px rgba(13,27,42,.22)); }
 .hm-final-card .hm-sitbtn { margin-top: 56px; }
@@ -183,7 +181,7 @@
 /* ---------- REVEAL ---------- */
 .js .hm-r { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
 .js .hm-r.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .hm-track, .hm-chip-float, .hm-mascot { animation: none; } .hm-seq .hm-m, .hm-seq .hm-opt.pick { animation: none; } .hm-seq .hm-typing { display: none; } .hm-seq .hm-opt.pick { border-color: var(--green); background: var(--hm-mint); } .js .hm-r { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-track, .hm-chip-float { animation: none; } .hm-seq .hm-m, .hm-seq .hm-opt.pick { animation: none; } .hm-seq .hm-typing { display: none; } .hm-seq .hm-opt.pick { border-color: var(--green); background: var(--hm-mint); } .js .hm-r { opacity: 1; transform: none; transition: none; } }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 980px) {
@@ -192,7 +190,7 @@
   .hm-split { grid-template-columns: 1fr; gap: 40px; }
   .hm-band-in { grid-template-columns: 1fr 1fr; row-gap: 30px; }
   .hm-num:nth-child(2) { border-right: none; }
-  .hm-chip-float, .hm-mascot { display: none; }
+  .hm-chip-float { display: none; }
 }
 @media (max-width: 640px) {
   .hm-section { padding: 64px 0; }

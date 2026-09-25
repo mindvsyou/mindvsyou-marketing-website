@@ -77,6 +77,10 @@ nav {
   transition: background 0.2s !important;
 }
 .nav-cta:hover { background: var(--green-dark) !important; color: var(--white) !important; }
+/* Mindy peeks over the top of the nav button */
+.nav-cta { position: relative; }
+.nav-peek { position: absolute; left: 50%; bottom: calc(100% - 6.5px); width: 22px; height: auto; display: block; clip-path: inset(0 0 30% 0); pointer-events: none; transform: translateX(-50%); transition: transform .2s ease; }
+.nav-cta:hover .nav-peek { transform: translateX(-50%) translateY(-3px); }
 
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
 .hamburger span { width: 24px; height: 2px; background: var(--text-dark); border-radius: 2px; display: block; }
