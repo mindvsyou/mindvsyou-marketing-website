@@ -14,15 +14,6 @@
   </style>
 
   <defs>
-    <linearGradient id="m-g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5BE897"/><stop offset="1" stop-color="#1FBF5C"/>
-    </linearGradient>
-    <linearGradient id="m-gd" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2BCB68"/><stop offset="1" stop-color="#149446"/>
-    </linearGradient>
-    <linearGradient id="m-s" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#173049"/><stop offset="1" stop-color="#081420"/>
-    </linearGradient>
 
     <!-- antenna, ears, head and screen shared by every pose -->
     <g id="m-head">
@@ -35,15 +26,16 @@
       <rect x="101" y="52" width="12" height="26" rx="6" fill="#0D1B2A"/>
       <rect x="9.5" y="57" width="3" height="10" rx="1.5" fill="#25D366" opacity=".9"/>
       <rect x="107.5" y="57" width="3" height="10" rx="1.5" fill="#25D366" opacity=".9"/>
-      <rect x="16" y="24" width="88" height="80" rx="31" fill="url(#m-g)" stroke="#fff" stroke-width="4"/>
+      <rect x="16" y="24" width="88" height="80" rx="31" fill="#3ED67B" stroke="#fff" stroke-width="4"/>
+      <rect x="18" y="26" width="84" height="38" rx="29" fill="#fff" opacity=".13"/>
       <path d="M27 42 Q29 33 41 31" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".55"/>
-      <rect x="25" y="36" width="70" height="54" rx="23" fill="url(#m-s)" stroke="#2C4B66" stroke-width="1.2"/>
+      <rect x="25" y="36" width="70" height="54" rx="23" fill="#0F2134" stroke="#2C4B66" stroke-width="1.2"/>
       <circle cx="35" cy="78" r="5" fill="#FF6B2B" opacity=".38"/>
       <circle cx="85" cy="78" r="5" fill="#FF6B2B" opacity=".38"/>
     </g>
     <!-- torso with a chat-bubble badge -->
     <g id="m-body">
-      <rect x="34" y="96" width="52" height="28" rx="14" fill="url(#m-gd)" stroke="#fff" stroke-width="3"/>
+      <rect x="34" y="96" width="52" height="28" rx="14" fill="#1FB559" stroke="#fff" stroke-width="3"/>
       <rect x="49" y="103" width="22" height="14" rx="6" fill="#fff"/>
       <path d="M54 116 L52 122 L60 116Z" fill="#fff"/>
       <circle cx="55" cy="110" r="1.7" fill="#0D1B2A"/><circle cx="60" cy="110" r="1.7" fill="#0D1B2A"/><circle cx="65" cy="110" r="1.7" fill="#0D1B2A"/>
@@ -89,8 +81,8 @@
 
     <!-- sit: perches on the edge of a button (feet dangle below the edge line at y=109) -->
     <g id="sit">
-      <rect x="44" y="102" width="11" height="20" rx="5.5" fill="url(#m-gd)" stroke="#fff" stroke-width="2"/>
-      <rect x="65" y="102" width="11" height="20" rx="5.5" fill="url(#m-gd)" stroke="#fff" stroke-width="2"/>
+      <rect x="44" y="102" width="11" height="20" rx="5.5" fill="#1FB559" stroke="#fff" stroke-width="2"/>
+      <rect x="65" y="102" width="11" height="20" rx="5.5" fill="#1FB559" stroke="#fff" stroke-width="2"/>
       <ellipse cx="49" cy="123.5" rx="8" ry="4.5" fill="#0D1B2A"/>
       <ellipse cx="71" cy="123.5" rx="8" ry="4.5" fill="#0D1B2A"/>
       <g transform="translate(6 -2) scale(.9)">
