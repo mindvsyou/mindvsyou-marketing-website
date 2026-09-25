@@ -27,8 +27,10 @@
     <!-- antenna, ears, head and screen shared by every pose -->
     <g id="m-head">
       <line x1="60" y1="26" x2="60" y2="13" stroke="#0D1B2A" stroke-width="4" stroke-linecap="round"/>
-      <circle class="mindy-ant" cx="60" cy="10" r="7" fill="#FF6B2B" stroke="#fff" stroke-width="2.5"/>
-      <circle cx="58" cy="8" r="2" fill="#fff" opacity=".7"/>
+      <g class="mindy-ant">
+        <circle cx="60" cy="11" r="10" fill="#FF6B2B" stroke="#fff" stroke-width="2.5"/>
+        <path d="M55 15.5 L55 6.5 L60 11 L65 6.5 L65 15.5" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
       <rect x="7" y="52" width="12" height="26" rx="6" fill="#0D1B2A"/>
       <rect x="101" y="52" width="12" height="26" rx="6" fill="#0D1B2A"/>
       <rect x="9.5" y="57" width="3" height="10" rx="1.5" fill="#25D366" opacity=".9"/>
