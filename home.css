@@ -34,7 +34,7 @@
 .hm-hero h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.3rem, 5.4vw, 4.1rem); line-height: 1.06; letter-spacing: -0.035em; max-width: 920px; margin: 0 auto 22px; }
 .hm-mark { position: relative; white-space: nowrap; z-index: 0; }
 .hm-mark::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: .04em; height: .34em; background: rgba(37,211,102,.38); border-radius: 6px; z-index: -1; transform: rotate(-1deg); }
-.hm-lead { font-size: 1.15rem; color: var(--text-mid); max-width: 640px; margin: 0 auto 72px; }
+.hm-lead { font-size: 1.15rem; color: var(--text-mid); max-width: 640px; margin: 0 auto 84px; }
 .hm-cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
 .hm-ghost { background: #fff; color: var(--text-dark); border: 2px solid var(--border); }
 .hm-ghost:hover { border-color: var(--text-dark); background: #fff; color: var(--text-dark); }
