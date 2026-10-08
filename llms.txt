@@ -18,10 +18,10 @@
 - [How It Works](https://mindvsyou.io/how-it-works.html): Chapter-wise PYQ practice, the seven practice modes, question types covered, and who it is for.
 - [FAQ](https://mindvsyou.io/faq.html): Detailed answers on pricing, registration, PYQ practice, progress tracking, and data privacy.
 - [About](https://mindvsyou.io/about.html): Mission and founding story.
-- [Blog](https://mindvsyou.io/blog.html): CBSE Class 10 Science guides on PYQs, MCQs, case-based and Assertion-Reason questions, revision and board preparation.
+- [Study Tips](https://mindvsyou.io/blog.html): CBSE Class 10 Science guides on PYQs, MCQs, case-based and Assertion-Reason questions, revision and board preparation.
 - [Contact](https://mindvsyou.io/contact.html): Support and partnership contact form.
 
-## Blog guides (CBSE Class 10 Science)
+## Study Tips guides (CBSE Class 10 Science)
 
 ### PYQ practice
 - [CBSE Class 10 Science PYQs: what they are, why they matter and how to use them](https://mindvsyou.io/cbse-class-10-science-pyq.html): What CBSE Class 10 Science PYQs are, how they help board preparation, how many to solve and how to practise them chapter by chapter with instant feedback.
