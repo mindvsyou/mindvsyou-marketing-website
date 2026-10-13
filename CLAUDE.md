@@ -44,3 +44,9 @@ Most visitors are CBSE students under 18. India's DPDP Act restricts tracking ch
 Don't hand-edit the HTML; rerun the script when the question bank changes, then commit the output.
 Rules: say "practice questions" (never "question entries"; agreed with the user, the quiz team had suggested "entries"), interactive bank = 2023-2025 only, never mention paper
 "sets", don't expand samples beyond what the endpoint returns, practice links are built only by `practice_url()` in the script (never use the endpoint's `practiceUrl`; it redirects home). Only `type=mcq-practice` and `type=subjective-interactive` are linked; use the endpoint's `mcqUrl`/`subjectiveUrl` once it provides them.
+
+## CSS cache busting
+
+The host sends `style.css` with a 7-day cache, so phones keep old CSS after a deploy.
+Whenever `style.css` changes, bump `?v=` on the stylesheet link in every page (and in
+`build_pyq_coverage.py`), e.g. `style.css?v=20261013` -> a new date.

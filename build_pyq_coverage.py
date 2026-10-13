@@ -289,7 +289,7 @@ def build(d):
   <meta name="twitter:title" content="{esc(h1)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=20261013" />
 
 {ld_html}</head>
 <body>
