@@ -1,30 +1,32 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-10-13T05:36:55.039Z",
+ "generatedAt": "2026-10-16T06:09:16.616Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
- "totalQuestions": 1114,
+ "totalQuestions": 1467,
  "years": [
   2023,
   2024,
-  2025
+  2025,
+  2026
  ],
  "chapters": [
   {
    "chapter": "Acids, Bases and Salts",
-   "total": 95,
+   "total": 131,
    "byType": {
-    "MCQ": 46,
+    "MCQ": 67,
     "LA": 7,
     "Assertion-Reason": 2,
-    "VSA": 12,
-    "SA": 23,
-    "Case-based": 5
+    "VSA": 20,
+    "Case-based": 7,
+    "SA": 28
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Important Chemicals",
@@ -35,19 +37,19 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Which of the given option represents a family of salts ?",
-     "answer": "B",
-     "explanation": "• A family of salts shares the same acidic radical (anion), differing only in the metal/basic radical.\r\n• ✓ Option (b): K2SO4, Na2SO4 and CaSO4 are all sulphates, so they belong to the sulphate family of salts.\r\n• Why the others are wrong: options (a), (c) and (d) each mix different acidic radicals, so they are not one family.",
+     "text": "Tomato is a natural source of which acid ?",
+     "answer": "(C) Oxalic acid",
+     "explanation": "• Tomato contains oxalic acid, which contributes to its sour taste.\r\n• ✓ Option (c): Oxalic acid.\r\n• Why the others are wrong: (a) acetic acid is in vinegar; (b) tartaric acid is in tamarind; (d) citric acid is in orange and lemon.",
      "truncated": false,
      "options": {
-      "A": "NaCl, Na2SO4, CaSO4",
-      "B": "K2SO4, Na2SO4, CaSO4",
-      "C": "NaNO3, CaCO3, Na2CO3",
-      "D": "MgSO4, CuSO4, MgCl2"
+      "A": "Acetic acid",
+      "B": "Tartaric acid",
+      "C": "Oxalic acid",
+      "D": "Citric acid"
      },
-     "answerText": "K2SO4, Na2SO4, CaSO4"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
@@ -67,48 +69,49 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "(a) Write the formula of the ions which (i) acids, and (ii) bases generate in water solutions.\r\n(b) Dry HCl gas does not change the colour of dry litmus paper. Why ?",
-     "answer": "(a)\r\n    • (i) H+ / H3O+\r\n    • (ii) OH–\r\n(b)\r\n    • Dry HCl does not dissociate into hydrogen ions in the absence of water.",
-     "explanation": "(a)\r\n    • Acids generate H+/H3O+ ions in water; bases generate OH– ions in water.\r\n(b)\r\n    • Dry HCl gas has no free H+ ions since it does not ionise without water, so it cannot turn dry litmus paper red.",
+     "text": "Write the balanced chemical equations involved in the preparation of\r\n(a) Bleaching powder\r\n(b) Baking soda",
+     "answer": "(a)\r\n    • Ca(OH)2 + Cl2 → CaOCl2 + H2O\r\n      (Bleaching powder)\r\n(b)\r\n    • NaCl + H2O + CO2 + NH3 → NH4Cl + NaHCO3\r\n      (Baking soda)",
+     "explanation": "(a)\r\n    • Chlorine is passed over dry slaked lime: Ca(OH)₂ + Cl₂ → CaOCl₂ + H₂O.\r\n(b)\r\n    • Solvay process, using brine with CO₂ and ammonia: NaCl + H₂O + CO₂ + NH₃ → NH₄Cl + NaHCO₃.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "Write chemical formula of washing soda. How is it obtained from baking soda ? List two uses of washing soda.",
-     "answer": "Na2CO3.10H2O\r\nWhen baking soda is heated sodium carbonate is obtained and recrystallisation of sodium carbonate gives washing soda. /\r\n2 NaHCO3 --heat--> Na2CO3 + H2O + CO2\r\nNa2CO3 +10 H2O --> Na2CO3.10 H2O\r\nUses:\r\n(i)In glass / soap / paper industry\r\n(ii)In manufacture of borax\r\n(iii)As cleansing agent for domestic purpose\r\n(iv)Removing permanent hardness of water (Any Two)",
-     "explanation": "• Washing soda's chemical formula is Na₂CO₃·10H₂O.\r\n• It is obtained by heating baking soda (NaHCO₃) to form sodium carbonate, which is then recrystallised with water to yield washing soda crystals.\r\n• Two common uses: manufacturing glass, soap, and paper; and removing permanent hardness of water as a domestic cleansing agent.",
+     "text": "Write the preparation of following compounds with balanced chemical equation :\r\n(i) Baking soda\r\n(ii) Bleaching powder\r\n(iii) Plaster of Paris",
+     "answer": "(i)\r\n    • NaCl + H2O + NH3 + CO2 → NaHCO3 + NH4Cl\r\n(ii)\r\n    • Ca(OH)2 + Cl2 → CaOCl2 + H2O\r\n    /\r\n    • 2Ca(OH)2 + 2Cl2 → Ca(ClO)2 + CaCl2 + 2H2O\r\n(iii)\r\n    • CaSO4.2H2O --[373K]--> CaSO4.½H2O + 1½H2O\r\n(deduct ½ mark for no / incorrect balancing)",
+     "explanation": "(i)\r\n    • Baking soda: NaCl + H₂O + NH₃ + CO₂ → NaHCO₃ + NH₄Cl\r\n(ii)\r\n    • Bleaching powder: chlorine is passed over dry slaked lime — Ca(OH)₂ + Cl₂ → CaOCl₂ + H₂O\r\n(iii)\r\n    • Plaster of Paris: gypsum heated at 373 K — CaSO₄·2H₂O → CaSO₄·½H₂O + 1½H₂O",
      "truncated": false
     },
     {
      "type": "LA",
      "year": 2024,
      "marks": 5,
-     "text": "Common salt is a very important raw material as many compounds of industrial use can be prepared from it. Explain, giving chemical equations, the method of preparation of washing soda from sodium chloride. List four industrial/domestic uses of washing soda.",
-     "answer": "• Concentrated solution of sodium chloride reacts with ammonia and carbon dioxide to obtain sodium hydrogen carbonate and ammonium chloride.\r\n• NaCl + NH3 + CO2 + H2O → NaHCO3 + NH4Cl\r\n• When sodium hydrogen carbonate is heated strongly, sodium carbonate is obtained.\r\n• 2NaHCO3 --Heat--> Na2CO3 + CO2 + H2O\r\n• Sodium carbonate is dissolved in water to obtain washing soda.\r\n• Na2CO3 + 10H2O → Na2CO3·10H2O\r\nUses:\r\n• In glass, soap and paper industries.\r\n• Manufacture of borax.\r\n• As a cleaning agent for domestic purposes.\r\n• For removing permanent hardness of water.",
-     "explanation": "Given: Sodium chloride (NaCl) is the raw material for washing soda.\r\n• Step 1: NaCl + NH3 + CO2 + H2O → NaHCO3 + NH4Cl (Solvay process forms sodium hydrogen carbonate).\r\n• Step 2: 2NaHCO3 --heat--> Na2CO3 + CO2 + H2O (heating gives sodium carbonate).\r\n• Step 3: Na2CO3 + 10H2O → Na2CO3·10H2O (crystallisation gives washing soda).\r\n∴ Uses of washing soda: (1) glass, soap and paper industries; (2) manufacture of borax; (3) as a domestic cleaning agent; (4) for removing permanent hardness of water.",
+     "text": "Explain chlor-alkali process and write balanced chemical equations for the reactions that occur. Name the gases obtained at the anode and cathode respectively. Mention two uses each of the two gases obtained in the above process.",
+     "answer": "• Chlor-alkali process: When electricity is passed through an aqueous solution of sodium chloride (brine), it decomposes to form sodium hydroxide, chlorine and hydrogen.\r\n• 2NaCl(aq) + 2H2O(l) → 2NaOH + Cl2 + H2\r\n• Anode: Chlorine gas (Cl2); Cathode: Hydrogen gas (H2)\r\n• Cl2 uses: (1) used in the preparation of bleaching powder. (2) to make drinking water free from germs.\r\n• H2 uses: (1) used in the manufacture of ammonia/fertilisers. (2) used in fuels and margarine.",
+     "explanation": "• Chlor-alkali process: passing electricity through an aqueous solution of sodium chloride (brine) decomposes it to give sodium hydroxide, chlorine and hydrogen.\r\n• 2NaCl(aq) + 2H2O(l) → 2NaOH(aq) + Cl2(g) + H2(g)\r\n• Anode: Chlorine gas (Cl2) is liberated; Cathode: Hydrogen gas (H2) is liberated, while NaOH forms near the cathode.\r\n• Uses of Cl2: (1) used to prepare bleaching powder; (2) used to make drinking water free from germs.\r\n• Uses of H2: (1) used in the manufacture of ammonia for fertilisers; (2) used in fuels and in hydrogenating oils to make margarine.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "Carbon and Its Compounds",
-   "total": 84,
+   "total": 107,
    "byType": {
     "Assertion-Reason": 4,
-    "LA": 46,
-    "Case-based": 4,
+    "Case-based": 5,
+    "LA": 54,
     "SA": 2,
-    "MCQ": 20,
+    "MCQ": 34,
     "VSA": 8
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Bonding in Carbon",
@@ -120,19 +123,19 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Select from the following a hydrocarbon having one C–C bond and one C≡C bond :",
-     "answer": "D",
-     "explanation": "• A molecule with one C-C single bond and one C≡C triple bond needs exactly 3 carbon atoms in a chain.\r\n• ✓ Option (d): Propyne (CH3-C≡CH) has exactly one C-C bond and one C≡C bond.\r\n• Why the others are wrong: (a) benzene is a ring with alternating bonds; (b) cyclohexane has only C-C bonds; (c) butyne (4 carbons) has one C≡C bond but two C-C bonds.",
+     "text": "Which of the following set of compounds does not belong to same homologous series ?",
+     "answer": "(D) C4H8 and C5H12",
+     "explanation": "• Members of a homologous series share one general formula; alkanes follow CₙH₂ₙ₊₂ and alkenes CₙH₂ₙ.\r\n• ✓ Option (d): C₄H₈ is an alkene (CₙH₂ₙ) while C₅H₁₂ is an alkane, so they belong to different series.\r\n• Why the others are wrong: (a), (b) and (c) are all pairs of alkanes fitting CₙH₂ₙ₊₂.",
      "truncated": false,
      "options": {
-      "A": "Benzene",
-      "B": "Cyclohexane",
-      "C": "Butyne",
-      "D": "Propyne"
+      "A": "CH4 and C4H10",
+      "B": "C2H6 and C3H8",
+      "C": "C3H8 and C5H12",
+      "D": "C4H8 and C5H12"
      },
-     "answerText": "Propyne"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
@@ -154,45 +157,46 @@
      "type": "VSA",
      "year": 2024,
      "marks": 2,
-     "text": "The melting and boiling points of carbon compounds are generally low and they are largely non-conductors of electricity. State two conclusions based on these two properties.",
-     "answer": "• Low melting and boiling points indicate weak intermolecular forces of attraction between molecules.\r\n• Being non-conductors of electricity indicates that bonding in these compounds does not give rise to any ions (covalent bonds/sharing of electrons do not form charged particles).",
-     "explanation": "• Low melting and boiling points show that carbon compounds are held together by weak intermolecular forces of attraction, unlike ionic compounds.\r\n• Being poor conductors shows their covalent bonding does not produce free ions or charged particles needed to carry current.",
+     "text": "A spatula full of sodium carbonate is taken in a test tube and 2 mL of dilute ethanoic acid is added to it.\r\n    (a) Write a chemical equation for the reaction.\r\n    (b) Suggest a method of testing the gas liberated in the reaction.",
+     "answer": "(a)\r\n    • 2CH3COOH + Na2CO3 → 2CH3COONa + H2O + CO2\r\n(b)\r\n    • Pass the gas through lime water. It turns lime water milky.",
+     "explanation": "(a)\r\n    • Sodium carbonate reacts with ethanoic acid to give sodium acetate, water and carbon dioxide.\r\n    • 2CH3COOH + Na2CO3 → 2CH3COONa + H2O + CO2\r\n(b)\r\n    • Pass the gas through lime water — it turns milky, confirming CO2.",
      "truncated": false
     },
     {
      "type": "SA",
      "year": 2024,
      "marks": 3,
-     "text": "Why is the conversion of ethanol to ethanoic acid an oxidation reaction ? Name the oxidising agent used in this conversion. Write chemical equation for this oxidation reaction. How is this reaction different from the reaction in which ethanol burns in the presence of oxygen ?",
-     "answer": "• Oxygen is added to ethanol to produce ethanoic acid, which is why it is an oxidation reaction.\r\n• Oxidising agent: Alkaline potassium permanganate (or Acidified potassium dichromate).\r\n• Equation: CH3CH2OH —[Alkaline KMnO4 + Heat, or acidified K2Cr2O7 + Heat]→ CH3COOH\r\n• Difference: this is an oxidation reaction, whereas ethanol burning in oxygen is a combustion reaction.",
-     "explanation": "• Oxidation adds oxygen to a substance — here, ethanol gains an oxygen atom to form ethanoic acid.\r\n• Oxidising agent: alkaline KMnO4 or acidified K2Cr2O7, with heat.\r\n• Equation: CH3CH2OH → CH3COOH using the oxidising agent and heat.\r\n• Difference: this controlled oxidation differs from combustion, where ethanol burns directly in oxygen releasing heat and light, producing CO2 and H2O.",
+     "text": "Write chemical equations for the following reactions, giving the conditions for the reaction in each case :\r\n    (a) Reaction of ethanol with ethanoic acid\r\n    (b) Reaction of an ester with a base (NaOH)\r\n    (c) Formation of ethene from ethanol",
+     "answer": "(a)\r\n    • CH3COOH + CH3CH2OH —[Acid]→ CH3COOC2H5 + H2O\r\n(b)\r\n    • CH3COOC2H5 —[NaOH]→ C2H5OH + CH3COONa\r\n(c)\r\n    • CH3CH2OH —[Hot conc. H2SO4]→ CH2=CH2 + H2O",
+     "explanation": "(a)\r\n    • Ethanol reacts with ethanoic acid in the presence of an acid catalyst to form an ester (esterification): CH3COOH + C2H5OH —[Acid]→ CH3COOC2H5 + H2O.\r\n(b)\r\n    • An ester reacts with NaOH (saponification) to regenerate the alcohol and the sodium salt of the acid: CH3COOC2H5 + NaOH → C2H5OH + CH3COONa.\r\n(c)\r\n    • Ethanol undergoes dehydration with hot concentrated H2SO4 to form ethene: CH3CH2OH —[Hot conc. H2SO4]→ CH2=CH2 + H2O.",
      "truncated": false
     },
     {
      "type": "LA",
-     "year": 2025,
+     "year": 2026,
      "marks": 5,
-     "text": "(a) Define the term \"Functional group of a carbon compound\". Write the formula of functional group present in (i) propanol and (ii) propanone.\r\n(b) Name the process of conversion of (i) ethanol to ethene and (ii) ethanol to ethanoic acid. Write the reaction equation stating the conditions required for each of the reactions to occur.",
-     "answer": "(a)\r\n    • Functional group: The element (or group) replacing hydrogen in a carbon compound is called a heteroatom; these heteroatoms confer special properties to the compound and are known as functional groups.\r\n    • (i) Functional group in propanol: –OH (Alcohol)\r\n    • (ii) Functional group in propanone: >C=O (Ketone)\r\n(b)\r\n    • (i) Dehydration: C₂H₅OH →(443 K, Conc. H₂SO₄, excess) C₂H₄ + H₂O (ethanol → ethene)\r\n    • (ii) Oxidation: C₂H₅OH →(Alkaline KMnO₄/heat) CH₃COOH (ethanol → ethanoic acid)",
-     "explanation": "(a)\r\n    • A functional group is a heteroatom or group of atoms replacing hydrogen in a carbon chain, giving the compound its characteristic chemical properties. Propanol contains the –OH (alcohol) group; propanone contains the >C=O (ketone) group.\r\n(b)\r\n    • (i) Ethanol converts to ethene by dehydration: heating with excess concentrated sulphuric acid at 443 K removes water, C₂H₅OH → C₂H₄ + H₂O.\r\n    • (ii) Ethanol converts to ethanoic acid by oxidation: heating with alkaline potassium permanganate oxidises the alcohol group to a carboxylic acid, C₂H₅OH → CH₃COOH.",
+     "text": "(i) Carbon cannot form C4+ cation and C4– anion. Explain.\r\n(ii) Define homologous series of carbon compounds. Why are the melting and boiling points of C4H10 higher than C3H8 or C2H6 ?\r\n(iii) What happens when ethanol is heated with acidified potassium dichromate ?",
+     "answer": "(i)\r\n    • Carbon cannot form C4+ cation because removal of four electrons is energetically not possible. Carbon cannot form C4− anion because nucleus with six protons cannot hold ten electrons.\r\n(ii)\r\n    • A series of compounds in which the same functional group substitutes for hydrogen in carbon chain is called a homologous series.\r\n    • Because of higher molecular mass of C4H10 than C3H8 or C2H6.\r\n(iii)\r\n    • Ethanoic acid / acetic acid / CH3COOH is formed /\r\n    • CH3-CH2OH --[acidified K2Cr2O7 + Heat]--> CH3COOH",
+     "explanation": "(i)\r\n    • C⁴⁺: removing four electrons needs a very large amount of energy.\r\n    • C⁴⁻: a nucleus with six protons cannot hold ten electrons. Hence carbon forms covalent bonds by sharing electrons.\r\n(ii)\r\n    • Homologous series: compounds with the same functional group whose successive members differ by a –CH₂ unit (14 u).\r\n    • Melting and boiling points rise with molecular mass, and C₄H₁₀ has a higher molecular mass than C₃H₈ or C₂H₆.\r\n(iii)\r\n    • Acidified K₂Cr₂O₇ oxidises ethanol to ethanoic acid: CH₃CH₂OH → CH₃COOH; the orange solution turns green.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "Chemical Reactions and Equations",
-   "total": 105,
+   "total": 135,
    "byType": {
     "Assertion-Reason": 5,
-    "VSA": 32,
-    "MCQ": 41,
-    "SA": 23,
+    "VSA": 33,
+    "MCQ": 56,
+    "SA": 37,
     "LA": 4
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Applications of Chemical Reactions",
@@ -205,52 +209,52 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Electrolysis of water is a decomposition reaction. The mass ratio (MH : MO) of hydrogen and oxygen gases liberated at the electrodes during electrolysis of water is :",
-     "answer": "D",
-     "explanation": "• Electrolysis of water produces hydrogen and oxygen in a 2:1 volume ratio, but by mass, oxygen (molar mass 32) is much heavier than hydrogen (molar mass 2).\r\n• ✓ Option (d): The mass ratio MH : MO works out to 1 : 8, since 2 volumes of H2 (mass 4) form against 1 volume of O2 (mass 32), giving 4:32 = 1:8.\r\n• Why the others are wrong: (a) inverts the ratio; (b) and (c) confuse the volume ratio (2:1) with the mass ratio.",
+     "text": "The volume ratio of hydrogen and oxygen gases liberated during electrolysis of water is",
+     "answer": "(B) 2 : 1",
+     "explanation": "• Electrolysis of water: 2H₂O → 2H₂ + O₂; two molecules of hydrogen form for every molecule of oxygen.\r\n• ✓ Option (b): Volume of H₂ : O₂ = 2 : 1.\r\n• Why the others are wrong: (a) and (c) do not match the equation; (d) inverts the ratio.",
      "truncated": false,
      "options": {
-      "A": "8 : 1",
+      "A": "1 : 1",
       "B": "2 : 1",
-      "C": "1 : 2",
-      "D": "1 : 8"
+      "C": "4 : 1",
+      "D": "1 : 2"
      },
-     "answerText": "1 : 8"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
      "year": 2025,
      "marks": 1,
-     "text": "Assertion (A) : Decomposition reactions are generally endothermic reactions.\r\nReason (R) : Decomposition of organic matter into compost is an exothermic process.",
-     "answer": "B",
-     "explanation": "• Decomposition reactions generally require energy input (heat, light or electricity) to break bonds, making Assertion true; composting is also a genuine example of an exothermic decomposition, making Reason true too.\r\n• ✓ Option (b): Both statements are true, but the Reason does not explain the Assertion, since composting is an exception, not the general basis for Assertion.\r\n• Why the others are wrong: (a) wrongly links R as the explanation; (c) and (d) incorrectly mark one statement as false.",
+     "text": "Assertion (A) : Silver chloride turns grey in sunlight.\r\nReason (R) : Decomposition of silver chloride into silver and chlorine takes place by sunlight.",
+     "answer": "A",
+     "explanation": "• Silver chloride undergoes photolytic (light-induced) decomposition into silver and chlorine when exposed to sunlight, which directly causes its colour change.\r\n• ✓ Option (a): Both statements are true, and the Reason correctly explains why silver chloride turns grey.\r\n• Why the others are wrong: Since the Reason correctly and directly explains the Assertion, options (b), (c), and (d) are ruled out.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A)."
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "A crystalline substance of green colour 'X' emits gases of characteristic odour when heated over a flame. It first loses water and changes colour. On further heating, it decomposes and produces a solid compound Y.\r\n(a) Identify 'X' and 'Y'.\r\n(b) State the change in colour observed when 'X' is heated.",
-     "answer": "(a) X = FeSO4 . 7H2O / Ferrous Sulphate Crystals\r\nY = Fe2O3 / Ferric Oxide\r\n(b) Green to white /brown",
-     "explanation": "(a)\r\n    • X is FeSO₄·7H₂O (ferrous sulphate crystals); on heating it decomposes to Fe₂O₃ (Y), releasing SO₂ and SO₃ gases.\r\n(b)\r\n    • The colour changes from green to white as water of crystallisation is lost, then to brown as Fe₂O₃ forms.",
+     "text": "Answer the following :\r\n(a) Why should chemical equations be balanced ?\r\n(b) Name the oxidising and reducing agent in the following equation :\r\n    4Na + O2 → 2Na2O",
+     "answer": "(a)\r\n    • To follow the law of conservation of mass\r\n(b)\r\n    • Oxidising agent - O2 /Oxygen\r\n    • Reducing agent - Na/ Sodium",
+     "explanation": "(a)\r\n    • Mass is neither created nor destroyed, so atoms of each element must be equal on both sides.\r\n(b)\r\n    • Oxidising agent: O₂, which gives oxygen to sodium.\r\n    • Reducing agent: Na, which is itself oxidised to Na₂O.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "(i) Define the term decomposition reaction. Write one chemical equation each for decomposition reaction where energy is supplied in the form of heat, light or electricity.\r\n(ii) Decomposition of vegetable matter into compost is considered an exothermic reaction. Why ?",
-     "answer": "(i)\r\n    • A single reactant (substance) breaks down to give two or more products.\r\n    • CaCO3(s) --heat--> CaO(s) + CO2(g)\r\n    • 2AgCl(s) --sunlight--> 2Ag(s) + Cl2(g)\r\n    • 2H2O(l) --electric current--> 2H2(g) + O2(g)\r\n    (any other suitable example)\r\n(ii)\r\n    • Because energy (heat) is released.",
-     "explanation": "(i)\r\n    • A decomposition reaction is one where a single reactant breaks down into two or more products.\r\n    • Heat: CaCO₃ → CaO + CO₂; Light: 2AgCl → 2Ag + Cl₂; Electricity: 2H₂O → 2H₂ + O₂.\r\n(ii)\r\n    • Composting is exothermic because energy (heat) is released as vegetable matter decomposes.",
+     "text": "What happens when\r\n(i) potassium iodide solution is added to lead (II) nitrate solution ?\r\n(ii) zinc is added to copper (II) chloride solution ?\r\n(iii) hydrogen gas is passed over hot copper (II) oxide ?\r\nWrite balanced chemical equations of the reactions involved in support of your answer.",
+     "answer": "(i)\r\n    • Yellow precipitate of potassium iodide is formed.\r\n    • 2KI + Pb(NO3)2 → PbI2 + 2KNO3\r\n(ii)\r\n    • Zinc will displace copper from copper chloride.\r\n    • Zn + CuCl2 → ZnCl2 + Cu\r\n(iii)\r\n    • The black coating of copper oxide will turn brown.\r\n    • CuO + H2 → Cu + H2O\r\n(Note: Award full marks if balanced chemical equation is written)",
+     "explanation": "(i)\r\n    • Double displacement: a yellow precipitate of lead iodide forms.\r\n    • 2KI + Pb(NO₃)₂ → PbI₂ + 2KNO₃\r\n(ii)\r\n    • Displacement: zinc is more reactive, so copper is deposited.\r\n    • Zn + CuCl₂ → ZnCl₂ + Cu\r\n(iii)\r\n    • Redox: CuO is reduced; black turns brown.\r\n    • CuO + H₂ → Cu + H₂O",
      "truncated": false
     },
     {
@@ -266,11 +270,11 @@
   },
   {
    "chapter": "Control and Coordination",
-   "total": 76,
+   "total": 101,
    "byType": {
-    "MCQ": 22,
-    "Assertion-Reason": 2,
+    "MCQ": 44,
     "SA": 17,
+    "Assertion-Reason": 5,
     "VSA": 24,
     "LA": 8,
     "Case-based": 3
@@ -278,7 +282,8 @@
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Control and Coordination in Plants",
@@ -289,35 +294,35 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "The part of the hind-brain controlling involuntary actions such as salivation and vomiting in humans is :",
-     "answer": "D",
-     "explanation": "• Different hindbrain regions control distinct involuntary functions such as breathing, blood pressure, salivation and vomiting.\r\n• ✓ Option (d): The medulla controls involuntary actions such as salivation, vomiting, blood pressure and heart rate.\r\n• Why the others are wrong: (a) cerebellum governs posture/balance, (b) cerebrum controls voluntary actions and thinking, (c) pons mainly relays signals — none controls salivation/vomiting.",
+     "text": "Identify the endocrine gland that regulates the growth of human body.",
+     "answer": "(A) Pituitary gland",
+     "explanation": "• The pituitary gland secretes growth hormone, which regulates growth and development of the body.\r\n• ✓ Option (a): Pituitary gland.\r\n• Why the others are wrong: (b) thyroid makes thyroxin for metabolism; (c) pancreas makes insulin for blood sugar; (d) adrenal gland makes adrenaline for emergencies.",
      "truncated": false,
      "options": {
-      "A": "Cerebellum",
-      "B": "Cerebrum",
-      "C": "Pons",
-      "D": "Medulla"
+      "A": "Pituitary gland",
+      "B": "Thyroid gland",
+      "C": "Pancreas",
+      "D": "Adrenal gland"
      },
-     "answerText": "Medulla"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : In our actions of writing or talking, our nervous system communicates with the muscles.\r\nReason (R) : Cranial nerves and spinal nerves form the peripheral nervous system.",
-     "answer": "B",
-     "explanation": "• Voluntary actions like writing/talking need signals from the nervous system to reach the relevant muscles.\r\n• ✓ Option (b): Both statements are true, but the Reason (definition of peripheral nervous system) does not explain why the nervous system communicates with muscles during writing/talking.\r\n• Why the others are wrong: (a) wrongly claims R explains A; (c) and (d) wrongly mark one true statement as false.",
+     "text": "Assertion (A) : Reflex actions do not involve thinking.\r\nReason (R) : Most reflex actions are controlled by the spinal cord.",
+     "answer": "(A) Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+     "explanation": "• A reflex action is a sudden, automatic response; the reflex arc connects receptor to effector through the spinal cord, so the brain's thinking centre is not involved.\r\n• ✓ Option (a): Both are true, and control by the spinal cord explains why no thinking is needed.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both, Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
@@ -341,53 +346,54 @@
      "type": "LA",
      "year": 2024,
      "marks": 5,
-     "text": "(a)\r\n    (i) Distinguish between hormonal co-ordination in plants and animals.\r\n    (ii) Which part of the brain is responsible for –\r\n        (1) intelligence\r\n        (2) riding a bicycle\r\n        (3) vomiting\r\n        (4) controlling hunger\r\n    (iii) How is brain and spinal-cord protected against mechanical injuries ?",
-     "answer": "(i) In plants, hormones move by simple diffusion and no specialised glands are involved; in animals, hormones are transported through the blood to target organs and are released by endocrine glands.\r\n(ii) (1) Cerebrum/forebrain (2) Cerebellum/hindbrain (3) Medulla/hindbrain (4) Hypothalamus/forebrain.\r\n(iii) The brain is protected by the skull (a bony box/fluid-filled balloon), and the spinal cord is protected by the backbone/vertebral column.",
-     "explanation": "(i)\r\n    • In plants, hormones travel by simple diffusion from the cells that make them, with no specialised glands involved.\r\n    • In animals, hormones are secreted by specific endocrine glands and carried through the bloodstream to distant target organs.\r\n(ii)\r\n    • (1) Cerebrum — intelligence, (2) cerebellum — riding a bicycle (balance/coordination), (3) medulla — vomiting, (4) hypothalamus — controlling hunger.\r\n(iii)\r\n    • The brain is enclosed and protected within the bony skull, cushioned further by cerebrospinal fluid, while the spinal cord runs safely through the vertebral column (backbone).",
+     "text": "(i) Leaves of chhui-mui plant begin to fold up and droop in response to a stimulus. Name the stimulus and write the cause for such a rapid movement. Is there any growth involved in the movement ?\r\n(ii) Define geotropism in plants. What is meant by positive and negative geotropism ? Give one example of each type.",
+     "answer": "(i)\r\n    • Stimulus: touch.\r\n    • Cause: the shape of the leaves changes due to a change in the amount of water in their cells.\r\n    • No, growth is not involved in this movement.\r\n(ii)\r\n    • Geotropism: growth of a plant part in response to the pull of gravity.\r\n    • Positive geotropism: movement of a plant part towards gravity, e.g., roots growing downwards.\r\n    • Negative geotropism: movement of a plant part away from gravity, e.g., shoots growing upwards.",
+     "explanation": "(i)\r\n    • Stimulus: touch (a mechanical stimulus applied to the leaflets).\r\n    • Cause: a rapid change in the water content (turgor pressure) of cells at the base of the leaflets, not any growth process.\r\n    • No growth is involved — it is a quick, reversible turgor movement that occurs within seconds.\r\n(ii)\r\n    • Geotropism is the growth movement of a plant part in response to the pull of gravity.\r\n    • Positive geotropism: movement of a plant part towards gravity — e.g., roots grow downwards into the soil.\r\n    • Negative geotropism: movement of a plant part away from gravity — e.g., shoots grow upwards against gravity.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "Electricity",
-   "total": 92,
+   "total": 118,
    "byType": {
-    "SA": 14,
+    "SA": 19,
+    "LA": 27,
+    "Case-based": 8,
     "Assertion-Reason": 3,
-    "Case-based": 6,
-    "LA": 15,
-    "MCQ": 25,
-    "VSA": 29
+    "MCQ": 27,
+    "VSA": 34
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Combination of Resistors",
     "Electric Current and Potential Difference",
     "Electric Power and Energy",
     "Heating Effect of Current",
-    "Ohm's Law",
+    "Ohm’s Law",
     "Resistance"
    ],
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "A piece of wire of resistance 'R' is cut lengthwise into three identical parts. These parts are then connected in parallel. If the equivalent resistance of this combination is R', then the value of R/R' is :",
-     "answer": "D",
-     "explanation": "• Cutting a wire of resistance R into 3 equal parts gives each part resistance R/3.\r\n• Connecting these in parallel: 1/R' = 3 ÷ (R/3) = 9/R, so R' = R/9.\r\n• ✓ Option (d): R/R' = R ÷ (R/9) = 9.",
+     "text": "The correct way to connect an ammeter and a voltmeter in an electric circuit is :",
+     "answer": "(C) Ammeter in series and voltmeter in parallel.",
+     "explanation": "• An ammeter (low resistance) measures the current through a component, so it must be in series; a voltmeter (high resistance) measures potential difference across a component, so it must be in parallel.\r\n• ✓ Option (c): Ammeter in series, voltmeter in parallel.\r\n• Why the others are wrong: (a) swaps the connections; (b) and (d) connect both meters the same way, which gives wrong readings.",
      "truncated": false,
      "options": {
-      "A": "46266",
-      "B": "46082",
-      "C": "3",
-      "D": "9"
+      "A": "Ammeter in parallel and voltmeter in series",
+      "B": "Ammeter and voltmeter both in parallel",
+      "C": "Ammeter in series and voltmeter in parallel",
+      "D": "Ammeter and voltmeter both in series"
      },
-     "answerText": "9"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
@@ -407,51 +413,51 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "Heat produced per second due to a current in a resistor of 4 Ω is 400 joules. Calculate the potential difference across the resistor.",
-     "answer": "Given: H = 400 J, R = 4Ω, t = 1 s\r\nH = V²/R × t\r\n400 = V²/4 × 1\r\nV² = 1600\r\n∴ V = 40 V",
-     "explanation": "• H = (V²/R) × t, using the given values 400 = V²/4 × 1\r\n• Rearranging, V² = 400 × 4 = 1600\r\n• V = √1600 = 40 V, the potential difference developed across the resistor.",
+     "text": "A fuse in electric circuit is rated 4 A. Can it be used with an electric heater of rating 2 kW, 200 V ? Explain your answer.",
+     "answer": "I = P/V\r\nI = 2000/200\r\nI = 10 A\r\n• Current passing through electric heater is 10A which is much more than rated value (4A) of fuse. Hence fuse will melt and break the circuit. So, it cannot be used.",
+     "explanation": "Given: P = 2000 W, V = 200 V\r\nI = P/V\r\nI = 2000/200\r\nI = 10 A\r\n∴ 10 A exceeds the 4 A rating, so the fuse melts; it cannot be used.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "(a) Define one ampere.\r\n(b) The resistance of a wire of 0.01 cm radius is 14 Ω. If the resistivity of the material of the wire is 44 × 10⁻⁸ Ωm, find the length of the wire. (Given π = 22/7)",
-     "answer": "(a)\r\n    • When 1 coulomb of charge flows through any cross-section of a conductor in 1 second, the electric current flowing through it is 1 ampere.\r\n    • 1A = 1C/1s\r\n(b)\r\n    Given: r = 0.01 cm = 0.01×10⁻² m, ρ = 44×10⁻⁸ Ωm, R = 14Ω\r\n    R = ρl/A\r\n    l = RA/ρ = (14×22×(0.01×10⁻²)²)/(7×44×10⁻⁸)\r\n    ∴ l = 1.0 m",
-     "explanation": "(a)\r\n    • One ampere is the current flowing when 1 coulomb of charge passes through a cross-section of a conductor in 1 second (1A = 1C/1s).\r\n(b)\r\n    Given: r = 0.01 cm = 0.01×10⁻² m, R = 14Ω, ρ = 44×10⁻⁸ Ωm\r\n    A = πr²\r\n    l = RA/ρ = (14 × 22 × (0.01×10⁻²)²)/(7 × 44×10⁻⁸)\r\n    l = 1.0 m\r\n    ∴ The length of the wire is 1.0 metre.",
+     "text": "(a) Name a device which is used to :\r\n    (i) Maintain a constant potential difference in a circuit.\r\n    (ii) Change the electric current in an electric circuit.\r\n(b) When the potential difference between the terminals of an electric heater is 110 V, a current of 5 A flows through it. What will be the value of current flowing through it when the potential difference is increased to 220 V ?",
+     "answer": "(a)\r\n    (i)\r\n        • Battery / Electric cell\r\n    (ii)\r\n        • Rheostat / Variable resistance\r\n(b)\r\n    Resistance of the heater, R = V/I\r\n    R = 110/5\r\n    R = 22 Ω\r\n    Current through the heater, I′ = V′/R\r\n    = 220/22\r\n    = 10 A\r\n    /\r\n    Alternate answer for (b):\r\n    • According to Ohm’s law, potential difference is directly proportional to current.\r\n    • When the potential difference is doubled, current will also be doubled. So, value of current will be 10A.",
+     "explanation": "(a)\r\n    • (i) Battery / cell maintains a constant potential difference.\r\n    • (ii) Rheostat (variable resistance) changes the current.\r\n(b)\r\n    Given: V = 110 V, I = 5 A, V′ = 220 V\r\n    R = V/I\r\n    R = 110/5\r\n    R = 22 Ω\r\n    I′ = V′/R\r\n    I′ = 220/22\r\n    I′ = 10 A\r\n    ∴ Doubling the voltage doubles the current to 10 A (resistance unchanged).",
      "truncated": false
     },
     {
      "type": "LA",
-     "year": 2024,
+     "year": 2026,
      "marks": 5,
-     "text": "(i) Which type of circuits — series or parallel, should be used when you have to operate different electrical gadgets in your house ? List two reasons for your answer.\r\n(ii) Find the current flowing through the following electric circuit :\r\n(see image for circuit diagram)",
-     "answer": "(i)\r\n    • Parallel Circuit\r\n    • Each electrical appliance has its own switch due to which it can be turned ON and OFF separately.\r\n    • If one electrical appliance stops working, others remain unaffected.\r\n    • Each appliance has equal potential difference and draws current as per its requirement.\r\n    • The total resistance in parallel circuit decreases. (any two)\r\n(ii)\r\n    • Combined resistance of the series, R1 = 6Ω + 6Ω = 12Ω\r\n    • Combined resistance of parallel grouping of 6Ω and R1 = 12Ω, resistors is R2, where 1/R2 = 1/6 + 1/12 = 3/12\r\n    • R2 = 4.0Ω\r\n    • Total resistance of circuit = R = 3 + 4 + 3 = 10Ω\r\n    • Current flowing = I = V/R = 4.5 V/10Ω = 0.45 A",
-     "explanation": "(i)\r\n    • Parallel circuits should be used, since each appliance gets its own switch and can be turned on/off independently.\r\n    • If one appliance fails, the others keep working, and each appliance still receives the full supply voltage.\r\n(ii)\r\nGiven: 3Ω, 6Ω, 3Ω in the outer loop; two 6Ω resistors forming a parallel branch; battery = 4.5 V (see image for circuit diagram)\r\n    • Series pair in the branch: 6Ω + 6Ω = 12Ω\r\n    • This 12Ω combines in parallel with the other 6Ω: 1/R2 = 1/6 + 1/12, R2 = 4Ω\r\n    • Total resistance: R = 3 + 4 + 3 = 10Ω\r\n    • Current: I = V/R = 4.5/10 = 0.45 A",
+     "text": "(i) How many bulbs of resistance 8 Ω each should be connected in parallel combination to draw a current of 2 A from a battery of 4 V ?\r\n(ii) Name the device used for measuring electric current. How is it connected in a circuit ?\r\n(iii) State Joule’s law of heating.",
+     "answer": "(i)\r\n    V= 4V, I= 2A\r\n    Resistance of circuit R = V/I\r\n    R = 4/2\r\n    R = 2Ω\r\n    Let ‘n’ be the number of bulbs\r\n    1/R = 1/8 + 1/8 + 1/8 + 1/8 + ---n\r\n    1/R = n/8\r\n    1/2 = n/8\r\n    n = 4\r\n    Therefore, 4 bulbs of resistance 8 Ω should be connected in parallel.\r\n(ii)\r\n    • Ammeter\r\n    • In series\r\n(iii)\r\n    • Heat generated through a current carrying conductor is directly proportional to square of current, resistance of conductor and time for which current flows in conductor. / H = I²Rt",
+     "explanation": "(i)\r\n    Given: V = 4 V, I = 2 A, each bulb = 8 Ω\r\n    R = V/I\r\n    R = 4/2\r\n    R = 2 Ω\r\n    1/R = n/8\r\n    1/2 = n/8\r\n    n = 4\r\n    ∴ 4 bulbs must be connected in parallel.\r\n(ii)\r\n    • Ammeter, connected in series so the whole current passes through it.\r\n(iii)\r\n    • Heat produced in a conductor is directly proportional to the square of current, its resistance and the time of flow: H = I²Rt.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "Heredity",
-   "total": 65,
+   "total": 82,
    "byType": {
+    "MCQ": 38,
     "VSA": 14,
     "Case-based": 7,
-    "Assertion-Reason": 9,
-    "MCQ": 21,
-    "SA": 14
+    "Assertion-Reason": 10,
+    "SA": 13
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Chromosomes, Genes and Trait Inheritance",
-    "Mendel's Experiments",
     "Mendel’s Experiments",
     "Sex Determination",
     "Variations and Heredity"
@@ -459,35 +465,35 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Mendel obtained F2 generation by",
-     "answer": "(A) self-pollinating F1 generation plants.",
-     "explanation": "• The F2 generation in Mendel's experiments was obtained by self-pollinating (selfing) the F1 hybrid plants, allowing recessive traits to reappear.\r\n• ✓ Option (a): Self-pollinating F1 generation plants.\r\n• Why the others are wrong: Cross-pollinating with dominant/recessive/parent plants (b, c, d) does not describe how Mendel raised the F2 generation.",
+     "text": "Choose the correct statements with reference to chromosomes :\r\n    (i) carry hereditary information from parents to next generation.\r\n    (ii) are thread-like structures located inside the nucleus of an animal cell.\r\n    (iii) always exist in pairs in human gametes.\r\n    (iv) are involved in the process of cell division.",
+     "answer": "(C) (i), (ii) and (iv)",
+     "explanation": "• Chromosomes are thread-like structures in the nucleus that carry hereditary information (genes) and are distributed during cell division. Gametes are haploid, so chromosomes are single, not paired, in them.\r\n• ✓ Option (c): (i), (ii) and (iv) are correct.\r\n• Why the others are wrong: (a) omits (iv); (b) and (d) include (iii), which is false for gametes.",
      "truncated": false,
      "options": {
-      "A": "self pollinating F1 generation plants",
-      "B": "cross pollinating F1 generation plants with plants having dominant trait.",
-      "C": "cross pollinating F1 generation plants with plants having recessive trait.",
-      "D": "cross pollinating both the parents."
+      "A": "(i) and (ii)",
+      "B": "(iii) and (iv)",
+      "C": "(i), (ii) and (iv)",
+      "D": "(ii), (iii) and (iv)"
      },
      "answerText": null
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : A mango seed will germinate to form a mango tree.\r\nReason (R) : Heredity determines the process by which traits and characteristics are reliably inherited from parents to offspring.",
-     "answer": "A",
-     "explanation": "• A mango seed germinating into a mango tree (not any other species) happens because heredity ensures reliable transmission of traits from parent to offspring.\r\n• ✓ Option (a): Both statements are true, and heredity correctly explains why the seed grows true to type.\r\n• Why the others are wrong: (b) wrongly denies the causal link; (c) and (d) incorrectly mark a true statement as false.",
+     "text": "Assertion (A) : Bacteria that can withstand heat have better chances of survival in a heat wave.\r\nReason (R) : Accumulation of variations in a species increases the chances of its survival in changing environment.",
+     "answer": "(A) Both A and R are true and R is the correct explanation of A.",
+     "explanation": "• Variations among individuals mean some are better suited to a changed environment; heat-resistant bacteria are such a variant and survive a heat wave.\r\n• ✓ Option (a): Both A and R are true, and R (variations increase survival) explains A.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
@@ -502,28 +508,29 @@
      "type": "SA",
      "year": 2025,
      "marks": 3,
-     "text": "(a) How many chromosomes are present in human beings ? Out of these how many are sex chromosomes ?\r\n(b) Explain how, in sexually reproducing organisms, the number of chromosomes in the progeny is maintained.",
-     "answer": "(a)\r\n    • 23 pairs or 46 chromosomes.\r\n    • 1 pair or 2 chromosomes.\r\n(b)\r\n    • In sexually reproducing organisms, chromosomes occur in pairs.\r\n    • The members of the pair separate at the time of gamete formation.\r\n    • The two germ cells fuse and form a zygote, thus restoring the same number of chromosomes as the parents.",
-     "explanation": "• Human beings have 23 pairs (46) chromosomes, of which 1 pair (2 chromosomes) are sex chromosomes.\r\n• In sexually reproducing organisms, chromosomes occur in pairs; these pairs separate when gametes form.\r\n• Fusion of the two germ cells restores the original number of chromosomes in the zygote, keeping it constant across generations.",
+     "text": "(a) What are chromosomes ?\r\n(b) Explain in brief how stability of DNA content of a species is ensured in sexually reproducing organisms ?",
+     "answer": "(a)\r\n    • Chromosomes carry genes which control the traits of an organism/chromosomes contain information for inheritance of features from parents to next generation in the form of DNA (Deoxy ribonucleic acid) molecule.\r\n(b)\r\n    • Each cell has two copies of each chromosome, one from male and the other from female parents, which get halved during the formation of germ cells/gametes.\r\n    • After fusion of the germ cells a zygote is formed which restores the normal number of chromosomes and the same amount of DNA in the progeny.",
+     "explanation": "(a)\r\n    • Chromosomes are thread-like structures in the cell nucleus that carry genes controlling an organism's traits, in the form of DNA.\r\n(b)\r\n    • Each cell has two copies of every chromosome; gamete formation halves this number.\r\n    • Fusion of two gametes at fertilisation restores the normal chromosome number and DNA content in the zygote, keeping it stable across generations.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "How Do Organisms Reproduce?",
-   "total": 83,
+   "total": 107,
    "byType": {
-    "LA": 28,
-    "Assertion-Reason": 4,
+    "SA": 8,
     "Case-based": 4,
-    "SA": 7,
+    "LA": 28,
+    "Assertion-Reason": 7,
     "VSA": 8,
-    "MCQ": 32
+    "MCQ": 52
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Asexual Reproduction",
@@ -535,27 +542,27 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Plants like rose and banana have lost the capacity to produce :",
-     "answer": "C",
-     "explanation": "• Some cultivated plant varieties, propagated vegetatively (via cuttings, suckers etc.), have lost the ability to produce viable seeds through sexual reproduction.\r\n• ✓ Option (c): Rose and banana varieties are usually propagated vegetatively and have lost the capacity to produce seeds.\r\n• Why the others are wrong: these plants can still produce flowers, buds and (in banana's case) fruits, just not viable seeds.",
+     "text": "Yeast multiplies by which of the following methods ?",
+     "answer": "(D) Budding",
+     "explanation": "• In yeast a small outgrowth (bud) forms on the parent cell, grows, and detaches to become a new individual.\r\n• ✓ Option (d): Budding.\r\n• Why the others are wrong: (a) fragmentation occurs in Spirogyra; (b) binary fission in Amoeba and bacteria; (c) multiple fission in Plasmodium.",
      "truncated": false,
      "options": {
-      "A": "flowers",
-      "B": "buds",
-      "C": "seeds",
-      "D": "fruits"
+      "A": "Fragmentation",
+      "B": "Binary Fission",
+      "C": "Multiple Fission",
+      "D": "Budding"
      },
-     "answerText": "seeds"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : The embryo gets nutrition from the mother's blood with the help of a special tissue called placenta.\r\nReason (R) : Placenta is a disc which is embedded in the uterine wall.",
-     "answer": "B",
-     "explanation": "• The placenta enables nutrient transfer from mother to embryo, but simply describing it as a disc embedded in the uterine wall does not explain why nutrition transfer occurs.\r\n• ✓ Option (b): Both statements are individually true, but the Reason describes placental structure rather than explaining the nutrition function.\r\n• Why the others are wrong: Since both statements are true, (c) and (d) are ruled out; since R does not explain A, (a) is also incorrect.",
+     "text": "Assertion (A) : Variations are not often seen in off-springs produced by asexual reproduction.\r\nReason (R) : DNA molecule generated by replication is not similar to the original DNA.",
+     "answer": "(C) Assertion (A) is true but Reason (R) is false.",
+     "explanation": "• In asexual reproduction a single parent's DNA is copied, and DNA copying is highly accurate, so offspring show very little variation.\r\n• ✓ Option (c): A is true; R is false because the replicated DNA is similar (though not absolutely identical) to the original.\r\n• Why the others are wrong: (a) and (b) treat R as true; (d) wrongly marks A false.",
      "truncated": false,
      "options": {
       "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
@@ -563,7 +570,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
@@ -578,37 +585,38 @@
      "type": "SA",
      "year": 2025,
      "marks": 3,
-     "text": "Differentiate between self-pollination and cross pollination. Which one of the two is better for the survival of species ? Give reason to justify your answer.",
-     "answer": "Self-Pollination:\r\n    • Pollen grains are transferred from stamen to the stigma of the same flower.\r\nCross Pollination:\r\n    • Transfer of pollen grains from stamen of one flower to the stigma of another flower of same species.\r\nBetter for survival:\r\n    • Cross pollination is better as it leads to more variations which is better for survival of the species over time.",
-     "explanation": "• Self-pollination transfers pollen within the same flower, producing offspring genetically similar to the parent.\r\n• Cross-pollination transfers pollen between different flowers of the same species, mixing genetic material from two parents.\r\n• Cross-pollination is better for species survival because it introduces greater genetic variation, improving the population's ability to adapt to changing environmental conditions and resist diseases.",
+     "text": "(a) Define fertilisation.\r\n(b) What happens to Zygote, Ovule, Ovary and Stamens after fertilisation in a flowering plant ?",
+     "answer": "(a) Fertilization is the fusion of male and female gametes to form zygote.\r\n(b) •Zygote forms embryo\r\n•Ovule forms seeds\r\n•Ovary forms fruits\r\n•Stamens withers away (shrivel and falls off)",
+     "explanation": "(a)\r\n    • Fertilisation is the fusion of a male gamete with a female gamete, forming a diploid zygote.\r\n(b)\r\n    • After fertilisation: the zygote develops into an embryo, the ovule becomes a seed, the ovary matures into a fruit, and the stamens wither and fall off since their pollen-producing role is now complete.",
      "truncated": false
     },
     {
      "type": "LA",
      "year": 2025,
      "marks": 5,
-     "text": "(i) Write the functions of the following parts of human female reproductive system :\r\n    (I) Ovary\r\n    (II) Fallopian tube\r\n    (III) Uterus\r\n(ii) State briefly two contraceptive methods used by human males.",
-     "answer": "(i)\r\n    • (I) Ovary: Produces female gamete (egg) and female hormones (oestrogen).\r\n    • (II) Fallopian tube: Site of fertilization.\r\n    • (III) Uterus: Site of implantation and embryonic development.\r\n(ii)\r\n    • Mechanical barrier – Condoms.\r\n    • Surgical method – blocking the vas deferens in males (Vasectomy).",
-     "explanation": "(i)\r\n    • Ovary: produces the female gamete (egg/ovum) and secretes female hormones such as oestrogen.\r\n    • Fallopian tube: the site where fertilisation of the egg by sperm occurs.\r\n    • Uterus: the site where the fertilised egg implants and the embryo develops until birth.\r\n(ii)\r\n    • Condoms act as a mechanical barrier, physically preventing sperm from reaching the egg.\r\n    • Vasectomy is a surgical method in males that involves blocking or cutting the vas deferens, preventing sperm from being included in the semen ejaculated during intercourse.",
+     "text": "(a) Name the part performing following functions in human female reproductive system :\r\n    (i) production of eggs\r\n    (ii) site of fertilization\r\n    (iii) site of implantation\r\n    (iv) entry of the sperms\r\n(b) What changes are observed in the uterus :\r\n    (i) subsequent to implantation of zygote and\r\n    (ii) if an egg does not get fertilized ?",
+     "answer": "(a)\r\n    (i) Ovary\r\n    (ii) Oviduct / fallopian tube\r\n    (iii) Uterus\r\n    (iv) Vagina / Vaginal passage\r\n(b)\r\n    (i) Zygote starts dividing in the uterus. Thickened Uterine lining which is richly supplied with blood vessels nourishes the developing embryo. Placenta develops, which provides oxygen, food to the embryo and removes waste substances.\r\n    (ii) The uterine lining slowly breaks down and comes out as blood and mucous along with unfertilised egg.",
+     "explanation": "(a)\r\n    • (i) Ovary produces eggs; (ii) oviduct (fallopian tube) is the site of fertilisation; (iii) uterus is the site of implantation; (iv) vagina is the sperm entry point.\r\n(b)\r\n    • (i) After implantation, the zygote divides repeatedly in the uterus; the thickened, blood-vessel-rich uterine lining nourishes the embryo, and a placenta develops to supply oxygen and nutrients and remove waste.\r\n    • (ii) If the egg is not fertilised, the thickened uterine lining breaks down and is shed as menstrual blood along with the unfertilised egg.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "Life Processes",
-   "total": 120,
+   "total": 162,
    "byType": {
     "SA": 27,
     "Case-based": 3,
+    "Assertion-Reason": 18,
     "LA": 4,
-    "Assertion-Reason": 13,
     "VSA": 37,
-    "MCQ": 36
+    "MCQ": 73
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Excretion",
@@ -619,43 +627,43 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "The essential element taken up from the soil by the plants to synthesize proteins is :",
-     "answer": "B",
-     "explanation": "• Proteins are made of amino acids, which contain nitrogen as a key structural component.\r\n• ✓ Option (b): Nitrogen, absorbed from soil as nitrates, is essential for protein synthesis.\r\n• Why the others are wrong: (a), (c), (d) are important plant nutrients but are not the defining element of amino acids/proteins.",
+     "text": "Which structure in a leaf is mainly responsible for gaseous exchange ?",
+     "answer": "(B) Stomata",
+     "explanation": "• Gaseous exchange in leaves (CO₂ in for photosynthesis, O₂ out) takes place through tiny pores on the leaf surface called stomata.\r\n• ✓ Option (b): Stomata are the main sites of gaseous exchange in a leaf.\r\n• Why the others are wrong: (a) xylem transports water and minerals; (c) phloem transports food; (d) cuticle is a waxy layer that reduces water loss.",
      "truncated": false,
      "options": {
-      "A": "Phosphorus",
-      "B": "Nitrogen",
-      "C": "Iron",
-      "D": "Magnesium"
+      "A": "Xylem",
+      "B": "Stomata",
+      "C": "Phloem",
+      "D": "Cuticle"
      },
-     "answerText": "Nitrogen"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : In large animals, oxygen can reach different parts of the animal's body easily.\r\nReason (R) : Respiratory pigments take up oxygen from the air and carry it to body tissues.",
-     "answer": "D",
-     "explanation": "• In large animals, simple diffusion is too slow to supply oxygen to all body parts, so a circulatory system with respiratory pigments is required.\r\n• ✓ Option (d): Assertion (A) is false — oxygen does not reach all parts easily by diffusion alone in large animals — but Reason (R) is true, since respiratory pigments do carry oxygen to tissues.\r\n• Why the others are wrong: (a), (b), (c) all treat the Assertion as true, contradicting why large animals evolved a circulatory system.",
+     "text": "Assertion (A) : Arteries have valves as they have to withstand high pressure.\r\nReason (R) : Arteries are vessels which carry blood away from the heart to various organs.",
+     "answer": "(D) A is false, R is true.",
+     "explanation": "• Arteries carry blood away from the heart under high pressure, so they have thick, elastic walls; valves are found in veins, which carry blood at low pressure and need valves to prevent backflow.\r\n• ✓ Option (d): A is false (arteries do not have valves), but R is true.\r\n• Why the others are wrong: (a) and (b) treat A as true; (c) wrongly marks R false.",
      "truncated": false,
      "options": {
-      "A": "Both, Assertion (A) and Reason (R) are true, and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both, Assertion (A) and Reason (R) are true, and Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Assertion (A) is false, but Reason (R) is true."
+     "answerText": null
     },
     {
      "type": "VSA",
      "year": 2025,
      "marks": 2,
-     "text": "How is lymph formed ? State its important function.",
-     "answer": "• Through the pores present in the walls of capillaries some amount of plasma, proteins and blood cells escape into intercellular spaces in the tissue to form the tissue fluid called lymph.\r\n• Lymph carries digested and absorbed fat from intestine / drains excess fluid from extracellular space back into the blood.",
-     "explanation": "• Lymph forms when plasma, proteins, and some blood cells leak through capillary pore walls into intercellular spaces, becoming tissue fluid.\r\n• Its key function is transporting digested fat from the intestine and draining excess fluid back into the bloodstream.",
+     "text": "Name the tissues which form the vascular bundle. State their function in plants.",
+     "answer": "• Xylem and Phloem\r\n• Xylem – transports water and minerals obtained from the soil into the different parts of the plant.\r\n• Phloem – Transports food from leaves to other parts of the plant./ translocation of soluble products.",
+     "explanation": "• The vascular bundle is made up of xylem and phloem tissues.\r\n• Xylem transports water and minerals absorbed from the soil upward to all parts of the plant.\r\n• Phloem transports food made in the leaves to other parts of the plant, a process called translocation.",
      "truncated": false
     },
     {
@@ -671,29 +679,31 @@
      "type": "LA",
      "year": 2025,
      "marks": 5,
-     "text": "(i) \"The length of the small intestine in various animals depends on the food they eat.\" Justify the statement.\r\n(ii) Discuss the role of the pancreas and bile juice in the digestion of food in human beings.\r\n(iii) How is the small intestine designed to absorb digested food ?",
-     "answer": "(i)\r\n    • Herbivores eating grass need a longer small intestine to digest cellulose.\r\n    • Meat is easier to digest, so meat-eating animals (carnivores) have a shorter small intestine.\r\n(ii)\r\n    • Role of Pancreas: secretes pancreatic juice containing trypsin (for digesting proteins) and lipase (for breaking down emulsified fats).\r\n    • Role of Bile: emulsifies fats and makes the medium alkaline in the small intestine so that pancreatic enzymes can act.\r\n(iii)\r\n    • The inner lining of the small intestine has numerous finger-like projections called villi, which increase the surface area for absorption of food.\r\n    • The villi are richly supplied with blood vessels which carry the absorbed food to every cell of the body.",
-     "explanation": "(i)\r\n    • Herbivores need a longer small intestine to digest cellulose from grass, while carnivores, eating easily digestible meat, have a shorter small intestine.\r\n(ii)\r\n    • Pancreas: secretes pancreatic juice with trypsin (digests proteins) and lipase (breaks down emulsified fats).\r\n    • Bile: emulsifies fats and makes the intestinal medium alkaline so pancreatic enzymes can act effectively.\r\n(iii)\r\n    • The small intestine's lining has finger-like villi that increase surface area and are richly supplied with blood vessels to absorb and transport digested food to body cells.",
+     "text": "(i) State the role of rings of cartilage present in the throat.\r\n(ii) Discuss the role of the ribs and diaphragm when air is taken in during the breathing cycle.\r\n(iii) Why do we get muscle cramps during heavy exercise ? Explain.",
+     "answer": "(i)\r\n    • 'Rings of cartilage' ensure that the air passage does not collapse in the absence of air.\r\n(ii)\r\n    • Ribs are lifted → diaphragm flattens → chest cavity becomes larger → air is sucked into the lungs (alveoli) and we breathe in.\r\n(iii)\r\n    • Due to lack of oxygen in muscle cells (anaerobic respiration), pyruvate is converted into lactic acid; build-up of lactic acid in muscles causes cramps.",
+     "explanation": "(i)\r\n    • Rings of cartilage in the throat (trachea) keep the air passage from collapsing even when there's little air inside, ensuring a continuous, open pathway for airflow.\r\n(ii)\r\n    • During inhalation: the ribs move up and outward while the diaphragm contracts and flattens, together enlarging the chest cavity; this reduces internal pressure, drawing air into the lungs.\r\n(iii)\r\n    • During heavy exercise, muscle cells don't get enough oxygen and switch to anaerobic respiration, converting pyruvate into lactic acid instead of carbon dioxide; the resulting build-up of lactic acid in the muscles causes painful cramps.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "Light – Reflection and Refraction",
-   "total": 85,
+   "total": 111,
    "byType": {
     "LA": 16,
-    "SA": 28,
-    "VSA": 17,
-    "Case-based": 7,
-    "MCQ": 17
+    "SA": 36,
+    "VSA": 29,
+    "MCQ": 20,
+    "Case-based": 10
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
+    "Laws of Reflection",
     "Lens Formula and Magnification",
     "Mirror Formula and Magnification",
     "Power of Lens",
@@ -705,36 +715,36 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "To get an image of magnification –1 on a screen using a lens of focal length 20 cm, the object distance must be :",
-     "answer": "C",
-     "explanation": "• Magnification m = –1 (real, inverted, same-size image) occurs only when the object is placed at 2F, i.e., u = –2f.\r\n• ✓ Option (c): With f = 20 cm, object distance = 2 × 20 cm = 40 cm.\r\n• Why the others are wrong: (a), (b), (d) do not correspond to the object being placed at exactly twice the focal length.",
+     "text": "From the following options choose the one which gives negative magnification greater than one :",
+     "answer": "(A) Concave mirror, Nature of image-real",
+     "explanation": "• Negative magnification means a real, inverted image; magnitude greater than one means it is enlarged — formed by a concave mirror when the object is between F and C.\r\n• ✓ Option (a): Concave mirror, real image.\r\n• Why the others are wrong: (b) a virtual image has positive m; (c) a convex mirror never forms a real image; (d) convex mirror images have positive m less than one.",
      "truncated": false,
      "options": {
-      "A": "Less than 20 cm",
-      "B": "30 cm",
-      "C": "40 cm",
-      "D": "80 cm"
+      "A": "Concave mirror; Nature of image – real",
+      "B": "Concave mirror; Nature of image – virtual",
+      "C": "Convex mirror; Nature of image – real",
+      "D": "Convex mirror; Nature of image – virtual"
      },
-     "answerText": "40 cm"
+     "answerText": null
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "An object is placed at a distance of 10 cm in front of a concave mirror of focal length 15 cm. Use mirror formula to determine the position of the image formed by this mirror.",
-     "answer": "Given: u = -10 cm, f = -15 cm\r\n1/f = 1/v + 1/u\r\n1/(-15) = 1/v + 1/(-10)\r\n1/v = 1/(-15) + 1/10\r\nv = +30 cm\r\n∴ Position of image is 30 cm from the mirror.",
-     "explanation": "• u = -10 cm, f = -15 cm; using 1/f = 1/v + 1/u\r\n• 1/(-15) = 1/v + 1/(-10) → 1/v = 1/10 - 1/15 = 1/30\r\n• v = +30 cm, so the image forms 30 cm behind the mirror, on the virtual side.",
+     "text": "When an incident ray of light enters in a medium ‘X’ from medium ‘Y’, it bends away from the normal.\r\nComment about the following :\r\n(a) Speed of light in medium ‘X’ with respect to the speed of light in medium of ‘Y’.\r\n(b) Optical density of medium ‘X’ with respect to the optical density of medium ‘Y’.\r\nGive reason for your answer in each case.",
+     "answer": "(a)\r\n    • Speed of light in medium ‘X’ is more than in medium ‘Y’.\r\n    • Because light ray bends away from the normal in optically rarer medium.\r\n(b)\r\n    • Optical density of medium ‘X’ is less than medium ‘Y’.\r\n    • Because in optically rarer medium light bends away from the normal.",
+     "explanation": "(a)\r\n    • Light speeds up in X; a ray bends away from the normal when entering a medium where it travels faster.\r\n(b)\r\n    • X is optically rarer than Y; bending away from the normal shows passage from denser to rarer medium.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "An object of size 5 cm is placed at a distance of 30 cm from the optical centre of a converging lens of focal length 20 cm. Use lens formula to determine the position and size of the image formed.",
-     "answer": "Position:\r\n1/v - 1/u = 1/f\r\n1/v - 1/(-30) = 1/(+20)\r\n1/v + 1/30 = 1/20 => v = +60 cm\r\nposition is 60 cm from the lens\r\nSize: m = hi/ho = v/u\r\n= 60/(-30) = -2\r\nhi = -2 x 5 cm = -10 cm\r\nsize of image is 10 cm (Enlarged)",
-     "explanation": "• Given: ho = 5 cm, u = -30 cm, f = +20 cm\r\n• 1/v - 1/u = 1/f\r\n• 1/v - 1/(-30) = 1/20\r\n• 1/v = 1/20 - 1/30 = 1/60\r\n• v = +60 cm\r\n• ∴ Image at 60 cm, opposite side (real).\r\n• m = v/u = 60/(-30) = -2\r\n• hi = m x ho = -2 x 5 = -10 cm\r\n• ∴ Image size = 10 cm; real, inverted, enlarged.",
+     "text": "(a) Write the name of the lens and position of the object in front of it so that a virtual and magnified image is formed.\r\n(b) An object is placed perpendicular to the principal axis of a convex lens of focal length 20 cm. If object is located at 30 cm from this lens, using lens formula find out the position and nature of the image formed.",
+     "answer": "(a)\r\n    • Convex lens\r\n    • When object is placed between focus and optical centre\r\n(b)\r\n    f = + 20 cm\r\n    u = −30 cm\r\n    1/v − 1/u = 1/f\r\n    1/v = 1/f + 1/u\r\n    1/v = 1/20 + 1/(−30)\r\n    1/v = 1/60\r\n    v = 60 cm\r\n    The image is formed at a distance of 60 cm on the other side of the optical centre.\r\n    • Nature of image – Real, inverted",
+     "explanation": "(a)\r\n    • Convex lens, with the object between F and the optical centre O.\r\n(b)\r\n    Given: f = +20 cm, u = −30 cm\r\n    1/v = 1/f + 1/u\r\n    1/v = 1/20 − 1/30\r\n    1/v = 1/60\r\n    v = +60 cm\r\n    ∴ Image forms 60 cm behind the lens; it is real, inverted and magnified.",
      "truncated": false
     },
     {
@@ -750,19 +760,20 @@
   },
   {
    "chapter": "Magnetic Effects of Electric Current",
-   "total": 74,
+   "total": 99,
    "byType": {
-    "MCQ": 18,
-    "SA": 26,
+    "MCQ": 21,
     "Assertion-Reason": 10,
+    "SA": 29,
+    "VSA": 12,
     "Case-based": 2,
-    "VSA": 10,
-    "LA": 8
+    "LA": 25
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Domestic Electric Circuits",
@@ -773,19 +784,19 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "In domestic electric circuits, the colour of insulation covers of wires in the cables of electric iron/electric toaster is generally :",
-     "answer": "B",
-     "explanation": "• The standard domestic wiring convention uses red for the live wire, black for the neutral wire, and green for the earth wire.\r\n• ✓ Option (b): Red for live, black for neutral and green for earth wire.\r\n• Why the others are wrong: (a), (c) and (d) swap or mismatch the standard colour codes for live, neutral and earth wires.",
+     "text": "Assertion (A) : Direction of force exerted on a current-carrying conductor placed in a magnetic field remains same if the directions of both magnetic field and current flowing through the conductor are reversed.\r\nReason (R) : The direction of force exerted on a current-carrying conductor placed in an external magnetic field can be determined by using magnetic compass.",
+     "answer": "(C) Assertion (A) is true, but reason (R) is false.",
+     "explanation": "• By Fleming's left-hand rule, reversing both the field and the current reverses the force twice, so its direction stays the same — A is true. The direction of force is found using Fleming's left-hand rule, not a compass — R is false.\r\n• ✓ Option (c): A true, R false.\r\n• Why the others are wrong: (a) and (b) treat R as true; (d) marks A as false.",
      "truncated": false,
      "options": {
-      "A": "red for live wire, green for neutral wire and black for earth wire",
-      "B": "red for live wire, black for neutral wire and green for earth wire",
-      "C": "green for live wire, black for neutral wire and red for earth wire",
-      "D": "green for live wire, red for neutral wire and black for earth wire"
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "C": "Assertion (A) is true, but Reason (R) is false.",
+      "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "red for live wire, black for neutral wire and green for earth wire"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
@@ -805,11 +816,11 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "How and why is an electric fuse used in an electric circuit ? Briefly describe its function.",
-     "answer": "• An electric fuse is placed in series with the device to prevent the electric circuit from possible damage by stopping the flow of unduly high electric current.\r\n• If current larger than the specified value flows through the circuit, the fuse melts and breaks the electric circuit.",
-     "explanation": "• An electric fuse is a short, thin wire of low melting point, connected in series with a circuit or appliance.\r\n• If current larger than the specified safe value flows due to a short-circuit or overload, the fuse wire melts and breaks the circuit, protecting the appliance from damage.",
+     "text": "How is an electromagnet made ? Write any two ways by which the strength of electromagnet can be increased.",
+     "answer": "• An electromagnet is formed by wrapping a current carrying insulated copper wire in the form of coil around a magnetic material like soft iron core. /\r\n  By placing a magnetic material like soft iron as a core material inside the current carrying solenoid.\r\n• Strength of electromagnet can be increased by increasing the\r\n    (i) Number of turns of coil\r\n    (ii) Current flowing through the coil.",
+     "explanation": "• Wind insulated copper wire as a coil around a soft iron core and pass current; the core becomes a temporary magnet.\r\n• Strength increases by:\r\n    (i) increasing the number of turns of the coil.\r\n    (ii) increasing the current through the coil.",
      "truncated": false
     },
     {
@@ -825,19 +836,20 @@
   },
   {
    "chapter": "Metals and Non-Metals",
-   "total": 85,
+   "total": 114,
    "byType": {
-    "VSA": 7,
+    "VSA": 13,
     "Assertion-Reason": 14,
-    "SA": 26,
-    "LA": 2,
-    "MCQ": 28,
-    "Case-based": 8
+    "SA": 32,
+    "MCQ": 41,
+    "Case-based": 10,
+    "LA": 4
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Chemical Reactions of Metals",
@@ -849,19 +861,19 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "The products formed when Aluminium and Magnesium are burnt in the presence of air respectively are :",
-     "answer": "B",
-     "explanation": "• Metals burn in air (oxygen) to form their respective metal oxides, following standard valency-based formulas.\r\n• ✓ Option (b): Aluminium (valency 3) forms Al2O3, and Magnesium (valency 2) forms MgO.\r\n• Why the others are wrong: (a), (c) and (d) show incorrect formulas that do not balance the charges of Al3+/Mg2+ with O2-.",
+     "text": "Which of the following is an amphoteric oxide ?",
+     "answer": "(D) Al2O3",
+     "explanation": "• Amphoteric oxides react with both acids and bases to give salt and water.\r\n• ✓ Option (d): Al₂O₃ reacts with HCl and with NaOH (forming sodium aluminate).\r\n• Why the others are wrong: (a) Na₂O and (b) K₂O are basic oxides; (c) CO₂ is an acidic oxide.",
      "truncated": false,
      "options": {
-      "A": "Al3O4 and MgO2",
-      "B": "Al2O3 and MgO",
-      "C": "Al3O4 and MgO",
-      "D": "Al2O3 and MgO2"
+      "A": "Na2O",
+      "B": "K2O",
+      "C": "CO2",
+      "D": "Al2O3"
      },
-     "answerText": "Al2O3 and MgO"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
@@ -881,20 +893,20 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "Cinnabar is an ore of a metal 'X'. When this ore is heated in air, it is first converted into oxide of 'X' (XO) and then reduced to metal 'X' on further heating.\r\nIdentify metal 'X' and write chemical equations for the reactions that occur in the above processes.",
-     "answer": "'X' is Mercury.\r\nReaction involved in its extraction are:\r\n2HgS + 3O2 --Δ--> 2HgO + 2SO2\r\n2HgO --Δ--> 2Hg + O2",
-     "explanation": "• Metal 'X' is Mercury (Hg), extracted from cinnabar (mercury sulphide) by roasting in air.\r\n• 2HgS + 3O2 → 2HgO + 2SO2 (roasting forms mercury oxide)\r\n• 2HgO → 2Hg + O2 (further heating gives free mercury metal)",
+     "text": "(a) What are amphoteric oxides ?\r\n(b) Categorise the following based on their nature :\r\n    ZnO, Na2O, CO2",
+     "answer": "(a)\r\n    • Metal oxides which can react with both acids as well as bases to produce salt and water.\r\n(b)\r\n    • ZnO – Amphoteric oxide\r\n    • Na2O – Basic oxide\r\n    • CO2 – Acidic oxide",
+     "explanation": "(a)\r\n    • Amphoteric oxides are metal oxides that react with both acids and bases to form salt and water.\r\n(b)\r\n    • ZnO – amphoteric\r\n    • Na₂O – basic (metal oxide)\r\n    • CO₂ – acidic (non-metal oxide)",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "(a) What is a reactivity series of elements ? How is it developed ? Arrange the following elements as they are arranged in the reactivity series :\r\n    Aluminum, Calcium, Copper, Lead\r\n(b) Write balanced chemical equation to show the reaction of iron (III) oxide (Fe2O3) with aluminium.",
-     "answer": "(a)\r\n    • A series of metals arranged in order of their decreasing reactivity/activity, determined by performing displacement reactions.\r\n    • Calcium, Aluminium, Lead, Copper\r\n(b)\r\n    • Fe2O3 + 2Al → Al2O3 + 2Fe + Heat",
-     "explanation": "(a)\r\n    • A reactivity series arranges metals in order of decreasing reactivity, developed by performing displacement reactions between metals and salt solutions.\r\n    • Order: Calcium, Aluminium, Lead, Copper (most to least reactive).\r\n(b)\r\n    • Fe2O3 + 2Al → Al2O3 + 2Fe + Heat, an exothermic thermite reaction in which aluminium displaces iron from its oxide.",
+     "text": "Answer the following :\r\n(a) Why can the oxides of highly reactive metals not be reduced by carbon ?\r\n(b) Why do ionic compounds have high melting and boiling points ?\r\n(c) Why is a solder, an alloy of lead and tin, used for welding electrical wires together ?",
+     "answer": "(a)\r\n    • Highly reactive metals have more affinity for oxygen than carbon.\r\n(b)\r\n    • Because a considerable amount of energy is required to break the strong inter-ionic attraction /Because of strong forces of attraction between oppositely charged ions.\r\n(c)\r\n    • Because of its low melting point.",
+     "explanation": "(a)\r\n    • Metals like Na, Ca, Al have a greater affinity for oxygen than carbon, so carbon cannot remove oxygen from their oxides; electrolytic reduction is used instead.\r\n(b)\r\n    • Strong electrostatic forces hold oppositely charged ions together, so much energy is needed to break them.\r\n(c)\r\n    • Solder has a low melting point, so it melts easily to join wires.",
      "truncated": false
     },
     {
@@ -910,17 +922,18 @@
   },
   {
    "chapter": "Our Environment",
-   "total": 72,
+   "total": 99,
    "byType": {
-    "MCQ": 20,
+    "MCQ": 42,
     "VSA": 23,
     "SA": 18,
-    "Assertion-Reason": 11
+    "Assertion-Reason": 16
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Ecosystem",
@@ -930,27 +943,27 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Consider the following food chain :\r\nGrass → Grasshopper → Frog → Snake → Eagle\r\nIf the amount of energy available at third trophic level is 50 kJ, the available energy at the producer level was :",
-     "answer": "D",
-     "explanation": "Given: Energy at 3rd trophic level (Frog) = 50 kJ; only 10% of energy transfers between successive trophic levels.\r\nEnergy at 2nd level = 50 × 10 = 500 kJ\r\nEnergy at 1st (producer) level = 500 × 10 = 5000 kJ\r\n∴ Available energy at producer level = 5000 kJ.\r\n✓ Option (d): 5000 kJ is correct.\r\nWhy the others are wrong: The other values come from dividing instead of multiplying, or from using the wrong number of trophic-level steps.",
+     "text": "An ecosystem contains maximum number of :",
+     "answer": "(A) Producers",
+     "explanation": "• Only about 10% of energy passes from one trophic level to the next, so each higher level supports fewer organisms; the base of the pyramid is the largest.\r\n• ✓ Option (a): Producers (green plants) are the most numerous.\r\n• Why the others are wrong: (b) herbivores, (c) carnivores and (d) omnivores occupy higher trophic levels with less available energy, so they are fewer.",
      "truncated": false,
      "options": {
-      "A": "0.5 kJ",
-      "B": "5 kJ",
-      "C": "500 kJ",
-      "D": "5000 kJ"
+      "A": "Producers",
+      "B": "Herbivores",
+      "C": "Carnivores",
+      "D": "Omnivores"
      },
-     "answerText": "5000 kJ"
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : The amount of ozone in the atmosphere began to drop sharply in the 1980s.\r\nReason (R) : The oxygen atoms combine with molecular oxygen to form ozone.",
-     "answer": "B",
-     "explanation": "• Ozone depletion, caused mainly by CFCs, was first sharply noticed in the 1980s, making the Assertion true; the natural formation of ozone from oxygen atoms combining with O2 is also a true statement, but it does not explain the depletion.\r\n• ✓ Option (b): Both statements are true, but the Reason does not explain the Assertion.\r\n• Why the others are wrong: (a) wrongly treats R as the explanation; (c) and (d) wrongly mark one statement false.",
+     "text": "Assertion (A) : Natural replenishment of soil will not take place in absence of microbes.\r\nReason (R) : Microbes, comprising of bacteria and fungi, break down dead remains and waste products of organisms, and they go into the soil.",
+     "answer": "(A) Both A and R are true, and R is the correct explanation of A",
+     "explanation": "• Decomposers (bacteria and fungi) break down complex organic matter of dead remains into simple substances that return to the soil.\r\n• ✓ Option (a): Both are true, and decomposition by microbes is exactly why soil gets replenished.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
       "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
@@ -958,7 +971,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
@@ -973,27 +986,28 @@
      "type": "SA",
      "year": 2025,
      "marks": 3,
-     "text": "(a) 'In a food chain energy flow is unidirectional.' Give two reasons for the given statement.\r\n(b) If 10,000 J energy is available at the producer level, how much energy will be available to the secondary consumers ? Give reason to justify your answer.",
-     "answer": "(a)\r\n    • The energy captured by plants does not revert to solar input, and the energy that passes to herbivores does not revert back to autotrophs.\r\n    • As energy moves progressively through the trophic levels, it is no longer available to the previous level.\r\n    • The energy available at each trophic level gets progressively diminished due to loss of energy at each level. (any two)\r\n(b)\r\n    • 100 J\r\n    • Autotrophs (10000 J) → Primary consumer (1000 J) → Secondary consumer (100 J)\r\n    • Only 10% of the energy of the organic matter of the previous trophic level is transferred to the next trophic level (10% law).",
-     "explanation": "(a)\r\n    • Energy captured by producers never reverts back to the sun or to the previous trophic level once it moves forward through the food chain.\r\n    • Energy available at each trophic level diminishes progressively, so it cannot flow backward.\r\n(b)\r\n    • Only 10% of energy transfers at each trophic level (10% law): 10,000 J → 1,000 J (primary consumers) → 100 J (secondary consumers).\r\n    ∴ Secondary consumers receive 100 J.",
+     "text": "Write the essential function performed by ozone at the higher levels of the atmosphere. How is it formed in the upper atmosphere ? Write the name of the group of chemicals mainly responsible for the depletion of ozone layer.",
+     "answer": "• Ozone (O3) shields the surface of the earth from ultraviolet (UV) radiation, which is highly damaging to organisms (may cause skin cancer).\r\n• UV radiation splits apart some molecular oxygen (O2) into free oxygen (O) atoms; these atoms then combine with molecular oxygen to form ozone.\r\n• O2 --UV--> O + O\r\n• O + O2 → O3 (Ozone)\r\n• Chlorofluorocarbons (CFCs)/freons deplete the ozone layer.",
+     "explanation": "• Ozone in the upper atmosphere shields the Earth's surface from harmful UV radiation, which can cause skin cancer and other damage.\r\n• It forms when UV radiation splits O₂ into free oxygen atoms, which then combine with O₂ to form O₃.\r\n• Chlorofluorocarbons (CFCs)/freons are mainly responsible for ozone layer depletion.",
      "truncated": false
     }
    ]
   },
   {
    "chapter": "The Human Eye and the Colourful World",
-   "total": 78,
+   "total": 101,
    "byType": {
-    "Assertion-Reason": 8,
-    "MCQ": 25,
+    "MCQ": 33,
     "Case-based": 2,
-    "SA": 24,
-    "VSA": 19
+    "SA": 33,
+    "VSA": 25,
+    "Assertion-Reason": 8
    },
    "years": [
     2023,
     2024,
-    2025
+    2025,
+    2026
    ],
    "subtopics": [
     "Defects of Vision",
@@ -1004,19 +1018,19 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Select the correct statement from the following :",
-     "answer": "C",
-     "explanation": "• Fine particles in the atmosphere scatter shorter wavelengths (blue) more strongly than longer wavelengths (red), by Rayleigh scattering.\r\n• ✓ Option (c): Sunlight passing through fine air particles scatters blue light more strongly than red.\r\n• Why the others are wrong: (a) air molecules are smaller than the wavelength of light; (b) red has a longer wavelength than blue; (d) red is scattered least, not most, by fog/smoke.",
+     "text": "The pair of eye parts responsible for admitting different amount of light in to the eyes is",
+     "answer": "(A) Iris and pupil",
+     "explanation": "• The iris is a muscular diaphragm that adjusts the size of the pupil, and the pupil regulates how much light enters the eye.\r\n• ✓ Option (a): Iris and pupil.\r\n• Why the others are wrong: (b) and (d) ciliary muscles change the focal length of the lens; (c) the retina forms the image, it does not control light entry.",
      "truncated": false,
      "options": {
-      "A": "The size of the molecules of air is larger than the wavelength of visible light.",
-      "B": "The blue light has a wavelength about 1·8 times greater than that of red light.",
-      "C": "When sunlight passes through the fine particles in air, they scatter the blue colour of visible light more strongly than red.",
-      "D": "The light of red colour is scattered the most by fog or smoke."
+      "A": "Iris and pupil",
+      "B": "Ciliary muscles and pupil",
+      "C": "Retina and Iris",
+      "D": "Ciliary muscles and cornea"
      },
-     "answerText": "When sunlight passes through the fine particles in air, they scatter the blue colour of visible light more strongly than red."
+     "answerText": null
     },
     {
      "type": "Assertion-Reason",
@@ -1036,20 +1050,20 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "Give reasons :\r\n    (i) The sky appears dark to passengers flying at very high altitude.\r\n    (ii) 'Danger' signal lights are red in colour.",
-     "answer": "(i) Scattering of light is not prominent at such heights.\r\n(ii) The red colour is least scattered by smoke or fog. / Red colour has longer wavelength.",
-     "explanation": "(i)\r\n    • At very high altitudes the atmosphere is thin, leaving little air to scatter sunlight, so the sky appears dark.\r\n(ii)\r\n    • Red light has the longest wavelength among visible colours and is scattered the least by smoke or fog, so danger signals use red for maximum visibility.",
+     "text": "What happens when light is scattered from (i) very fine particles and (ii) very large size particles of medium ? Justify your answer in each case.",
+     "answer": "(i)\r\n    • Mainly blue coloured light is scattered because very fine particles scatter shorter wavelength.\r\n(ii)\r\n    • Scattered light may appear white because very large size particles scatter light of all wavelengths.",
+     "explanation": "(i)\r\n    • Very fine particles scatter mainly blue light, as they scatter shorter wavelengths more strongly.\r\n(ii)\r\n    • Large particles scatter all wavelengths nearly equally, so the scattered light appears white.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "A person uses lenses of +2.0 D power in his spectacles for the correction of his vision.\r\n    (a) Name the defect of vision the person is suffering from.\r\n    (b) List two causes of this defect.\r\n    (c) Determine the focal length of the lenses used in the spectacles.",
-     "answer": "(a) Hypermetropia\r\n(b) Two causes:\r\n    • Eye ball has become too small /Eye ball is shortened\r\n    • The focal length of the eye Lens is long / eye lens becomes less convergent\r\n(c) Focal length = 1/P = 1/2 = + 0.5 m",
-     "explanation": "(a)\r\n    • A positive (converging) lens correction indicates hypermetropia (far-sightedness).\r\n(b)\r\n    • Caused by an eyeball that is too short, or by an eye lens with too long a focal length (less convergent).\r\n(c)\r\nGiven: P = +2.0 D\r\nf = 1/P\r\nf = 1/2\r\n∴ f = +0.5 m",
+     "text": "What is scattering of light ? How is scattering of light different from reflection of light ? Explain.",
+     "answer": "• The phenomenon of spreading light in different directions on interaction with particles of the medium.\r\n• Light bounces back in a fixed direction after reflection while in scattering of light, it spreads in different directions. / Reflection of light is independent of the size of reflecting particles whereas the colour of the scattered light depends upon the size of scattering particles.",
+     "explanation": "• Scattering: when light strikes tiny particles of a medium, it spreads out in different directions.\r\n• Difference:\r\n    • Reflection sends light back in one fixed direction; scattering spreads it in all directions.\r\n    • Reflection does not depend on particle size, whereas the colour of scattered light depends on the size of the scattering particles (e.g. blue sky).",
      "truncated": false
     }
    ]
