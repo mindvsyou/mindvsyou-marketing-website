@@ -221,6 +221,11 @@ def build(d):
             f'<div class="chapter-actions">{action_links(c, "", True)}</div>')
 
     n_types = len({t for c in chapters for t in c["byType"]})
+    by_size = sorted(chapters, key=lambda c: -c["total"])
+    top3 = ", ".join(esc(c["chapter"]) for c in by_size[:3])
+    top_line = (f"Most practice questions: {top3}. Fewest: {esc(by_size[-1]['chapter'])} "
+                f"({by_size[-1]['total']} practice questions). Start with the chapters where you score lowest, "
+                f"then use the case-based and assertion-reason questions to test how well you can apply a concept.")
     ar = sum(c["byType"].get("Assertion-Reason", 0) for c in chapters)
     ar_line = (f"MCQ practice includes {ar} assertion-reason question{'s' if ar != 1 else ''}. " if ar else "")
     faqs = [
@@ -322,6 +327,7 @@ def build(d):
       </div>
       <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I practise CBSE Class 10 Science PYQs chapter-wise?</strong> On <a href="{esc(practice)}">quiz.mindvsyou.io</a>: {total} practice questions from board years {y0}&ndash;{y1}, in MCQ, assertion-reason, very short, short, long and case-based formats, with instant marking for MCQs. Guests can try it without an account.</p></div>
       <p>Some board questions have several parts, and each part can count as its own practice question.</p>
+      <p>{top_line}</p>
 
       <h2 id="coverage-table">Coverage by chapter and question type</h2>
       <p>Number of practice questions. A zero means that chapter has none of that type in the bank. VSA = very short answer, SA = short answer, LA = long answer.</p>
