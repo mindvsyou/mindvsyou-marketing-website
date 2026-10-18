@@ -1,7 +1,7 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-10-16T06:09:16.616Z",
+ "generatedAt": "2026-10-18T07:08:15.921Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
  "totalQuestions": 1467,
  "years": [
@@ -15,12 +15,12 @@
    "chapter": "Acids, Bases and Salts",
    "total": 131,
    "byType": {
-    "MCQ": 67,
-    "LA": 7,
+    "SA": 28,
+    "Case-based": 7,
     "Assertion-Reason": 2,
     "VSA": 20,
-    "Case-based": 7,
-    "SA": 28
+    "MCQ": 67,
+    "LA": 7
    },
    "years": [
     2023,
@@ -71,18 +71,18 @@
      "type": "VSA",
      "year": 2026,
      "marks": 2,
-     "text": "Write the balanced chemical equations involved in the preparation of\r\n(a) Bleaching powder\r\n(b) Baking soda",
-     "answer": "(a)\r\n    • Ca(OH)2 + Cl2 → CaOCl2 + H2O\r\n      (Bleaching powder)\r\n(b)\r\n    • NaCl + H2O + CO2 + NH3 → NH4Cl + NaHCO3\r\n      (Baking soda)",
-     "explanation": "(a)\r\n    • Chlorine is passed over dry slaked lime: Ca(OH)₂ + Cl₂ → CaOCl₂ + H₂O.\r\n(b)\r\n    • Solvay process, using brine with CO₂ and ammonia: NaCl + H₂O + CO₂ + NH₃ → NH₄Cl + NaHCO₃.",
+     "text": "Write the preparation of Baking soda. How does it help in making cakes soft and spongy ?",
+     "answer": "• Baking soda is prepared by passing carbon dioxide and ammonia gas through aqueous solution of sodium chloride.\r\n/\r\nNaCl + H2O + NH3 + CO2 → NaHCO3 + NH4Cl\r\n• Baking soda on heating releases CO2 gas which makes cakes soft and spongy\r\n/\r\n2NaHCO3 → Na2CO3 + H2O + CO2(g)",
+     "explanation": "• Preparation: NaCl + H₂O + NH₃ + CO₂ → NaHCO₃ + NH₄Cl.\r\n• On heating in the oven, 2NaHCO₃ → Na₂CO₃ + H₂O + CO₂; the CO₂ bubbles make the dough rise, giving soft, spongy cakes.",
      "truncated": false
     },
     {
      "type": "SA",
      "year": 2026,
      "marks": 3,
-     "text": "Write the preparation of following compounds with balanced chemical equation :\r\n(i) Baking soda\r\n(ii) Bleaching powder\r\n(iii) Plaster of Paris",
-     "answer": "(i)\r\n    • NaCl + H2O + NH3 + CO2 → NaHCO3 + NH4Cl\r\n(ii)\r\n    • Ca(OH)2 + Cl2 → CaOCl2 + H2O\r\n    /\r\n    • 2Ca(OH)2 + 2Cl2 → Ca(ClO)2 + CaCl2 + 2H2O\r\n(iii)\r\n    • CaSO4.2H2O --[373K]--> CaSO4.½H2O + 1½H2O\r\n(deduct ½ mark for no / incorrect balancing)",
-     "explanation": "(i)\r\n    • Baking soda: NaCl + H₂O + NH₃ + CO₂ → NaHCO₃ + NH₄Cl\r\n(ii)\r\n    • Bleaching powder: chlorine is passed over dry slaked lime — Ca(OH)₂ + Cl₂ → CaOCl₂ + H₂O\r\n(iii)\r\n    • Plaster of Paris: gypsum heated at 373 K — CaSO₄·2H₂O → CaSO₄·½H₂O + 1½H₂O",
+     "text": "Give reasons :\r\n(i) For dilution of an acid, acid is added into water and not water into acid.\r\n(ii) Dry HCl gas does not turn blue litmus red whereas dilute hydrochloric acid does.\r\n(iii) Blue colour of Copper(II) sulphate crystals turns white on heating.",
+     "answer": "(i)\r\n    • When acid is added to water, it does not cause excessive local heating/ does not splash out and cause burns.\r\n(ii)\r\n    • Because dry HCl does not ionize/produce H+ ions whereas in dilute HCl, H+ ions are present.\r\n(iii)\r\n    • Because of loss of 5 molecules of water of crystallisation.",
+     "explanation": "(i)\r\n    • Dilution is highly exothermic; adding acid slowly to water spreads the heat, whereas water added to acid may boil locally, splash and cause burns.\r\n(ii)\r\n    • Acidic behaviour needs H⁺ ions, which form only in water; dry HCl gas does not ionise.\r\n(iii)\r\n    • On heating, CuSO₄·5H₂O loses its five water molecules of crystallisation, becoming white anhydrous CuSO₄.",
      "truncated": false
     },
     {
@@ -100,12 +100,12 @@
    "chapter": "Carbon and Its Compounds",
    "total": 107,
    "byType": {
-    "Assertion-Reason": 4,
-    "Case-based": 5,
-    "LA": 54,
+    "VSA": 8,
+    "MCQ": 28,
     "SA": 2,
-    "MCQ": 34,
-    "VSA": 8
+    "Assertion-Reason": 10,
+    "LA": 54,
+    "Case-based": 5
    },
    "years": [
     2023,
@@ -139,19 +139,19 @@
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : Propanal and propanone are structural isomers.\r\nReason (R) : Propanal and propanone both have the same molecular formula.",
-     "answer": "A",
-     "explanation": "• Propanal (C3H6O, an aldehyde) and propanone (C3H6O, a ketone) share the same molecular formula but differ in structure — making them structural isomers.\r\n• ✓ Option (a): Both statements are true, and having the same molecular formula with different structures is exactly why they're isomers, so Reason correctly explains Assertion.\r\n• Why the others are wrong: (b), (c), (d) incorrectly deny the true statements or the causal link between them.",
+     "text": "Assertion (A) : Carbon shares its valence electrons with other atoms of carbon or with atoms of other elements.\r\nReason (R) : The shared electrons belong to the outermost shells of both the atoms and lead to both atoms attaining the noble gas configuration.",
+     "answer": "(A) Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+     "explanation": "• Carbon (valency 4) cannot easily gain or lose four electrons, so it shares them to form covalent bonds; the shared pair counts for both atoms, completing their octets.\r\n• ✓ Option (a): Both are true and R explains why carbon shares electrons.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both, Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
@@ -186,11 +186,11 @@
    "chapter": "Chemical Reactions and Equations",
    "total": 135,
    "byType": {
-    "Assertion-Reason": 5,
+    "Assertion-Reason": 6,
+    "LA": 4,
     "VSA": 33,
-    "MCQ": 56,
-    "SA": 37,
-    "LA": 4
+    "MCQ": 55,
+    "SA": 37
    },
    "years": [
     2023,
@@ -211,25 +211,25 @@
      "type": "MCQ",
      "year": 2026,
      "marks": 1,
-     "text": "The volume ratio of hydrogen and oxygen gases liberated during electrolysis of water is",
-     "answer": "(B) 2 : 1",
-     "explanation": "• Electrolysis of water: 2H₂O → 2H₂ + O₂; two molecules of hydrogen form for every molecule of oxygen.\r\n• ✓ Option (b): Volume of H₂ : O₂ = 2 : 1.\r\n• Why the others are wrong: (a) and (c) do not match the equation; (d) inverts the ratio.",
+     "text": "Which of the following are combination reactions ?\r\n(i) 2KClO3 → 2KCl + 3O2\r\n(ii) MgO + H2O → Mg(OH)2\r\n(iii) 4Al + 3O2 → 2Al2O3\r\n(iv) Zn + FeSO4 → ZnSO4 + Fe",
+     "answer": "(D) (ii) and (iii)",
+     "explanation": "• In a combination reaction two or more reactants combine to form a single product — MgO + H₂O → Mg(OH)₂ and 4Al + 3O₂ → 2Al₂O₃.\r\n• ✓ Option (d): (ii) and (iii).\r\n• Why the others are wrong: (i) is a decomposition reaction and (iv) is a displacement reaction, so options (a), (b) and (c) are incorrect.",
      "truncated": false,
      "options": {
-      "A": "1 : 1",
-      "B": "2 : 1",
-      "C": "4 : 1",
-      "D": "1 : 2"
+      "A": "(i) and (iii)",
+      "B": "(iii) and (iv)",
+      "C": "(ii) and (iv)",
+      "D": "(ii) and (iii)"
      },
      "answerText": null
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : Silver chloride turns grey in sunlight.\r\nReason (R) : Decomposition of silver chloride into silver and chlorine takes place by sunlight.",
-     "answer": "A",
-     "explanation": "• Silver chloride undergoes photolytic (light-induced) decomposition into silver and chlorine when exposed to sunlight, which directly causes its colour change.\r\n• ✓ Option (a): Both statements are true, and the Reason correctly explains why silver chloride turns grey.\r\n• Why the others are wrong: Since the Reason correctly and directly explains the Assertion, options (b), (c), and (d) are ruled out.",
+     "text": "Assertion (A) : Reaction of quick lime with water is an exothermic reaction.\r\nReason (R) : A large amount of heat is evolved on the reaction of quick lime and water.",
+     "answer": "(A) Both A and R are true, and R is the correct explanation of A.",
+     "explanation": "• CaO + H₂O → Ca(OH)₂ + heat; a reaction that releases heat is exothermic.\r\n• ✓ Option (a): Both are true, and the large amount of heat evolved (R) is why the reaction is exothermic (A).\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
       "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
@@ -237,7 +237,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
@@ -252,9 +252,9 @@
      "type": "SA",
      "year": 2026,
      "marks": 3,
-     "text": "What happens when\r\n(i) potassium iodide solution is added to lead (II) nitrate solution ?\r\n(ii) zinc is added to copper (II) chloride solution ?\r\n(iii) hydrogen gas is passed over hot copper (II) oxide ?\r\nWrite balanced chemical equations of the reactions involved in support of your answer.",
-     "answer": "(i)\r\n    • Yellow precipitate of potassium iodide is formed.\r\n    • 2KI + Pb(NO3)2 → PbI2 + 2KNO3\r\n(ii)\r\n    • Zinc will displace copper from copper chloride.\r\n    • Zn + CuCl2 → ZnCl2 + Cu\r\n(iii)\r\n    • The black coating of copper oxide will turn brown.\r\n    • CuO + H2 → Cu + H2O\r\n(Note: Award full marks if balanced chemical equation is written)",
-     "explanation": "(i)\r\n    • Double displacement: a yellow precipitate of lead iodide forms.\r\n    • 2KI + Pb(NO₃)₂ → PbI₂ + 2KNO₃\r\n(ii)\r\n    • Displacement: zinc is more reactive, so copper is deposited.\r\n    • Zn + CuCl₂ → ZnCl₂ + Cu\r\n(iii)\r\n    • Redox: CuO is reduced; black turns brown.\r\n    • CuO + H₂ → Cu + H₂O",
+     "text": "(a) Name the substance oxidised and reduced in the following reaction :\r\n    ZnO + C → Zn + CO\r\n(b) Balance the following chemical reaction :\r\n    Pb(NO3)2 + KI → PbI2 + KNO3\r\n(c) Give one example each of electrolytic decomposition and decomposition by sunlight.",
+     "answer": "(a)\r\n    • Substance oxidised - C\r\n    • Substance reduced - ZnO\r\n(b)\r\n    • Pb(NO3)2 + 2 KI → PbI2 + 2 KNO3\r\n(c)\r\n    • 2H2O --[electricity]--> 2H2 + O2\r\n    • 2AgCl --[sunlight]--> 2Ag + Cl2\r\n    (any other example in each case)",
+     "explanation": "(a)\r\n    • Carbon gains oxygen to form CO, so it is oxidised; ZnO loses oxygen to form zinc, so it is reduced. Carbon acts as the reducing agent.\r\n(b)\r\n    • Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃\r\n(c)\r\n    • Electrolytic: 2H₂O → 2H₂ + O₂ (electricity)\r\n    • Photolytic: 2AgCl → 2Ag + Cl₂ (sunlight)",
      "truncated": false
     },
     {
@@ -272,12 +272,12 @@
    "chapter": "Control and Coordination",
    "total": 101,
    "byType": {
-    "MCQ": 44,
-    "SA": 17,
-    "Assertion-Reason": 5,
-    "VSA": 24,
     "LA": 8,
-    "Case-based": 3
+    "Case-based": 5,
+    "VSA": 33,
+    "Assertion-Reason": 5,
+    "SA": 19,
+    "MCQ": 31
    },
    "years": [
     2023,
@@ -296,15 +296,15 @@
      "type": "MCQ",
      "year": 2026,
      "marks": 1,
-     "text": "Identify the endocrine gland that regulates the growth of human body.",
-     "answer": "(A) Pituitary gland",
-     "explanation": "• The pituitary gland secretes growth hormone, which regulates growth and development of the body.\r\n• ✓ Option (a): Pituitary gland.\r\n• Why the others are wrong: (b) thyroid makes thyroxin for metabolism; (c) pancreas makes insulin for blood sugar; (d) adrenal gland makes adrenaline for emergencies.",
+     "text": "Identify the type of tropic movement that is responsible for the movement of the pollen tube towards an ovule from the following options.",
+     "answer": "(C) Chemotropism",
+     "explanation": "• The pollen tube grows towards the ovule in response to chemicals released by the ovule — a growth movement towards a chemical stimulus.\r\n• ✓ Option (c): Chemotropism.\r\n• Why the others are wrong: (a) hydrotropism is response to water; (b) geotropism is response to gravity; (d) phototropism is response to light.",
      "truncated": false,
      "options": {
-      "A": "Pituitary gland",
-      "B": "Thyroid gland",
-      "C": "Pancreas",
-      "D": "Adrenal gland"
+      "A": "Hydrotropism",
+      "B": "Geotropism",
+      "C": "Chemotropism",
+      "D": "Phototropism"
      },
      "answerText": null
     },
@@ -326,20 +326,20 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "(a) How is brain protected in our body ?\r\n(b) A doctor finds in one of his patients that he is not maintaining a proper posture and balance of his body. State the region of brain and also the part of brain which is responsible for it.",
-     "answer": "(a) Brain is protected in bony box / skull / cranium / fluid filled balloon.\r\n(b) Region of brain: Hind brain and its part is cerebellum.",
-     "explanation": "(a)\r\n    • The brain is enclosed within the skull (cranium) and cushioned by cerebrospinal fluid, protecting it from mechanical shock.\r\n(b)\r\n    • Loss of posture and balance points to the hindbrain, specifically the cerebellum, which coordinates muscle movements and body balance.",
+     "text": "Electrical impulse is an excellent means to transmit information in the animal body, but there are some limitations to the use of electrical impulses. State any two limitations.",
+     "answer": "• Electrical impulse reaches only those cells that are connected by nervous tissue, not each and every cell in the animal body.\r\n• Once an electrical impulse is generated in the cell and transmitted, the cell will take some time to reset its mechanism before it can generate and transmit a new impulse. / Transmission of electrical impulses is not a continuous process.",
+     "explanation": "• Limited reach: impulses reach only cells connected by nervous tissue, not every cell of the body.\r\n• Not continuous: after an impulse is generated and transmitted, the cell needs time to reset before it can send a new impulse.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "(a) Define hormone.\r\n(b) \"Hormones should be secreted in precise quantities. We have a feedback mechanism through which this is done.\" With the help of an example justify the statement.",
-     "answer": "(a)\r\n    • Hormones are chemical messengers (substances) which regulate body functions / hormones are biochemical substances produced in one part of the body and move to the target organ or tissue to regulate body function.\r\n(b)\r\n    • Example: if the sugar level in blood rises, it is detected by cells of the pancreas which respond by producing more insulin to lower the blood sugar level.\r\n    • As the blood sugar level falls, this is detected by the cells of the pancreas and insulin secretion is reduced.",
-     "explanation": "(a)\r\n    • Hormones are chemical messengers produced in one part of the body that travel to a target organ to regulate its function.\r\n(b)\r\n    • Example: rising blood sugar is detected by pancreas cells, which secrete more insulin to lower it; as sugar falls, insulin secretion reduces — a feedback loop keeping hormone levels precise.",
+     "text": "Give reasons for the following :\r\n(a) Adrenal gland is known as the stress gland of the body.\r\n(b) Prenatal sex determination is banned in India.\r\n(c) Vegetative propagation is advantageous in some plants.",
+     "answer": "(a)\r\n    • Because adrenal gland secretes adrenaline hormone that enables the animal body to face a scary situation.\r\n(b)\r\n    • To prevent female foeticide.\r\n(c)\r\n    • Plants raised by vegetative propagation can bear flowers and fruits earlier than those produced from seeds /\r\n    • Such methods also make possible the propagation of plants such as banana, orange, rose and jasmine that have lost the capacity to produce seeds /\r\n    • All plants produced are genetically similar enough to the parent plant to have all its characteristics.",
+     "explanation": "(a)\r\n    • Adrenal glands secrete adrenaline in emergencies; it raises heart rate and blood supply to muscles, preparing the body to face stress.\r\n(b)\r\n    • Sex is known before birth, so the ban prevents female foeticide and protects the sex ratio.\r\n(c)\r\n    • Plants flower and fruit earlier, seedless plants like banana and rose can be grown, and offspring retain all parental characters.",
      "truncated": false
     },
     {
@@ -357,12 +357,12 @@
    "chapter": "Electricity",
    "total": 118,
    "byType": {
-    "SA": 19,
-    "LA": 27,
-    "Case-based": 8,
-    "Assertion-Reason": 3,
+    "VSA": 34,
     "MCQ": 27,
-    "VSA": 34
+    "SA": 19,
+    "Assertion-Reason": 3,
+    "Case-based": 8,
+    "LA": 27
    },
    "years": [
     2023,
@@ -444,11 +444,11 @@
    "chapter": "Heredity",
    "total": 82,
    "byType": {
-    "MCQ": 38,
-    "VSA": 14,
-    "Case-based": 7,
     "Assertion-Reason": 10,
-    "SA": 13
+    "MCQ": 27,
+    "SA": 21,
+    "Case-based": 8,
+    "VSA": 16
    },
    "years": [
     2023,
@@ -467,15 +467,15 @@
      "type": "MCQ",
      "year": 2026,
      "marks": 1,
-     "text": "Choose the correct statements with reference to chromosomes :\r\n    (i) carry hereditary information from parents to next generation.\r\n    (ii) are thread-like structures located inside the nucleus of an animal cell.\r\n    (iii) always exist in pairs in human gametes.\r\n    (iv) are involved in the process of cell division.",
-     "answer": "(C) (i), (ii) and (iv)",
-     "explanation": "• Chromosomes are thread-like structures in the nucleus that carry hereditary information (genes) and are distributed during cell division. Gametes are haploid, so chromosomes are single, not paired, in them.\r\n• ✓ Option (c): (i), (ii) and (iv) are correct.\r\n• Why the others are wrong: (a) omits (iv); (b) and (d) include (iii), which is false for gametes.",
+     "text": "The genotype of green stemmed tomato plant is denoted by ‘GG’ and that of purple stemmed tomato plant as ‘gg’. Hybrid of a cross between these two were self-pollinated to obtain F2 progeny. What will be the ratio of GG, Gg and gg in this F2 progeny ?",
+     "answer": "(D) 1 : 2 : 1",
+     "explanation": "• GG × gg gives an F1 hybrid Gg; selfing Gg × Gg produces GG, Gg, Gg and gg — a genotypic ratio of 1 : 2 : 1.\r\n• ✓ Option (d): 1:2:1.\r\n• Why the others are wrong: (a) and (c) misplace the counts of homozygotes and heterozygotes; (b) 3:1 is the phenotypic ratio, and gg plants do appear in F2.",
      "truncated": false,
      "options": {
-      "A": "(i) and (ii)",
-      "B": "(iii) and (iv)",
-      "C": "(i), (ii) and (iv)",
-      "D": "(ii), (iii) and (iv)"
+      "A": "2:1:1",
+      "B": "3:1:0",
+      "C": "1:1:2",
+      "D": "1:2:1"
      },
      "answerText": null
     },
@@ -497,11 +497,11 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "\"Proteins control the expression of various characters.\" Explain this statement by taking an example of \"tallness\" as a characteristic in plants.",
-     "answer": "The height of plant depends upon amount of particular plant hormone. This hormone depends upon the efficiency of enzyme (protein) which depends upon a DNA sequence (gene). If the enzyme works efficiently, lot of hormones are made and the plant will be tall.",
-     "explanation": "• Plant height depends on the amount of a growth hormone produced.\r\n• Hormone production depends on an enzyme (a protein) coded by a specific gene (DNA sequence).\r\n• An efficient enzyme produces more hormone, making the plant tall — showing how proteins control character expression.",
+     "text": "“Variation is useful for the survival of species over time.” Explain this statement with the help of an example.",
+     "answer": "• Variation provides chance for species to survive under unfavourable / changing environmental conditions. e.g. if there were a population of bacteria living in temperate waters and if water temperature increased by global warming, most of these bacteria would die but the few variants resistant to heat would survive and grow further.\r\n(or any other suitable example)",
+     "explanation": "• Variation gives some individuals traits that help them survive when the environment changes.\r\n• Example: if global warming heats temperate waters, most bacteria die, but a few heat-resistant variants survive and multiply.\r\n• Thus the species continues over time.",
      "truncated": false
     },
     {
@@ -520,11 +520,11 @@
    "total": 107,
    "byType": {
     "SA": 8,
-    "Case-based": 4,
-    "LA": 28,
+    "MCQ": 42,
+    "VSA": 10,
+    "LA": 36,
     "Assertion-Reason": 7,
-    "VSA": 8,
-    "MCQ": 52
+    "Case-based": 4
    },
    "years": [
     2023,
@@ -592,11 +592,11 @@
     },
     {
      "type": "LA",
-     "year": 2025,
+     "year": 2026,
      "marks": 5,
-     "text": "(a) Name the part performing following functions in human female reproductive system :\r\n    (i) production of eggs\r\n    (ii) site of fertilization\r\n    (iii) site of implantation\r\n    (iv) entry of the sperms\r\n(b) What changes are observed in the uterus :\r\n    (i) subsequent to implantation of zygote and\r\n    (ii) if an egg does not get fertilized ?",
-     "answer": "(a)\r\n    (i) Ovary\r\n    (ii) Oviduct / fallopian tube\r\n    (iii) Uterus\r\n    (iv) Vagina / Vaginal passage\r\n(b)\r\n    (i) Zygote starts dividing in the uterus. Thickened Uterine lining which is richly supplied with blood vessels nourishes the developing embryo. Placenta develops, which provides oxygen, food to the embryo and removes waste substances.\r\n    (ii) The uterine lining slowly breaks down and comes out as blood and mucous along with unfertilised egg.",
-     "explanation": "(a)\r\n    • (i) Ovary produces eggs; (ii) oviduct (fallopian tube) is the site of fertilisation; (iii) uterus is the site of implantation; (iv) vagina is the sperm entry point.\r\n(b)\r\n    • (i) After implantation, the zygote divides repeatedly in the uterus; the thickened, blood-vessel-rich uterine lining nourishes the embryo, and a placenta develops to supply oxygen and nutrients and remove waste.\r\n    • (ii) If the egg is not fertilised, the thickened uterine lining breaks down and is shed as menstrual blood along with the unfertilised egg.",
+     "text": "(i) Sugarcane does not produce seeds so name the process through which it will be able to reproduce.\r\n(ii) List any two advantages of this method.\r\n(iii) Besides sugarcane, give two more examples of plants that reproduce by this method.\r\n(iv) Why regeneration is not possible in all the types of animals ?",
+     "answer": "(i)\r\n    • Vegetative propagation.\r\n(ii)\r\n    Advantages: -\r\n    • Plants raised by vegetative propagation can bear flowers and fruits earlier than those produced from seeds.\r\n    • Plants produced by vegetative propagation are genetically similar to the parent plant.\r\n    • Plants that have lost the capacity to produce seed can reproduce by Vegetative propagation.\r\n    (any two advantages)\r\n(iii)\r\n    • Roses, grapes, banana, orange, jasmine etc.\r\n    (any other two examples)\r\n(iv)\r\n    • Regeneration is carried out by specialised cells. The organism which have those cells only can show regeneration.",
+     "explanation": "(i)\r\n    • Vegetative propagation: new plants grow from stem cuttings with nodes.\r\n(ii)\r\n    • Plants flower and fruit earlier than those raised from seeds.\r\n    • Offspring are genetically identical to the parent, so desirable traits are preserved; seedless plants can also be multiplied.\r\n(iii)\r\n    • Rose and grapes (also banana, orange, jasmine).\r\n(iv)\r\n    • Regeneration needs specialised cells that can divide and differentiate into all tissue types. Simple animals like Hydra and Planaria have such cells; most complex animals have highly specialised cells and lack them, so they cannot regenerate a whole body.",
      "truncated": false
     }
    ]
@@ -605,12 +605,12 @@
    "chapter": "Life Processes",
    "total": 162,
    "byType": {
-    "SA": 27,
-    "Case-based": 3,
-    "Assertion-Reason": 18,
-    "LA": 4,
-    "VSA": 37,
-    "MCQ": 73
+    "MCQ": 52,
+    "VSA": 47,
+    "SA": 34,
+    "Case-based": 5,
+    "LA": 6,
+    "Assertion-Reason": 18
    },
    "years": [
     2023,
@@ -659,20 +659,20 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "Name the tissues which form the vascular bundle. State their function in plants.",
-     "answer": "• Xylem and Phloem\r\n• Xylem – transports water and minerals obtained from the soil into the different parts of the plant.\r\n• Phloem – Transports food from leaves to other parts of the plant./ translocation of soluble products.",
-     "explanation": "• The vascular bundle is made up of xylem and phloem tissues.\r\n• Xylem transports water and minerals absorbed from the soil upward to all parts of the plant.\r\n• Phloem transports food made in the leaves to other parts of the plant, a process called translocation.",
+     "text": "(a) Why is bile juice considered to be very important for digestion, even though it doesn’t contain any digestive enzymes ?\r\n(b) Name some substances present in initial filtrate and subsequently selectively reabsorbed in the tubules of nephron.",
+     "answer": "(a)\r\n    • Bile emulsifies fats for their digestion.\r\n    • It makes medium alkaline for further digestion by pancreatic and small intestinal enzymes.\r\n(b)\r\n    • Glucose, water, salt, amino acid",
+     "explanation": "(a)\r\n    • Bile breaks fat into tiny droplets (emulsification) and makes the food alkaline, so pancreatic and intestinal enzymes can act.\r\n(b)\r\n    • Glucose, amino acids, salts and water are reabsorbed in the nephron tubules.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "The digestion of food in human alimentary canal is a complex process. State the enzyme/salt present in the following and mention their function in the process of digestion :\r\n(i) Saliva\r\n(ii) Bile Juice\r\n(iii) Pancreatic Juice",
-     "answer": "(i) Salivary amylase - converts Starch to sugar\r\n(ii) Bile salts – changing the acidic food alkaline/ emulsifies fats.\r\n(iii) Trypsin – Helps in digestion of proteins / Lipase – Breaking down emulsified fats",
-     "explanation": "• (i) Saliva contains salivary amylase, which breaks down starch into simpler sugars.\r\n• (ii) Bile juice contains bile salts, which neutralise the acidic food coming from the stomach and emulsify fats into smaller droplets for easier digestion.\r\n• (iii) Pancreatic juice contains trypsin, which digests proteins, and lipase, which breaks down the emulsified fats into fatty acids and glycerol.",
+     "text": "In xylem tissue, vessels and tracheids of the roots, stems and leaves are interconnected to form a continuous system of water-conducting channels reaching all parts of the plant. Explain how this is achieved.",
+     "answer": "• Root pressure: Cells in the contact of the soil actively take up ions and creates a difference in concentration between roots and soil, water moves from soil to root to eliminate this difference.\r\n• Transpirational pull: Water lost through transpiration from aerial parts of plants, creates a suction which pulls water column from xylem cells of roots.",
+     "explanation": "• Root pressure: Root cells in contact with soil actively take up ions, creating a concentration difference between root and soil. Water moves into the root to remove this difference, pushing a steady column of water upward through xylem.\r\n• Transpirational pull: Water evaporating from leaves through stomata creates suction that pulls the water column up from the roots. This is the main force, especially during the day.",
      "truncated": false
     },
     {
@@ -690,11 +690,11 @@
    "chapter": "Light – Reflection and Refraction",
    "total": 111,
    "byType": {
-    "LA": 16,
-    "SA": 36,
-    "VSA": 29,
     "MCQ": 20,
-    "Case-based": 10
+    "Case-based": 10,
+    "VSA": 29,
+    "SA": 36,
+    "LA": 16
    },
    "years": [
     2023,
@@ -717,15 +717,15 @@
      "type": "MCQ",
      "year": 2026,
      "marks": 1,
-     "text": "From the following options choose the one which gives negative magnification greater than one :",
-     "answer": "(A) Concave mirror, Nature of image-real",
-     "explanation": "• Negative magnification means a real, inverted image; magnitude greater than one means it is enlarged — formed by a concave mirror when the object is between F and C.\r\n• ✓ Option (a): Concave mirror, real image.\r\n• Why the others are wrong: (b) a virtual image has positive m; (c) a convex mirror never forms a real image; (d) convex mirror images have positive m less than one.",
+     "text": "A convex lens of focal length 15 cm, is forming a real image. If the size of image is same as the size of object, then position of object and position of image will be, respectively :",
+     "answer": "(C) - 30 cm and + 30 cm from lens",
+     "explanation": "• A convex lens forms a real, inverted image of the same size when the object is at 2F₁; the image then forms at 2F₂ on the other side. Here 2f = 30 cm.\r\n• ✓ Option (c): u = –30 cm and v = +30 cm.\r\n• Why the others are wrong: (a) and (b) place the object at F, which gives an image at infinity; (d) a real image cannot form on the same side as the object.",
      "truncated": false,
      "options": {
-      "A": "Concave mirror; Nature of image – real",
-      "B": "Concave mirror; Nature of image – virtual",
-      "C": "Convex mirror; Nature of image – real",
-      "D": "Convex mirror; Nature of image – virtual"
+      "A": "– 15 cm and – 15 cm from lens",
+      "B": "– 15 cm and + 15 cm from lens",
+      "C": "– 30 cm and + 30 cm from lens",
+      "D": "– 30 cm and – 30 cm from lens"
      },
      "answerText": null
     },
@@ -742,9 +742,9 @@
      "type": "SA",
      "year": 2026,
      "marks": 3,
-     "text": "(a) Write the name of the lens and position of the object in front of it so that a virtual and magnified image is formed.\r\n(b) An object is placed perpendicular to the principal axis of a convex lens of focal length 20 cm. If object is located at 30 cm from this lens, using lens formula find out the position and nature of the image formed.",
-     "answer": "(a)\r\n    • Convex lens\r\n    • When object is placed between focus and optical centre\r\n(b)\r\n    f = + 20 cm\r\n    u = −30 cm\r\n    1/v − 1/u = 1/f\r\n    1/v = 1/f + 1/u\r\n    1/v = 1/20 + 1/(−30)\r\n    1/v = 1/60\r\n    v = 60 cm\r\n    The image is formed at a distance of 60 cm on the other side of the optical centre.\r\n    • Nature of image – Real, inverted",
-     "explanation": "(a)\r\n    • Convex lens, with the object between F and the optical centre O.\r\n(b)\r\n    Given: f = +20 cm, u = −30 cm\r\n    1/v = 1/f + 1/u\r\n    1/v = 1/20 − 1/30\r\n    1/v = 1/60\r\n    v = +60 cm\r\n    ∴ Image forms 60 cm behind the lens; it is real, inverted and magnified.",
+     "text": "(a) Write the expression for the magnification produced by a lens in terms of object distance and image distance.\r\n(b) A 4 cm tall object is placed perpendicular to the principal axis of a convex lens of focal length 20 cm. Calculate the size of the image formed, if the distance of the object from the lens is 10 cm.",
+     "answer": "(a)\r\n    • Magnification, m = Image distance/Object distance / m = v/u\r\n(b)\r\n    ho = + 4 cm\r\n    f = + 20 cm\r\n    u = −10 cm\r\n    hi = ?\r\n    1/v − 1/u = 1/f\r\n    1/v = 1/f + 1/u\r\n    1/v = 1/20 + 1/(−10)\r\n    1/v = −1/20\r\n    v = −20 cm\r\n    m = v/u\r\n    m = −20/−10\r\n    m = 2\r\n    m = height of image/height of object\r\n    height of image = m × height of object\r\n    height of image = 2 × 4 cm\r\n    height of image = 8 cm",
+     "explanation": "(a)\r\n    • m = v/u\r\n(b)\r\n    Given: hₒ = +4 cm, f = +20 cm, u = −10 cm\r\n    1/v = 1/f + 1/u\r\n    1/v = 1/20 − 1/10\r\n    1/v = −1/20\r\n    v = −20 cm\r\n    m = v/u\r\n    m = −20/−10\r\n    m = 2\r\n    hᵢ = m × hₒ\r\n    hᵢ = 2 × 4\r\n    hᵢ = 8 cm\r\n    ∴ Image is 8 cm tall, virtual, erect and enlarged.",
      "truncated": false
     },
     {
@@ -762,12 +762,12 @@
    "chapter": "Magnetic Effects of Electric Current",
    "total": 99,
    "byType": {
-    "MCQ": 21,
-    "Assertion-Reason": 10,
-    "SA": 29,
-    "VSA": 12,
     "Case-based": 2,
-    "LA": 25
+    "VSA": 12,
+    "LA": 25,
+    "SA": 29,
+    "Assertion-Reason": 13,
+    "MCQ": 18
    },
    "years": [
     2023,
@@ -784,35 +784,35 @@
    "samples": [
     {
      "type": "MCQ",
-     "year": 2026,
+     "year": 2025,
      "marks": 1,
-     "text": "Assertion (A) : Direction of force exerted on a current-carrying conductor placed in a magnetic field remains same if the directions of both magnetic field and current flowing through the conductor are reversed.\r\nReason (R) : The direction of force exerted on a current-carrying conductor placed in an external magnetic field can be determined by using magnetic compass.",
-     "answer": "(C) Assertion (A) is true, but reason (R) is false.",
-     "explanation": "• By Fleming's left-hand rule, reversing both the field and the current reverses the force twice, so its direction stays the same — A is true. The direction of force is found using Fleming's left-hand rule, not a compass — R is false.\r\n• ✓ Option (c): A true, R false.\r\n• Why the others are wrong: (a) and (b) treat R as true; (d) marks A as false.",
+     "text": "In domestic electric circuits, the colour of insulation covers of wires in the cables of electric iron/electric toaster is generally :",
+     "answer": "B",
+     "explanation": "• The standard domestic wiring convention uses red for the live wire, black for the neutral wire, and green for the earth wire.\r\n• ✓ Option (b): Red for live, black for neutral and green for earth wire.\r\n• Why the others are wrong: (a), (c) and (d) swap or mismatch the standard colour codes for live, neutral and earth wires.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "red for live wire, green for neutral wire and black for earth wire",
+      "B": "red for live wire, black for neutral wire and green for earth wire",
+      "C": "green for live wire, black for neutral wire and red for earth wire",
+      "D": "green for live wire, red for neutral wire and black for earth wire"
+     },
+     "answerText": "red for live wire, black for neutral wire and green for earth wire"
+    },
+    {
+     "type": "Assertion-Reason",
+     "year": 2026,
+     "marks": 1,
+     "text": "Assertion (A) : With the help of compass, magnetic field lines can be traced outside the bar magnet.\r\nReason (R) : The north pole of a compass needle always points towards the south pole of the magnet when brought close to it.",
+     "answer": "(A) Both Assertion (A) and Reason (R) both are true, and Reason (R) is the correct explanation of Assertion",
+     "explanation": "• A compass needle is a small magnet; its north pole is attracted towards the south pole of the bar magnet, so it aligns along the field at each point.\r\n• ✓ Option (a): Both are true, and this alignment is why a compass can trace field lines.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
+     "truncated": false,
+     "options": {
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
      "answerText": null
-    },
-    {
-     "type": "Assertion-Reason",
-     "year": 2025,
-     "marks": 1,
-     "text": "Assertion (A) : In the common domestic circuits the earth wire is connected to a metallic plate buried deep inside the earth.\r\nReason (R) : Earth wire ensures that any leakage of current to the metallic body of the appliance keeps its potential to that of the earth, so the user may not get a severe electric shock.",
-     "answer": "A",
-     "explanation": "• The earth wire connects an appliance's metallic body to a plate buried in the ground, giving leakage current a safe path to earth.\r\n• ✓ Option (a): Both statements are true, and the Reason correctly explains why the earth wire prevents electric shocks.\r\n• Why the others are wrong: (b), (c) and (d) deny the explanatory link or mark a true statement as false.",
-     "truncated": false,
-     "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
-      "C": "Assertion (A) is true, but Reason (R) is false.",
-      "D": "Assertion (A) is false, but Reason (R) is true."
-     },
-     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)."
     },
     {
      "type": "VSA",
@@ -838,12 +838,12 @@
    "chapter": "Metals and Non-Metals",
    "total": 114,
    "byType": {
-    "VSA": 13,
-    "Assertion-Reason": 14,
     "SA": 32,
+    "LA": 4,
     "MCQ": 41,
     "Case-based": 10,
-    "LA": 4
+    "Assertion-Reason": 14,
+    "VSA": 13
    },
    "years": [
     2023,
@@ -895,9 +895,9 @@
      "type": "VSA",
      "year": 2026,
      "marks": 2,
-     "text": "(a) What are amphoteric oxides ?\r\n(b) Categorise the following based on their nature :\r\n    ZnO, Na2O, CO2",
-     "answer": "(a)\r\n    • Metal oxides which can react with both acids as well as bases to produce salt and water.\r\n(b)\r\n    • ZnO – Amphoteric oxide\r\n    • Na2O – Basic oxide\r\n    • CO2 – Acidic oxide",
-     "explanation": "(a)\r\n    • Amphoteric oxides are metal oxides that react with both acids and bases to form salt and water.\r\n(b)\r\n    • ZnO – amphoteric\r\n    • Na₂O – basic (metal oxide)\r\n    • CO₂ – acidic (non-metal oxide)",
+     "text": "Write balanced equations for the reactions of the following :\r\n(a) Iron with steam\r\n(b) Calcium with water",
+     "answer": "(a)\r\n    • 3Fe(s) + 4H2O(g) → Fe3O4(s) + 4H2(g)\r\n(b)\r\n    • Ca(s) + 2H2O(l) → Ca(OH)2(aq) + H2(g)\r\n(Deduct ½ mark for no/incorrect balancing in each case)",
+     "explanation": "(a)\r\n    • 3Fe(s) + 4H₂O(g) → Fe₃O₄(s) + 4H₂(g); iron does not react with cold water, only with steam.\r\n(b)\r\n    • Ca(s) + 2H₂O(l) → Ca(OH)₂(aq) + H₂(g); calcium reacts less violently, and hydrogen bubbles make it float.",
      "truncated": false
     },
     {
@@ -924,10 +924,10 @@
    "chapter": "Our Environment",
    "total": 99,
    "byType": {
-    "MCQ": 42,
-    "VSA": 23,
-    "SA": 18,
-    "Assertion-Reason": 16
+    "SA": 20,
+    "Assertion-Reason": 16,
+    "VSA": 31,
+    "MCQ": 32
    },
    "years": [
     2023,
@@ -975,20 +975,20 @@
     },
     {
      "type": "VSA",
-     "year": 2025,
+     "year": 2026,
      "marks": 2,
-     "text": "A gas 'X' is found in the upper layer of atmosphere. It is a deadly poison, but still essential for all life forms on earth.\r\n(a) Identify the gas and state the main factor for its depletion in the atmosphere.\r\n(b) How is this gas formed in the upper atmosphere ?",
-     "answer": "(a)\r\n    • Ozone (O₃)\r\n    • Excessive use of chlorofluorocarbons (CFC's) / Freons\r\n(b)\r\n    • The higher energy ultra violet radiations split apart molecular oxygen (O₂) into free oxygen (O) atoms. These atoms then combine with the molecular oxygen to form ozone.\r\n    • O₂ →(UV) O + O\r\n    • O + O₂ → O₃ (Ozone)",
-     "explanation": "(a)\r\n    • 'X' is ozone (O₃); it depletes mainly due to excessive use of chlorofluorocarbons (CFCs)/Freons.\r\n(b)\r\n    • High-energy UV radiation splits O₂ into free oxygen atoms, which then combine with O₂ molecules to form ozone in the upper atmosphere.",
+     "text": "(i) Chlorofluorocarbons (CFCs) have been linked to depletion of ozone layer. In 1987, the United Nations Environment Programme (UNEP) succeeded in making an agreement. State this agreement.\r\n(ii) What is the role of ozone in our atmosphere ?",
+     "answer": "(i)\r\n    • To freeze the CFC production at 1986 levels.\r\n(ii)\r\n    • Ozone shields the earth’s surface from harmful UV radiations.",
+     "explanation": "(i)\r\n    • The 1987 UNEP agreement required countries to freeze CFC production at 1986 levels.\r\n(ii)\r\n    • The ozone layer absorbs harmful ultraviolet radiation from the Sun, protecting living beings from skin cancer and other damage.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2025,
+     "year": 2026,
      "marks": 3,
-     "text": "Write the essential function performed by ozone at the higher levels of the atmosphere. How is it formed in the upper atmosphere ? Write the name of the group of chemicals mainly responsible for the depletion of ozone layer.",
-     "answer": "• Ozone (O3) shields the surface of the earth from ultraviolet (UV) radiation, which is highly damaging to organisms (may cause skin cancer).\r\n• UV radiation splits apart some molecular oxygen (O2) into free oxygen (O) atoms; these atoms then combine with molecular oxygen to form ozone.\r\n• O2 --UV--> O + O\r\n• O + O2 → O3 (Ozone)\r\n• Chlorofluorocarbons (CFCs)/freons deplete the ozone layer.",
-     "explanation": "• Ozone in the upper atmosphere shields the Earth's surface from harmful UV radiation, which can cause skin cancer and other damage.\r\n• It forms when UV radiation splits O₂ into free oxygen atoms, which then combine with O₂ to form O₃.\r\n• Chlorofluorocarbons (CFCs)/freons are mainly responsible for ozone layer depletion.",
+     "text": "(a) Mention any one harmful effect of using plastic bags on the environment. Suggest better alternatives to the usage of plastic bags.\r\n(b) Paddy fields require a large amount of water. The pesticides and chemical fertilizers used are washed down into the soil or waterbodies. How do these chemicals reach our bodies ? What is this phenomenon known as ?",
+     "answer": "(a)\r\n    • Plastics being non - biodegradable persist in environment for a long time.\r\n    (any other harmful effect)\r\n    • Alternative - Jute or cloth bag\r\n    (any other suitable alternative)\r\n(b)\r\n    • Pesticides and chemical fertilizers are not biodegradable. They accumulate progressively at each trophic level. As human beings occupy the top level in any food chain the maximum concentration of these chemicals get accumulated in our bodies.\r\n    • This Phenomenon is biological magnification.",
+     "explanation": "(a)\r\n    • Plastic is non-biodegradable, so it persists, clogs drains and harms animals that swallow it.\r\n    • Alternatives: jute or cloth bags.\r\n(b)\r\n    • Chemicals washed into soil and water are absorbed by plants and aquatic organisms and enter food chains.\r\n    • Not being degraded, they accumulate at each trophic level; humans at the top receive the highest concentration.\r\n    • This is biological magnification.",
      "truncated": false
     }
    ]
@@ -997,11 +997,11 @@
    "chapter": "The Human Eye and the Colourful World",
    "total": 101,
    "byType": {
-    "MCQ": 33,
-    "Case-based": 2,
     "SA": 33,
     "VSA": 25,
-    "Assertion-Reason": 8
+    "Assertion-Reason": 9,
+    "Case-based": 2,
+    "MCQ": 32
    },
    "years": [
     2023,
@@ -1034,27 +1034,27 @@
     },
     {
      "type": "Assertion-Reason",
-     "year": 2025,
+     "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : White light is dispersed by a glass prism into seven colours.\r\nReason (R) : The red light bends the least while the violet the most when a beam of white light passes through a glass prism.",
-     "answer": "B",
-     "explanation": "• Both statements are factually correct: white light splits into seven colours (VIBGYOR) through a prism, and red bends least while violet bends most, due to differing refractive indices.\r\n• ✓ Option (b): Assertion and Reason are both true, but Reason (R) explains the order of the colours' bending, not the cause of dispersion itself, so it does not correctly explain Assertion (A).\r\n• Why the others are wrong: (a) is incorrect since R does not explain A; (c) and (d) wrongly call one of the statements false, when both are true.",
+     "text": "Assertion (A) : When rays of white light pass through a prism, on emerging they give spectrum of seven colours.\r\nReason (R) : It is due to the scattering of light that red light bends minimum and violet light bends the maximum.",
+     "answer": "(C) Assertion (A) is true, but Reason (R) is false.",
+     "explanation": "• White light splits into seven colours through a prism because each colour refracts by a different amount — this is dispersion, not scattering; red bends least and violet most.\r\n• ✓ Option (c): Assertion is true, but Reason is false.\r\n• Why the others are wrong: (a) and (b) accept the wrong cause (scattering); (d) wrongly marks A as false.",
      "truncated": false,
      "options": {
-      "A": "Both, Assertion (A) and Reason (R) are true, and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both, Assertion (A) and Reason (R) are true, and Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both, Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both, Assertion (A) and Reason (R) are true, and Reason (R) is not the correct explanation of Assertion (A)."
+     "answerText": null
     },
     {
      "type": "VSA",
      "year": 2026,
      "marks": 2,
-     "text": "What happens when light is scattered from (i) very fine particles and (ii) very large size particles of medium ? Justify your answer in each case.",
-     "answer": "(i)\r\n    • Mainly blue coloured light is scattered because very fine particles scatter shorter wavelength.\r\n(ii)\r\n    • Scattered light may appear white because very large size particles scatter light of all wavelengths.",
-     "explanation": "(i)\r\n    • Very fine particles scatter mainly blue light, as they scatter shorter wavelengths more strongly.\r\n(ii)\r\n    • Large particles scatter all wavelengths nearly equally, so the scattered light appears white.",
+     "text": "(i) How does the change in curvature of the eye lens helps us in the process of seeing the nearby objects clearly ?\r\n(ii) State the range of the power of accommodation of a normal human eye.",
+     "answer": "(i)\r\n    • While looking at objects nearer to eye, the curvature of the eye lens increases. Consequently, the focal length of the eye lens decreases.\r\n(ii)\r\n    • From 25cm (near point) to infinity (far point)",
+     "explanation": "(i)\r\n    • For near objects ciliary muscles contract, the lens thickens, its curvature increases and focal length decreases, focusing the image on the retina.\r\n(ii)\r\n    • A normal eye sees clearly from 25 cm (near point) to infinity (far point).",
      "truncated": false
     },
     {

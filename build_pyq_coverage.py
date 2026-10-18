@@ -87,19 +87,21 @@ QUIZ_PYQ = "https://quiz.mindvsyou.io/pyq?class=10&subject=science"
 
 
 def practice_url(kind=None, chapter=None):
-    """The one place practice links are built. kind: "mcq" or "subjective".
+    """The one place practice links are built. kind: "mcq", "subjective" or "casebased".
 
-    Prefers the endpoint's ready-made mcqUrl / subjectiveUrl when a chapter provides them.
+    Prefers the endpoint's ready-made mcqUrl / subjectiveUrl / caseBasedUrl when a chapter provides them.
     The endpoint's own practiceUrl is deliberately ignored (it redirects to the app home page).
     """
     if kind is None:
         return QUIZ_PYQ
-    ready = chapter.get("mcqUrl" if kind == "mcq" else "subjectiveUrl")
+    ready = chapter.get({"mcq": "mcqUrl", "subjective": "subjectiveUrl", "casebased": "caseBasedUrl"}[kind])
     if ready:
         return ready
     t = "mcq-practice" if kind == "mcq" else "subjective-interactive"
+    # case-based = the subjective flow narrowed with qtype (must be written exactly "Case-based")
+    q = "&qtype=Case-based" if kind == "casebased" else ""
     # same escaping as JavaScript's encodeURIComponent; the app matches the chapter name exactly
-    return f"{QUIZ_PYQ}&type={t}&chapter={urllib.parse.quote(chapter['chapter'], safe=chr(33)+chr(39)+'()*~')}"
+    return f"{QUIZ_PYQ}&type={t}{q}&chapter={urllib.parse.quote(chapter['chapter'], safe=chr(33)+chr(39)+'()*~')}"
 
 
 def answer_html(s):
@@ -145,10 +147,14 @@ RAIL_JS = r'''
 
 
 def action_links(c, cls, full=False):
-    """MCQ and written-question practice buttons for one chapter."""
+    """MCQ, written-question and (where the chapter has any) case-based practice buttons."""
     name = esc(c["chapter"])
-    return (f'<a class="btn btn-green {cls}" href="{esc(practice_url("mcq", c))}" aria-label="Practise {name} MCQs">{f"Practise {name} MCQs &rarr;" if full else "MCQs"}</a>'
-            f'<a class="btn btn-green {cls}" href="{esc(practice_url("subjective", c))}" aria-label="Practise {name} VSA, SA, LA questions">{f"Practise {name} VSA, SA, LA &rarr;" if full else "VSA, SA, LA"}</a>')
+    out = (f'<a class="btn btn-green {cls}" href="{esc(practice_url("mcq", c))}" aria-label="Practise {name} MCQs">{f"Practise {name} MCQs &rarr;" if full else "MCQs"}</a>'
+           f'<a class="btn btn-green {cls}" href="{esc(practice_url("subjective", c))}" aria-label="Practise {name} VSA, SA, LA questions">{f"Practise {name} VSA, SA, LA &rarr;" if full else "VSA, SA, LA"}</a>')
+    if c["byType"].get("Case-based"):
+        out += (f'<a class="btn btn-green {cls}" href="{esc(practice_url("casebased", c))}" aria-label="Practise {name} case-based questions">'
+                f'{f"Practise {name} case-based questions &rarr;" if full else "Case-based"}</a>')
+    return out
 
 
 def esc(s):
