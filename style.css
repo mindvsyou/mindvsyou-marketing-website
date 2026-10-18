@@ -112,6 +112,9 @@ nav {
 .btn-green  { background: var(--green);  color: var(--white); box-shadow: 0 4px 14px rgba(37,211,102,0.3); }
 .btn-green:hover { background: var(--green-dark); }
 .btn-orange { background: var(--orange); color: var(--white); }
+.btn-grey { background: #eef0f2; color: #3d4650; border: 1px solid #c4cad1; }
+.btn-grey:hover { background: #e2e5e9; box-shadow: none; }
+.post-body a.btn.btn-grey { color: #3d4650; }
 .btn-outline { background: transparent; color: var(--green); border: 2px solid var(--green); }
 .btn-outline:hover { background: var(--green); color: var(--white); }
 .btn-white  { background: var(--white);  color: var(--navy); }
@@ -564,3 +567,5 @@ footer {
 .step p a { display: inline; color: var(--green-dark); font-weight: 700; text-decoration: none; border-bottom: 2px solid rgba(37,211,102,.35); }
 .step p a:hover { border-bottom-color: var(--green-dark); }
 .step p a::after { content: ' \2192'; }
+.footer-legal { margin-top: 6px; font-size: 0.85rem; }
+.footer-legal a { color: inherit; text-decoration: underline; opacity: 0.85; }

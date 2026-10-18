@@ -80,6 +80,11 @@ function ctaLocation(link) {
 
 function initCtaTracking() {
   document.addEventListener('click', e => {
+    const buy = e.target.closest('a[data-buy-pdf]');
+    if (buy && typeof gtag === 'function') {
+      gtag('event', 'buy_pdf_click', { pdf_chapter: buy.dataset.buyPdf });
+      return;
+    }
     const link = e.target.closest('a[href^="' + CONFIG.appLink + '"]');
     if (!link || typeof gtag !== 'function') return;
     gtag('event', 'cta_click', {
