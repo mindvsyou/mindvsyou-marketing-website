@@ -1,7 +1,7 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-10-18T07:08:15.921Z",
+ "generatedAt": "2026-10-19T03:00:08.979Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
  "totalQuestions": 1467,
  "years": [
@@ -15,12 +15,12 @@
    "chapter": "Acids, Bases and Salts",
    "total": 131,
    "byType": {
-    "SA": 28,
-    "Case-based": 7,
+    "MCQ": 67,
+    "LA": 7,
     "Assertion-Reason": 2,
     "VSA": 20,
-    "MCQ": 67,
-    "LA": 7
+    "Case-based": 7,
+    "SA": 28
    },
    "years": [
     2023,
@@ -40,7 +40,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Tomato is a natural source of which acid ?",
-     "answer": "(C) Oxalic acid",
+     "answer": "C",
      "explanation": "• Tomato contains oxalic acid, which contributes to its sour taste.\r\n• ✓ Option (c): Oxalic acid.\r\n• Why the others are wrong: (a) acetic acid is in vinegar; (b) tartaric acid is in tamarind; (d) citric acid is in orange and lemon.",
      "truncated": false,
      "options": {
@@ -49,7 +49,7 @@
       "C": "Oxalic acid",
       "D": "Citric acid"
      },
-     "answerText": null
+     "answerText": "Oxalic acid"
     },
     {
      "type": "Assertion-Reason",
@@ -101,11 +101,11 @@
    "total": 107,
    "byType": {
     "VSA": 8,
-    "MCQ": 28,
-    "SA": 2,
     "Assertion-Reason": 10,
+    "Case-based": 5,
     "LA": 54,
-    "Case-based": 5
+    "SA": 2,
+    "MCQ": 28
    },
    "years": [
     2023,
@@ -126,7 +126,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Which of the following set of compounds does not belong to same homologous series ?",
-     "answer": "(D) C4H8 and C5H12",
+     "answer": "D",
      "explanation": "• Members of a homologous series share one general formula; alkanes follow CₙH₂ₙ₊₂ and alkenes CₙH₂ₙ.\r\n• ✓ Option (d): C₄H₈ is an alkene (CₙH₂ₙ) while C₅H₁₂ is an alkane, so they belong to different series.\r\n• Why the others are wrong: (a), (b) and (c) are all pairs of alkanes fitting CₙH₂ₙ₊₂.",
      "truncated": false,
      "options": {
@@ -135,14 +135,14 @@
       "C": "C3H8 and C5H12",
       "D": "C4H8 and C5H12"
      },
-     "answerText": null
+     "answerText": "C4H8 and C5H12"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Carbon shares its valence electrons with other atoms of carbon or with atoms of other elements.\r\nReason (R) : The shared electrons belong to the outermost shells of both the atoms and lead to both atoms attaining the noble gas configuration.",
-     "answer": "(A) Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+     "answer": "A",
      "explanation": "• Carbon (valency 4) cannot easily gain or lose four electrons, so it shares them to form covalent bonds; the shared pair counts for both atoms, completing their octets.\r\n• ✓ Option (a): Both are true and R explains why carbon shares electrons.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
@@ -151,7 +151,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
@@ -187,10 +187,10 @@
    "total": 135,
    "byType": {
     "Assertion-Reason": 6,
-    "LA": 4,
     "VSA": 33,
     "MCQ": 55,
-    "SA": 37
+    "SA": 37,
+    "LA": 4
    },
    "years": [
     2023,
@@ -212,7 +212,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Which of the following are combination reactions ?\r\n(i) 2KClO3 → 2KCl + 3O2\r\n(ii) MgO + H2O → Mg(OH)2\r\n(iii) 4Al + 3O2 → 2Al2O3\r\n(iv) Zn + FeSO4 → ZnSO4 + Fe",
-     "answer": "(D) (ii) and (iii)",
+     "answer": "D",
      "explanation": "• In a combination reaction two or more reactants combine to form a single product — MgO + H₂O → Mg(OH)₂ and 4Al + 3O₂ → 2Al₂O₃.\r\n• ✓ Option (d): (ii) and (iii).\r\n• Why the others are wrong: (i) is a decomposition reaction and (iv) is a displacement reaction, so options (a), (b) and (c) are incorrect.",
      "truncated": false,
      "options": {
@@ -221,14 +221,14 @@
       "C": "(ii) and (iv)",
       "D": "(ii) and (iii)"
      },
-     "answerText": null
+     "answerText": "(ii) and (iii)"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Reaction of quick lime with water is an exothermic reaction.\r\nReason (R) : A large amount of heat is evolved on the reaction of quick lime and water.",
-     "answer": "(A) Both A and R are true, and R is the correct explanation of A.",
+     "answer": "A",
      "explanation": "• CaO + H₂O → Ca(OH)₂ + heat; a reaction that releases heat is exothermic.\r\n• ✓ Option (a): Both are true, and the large amount of heat evolved (R) is why the reaction is exothermic (A).\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
@@ -237,7 +237,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
@@ -272,12 +272,12 @@
    "chapter": "Control and Coordination",
    "total": 101,
    "byType": {
-    "LA": 8,
-    "Case-based": 5,
-    "VSA": 33,
-    "Assertion-Reason": 5,
+    "MCQ": 31,
     "SA": 19,
-    "MCQ": 31
+    "Assertion-Reason": 5,
+    "VSA": 33,
+    "Case-based": 5,
+    "LA": 8
    },
    "years": [
     2023,
@@ -297,7 +297,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Identify the type of tropic movement that is responsible for the movement of the pollen tube towards an ovule from the following options.",
-     "answer": "(C) Chemotropism",
+     "answer": "C",
      "explanation": "• The pollen tube grows towards the ovule in response to chemicals released by the ovule — a growth movement towards a chemical stimulus.\r\n• ✓ Option (c): Chemotropism.\r\n• Why the others are wrong: (a) hydrotropism is response to water; (b) geotropism is response to gravity; (d) phototropism is response to light.",
      "truncated": false,
      "options": {
@@ -306,14 +306,14 @@
       "C": "Chemotropism",
       "D": "Phototropism"
      },
-     "answerText": null
+     "answerText": "Chemotropism"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Reflex actions do not involve thinking.\r\nReason (R) : Most reflex actions are controlled by the spinal cord.",
-     "answer": "(A) Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+     "answer": "A",
      "explanation": "• A reflex action is a sudden, automatic response; the reflex arc connects receptor to effector through the spinal cord, so the brain's thinking centre is not involved.\r\n• ✓ Option (a): Both are true, and control by the spinal cord explains why no thinking is needed.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
@@ -322,7 +322,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
@@ -357,12 +357,12 @@
    "chapter": "Electricity",
    "total": 118,
    "byType": {
-    "VSA": 34,
-    "MCQ": 27,
     "SA": 19,
+    "LA": 27,
     "Assertion-Reason": 3,
     "Case-based": 8,
-    "LA": 27
+    "MCQ": 27,
+    "VSA": 34
    },
    "years": [
     2023,
@@ -384,7 +384,7 @@
      "year": 2026,
      "marks": 1,
      "text": "The correct way to connect an ammeter and a voltmeter in an electric circuit is :",
-     "answer": "(C) Ammeter in series and voltmeter in parallel.",
+     "answer": "C",
      "explanation": "• An ammeter (low resistance) measures the current through a component, so it must be in series; a voltmeter (high resistance) measures potential difference across a component, so it must be in parallel.\r\n• ✓ Option (c): Ammeter in series, voltmeter in parallel.\r\n• Why the others are wrong: (a) swaps the connections; (b) and (d) connect both meters the same way, which gives wrong readings.",
      "truncated": false,
      "options": {
@@ -393,7 +393,7 @@
       "C": "Ammeter in series and voltmeter in parallel",
       "D": "Ammeter and voltmeter both in series"
      },
-     "answerText": null
+     "answerText": "Ammeter in series and voltmeter in parallel"
     },
     {
      "type": "Assertion-Reason",
@@ -444,11 +444,11 @@
    "chapter": "Heredity",
    "total": 82,
    "byType": {
-    "Assertion-Reason": 10,
-    "MCQ": 27,
-    "SA": 21,
+    "VSA": 16,
     "Case-based": 8,
-    "VSA": 16
+    "Assertion-Reason": 10,
+    "SA": 21,
+    "MCQ": 27
    },
    "years": [
     2023,
@@ -468,7 +468,7 @@
      "year": 2026,
      "marks": 1,
      "text": "The genotype of green stemmed tomato plant is denoted by ‘GG’ and that of purple stemmed tomato plant as ‘gg’. Hybrid of a cross between these two were self-pollinated to obtain F2 progeny. What will be the ratio of GG, Gg and gg in this F2 progeny ?",
-     "answer": "(D) 1 : 2 : 1",
+     "answer": "D",
      "explanation": "• GG × gg gives an F1 hybrid Gg; selfing Gg × Gg produces GG, Gg, Gg and gg — a genotypic ratio of 1 : 2 : 1.\r\n• ✓ Option (d): 1:2:1.\r\n• Why the others are wrong: (a) and (c) misplace the counts of homozygotes and heterozygotes; (b) 3:1 is the phenotypic ratio, and gg plants do appear in F2.",
      "truncated": false,
      "options": {
@@ -477,14 +477,14 @@
       "C": "1:1:2",
       "D": "1:2:1"
      },
-     "answerText": null
+     "answerText": "1:2:1"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Bacteria that can withstand heat have better chances of survival in a heat wave.\r\nReason (R) : Accumulation of variations in a species increases the chances of its survival in changing environment.",
-     "answer": "(A) Both A and R are true and R is the correct explanation of A.",
+     "answer": "A",
      "explanation": "• Variations among individuals mean some are better suited to a changed environment; heat-resistant bacteria are such a variant and survive a heat wave.\r\n• ✓ Option (a): Both A and R are true, and R (variations increase survival) explains A.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
@@ -493,7 +493,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
@@ -519,12 +519,12 @@
    "chapter": "How Do Organisms Reproduce?",
    "total": 107,
    "byType": {
+    "Case-based": 4,
     "SA": 8,
-    "MCQ": 42,
-    "VSA": 10,
     "LA": 36,
     "Assertion-Reason": 7,
-    "Case-based": 4
+    "VSA": 10,
+    "MCQ": 42
    },
    "years": [
     2023,
@@ -545,7 +545,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Yeast multiplies by which of the following methods ?",
-     "answer": "(D) Budding",
+     "answer": "D",
      "explanation": "• In yeast a small outgrowth (bud) forms on the parent cell, grows, and detaches to become a new individual.\r\n• ✓ Option (d): Budding.\r\n• Why the others are wrong: (a) fragmentation occurs in Spirogyra; (b) binary fission in Amoeba and bacteria; (c) multiple fission in Plasmodium.",
      "truncated": false,
      "options": {
@@ -554,14 +554,14 @@
       "C": "Multiple Fission",
       "D": "Budding"
      },
-     "answerText": null
+     "answerText": "Budding"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Variations are not often seen in off-springs produced by asexual reproduction.\r\nReason (R) : DNA molecule generated by replication is not similar to the original DNA.",
-     "answer": "(C) Assertion (A) is true but Reason (R) is false.",
+     "answer": "C",
      "explanation": "• In asexual reproduction a single parent's DNA is copied, and DNA copying is highly accurate, so offspring show very little variation.\r\n• ✓ Option (c): A is true; R is false because the replicated DNA is similar (though not absolutely identical) to the original.\r\n• Why the others are wrong: (a) and (b) treat R as true; (d) wrongly marks A false.",
      "truncated": false,
      "options": {
@@ -570,7 +570,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Assertion (A) is true, but Reason (R) is false."
     },
     {
      "type": "VSA",
@@ -605,12 +605,12 @@
    "chapter": "Life Processes",
    "total": 162,
    "byType": {
-    "MCQ": 52,
-    "VSA": 47,
     "SA": 34,
     "Case-based": 5,
+    "Assertion-Reason": 18,
     "LA": 6,
-    "Assertion-Reason": 18
+    "VSA": 47,
+    "MCQ": 52
    },
    "years": [
     2023,
@@ -630,7 +630,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Which structure in a leaf is mainly responsible for gaseous exchange ?",
-     "answer": "(B) Stomata",
+     "answer": "B",
      "explanation": "• Gaseous exchange in leaves (CO₂ in for photosynthesis, O₂ out) takes place through tiny pores on the leaf surface called stomata.\r\n• ✓ Option (b): Stomata are the main sites of gaseous exchange in a leaf.\r\n• Why the others are wrong: (a) xylem transports water and minerals; (c) phloem transports food; (d) cuticle is a waxy layer that reduces water loss.",
      "truncated": false,
      "options": {
@@ -639,14 +639,14 @@
       "C": "Phloem",
       "D": "Cuticle"
      },
-     "answerText": null
+     "answerText": "Stomata"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Arteries have valves as they have to withstand high pressure.\r\nReason (R) : Arteries are vessels which carry blood away from the heart to various organs.",
-     "answer": "(D) A is false, R is true.",
+     "answer": "D",
      "explanation": "• Arteries carry blood away from the heart under high pressure, so they have thick, elastic walls; valves are found in veins, which carry blood at low pressure and need valves to prevent backflow.\r\n• ✓ Option (d): A is false (arteries do not have valves), but R is true.\r\n• Why the others are wrong: (a) and (b) treat A as true; (c) wrongly marks R false.",
      "truncated": false,
      "options": {
@@ -655,7 +655,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Assertion (A) is false, but Reason (R) is true."
     },
     {
      "type": "VSA",
@@ -690,11 +690,11 @@
    "chapter": "Light – Reflection and Refraction",
    "total": 111,
    "byType": {
-    "MCQ": 20,
-    "Case-based": 10,
-    "VSA": 29,
+    "LA": 16,
     "SA": 36,
-    "LA": 16
+    "VSA": 29,
+    "MCQ": 20,
+    "Case-based": 10
    },
    "years": [
     2023,
@@ -718,7 +718,7 @@
      "year": 2026,
      "marks": 1,
      "text": "A convex lens of focal length 15 cm, is forming a real image. If the size of image is same as the size of object, then position of object and position of image will be, respectively :",
-     "answer": "(C) - 30 cm and + 30 cm from lens",
+     "answer": "C",
      "explanation": "• A convex lens forms a real, inverted image of the same size when the object is at 2F₁; the image then forms at 2F₂ on the other side. Here 2f = 30 cm.\r\n• ✓ Option (c): u = –30 cm and v = +30 cm.\r\n• Why the others are wrong: (a) and (b) place the object at F, which gives an image at infinity; (d) a real image cannot form on the same side as the object.",
      "truncated": false,
      "options": {
@@ -727,7 +727,7 @@
       "C": "– 30 cm and + 30 cm from lens",
       "D": "– 30 cm and – 30 cm from lens"
      },
-     "answerText": null
+     "answerText": "– 30 cm and + 30 cm from lens"
     },
     {
      "type": "VSA",
@@ -762,12 +762,12 @@
    "chapter": "Magnetic Effects of Electric Current",
    "total": 99,
    "byType": {
-    "Case-based": 2,
-    "VSA": 12,
-    "LA": 25,
-    "SA": 29,
+    "MCQ": 18,
     "Assertion-Reason": 13,
-    "MCQ": 18
+    "SA": 29,
+    "VSA": 12,
+    "Case-based": 2,
+    "LA": 25
    },
    "years": [
     2023,
@@ -803,7 +803,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : With the help of compass, magnetic field lines can be traced outside the bar magnet.\r\nReason (R) : The north pole of a compass needle always points towards the south pole of the magnet when brought close to it.",
-     "answer": "(A) Both Assertion (A) and Reason (R) both are true, and Reason (R) is the correct explanation of Assertion",
+     "answer": "A",
      "explanation": "• A compass needle is a small magnet; its north pole is attracted towards the south pole of the bar magnet, so it aligns along the field at each point.\r\n• ✓ Option (a): Both are true, and this alignment is why a compass can trace field lines.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
@@ -812,7 +812,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
@@ -838,12 +838,12 @@
    "chapter": "Metals and Non-Metals",
    "total": 114,
    "byType": {
+    "VSA": 13,
+    "Assertion-Reason": 14,
     "SA": 32,
     "LA": 4,
     "MCQ": 41,
-    "Case-based": 10,
-    "Assertion-Reason": 14,
-    "VSA": 13
+    "Case-based": 10
    },
    "years": [
     2023,
@@ -864,7 +864,7 @@
      "year": 2026,
      "marks": 1,
      "text": "Which of the following is an amphoteric oxide ?",
-     "answer": "(D) Al2O3",
+     "answer": "D",
      "explanation": "• Amphoteric oxides react with both acids and bases to give salt and water.\r\n• ✓ Option (d): Al₂O₃ reacts with HCl and with NaOH (forming sodium aluminate).\r\n• Why the others are wrong: (a) Na₂O and (b) K₂O are basic oxides; (c) CO₂ is an acidic oxide.",
      "truncated": false,
      "options": {
@@ -873,7 +873,7 @@
       "C": "CO2",
       "D": "Al2O3"
      },
-     "answerText": null
+     "answerText": "Al2O3"
     },
     {
      "type": "Assertion-Reason",
@@ -924,10 +924,10 @@
    "chapter": "Our Environment",
    "total": 99,
    "byType": {
-    "SA": 20,
-    "Assertion-Reason": 16,
+    "MCQ": 32,
     "VSA": 31,
-    "MCQ": 32
+    "SA": 20,
+    "Assertion-Reason": 16
    },
    "years": [
     2023,
@@ -946,7 +946,7 @@
      "year": 2026,
      "marks": 1,
      "text": "An ecosystem contains maximum number of :",
-     "answer": "(A) Producers",
+     "answer": "A",
      "explanation": "• Only about 10% of energy passes from one trophic level to the next, so each higher level supports fewer organisms; the base of the pyramid is the largest.\r\n• ✓ Option (a): Producers (green plants) are the most numerous.\r\n• Why the others are wrong: (b) herbivores, (c) carnivores and (d) omnivores occupy higher trophic levels with less available energy, so they are fewer.",
      "truncated": false,
      "options": {
@@ -955,14 +955,14 @@
       "C": "Carnivores",
       "D": "Omnivores"
      },
-     "answerText": null
+     "answerText": "Producers"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : Natural replenishment of soil will not take place in absence of microbes.\r\nReason (R) : Microbes, comprising of bacteria and fungi, break down dead remains and waste products of organisms, and they go into the soil.",
-     "answer": "(A) Both A and R are true, and R is the correct explanation of A",
+     "answer": "A",
      "explanation": "• Decomposers (bacteria and fungi) break down complex organic matter of dead remains into simple substances that return to the soil.\r\n• ✓ Option (a): Both are true, and decomposition by microbes is exactly why soil gets replenished.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
@@ -971,7 +971,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)."
     },
     {
      "type": "VSA",
@@ -997,11 +997,11 @@
    "chapter": "The Human Eye and the Colourful World",
    "total": 101,
    "byType": {
+    "MCQ": 32,
+    "Case-based": 2,
     "SA": 33,
     "VSA": 25,
-    "Assertion-Reason": 9,
-    "Case-based": 2,
-    "MCQ": 32
+    "Assertion-Reason": 9
    },
    "years": [
     2023,
@@ -1021,7 +1021,7 @@
      "year": 2026,
      "marks": 1,
      "text": "The pair of eye parts responsible for admitting different amount of light in to the eyes is",
-     "answer": "(A) Iris and pupil",
+     "answer": "A",
      "explanation": "• The iris is a muscular diaphragm that adjusts the size of the pupil, and the pupil regulates how much light enters the eye.\r\n• ✓ Option (a): Iris and pupil.\r\n• Why the others are wrong: (b) and (d) ciliary muscles change the focal length of the lens; (c) the retina forms the image, it does not control light entry.",
      "truncated": false,
      "options": {
@@ -1030,14 +1030,14 @@
       "C": "Retina and Iris",
       "D": "Ciliary muscles and cornea"
      },
-     "answerText": null
+     "answerText": "Iris and pupil"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
      "text": "Assertion (A) : When rays of white light pass through a prism, on emerging they give spectrum of seven colours.\r\nReason (R) : It is due to the scattering of light that red light bends minimum and violet light bends the maximum.",
-     "answer": "(C) Assertion (A) is true, but Reason (R) is false.",
+     "answer": "C",
      "explanation": "• White light splits into seven colours through a prism because each colour refracts by a different amount — this is dispersion, not scattering; red bends least and violet most.\r\n• ✓ Option (c): Assertion is true, but Reason is false.\r\n• Why the others are wrong: (a) and (b) accept the wrong cause (scattering); (d) wrongly marks A as false.",
      "truncated": false,
      "options": {
@@ -1046,7 +1046,7 @@
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": null
+     "answerText": "Assertion (A) is true, but Reason (R) is false."
     },
     {
      "type": "VSA",

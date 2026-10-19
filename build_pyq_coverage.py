@@ -83,7 +83,11 @@ def load():
         sys.exit(f"Fetch failed ({e}) and there is no saved copy. Not writing the page.")
 
 
-QUIZ_PYQ = "https://quiz.mindvsyou.io/pyq?class=10&subject=science"
+# Chapter name (as in the endpoint) -> checkout/sales-page URL. The "Chapter PDF" column and
+# "Buy PDF" buttons appear only once at least one chapter has a URL here.
+PDF_LINKS = {"Carbon and Its Compounds": "https://rzp.io/rzp/Lr17Ptc"}
+
+QUIZ_PYQ ="https://quiz.mindvsyou.io/pyq?class=10&subject=science"
 
 
 def practice_url(kind=None, chapter=None):
@@ -157,6 +161,16 @@ def action_links(c, cls, full=False):
     return out
 
 
+def pdf_button(c):
+    """Grey 'Buy PDF' button for a chapter; empty until that chapter's PDF has a link in PDF_LINKS."""
+    url = PDF_LINKS.get(c["chapter"])
+    if not url:
+        return ""
+    name = esc(c["chapter"])
+    return (f'<a class="btn btn-grey btn-sm" href="{esc(url)}" data-buy-pdf="{name}" '
+            f'aria-label="Buy {name} PDF with Mindy explanations">Buy PDF</a>')
+
+
 def esc(s):
     return html.escape(s, quote=True)
 
@@ -184,20 +198,22 @@ def build(d):
     pretty_date = __import__("datetime").date.fromisoformat(date).strftime("%d %B %Y").lstrip("0")
     practice = practice_url()
 
-    title = f"CBSE Class 10 Science PYQs by Chapter: {total} Practice Questions, {y0}–{y1} | MindVsYou"
-    desc = (f"Chapter-wise inventory of the CBSE Class 10 Science PYQs you can practise on MindVsYou: "
-            f"{total} practice questions across {n} chapters, board years {y0}–{y1}, with sample questions.")
+    title = f"CBSE Class 10 Science PYQs: {total} Practice Questions | MindVsYou"
+    desc = (f"{n} chapters of CBSE Class 10 Science PYQs: {total} practice questions from board years {y0}–{y1}, "
+            f"by question type, with sample questions.")
     h1 = "CBSE Class 10 Science PYQs by chapter: what you can practise"
 
     rows = []
     for c in chapters:
         cells = "".join(f'<td>{c["byType"].get(t, 0)}</td>' for t in TYPES)
+        pdf = (f'<td class="row-actions">{pdf_button(c)}</td>') if PDF_LINKS else ""
         rows.append(f'<tr><td><a href="#{slug(c["chapter"])}">{esc(label(c["chapter"]))}</a></td>{cells}'
                     f'<td><strong>{c["total"]}</strong></td><td>{span(c["years"])}</td>'
-                    f'<td class="row-actions">{action_links(c, "btn-sm")}</td></tr>')
+                    f'<td class="row-actions">{action_links(c, "btn-sm")}</td>{pdf}</tr>')
     table = ('<div class="table-scroll"><table><thead><tr><th>Chapter</th>'
              + "".join(f"<th>{t}</th>" for t in TYPES)
-             + "<th>Total</th><th>Board years</th><th>Click to practice</th></tr></thead><tbody>"
+             + "<th>Total</th><th>Board years</th><th>Click to practice</th>"
+             + ("<th>Chapter PDF</th>" if PDF_LINKS else "") + "</tr></thead><tbody>"
              + "".join(rows) + "</tbody></table></div>")
 
     sections = []
@@ -228,7 +244,7 @@ def build(d):
 
     n_types = len({t for c in chapters for t in c["byType"]})
     by_size = sorted(chapters, key=lambda c: -c["total"])
-    top3 = ", ".join(esc(c["chapter"]) for c in by_size[:3])
+    top3 = ", ".join(f'{esc(c["chapter"])} ({c["total"]})' for c in by_size[:3])
     top_line = (f"Most practice questions: {top3}. Fewest: {esc(by_size[-1]['chapter'])} "
                 f"({by_size[-1]['total']} practice questions). Start with the chapters where you score lowest, "
                 f"then use the case-based and assertion-reason questions to test how well you can apply a concept.")
@@ -300,7 +316,7 @@ def build(d):
   <meta name="twitter:title" content="{esc(h1)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
 
-  <link rel="stylesheet" href="style.css?v=20261013" />
+  <link rel="stylesheet" href="style.css?v=20261018" />
 
 {ld_html}</head>
 <body>
@@ -343,7 +359,7 @@ def build(d):
         <svg class="mindy" viewBox="0 0 130 130" aria-hidden="true" focusable="false"><use href="mindy.svg#cheer"/></svg>
         <div class="mindy-say-b">
           <p><strong>Why practise here instead of reading a PDF?</strong> Mindy, the MindVsYou chat buddy, gives you one question at a time. MCQs are marked the moment you answer, with the official answer and an AI explanation. For written questions you attempt first, then compare with the official answer and rate yourself. Sign in to save your progress and get the questions you missed back for revision. Guests can start without an account.</p>
-          <p>Pick MCQs or VSA, SA, LA for any chapter in the table above.</p>
+          <p>Pick MCQs, VSA, SA, LA or case-based questions for any chapter in the table above.</p>
           <a href="{esc(practice)}" class="btn btn-green">Start practising &rarr;</a>
         </div>
       </div>
