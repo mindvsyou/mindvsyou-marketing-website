@@ -86,6 +86,7 @@ def load():
 # Chapter name (as in the endpoint) -> checkout/sales-page URL. The "Chapter PDF" column and
 # "Buy PDF" buttons appear only once at least one chapter has a URL here.
 PDF_LINKS = {"Carbon and Its Compounds": "https://rzp.io/rzp/Lr17Ptc"}
+PDF_PRICE = "₹49"  # shown in the copy; keep equal to the Razorpay payment pages
 # Chapter name -> direct-download URL of a free PDF (shows a green "Free PDF" button).
 FREE_PDFS = {"Chemical Reactions and Equations":
              "https://drive.google.com/uc?export=download&id=14Q032KIVndqRPSXAc3zhxQKfL2xhDgeU",
@@ -208,8 +209,8 @@ def build(d):
     practice = practice_url()
 
     title = f"CBSE Class 10 Science PYQs: {total} Practice Questions | MindVsYou"
-    desc = (f"{n} chapters of CBSE Class 10 Science PYQs: {total} practice questions from board years {y0}–{y1}, "
-            f"by question type, with sample questions.")
+    desc = (f"{n} chapters of CBSE Class 10 Science PYQs: {total} practice questions, {y0}–{y1}, "
+            f"plus chapter PDFs with answers and explanations (some free).")
     h1 = "CBSE Class 10 Science PYQs by chapter: what you can practise"
 
     rows = []
@@ -259,6 +260,19 @@ def build(d):
                 f"then use the case-based and assertion-reason questions to test how well you can apply a concept.")
     ar = sum(c["byType"].get("Assertion-Reason", 0) for c in chapters)
     ar_line = (f"MCQ practice includes {ar} assertion-reason question{'s' if ar != 1 else ''}. " if ar else "")
+    names = {c["chapter"] for c in chapters}
+    free_names = [k for k in FREE_PDFS if k in names]
+    paid_names = [k for k in PDF_LINKS if k in names and k not in FREE_PDFS]
+    pdf_parts = []
+    if free_names:
+        pdf_parts.append("Free to download: " + ", ".join(free_names) + ".")
+    if paid_names:
+        pdf_parts.append(f"Available for {PDF_PRICE} each: " + ", ".join(paid_names) + ".")
+    pdf_line = " ".join(pdf_parts)
+    pdf_block = (f'<div class="quick-answer"><span class="qa-label">Chapter PDFs</span><p><strong>Want to study offline?</strong> '
+                 f'Each chapter PDF has every practice question for that chapter with the official answers and Mindy&rsquo;s '
+                 f'step-by-step explanations. {esc(pdf_line)} More chapters are added over time. '
+                 f'Find the buttons in the Chapter PDF column of the table below.</p></div>') if pdf_parts else ""
     faqs = [
         ("Which years of CBSE Class 10 Science PYQs can I practise on MindVsYou?",
          f"The interactive question bank covers CBSE Class 10 Science board years {ydesc}."),
@@ -267,6 +281,12 @@ def build(d):
          "Not every chapter has every type; the table above shows the exact counts."),
         ("Can I try PYQ practice without an account?",
          "Yes. Guests can use both MCQ practice and written-question practice without creating an account. Sign in to save your progress and revise the questions you missed."),
+        ("Are there chapter-wise PDFs of CBSE Class 10 Science PYQs with answers?",
+         "Yes. Each chapter PDF has every practice question for that chapter with the official answers and Mindy's step-by-step explanations. "
+         + (pdf_line + " " if pdf_line else "") + "More chapters are added over time."),
+        ("How do I get a paid chapter PDF?",
+         f"Click Buy PDF for the chapter, pay {PDF_PRICE} on the secure Razorpay page with UPI, card or netbanking, and you are taken straight to a page with your download button. "
+         "If anything goes wrong, email hello@mindvsyou.io with your payment id."),
         ("How does the practice work?",
          "MCQ practice gives 10 questions per round by chapter, with optional subtopic, instant marking, official answers and AI explanations. " + ar_line +
          "Subjective practice gives 10 questions per round by chapter, subtopic and type; you attempt first, then rate yourself against the official answer."),
@@ -357,6 +377,7 @@ def build(d):
         <div class="stat"><span class="stat-icon" aria-hidden="true">&#10024;</span><span class="stat-num">{n_types}</span><span class="stat-label">question types</span></div>
       </div>
       <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I practise CBSE Class 10 Science PYQs chapter-wise?</strong> On <a href="{esc(practice)}">quiz.mindvsyou.io</a>: {total} practice questions from board years {y0}&ndash;{y1}, in MCQ, assertion-reason, very short, short, long and case-based formats, with instant marking for MCQs. Guests can try it without an account.</p></div>
+      {pdf_block}
       <p>Some board questions have several parts, and each part can count as its own practice question.</p>
       <p>{top_line}</p>
 
@@ -367,7 +388,7 @@ def build(d):
       <div class="mindy-say">
         <svg class="mindy" viewBox="0 0 130 130" aria-hidden="true" focusable="false"><use href="mindy.svg#cheer"/></svg>
         <div class="mindy-say-b">
-          <p><strong>Why practise here instead of reading a PDF?</strong> Mindy, the MindVsYou chat buddy, gives you one question at a time. MCQs are marked the moment you answer, with the official answer and an AI explanation. For written questions you attempt first, then compare with the official answer and rate yourself. Sign in to save your progress and get the questions you missed back for revision. Guests can start without an account.</p>
+          <p><strong>Why practise with Mindy?</strong> Mindy, the MindVsYou chat buddy, gives you one question at a time. MCQs are marked the moment you answer, with the official answer and an AI explanation. For written questions you attempt first, then compare with the official answer and rate yourself. Sign in to save your progress and get the questions you missed back for revision. Guests can start without an account.</p>
           <p>Pick MCQs, VSA, SA, LA or case-based questions for any chapter in the table above.</p>
           <a href="{esc(practice)}" class="btn btn-green">Start practising &rarr;</a>
         </div>
