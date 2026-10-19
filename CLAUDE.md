@@ -50,3 +50,5 @@ Rules: say "practice questions" (never "question entries"; agreed with the user,
 The host sends `style.css` with a 7-day cache, so phones keep old CSS after a deploy.
 Whenever `style.css` changes, bump `?v=` on the stylesheet link in every page (and in
 `build_pyq_coverage.py`), e.g. `style.css?v=20261013` -> a new date.
+
+`main.js` has the same problem (7-day cache). Its script tag is `main.js?v=...` on every page; bump that `?v=` whenever `main.js` changes, otherwise returning visitors keep the old script and events like `buy_pdf_click` are not sent.
