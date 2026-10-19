@@ -25,6 +25,7 @@ Most visitors are CBSE students under 18. India's DPDP Act restricts tracking ch
   in event parameters or in URLs.
 - `forgot-login.html` has NO gtag on purpose: students enter their name, student ID and phone there.
   Do not add it back. Apply the same rule to any future page that collects student details.
+- `thanks-<random>.html` (Razorpay thank-you page) collects nothing, so it has gtag, but it reports itself as `/pdf-thank-you` so the secret address and Razorpay's payment-id query string never reach GA. Its `purchase` event is approximate; Razorpay is the source of truth for revenue.
 
 ## Google Search Console
 

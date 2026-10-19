@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Unlisted thank-you page for the Razorpay Payment Page redirect. Not in the sitemap, not linked
-       from anywhere, no Google Analytics (buyers are mostly students under 18 or their parents).
-       Do not link to this page from other pages. If the link leaks, rename this file and update the
-       redirect URL in Razorpay. -->
+  <!-- Unlisted thank-you page for the Razorpay Payment Page redirect. Not in the sitemap and not linked
+       from anywhere. If the link leaks, rename this file and update the redirect URL in Razorpay.
+       Analytics: this page collects no personal data. It sends one purchase event (price and chapter only)
+       and reports itself as /pdf-thank-you so neither this secret address nor Razorpay's payment id
+       query string ever reaches GA. The count is approximate (a refresh or shared link can repeat it);
+       Razorpay is the source of truth for revenue. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM406K6TT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JM406K6TT0', { page_location: 'https://mindvsyou.io/pdf-thank-you', page_referrer: '' });
+    (function () {
+      var key = 'pdfPurchaseSent:carbon-and-its-compounds';
+      try { if (localStorage.getItem(key)) return; localStorage.setItem(key, '1'); } catch (e) {}
+      var id = 'tx-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+      gtag('event', 'purchase', {
+        transaction_id: id,
+        currency: 'INR',
+        value: 49,
+        items: [{ item_id: 'carbon-and-its-compounds', item_name: 'Carbon and Its Compounds PDF', item_category: 'PDF', price: 49, quantity: 1 }]
+      });
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thank You — Your Carbon and Its Compounds PDF | MindVsYou</title>
@@ -86,6 +106,6 @@
       <p class="footer-legal"><a href="terms.html">Terms</a> · <a href="privacy-policy.html">Privacy</a> · <a href="refund-policy.html">Refunds</a></p>
     </div>
   </footer>
-  <script src="main.js?v=20261019"></script>
+  <script src="main.js?v=20261019b"></script>
 </body>
 </html>

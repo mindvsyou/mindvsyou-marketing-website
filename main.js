@@ -83,6 +83,18 @@ function initCtaTracking() {
     const buy = e.target.closest('a[data-buy-pdf]');
     if (buy && typeof gtag === 'function') {
       gtag('event', 'buy_pdf_click', { pdf_chapter: buy.dataset.buyPdf });
+      const price = Number(buy.dataset.price) || 0;
+      gtag('event', 'begin_checkout', {
+        currency: 'INR',
+        value: price,
+        items: [{
+          item_id: buy.dataset.buyPdf.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+          item_name: buy.dataset.buyPdf + ' PDF',
+          item_category: 'PDF',
+          price: price,
+          quantity: 1,
+        }],
+      });
       return;
     }
     const free = e.target.closest('a[data-free-pdf]');

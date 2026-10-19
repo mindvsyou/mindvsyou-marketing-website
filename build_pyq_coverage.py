@@ -177,7 +177,8 @@ def pdf_button(c):
     url = PDF_LINKS.get(c["chapter"])
     if not url:
         return ""
-    return (f'<a class="btn btn-grey btn-sm" href="{esc(url)}" data-buy-pdf="{name}" '
+    price = re.sub(r"[^0-9]", "", PDF_PRICE)
+    return (f'<a class="btn btn-grey btn-sm" href="{esc(url)}" data-buy-pdf="{name}" data-price="{price}" '
             f'aria-label="Buy {name} PDF with Mindy explanations">Buy PDF</a>')
 
 
