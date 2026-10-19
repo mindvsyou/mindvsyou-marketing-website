@@ -172,7 +172,7 @@ def pdf_button(c):
     name = esc(c["chapter"])
     free = FREE_PDFS.get(c["chapter"])
     if free:
-        return (f'<a class="btn btn-green btn-sm" href="{esc(free)}" data-free-pdf="{name}" rel="noopener" '
+        return (f'<a class="btn btn-grey btn-sm" href="{esc(free)}" data-free-pdf="{name}" rel="noopener" '
                 f'aria-label="Download the free {name} PDF with Mindy explanations">Free PDF</a>')
     url = PDF_LINKS.get(c["chapter"])
     if not url:
