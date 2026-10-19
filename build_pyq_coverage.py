@@ -86,6 +86,9 @@ def load():
 # Chapter name (as in the endpoint) -> checkout/sales-page URL. The "Chapter PDF" column and
 # "Buy PDF" buttons appear only once at least one chapter has a URL here.
 PDF_LINKS = {"Carbon and Its Compounds": "https://rzp.io/rzp/Lr17Ptc"}
+# Chapter name -> direct-download URL of a free PDF (shows a green "Free PDF" button).
+FREE_PDFS = {"Chemical Reactions and Equations":
+             "https://drive.google.com/uc?export=download&id=14Q032KIVndqRPSXAc3zhxQKfL2xhDgeU"}
 
 QUIZ_PYQ ="https://quiz.mindvsyou.io/pyq?class=10&subject=science"
 
@@ -162,11 +165,15 @@ def action_links(c, cls, full=False):
 
 
 def pdf_button(c):
-    """Grey 'Buy PDF' button for a chapter; empty until that chapter's PDF has a link in PDF_LINKS."""
+    """Green 'Free PDF' or grey 'Buy PDF' button for a chapter; empty until the chapter has a link."""
+    name = esc(c["chapter"])
+    free = FREE_PDFS.get(c["chapter"])
+    if free:
+        return (f'<a class="btn btn-green btn-sm" href="{esc(free)}" data-free-pdf="{name}" rel="noopener" '
+                f'aria-label="Download the free {name} PDF with Mindy explanations">Free PDF</a>')
     url = PDF_LINKS.get(c["chapter"])
     if not url:
         return ""
-    name = esc(c["chapter"])
     return (f'<a class="btn btn-grey btn-sm" href="{esc(url)}" data-buy-pdf="{name}" '
             f'aria-label="Buy {name} PDF with Mindy explanations">Buy PDF</a>')
 
@@ -206,14 +213,14 @@ def build(d):
     rows = []
     for c in chapters:
         cells = "".join(f'<td>{c["byType"].get(t, 0)}</td>' for t in TYPES)
-        pdf = (f'<td class="row-actions">{pdf_button(c)}</td>') if PDF_LINKS else ""
+        pdf = (f'<td class="row-actions">{pdf_button(c)}</td>') if (PDF_LINKS or FREE_PDFS) else ""
         rows.append(f'<tr><td><a href="#{slug(c["chapter"])}">{esc(label(c["chapter"]))}</a></td>{cells}'
                     f'<td><strong>{c["total"]}</strong></td><td>{span(c["years"])}</td>'
                     f'<td class="row-actions">{action_links(c, "btn-sm")}</td>{pdf}</tr>')
     table = ('<div class="table-scroll"><table><thead><tr><th>Chapter</th>'
              + "".join(f"<th>{t}</th>" for t in TYPES)
              + "<th>Total</th><th>Board years</th><th>Click to practice</th>"
-             + ("<th>Chapter PDF</th>" if PDF_LINKS else "") + "</tr></thead><tbody>"
+             + ("<th>Chapter PDF</th>" if (PDF_LINKS or FREE_PDFS) else "") + "</tr></thead><tbody>"
              + "".join(rows) + "</tbody></table></div>")
 
     sections = []

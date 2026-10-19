@@ -85,6 +85,11 @@ function initCtaTracking() {
       gtag('event', 'buy_pdf_click', { pdf_chapter: buy.dataset.buyPdf });
       return;
     }
+    const free = e.target.closest('a[data-free-pdf]');
+    if (free && typeof gtag === 'function') {
+      gtag('event', 'free_pdf_click', { pdf_chapter: free.dataset.freePdf });
+      return;
+    }
     const link = e.target.closest('a[href^="' + CONFIG.appLink + '"]');
     if (!link || typeof gtag !== 'function') return;
     gtag('event', 'cta_click', {
