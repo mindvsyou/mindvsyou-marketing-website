@@ -88,7 +88,9 @@ def load():
 PDF_LINKS = {"Carbon and Its Compounds": "https://rzp.io/rzp/Lr17Ptc"}
 # Chapter name -> direct-download URL of a free PDF (shows a green "Free PDF" button).
 FREE_PDFS = {"Chemical Reactions and Equations":
-             "https://drive.google.com/uc?export=download&id=14Q032KIVndqRPSXAc3zhxQKfL2xhDgeU"}
+             "https://drive.google.com/uc?export=download&id=14Q032KIVndqRPSXAc3zhxQKfL2xhDgeU",
+             "Acids, Bases and Salts":
+             "https://drive.google.com/uc?export=download&id=14fBsK_70GJ7eSGJRbc5kc-Xw-J5AMsdb"}
 
 QUIZ_PYQ ="https://quiz.mindvsyou.io/pyq?class=10&subject=science"
 
