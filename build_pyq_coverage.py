@@ -216,12 +216,13 @@ def build(d):
 
     rows = []
     for c in chapters:
-        cells = "".join(f'<td>{c["byType"].get(t, 0)}</td>' for t in TYPES)
+        cells = "".join(f'<td data-label="{t}"{" class=\"zero\"" if not c["byType"].get(t, 0) else ""}>{c["byType"].get(t, 0)}</td>'
+                        for t in TYPES)
         pdf = (f'<td class="row-actions">{pdf_button(c)}</td>') if (PDF_LINKS or FREE_PDFS) else ""
         rows.append(f'<tr><td><a href="#{slug(c["chapter"])}">{esc(label(c["chapter"]))}</a></td>{cells}'
-                    f'<td><strong>{c["total"]}</strong></td><td>{span(c["years"])}</td>'
+                    f'<td data-label="Total"><strong>{c["total"]}</strong></td><td data-label="Board years">{span(c["years"])}</td>'
                     f'<td class="row-actions">{action_links(c, "btn-sm")}</td>{pdf}</tr>')
-    table = ('<div class="table-scroll"><table><thead><tr><th>Chapter</th>'
+    table = ('<div class="table-scroll"><table class="cov-table"><thead><tr><th>Chapter</th>'
              + "".join(f"<th>{t}</th>" for t in TYPES)
              + "<th>Total</th><th>Board years</th><th>Click to practice</th>"
              + ("<th>Chapter PDF</th>" if (PDF_LINKS or FREE_PDFS) else "") + "</tr></thead><tbody>"
@@ -346,7 +347,7 @@ def build(d):
   <meta name="twitter:title" content="{esc(h1)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
 
-  <link rel="stylesheet" href="style.css?v=20261018" />
+  <link rel="stylesheet" href="style.css?v=20261019" />
 
 {ld_html}</head>
 <body>

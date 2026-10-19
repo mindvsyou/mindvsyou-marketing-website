@@ -569,3 +569,19 @@ footer {
 .step p a::after { content: ' \2192'; }
 .footer-legal { margin-top: 6px; font-size: 0.85rem; }
 .footer-legal a { color: inherit; text-decoration: underline; opacity: 0.85; }
+
+/* PYQ coverage table: stacked cards on phones so the Chapter PDF / practice buttons are not off-screen */
+@media (max-width: 640px) {
+  .post-body .table-scroll { overflow-x: visible; }
+  .post-body .table-scroll table.cov-table { min-width: 0; display: block; }
+  .post-body .cov-table thead { display: none; }
+  .post-body .cov-table tbody, .post-body .cov-table tr { display: block; }
+  .post-body .cov-table tr { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; padding: 12px; background: var(--white); }
+  .post-body .cov-table td { display: inline-block; border: 0; padding: 2px 14px 2px 0; font-size: 0.92rem; }
+  .post-body .cov-table td:first-child { display: block; padding: 0 0 8px; font-size: 1.05rem; font-weight: 700; }
+  .post-body .cov-table td[data-label]::before { content: attr(data-label) " "; color: var(--text-light); font-size: 0.8rem; }
+  .post-body .cov-table td.zero { display: none; }
+  .post-body .cov-table td.row-actions { display: block; min-width: 0; padding: 8px 0 0; }
+  .post-body .cov-table td.row-actions:empty { display: none; }
+  .post-body .cov-table td.row-actions a.btn-sm { margin: 0 6px 6px 0; }
+}
