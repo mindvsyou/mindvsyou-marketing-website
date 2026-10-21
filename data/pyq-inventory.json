@@ -1,7 +1,7 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-10-19T05:09:28.661Z",
+ "generatedAt": "2026-10-21T02:27:17.368Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
  "totalQuestions": 1467,
  "years": [
@@ -12,15 +12,14 @@
  ],
  "chapters": [
   {
-   "chapter": "Acids, Bases and Salts",
-   "total": 131,
+   "chapter": "Chemical Reactions and Equations",
+   "total": 135,
    "byType": {
-    "Assertion-Reason": 2,
-    "VSA": 20,
-    "MCQ": 67,
-    "LA": 7,
-    "SA": 28,
-    "Case-based": 7
+    "Assertion-Reason": 6,
+    "VSA": 33,
+    "MCQ": 55,
+    "SA": 37,
+    "LA": 4
    },
    "years": [
     2023,
@@ -29,10 +28,97 @@
     2026
    ],
    "subtopics": [
-    "Important Chemicals",
+    "Identifying Chemical Change",
+    "Writing and Balancing Chemical Equations",
+    "Types of Chemical Reactions",
+    "Energy Changes in Reactions",
+    "Corrosion And Rancidity",
+    "Applications of Chemical Reactions"
+   ],
+   "samples": [
+    {
+     "type": "MCQ",
+     "year": 2026,
+     "marks": 1,
+     "text": "Which of the following are combination reactions ?\r\n(i) 2KClO3 → 2KCl + 3O2\r\n(ii) MgO + H2O → Mg(OH)2\r\n(iii) 4Al + 3O2 → 2Al2O3\r\n(iv) Zn + FeSO4 → ZnSO4 + Fe",
+     "answer": "D",
+     "explanation": "• In a combination reaction two or more reactants combine to form a single product — MgO + H₂O → Mg(OH)₂ and 4Al + 3O₂ → 2Al₂O₃.\r\n• ✓ Option (d): (ii) and (iii).\r\n• Why the others are wrong: (i) is a decomposition reaction and (iv) is a displacement reaction, so options (a), (b) and (c) are incorrect.",
+     "truncated": false,
+     "options": {
+      "A": "(i) and (iii)",
+      "B": "(iii) and (iv)",
+      "C": "(ii) and (iv)",
+      "D": "(ii) and (iii)"
+     },
+     "answerText": "(ii) and (iii)"
+    },
+    {
+     "type": "Assertion-Reason",
+     "year": 2026,
+     "marks": 1,
+     "text": "Assertion (A) : Reaction of quick lime with water is an exothermic reaction.\r\nReason (R) : A large amount of heat is evolved on the reaction of quick lime and water.",
+     "answer": "A",
+     "explanation": "• CaO + H₂O → Ca(OH)₂ + heat; a reaction that releases heat is exothermic.\r\n• ✓ Option (a): Both are true, and the large amount of heat evolved (R) is why the reaction is exothermic (A).\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
+     "truncated": false,
+     "options": {
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+      "C": "Assertion (A) is true, but Reason (R) is false.",
+      "D": "Assertion (A) is false, but Reason (R) is true."
+     },
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
+    },
+    {
+     "type": "VSA",
+     "year": 2026,
+     "marks": 2,
+     "text": "Answer the following :\r\n(a) Why should chemical equations be balanced ?\r\n(b) Name the oxidising and reducing agent in the following equation :\r\n    4Na + O2 → 2Na2O",
+     "answer": "(a)\r\n    • To follow the law of conservation of mass\r\n(b)\r\n    • Oxidising agent - O2 /Oxygen\r\n    • Reducing agent - Na/ Sodium",
+     "explanation": "(a)\r\n    • Mass is neither created nor destroyed, so atoms of each element must be equal on both sides.\r\n(b)\r\n    • Oxidising agent: O₂, which gives oxygen to sodium.\r\n    • Reducing agent: Na, which is itself oxidised to Na₂O.",
+     "truncated": false
+    },
+    {
+     "type": "SA",
+     "year": 2026,
+     "marks": 3,
+     "text": "(a) Name the substance oxidised and reduced in the following reaction :\r\n    ZnO + C → Zn + CO\r\n(b) Balance the following chemical reaction :\r\n    Pb(NO3)2 + KI → PbI2 + KNO3\r\n(c) Give one example each of electrolytic decomposition and decomposition by sunlight.",
+     "answer": "(a)\r\n    • Substance oxidised - C\r\n    • Substance reduced - ZnO\r\n(b)\r\n    • Pb(NO3)2 + 2 KI → PbI2 + 2 KNO3\r\n(c)\r\n    • 2H2O --[electricity]--> 2H2 + O2\r\n    • 2AgCl --[sunlight]--> 2Ag + Cl2\r\n    (any other example in each case)",
+     "explanation": "(a)\r\n    • Carbon gains oxygen to form CO, so it is oxidised; ZnO loses oxygen to form zinc, so it is reduced. Carbon acts as the reducing agent.\r\n(b)\r\n    • Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃\r\n(c)\r\n    • Electrolytic: 2H₂O → 2H₂ + O₂ (electricity)\r\n    • Photolytic: 2AgCl → 2Ag + Cl₂ (sunlight)",
+     "truncated": false
+    },
+    {
+     "type": "LA",
+     "year": 2024,
+     "marks": 5,
+     "text": "What is a chemical reaction ? Describe one activity each to show that a chemical change has occurred in which (i) change of colour, and (ii) change in temperature has taken place.",
+     "answer": "• A chemical reaction involves the breaking and making of bonds between atoms to produce new substances (reactants change into products).\r\n(i)\r\n    • Colour change: add lead nitrate solution to potassium iodide solution in a test tube — the colourless solution changes to a yellow precipitate.\r\n    • Pb(NO3)2 + 2KI → PbI2↓ (yellow) + 2KNO3 (or any other example)\r\n(ii)\r\n    • Temperature change: calcium oxide reacts vigorously with water to produce slaked lime (calcium hydroxide), releasing a large amount of heat.\r\n    • CaO(s) + H2O(l) → Ca(OH)2(aq) + Heat (or any other example)",
+     "explanation": "• A chemical reaction is a process in which bonds between atoms break and new bonds form, converting reactants into new products, often with a visible sign such as colour or temperature change.\r\n(i)\r\n    • Colour change: lead nitrate solution mixed with potassium iodide solution turns from colourless to a yellow precipitate.\r\n    • Pb(NO3)2 + 2KI → PbI2↓ (yellow) + 2KNO3.\r\n(ii)\r\n    • Temperature change: calcium oxide reacting with water is a highly exothermic activity.\r\n    • CaO + H2O → Ca(OH)2 + Heat, releasing a large amount of heat and forming slaked lime as the product.",
+     "truncated": false
+    }
+   ]
+  },
+  {
+   "chapter": "Acids, Bases and Salts",
+   "total": 131,
+   "byType": {
+    "MCQ": 67,
+    "LA": 7,
+    "Case-based": 7,
+    "SA": 28,
+    "VSA": 20,
+    "Assertion-Reason": 2
+   },
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "subtopics": [
     "Properties and Strength of Acids and Bases",
     "Reactions of Acids and Bases",
-    "pH and Salts"
+    "pH and Salts",
+    "Important Chemicals"
    ],
    "samples": [
     {
@@ -97,15 +183,101 @@
    ]
   },
   {
+   "chapter": "Metals and Non-Metals",
+   "total": 114,
+   "byType": {
+    "VSA": 13,
+    "Assertion-Reason": 14,
+    "MCQ": 41,
+    "SA": 32,
+    "Case-based": 10,
+    "LA": 4
+   },
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "subtopics": [
+    "Physical Properties of Metals and Non-Metals",
+    "Chemical Reactions of Metals",
+    "Reactivity Series",
+    "Extraction of Metals",
+    "Properties of Ionic Compounds"
+   ],
+   "samples": [
+    {
+     "type": "MCQ",
+     "year": 2026,
+     "marks": 1,
+     "text": "Which of the following is an amphoteric oxide ?",
+     "answer": "D",
+     "explanation": "• Amphoteric oxides react with both acids and bases to give salt and water.\r\n• ✓ Option (d): Al₂O₃ reacts with HCl and with NaOH (forming sodium aluminate).\r\n• Why the others are wrong: (a) Na₂O and (b) K₂O are basic oxides; (c) CO₂ is an acidic oxide.",
+     "truncated": false,
+     "options": {
+      "A": "Na2O",
+      "B": "K2O",
+      "C": "CO2",
+      "D": "Al2O3"
+     },
+     "answerText": "Al2O3"
+    },
+    {
+     "type": "Assertion-Reason",
+     "year": 2025,
+     "marks": 1,
+     "text": "Assertion (A) : The metals high up in the reactivity series cannot be obtained from their compounds by heating with carbon.\r\nReason (R) : Displacement reactions can also be used to obtain metal.",
+     "answer": "B",
+     "explanation": "• Metals high in the reactivity series (like Na, K, Ca) have too great an affinity for oxygen to be reduced by carbon — this makes Assertion true.\r\n• ✓ Option (b): Both statements are true, but displacement reactions (Reason) don't explain why carbon reduction fails for reactive metals — they're unrelated facts here.\r\n• Why the others are wrong: (a) wrongly claims a causal link; (c) and (d) incorrectly mark one statement false when both are actually true.",
+     "truncated": false,
+     "options": {
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "C": "Assertion (A) is true, but Reason (R) is false.",
+      "D": "Assertion (A) is false, but Reason (R) is true."
+     },
+     "answerText": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A)."
+    },
+    {
+     "type": "VSA",
+     "year": 2026,
+     "marks": 2,
+     "text": "Write balanced equations for the reactions of the following :\r\n(a) Iron with steam\r\n(b) Calcium with water",
+     "answer": "(a)\r\n    • 3Fe(s) + 4H2O(g) → Fe3O4(s) + 4H2(g)\r\n(b)\r\n    • Ca(s) + 2H2O(l) → Ca(OH)2(aq) + H2(g)\r\n(Deduct ½ mark for no/incorrect balancing in each case)",
+     "explanation": "(a)\r\n    • 3Fe(s) + 4H₂O(g) → Fe₃O₄(s) + 4H₂(g); iron does not react with cold water, only with steam.\r\n(b)\r\n    • Ca(s) + 2H₂O(l) → Ca(OH)₂(aq) + H₂(g); calcium reacts less violently, and hydrogen bubbles make it float.",
+     "truncated": false
+    },
+    {
+     "type": "SA",
+     "year": 2026,
+     "marks": 3,
+     "text": "Answer the following :\r\n(a) Why can the oxides of highly reactive metals not be reduced by carbon ?\r\n(b) Why do ionic compounds have high melting and boiling points ?\r\n(c) Why is a solder, an alloy of lead and tin, used for welding electrical wires together ?",
+     "answer": "(a)\r\n    • Highly reactive metals have more affinity for oxygen than carbon.\r\n(b)\r\n    • Because a considerable amount of energy is required to break the strong inter-ionic attraction /Because of strong forces of attraction between oppositely charged ions.\r\n(c)\r\n    • Because of its low melting point.",
+     "explanation": "(a)\r\n    • Metals like Na, Ca, Al have a greater affinity for oxygen than carbon, so carbon cannot remove oxygen from their oxides; electrolytic reduction is used instead.\r\n(b)\r\n    • Strong electrostatic forces hold oppositely charged ions together, so much energy is needed to break them.\r\n(c)\r\n    • Solder has a low melting point, so it melts easily to join wires.",
+     "truncated": false
+    },
+    {
+     "type": "LA",
+     "year": 2025,
+     "marks": 5,
+     "text": "(i) With the help of balanced chemical equations state the process of extracting (I) mercury from its ore called cinnabar, and (II) copper from its sulphide ore.\r\n(ii) Silver and copper articles slowly lose their shiny surfaces when exposed to air. Name the compounds formed on (I) silver articles, and (II) copper articles in the form of coating.",
+     "answer": "(i)\r\n    • (I) 2HgS(s) + 3O2(g) --[Heat]--> 2HgO(s) + 2SO2(s) (cinnabar); 2HgO(s) --[Heat]--> 2Hg(l) + O2(g)\r\n    • (II) 2CuS + 3O2(g) --[Heat]--> 2Cu2O(s) + 2SO2(g); 2Cu2O + Cu2S --[Heat]--> 6Cu(s) + SO2(g) (Deduct half mark each for unbalanced equation)\r\n(ii)\r\n    • (I) Silver sulphide / Ag2S\r\n    • (II) Basic Copper carbonate / Cu(OH)2.CuCO3",
+     "explanation": "(i)\r\n    • (I) Cinnabar (HgS) is roasted: 2HgS + 3O2 → 2HgO + 2SO2, then further heated: 2HgO → 2Hg + O2.\r\n    • (II) Copper sulphide ore is roasted: 2CuS + 3O2 → 2Cu2O + 2SO2, followed by self-reduction: 2Cu2O + Cu2S → 6Cu + SO2.\r\n(ii)\r\n    • (I) Silver tarnishes to form a black coating of silver sulphide (Ag2S) on reacting with sulphur compounds in air.\r\n    • (II) Copper develops a green coating of basic copper carbonate, Cu(OH)2·CuCO3, on prolonged exposure to moist air.",
+     "truncated": false
+    }
+   ]
+  },
+  {
    "chapter": "Carbon and Its Compounds",
    "total": 107,
    "byType": {
-    "SA": 2,
-    "Assertion-Reason": 10,
     "LA": 54,
     "Case-based": 5,
-    "VSA": 8,
-    "MCQ": 28
+    "MCQ": 28,
+    "SA": 2,
+    "Assertion-Reason": 10,
+    "VSA": 8
    },
    "years": [
     2023,
@@ -115,9 +287,9 @@
    ],
    "subtopics": [
     "Bonding in Carbon",
+    "Hydrocarbons",
     "Chemical Properties of Carbon Compounds",
     "Ethanol and Ethanoic Acid",
-    "Hydrocarbons",
     "Soaps and Detergents"
    ],
    "samples": [
@@ -183,14 +355,15 @@
    ]
   },
   {
-   "chapter": "Chemical Reactions and Equations",
-   "total": 135,
+   "chapter": "Life Processes",
+   "total": 162,
    "byType": {
-    "Assertion-Reason": 6,
-    "LA": 4,
-    "VSA": 33,
-    "SA": 37,
-    "MCQ": 55
+    "SA": 34,
+    "MCQ": 52,
+    "Case-based": 5,
+    "LA": 6,
+    "Assertion-Reason": 18,
+    "VSA": 47
    },
    "years": [
     2023,
@@ -199,71 +372,69 @@
     2026
    ],
    "subtopics": [
-    "Applications of Chemical Reactions",
-    "Corrosion And Rancidity",
-    "Energy Changes in Reactions",
-    "Identifying Chemical Change",
-    "Types of Chemical Reactions",
-    "Writing and Balancing Chemical Equations"
+    "Nutrition",
+    "Respiration",
+    "Transportation",
+    "Excretion"
    ],
    "samples": [
     {
      "type": "MCQ",
      "year": 2026,
      "marks": 1,
-     "text": "Which of the following are combination reactions ?\r\n(i) 2KClO3 → 2KCl + 3O2\r\n(ii) MgO + H2O → Mg(OH)2\r\n(iii) 4Al + 3O2 → 2Al2O3\r\n(iv) Zn + FeSO4 → ZnSO4 + Fe",
-     "answer": "D",
-     "explanation": "• In a combination reaction two or more reactants combine to form a single product — MgO + H₂O → Mg(OH)₂ and 4Al + 3O₂ → 2Al₂O₃.\r\n• ✓ Option (d): (ii) and (iii).\r\n• Why the others are wrong: (i) is a decomposition reaction and (iv) is a displacement reaction, so options (a), (b) and (c) are incorrect.",
+     "text": "Which structure in a leaf is mainly responsible for gaseous exchange ?",
+     "answer": "B",
+     "explanation": "• Gaseous exchange in leaves (CO₂ in for photosynthesis, O₂ out) takes place through tiny pores on the leaf surface called stomata.\r\n• ✓ Option (b): Stomata are the main sites of gaseous exchange in a leaf.\r\n• Why the others are wrong: (a) xylem transports water and minerals; (c) phloem transports food; (d) cuticle is a waxy layer that reduces water loss.",
      "truncated": false,
      "options": {
-      "A": "(i) and (iii)",
-      "B": "(iii) and (iv)",
-      "C": "(ii) and (iv)",
-      "D": "(ii) and (iii)"
+      "A": "Xylem",
+      "B": "Stomata",
+      "C": "Phloem",
+      "D": "Cuticle"
      },
-     "answerText": "(ii) and (iii)"
+     "answerText": "Stomata"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : Reaction of quick lime with water is an exothermic reaction.\r\nReason (R) : A large amount of heat is evolved on the reaction of quick lime and water.",
-     "answer": "A",
-     "explanation": "• CaO + H₂O → Ca(OH)₂ + heat; a reaction that releases heat is exothermic.\r\n• ✓ Option (a): Both are true, and the large amount of heat evolved (R) is why the reaction is exothermic (A).\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
+     "text": "Assertion (A) : Arteries have valves as they have to withstand high pressure.\r\nReason (R) : Arteries are vessels which carry blood away from the heart to various organs.",
+     "answer": "D",
+     "explanation": "• Arteries carry blood away from the heart under high pressure, so they have thick, elastic walls; valves are found in veins, which carry blood at low pressure and need valves to prevent backflow.\r\n• ✓ Option (d): A is false (arteries do not have valves), but R is true.\r\n• Why the others are wrong: (a) and (b) treat A as true; (c) wrongly marks R false.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
+     "answerText": "Assertion (A) is false, but Reason (R) is true."
     },
     {
      "type": "VSA",
      "year": 2026,
      "marks": 2,
-     "text": "Answer the following :\r\n(a) Why should chemical equations be balanced ?\r\n(b) Name the oxidising and reducing agent in the following equation :\r\n    4Na + O2 → 2Na2O",
-     "answer": "(a)\r\n    • To follow the law of conservation of mass\r\n(b)\r\n    • Oxidising agent - O2 /Oxygen\r\n    • Reducing agent - Na/ Sodium",
-     "explanation": "(a)\r\n    • Mass is neither created nor destroyed, so atoms of each element must be equal on both sides.\r\n(b)\r\n    • Oxidising agent: O₂, which gives oxygen to sodium.\r\n    • Reducing agent: Na, which is itself oxidised to Na₂O.",
+     "text": "(a) Why is bile juice considered to be very important for digestion, even though it doesn’t contain any digestive enzymes ?\r\n(b) Name some substances present in initial filtrate and subsequently selectively reabsorbed in the tubules of nephron.",
+     "answer": "(a)\r\n    • Bile emulsifies fats for their digestion.\r\n    • It makes medium alkaline for further digestion by pancreatic and small intestinal enzymes.\r\n(b)\r\n    • Glucose, water, salt, amino acid",
+     "explanation": "(a)\r\n    • Bile breaks fat into tiny droplets (emulsification) and makes the food alkaline, so pancreatic and intestinal enzymes can act.\r\n(b)\r\n    • Glucose, amino acids, salts and water are reabsorbed in the nephron tubules.",
      "truncated": false
     },
     {
      "type": "SA",
      "year": 2026,
      "marks": 3,
-     "text": "(a) Name the substance oxidised and reduced in the following reaction :\r\n    ZnO + C → Zn + CO\r\n(b) Balance the following chemical reaction :\r\n    Pb(NO3)2 + KI → PbI2 + KNO3\r\n(c) Give one example each of electrolytic decomposition and decomposition by sunlight.",
-     "answer": "(a)\r\n    • Substance oxidised - C\r\n    • Substance reduced - ZnO\r\n(b)\r\n    • Pb(NO3)2 + 2 KI → PbI2 + 2 KNO3\r\n(c)\r\n    • 2H2O --[electricity]--> 2H2 + O2\r\n    • 2AgCl --[sunlight]--> 2Ag + Cl2\r\n    (any other example in each case)",
-     "explanation": "(a)\r\n    • Carbon gains oxygen to form CO, so it is oxidised; ZnO loses oxygen to form zinc, so it is reduced. Carbon acts as the reducing agent.\r\n(b)\r\n    • Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃\r\n(c)\r\n    • Electrolytic: 2H₂O → 2H₂ + O₂ (electricity)\r\n    • Photolytic: 2AgCl → 2Ag + Cl₂ (sunlight)",
+     "text": "In xylem tissue, vessels and tracheids of the roots, stems and leaves are interconnected to form a continuous system of water-conducting channels reaching all parts of the plant. Explain how this is achieved.",
+     "answer": "• Root pressure: Cells in the contact of the soil actively take up ions and creates a difference in concentration between roots and soil, water moves from soil to root to eliminate this difference.\r\n• Transpirational pull: Water lost through transpiration from aerial parts of plants, creates a suction which pulls water column from xylem cells of roots.",
+     "explanation": "• Root pressure: Root cells in contact with soil actively take up ions, creating a concentration difference between root and soil. Water moves into the root to remove this difference, pushing a steady column of water upward through xylem.\r\n• Transpirational pull: Water evaporating from leaves through stomata creates suction that pulls the water column up from the roots. This is the main force, especially during the day.",
      "truncated": false
     },
     {
      "type": "LA",
-     "year": 2024,
+     "year": 2025,
      "marks": 5,
-     "text": "What is a chemical reaction ? Describe one activity each to show that a chemical change has occurred in which (i) change of colour, and (ii) change in temperature has taken place.",
-     "answer": "• A chemical reaction involves the breaking and making of bonds between atoms to produce new substances (reactants change into products).\r\n(i)\r\n    • Colour change: add lead nitrate solution to potassium iodide solution in a test tube — the colourless solution changes to a yellow precipitate.\r\n    • Pb(NO3)2 + 2KI → PbI2↓ (yellow) + 2KNO3 (or any other example)\r\n(ii)\r\n    • Temperature change: calcium oxide reacts vigorously with water to produce slaked lime (calcium hydroxide), releasing a large amount of heat.\r\n    • CaO(s) + H2O(l) → Ca(OH)2(aq) + Heat (or any other example)",
-     "explanation": "• A chemical reaction is a process in which bonds between atoms break and new bonds form, converting reactants into new products, often with a visible sign such as colour or temperature change.\r\n(i)\r\n    • Colour change: lead nitrate solution mixed with potassium iodide solution turns from colourless to a yellow precipitate.\r\n    • Pb(NO3)2 + 2KI → PbI2↓ (yellow) + 2KNO3.\r\n(ii)\r\n    • Temperature change: calcium oxide reacting with water is a highly exothermic activity.\r\n    • CaO + H2O → Ca(OH)2 + Heat, releasing a large amount of heat and forming slaked lime as the product.",
+     "text": "(i) State the role of rings of cartilage present in the throat.\r\n(ii) Discuss the role of the ribs and diaphragm when air is taken in during the breathing cycle.\r\n(iii) Why do we get muscle cramps during heavy exercise ? Explain.",
+     "answer": "(i)\r\n    • 'Rings of cartilage' ensure that the air passage does not collapse in the absence of air.\r\n(ii)\r\n    • Ribs are lifted → diaphragm flattens → chest cavity becomes larger → air is sucked into the lungs (alveoli) and we breathe in.\r\n(iii)\r\n    • Due to lack of oxygen in muscle cells (anaerobic respiration), pyruvate is converted into lactic acid; build-up of lactic acid in muscles causes cramps.",
+     "explanation": "(i)\r\n    • Rings of cartilage in the throat (trachea) keep the air passage from collapsing even when there's little air inside, ensuring a continuous, open pathway for airflow.\r\n(ii)\r\n    • During inhalation: the ribs move up and outward while the diaphragm contracts and flattens, together enlarging the chest cavity; this reduces internal pressure, drawing air into the lungs.\r\n(iii)\r\n    • During heavy exercise, muscle cells don't get enough oxygen and switch to anaerobic respiration, converting pyruvate into lactic acid instead of carbon dioxide; the resulting build-up of lactic acid in the muscles causes painful cramps.",
      "truncated": false
     }
    ]
@@ -273,9 +444,9 @@
    "total": 101,
    "byType": {
     "Assertion-Reason": 5,
-    "SA": 19,
     "MCQ": 31,
     "LA": 8,
+    "SA": 19,
     "Case-based": 5,
     "VSA": 33
    },
@@ -286,9 +457,9 @@
     2026
    ],
    "subtopics": [
-    "Control and Coordination in Plants",
-    "Hormonal Coordination in Humans",
     "Nervous System",
+    "Hormonal Coordination in Humans",
+    "Control and Coordination in Plants",
     "Plant Hormones"
    ],
    "samples": [
@@ -354,177 +525,15 @@
    ]
   },
   {
-   "chapter": "Electricity",
-   "total": 118,
-   "byType": {
-    "MCQ": 27,
-    "SA": 19,
-    "Case-based": 8,
-    "LA": 27,
-    "Assertion-Reason": 3,
-    "VSA": 34
-   },
-   "years": [
-    2023,
-    2024,
-    2025,
-    2026
-   ],
-   "subtopics": [
-    "Combination of Resistors",
-    "Electric Current and Potential Difference",
-    "Electric Power and Energy",
-    "Heating Effect of Current",
-    "Ohm’s Law",
-    "Resistance"
-   ],
-   "samples": [
-    {
-     "type": "MCQ",
-     "year": 2026,
-     "marks": 1,
-     "text": "The correct way to connect an ammeter and a voltmeter in an electric circuit is :",
-     "answer": "C",
-     "explanation": "• An ammeter (low resistance) measures the current through a component, so it must be in series; a voltmeter (high resistance) measures potential difference across a component, so it must be in parallel.\r\n• ✓ Option (c): Ammeter in series, voltmeter in parallel.\r\n• Why the others are wrong: (a) swaps the connections; (b) and (d) connect both meters the same way, which gives wrong readings.",
-     "truncated": false,
-     "options": {
-      "A": "Ammeter in parallel and voltmeter in series",
-      "B": "Ammeter and voltmeter both in parallel",
-      "C": "Ammeter in series and voltmeter in parallel",
-      "D": "Ammeter and voltmeter both in series"
-     },
-     "answerText": "Ammeter in series and voltmeter in parallel"
-    },
-    {
-     "type": "Assertion-Reason",
-     "year": 2025,
-     "marks": 1,
-     "text": "Assertion (A) : The bending of a wire in the form of a coil of several turns does not affect its electrical resistance.\r\nReason (R) : The electrical resistance of a wire is directly proportional to its electrical resistivity.",
-     "answer": "C",
-     "explanation": "• Bending a wire into a coil changes only its shape, not its length, area of cross-section, or the material's resistivity, so its resistance stays unchanged — the Assertion is true.\r\n• ✓ Option (c): Assertion (A) is true, but Reason (R) is false — resistance depends on length and area too (R = ρl/A), not on resistivity alone.\r\n• Why the others are wrong: (a) and (b) wrongly treat Reason as true; (d) wrongly marks the Assertion as false.",
-     "truncated": false,
-     "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
-      "C": "Assertion (A) is true, but Reason (R) is false.",
-      "D": "Assertion (A) is false, but Reason (R) is true."
-     },
-     "answerText": "Assertion (A) is true, but Reason (R) is false."
-    },
-    {
-     "type": "VSA",
-     "year": 2026,
-     "marks": 2,
-     "text": "A fuse in electric circuit is rated 4 A. Can it be used with an electric heater of rating 2 kW, 200 V ? Explain your answer.",
-     "answer": "I = P/V\r\nI = 2000/200\r\nI = 10 A\r\n• Current passing through electric heater is 10A which is much more than rated value (4A) of fuse. Hence fuse will melt and break the circuit. So, it cannot be used.",
-     "explanation": "Given: P = 2000 W, V = 200 V\r\nI = P/V\r\nI = 2000/200\r\nI = 10 A\r\n∴ 10 A exceeds the 4 A rating, so the fuse melts; it cannot be used.",
-     "truncated": false
-    },
-    {
-     "type": "SA",
-     "year": 2026,
-     "marks": 3,
-     "text": "(a) Name a device which is used to :\r\n    (i) Maintain a constant potential difference in a circuit.\r\n    (ii) Change the electric current in an electric circuit.\r\n(b) When the potential difference between the terminals of an electric heater is 110 V, a current of 5 A flows through it. What will be the value of current flowing through it when the potential difference is increased to 220 V ?",
-     "answer": "(a)\r\n    (i)\r\n        • Battery / Electric cell\r\n    (ii)\r\n        • Rheostat / Variable resistance\r\n(b)\r\n    Resistance of the heater, R = V/I\r\n    R = 110/5\r\n    R = 22 Ω\r\n    Current through the heater, I′ = V′/R\r\n    = 220/22\r\n    = 10 A\r\n    /\r\n    Alternate answer for (b):\r\n    • According to Ohm’s law, potential difference is directly proportional to current.\r\n    • When the potential difference is doubled, current will also be doubled. So, value of current will be 10A.",
-     "explanation": "(a)\r\n    • (i) Battery / cell maintains a constant potential difference.\r\n    • (ii) Rheostat (variable resistance) changes the current.\r\n(b)\r\n    Given: V = 110 V, I = 5 A, V′ = 220 V\r\n    R = V/I\r\n    R = 110/5\r\n    R = 22 Ω\r\n    I′ = V′/R\r\n    I′ = 220/22\r\n    I′ = 10 A\r\n    ∴ Doubling the voltage doubles the current to 10 A (resistance unchanged).",
-     "truncated": false
-    },
-    {
-     "type": "LA",
-     "year": 2026,
-     "marks": 5,
-     "text": "(i) How many bulbs of resistance 8 Ω each should be connected in parallel combination to draw a current of 2 A from a battery of 4 V ?\r\n(ii) Name the device used for measuring electric current. How is it connected in a circuit ?\r\n(iii) State Joule’s law of heating.",
-     "answer": "(i)\r\n    V= 4V, I= 2A\r\n    Resistance of circuit R = V/I\r\n    R = 4/2\r\n    R = 2Ω\r\n    Let ‘n’ be the number of bulbs\r\n    1/R = 1/8 + 1/8 + 1/8 + 1/8 + ---n\r\n    1/R = n/8\r\n    1/2 = n/8\r\n    n = 4\r\n    Therefore, 4 bulbs of resistance 8 Ω should be connected in parallel.\r\n(ii)\r\n    • Ammeter\r\n    • In series\r\n(iii)\r\n    • Heat generated through a current carrying conductor is directly proportional to square of current, resistance of conductor and time for which current flows in conductor. / H = I²Rt",
-     "explanation": "(i)\r\n    Given: V = 4 V, I = 2 A, each bulb = 8 Ω\r\n    R = V/I\r\n    R = 4/2\r\n    R = 2 Ω\r\n    1/R = n/8\r\n    1/2 = n/8\r\n    n = 4\r\n    ∴ 4 bulbs must be connected in parallel.\r\n(ii)\r\n    • Ammeter, connected in series so the whole current passes through it.\r\n(iii)\r\n    • Heat produced in a conductor is directly proportional to the square of current, its resistance and the time of flow: H = I²Rt.",
-     "truncated": false
-    }
-   ]
-  },
-  {
-   "chapter": "Heredity",
-   "total": 82,
-   "byType": {
-    "VSA": 16,
-    "Assertion-Reason": 10,
-    "MCQ": 27,
-    "SA": 21,
-    "Case-based": 8
-   },
-   "years": [
-    2023,
-    2024,
-    2025,
-    2026
-   ],
-   "subtopics": [
-    "Chromosomes, Genes and Trait Inheritance",
-    "Mendel’s Experiments",
-    "Sex Determination",
-    "Variations and Heredity"
-   ],
-   "samples": [
-    {
-     "type": "MCQ",
-     "year": 2026,
-     "marks": 1,
-     "text": "The genotype of green stemmed tomato plant is denoted by ‘GG’ and that of purple stemmed tomato plant as ‘gg’. Hybrid of a cross between these two were self-pollinated to obtain F2 progeny. What will be the ratio of GG, Gg and gg in this F2 progeny ?",
-     "answer": "D",
-     "explanation": "• GG × gg gives an F1 hybrid Gg; selfing Gg × Gg produces GG, Gg, Gg and gg — a genotypic ratio of 1 : 2 : 1.\r\n• ✓ Option (d): 1:2:1.\r\n• Why the others are wrong: (a) and (c) misplace the counts of homozygotes and heterozygotes; (b) 3:1 is the phenotypic ratio, and gg plants do appear in F2.",
-     "truncated": false,
-     "options": {
-      "A": "2:1:1",
-      "B": "3:1:0",
-      "C": "1:1:2",
-      "D": "1:2:1"
-     },
-     "answerText": "1:2:1"
-    },
-    {
-     "type": "Assertion-Reason",
-     "year": 2026,
-     "marks": 1,
-     "text": "Assertion (A) : Bacteria that can withstand heat have better chances of survival in a heat wave.\r\nReason (R) : Accumulation of variations in a species increases the chances of its survival in changing environment.",
-     "answer": "A",
-     "explanation": "• Variations among individuals mean some are better suited to a changed environment; heat-resistant bacteria are such a variant and survive a heat wave.\r\n• ✓ Option (a): Both A and R are true, and R (variations increase survival) explains A.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
-     "truncated": false,
-     "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
-      "C": "Assertion (A) is true, but Reason (R) is false.",
-      "D": "Assertion (A) is false, but Reason (R) is true."
-     },
-     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
-    },
-    {
-     "type": "VSA",
-     "year": 2026,
-     "marks": 2,
-     "text": "“Variation is useful for the survival of species over time.” Explain this statement with the help of an example.",
-     "answer": "• Variation provides chance for species to survive under unfavourable / changing environmental conditions. e.g. if there were a population of bacteria living in temperate waters and if water temperature increased by global warming, most of these bacteria would die but the few variants resistant to heat would survive and grow further.\r\n(or any other suitable example)",
-     "explanation": "• Variation gives some individuals traits that help them survive when the environment changes.\r\n• Example: if global warming heats temperate waters, most bacteria die, but a few heat-resistant variants survive and multiply.\r\n• Thus the species continues over time.",
-     "truncated": false
-    },
-    {
-     "type": "SA",
-     "year": 2025,
-     "marks": 3,
-     "text": "(a) What are chromosomes ?\r\n(b) Explain in brief how stability of DNA content of a species is ensured in sexually reproducing organisms ?",
-     "answer": "(a)\r\n    • Chromosomes carry genes which control the traits of an organism/chromosomes contain information for inheritance of features from parents to next generation in the form of DNA (Deoxy ribonucleic acid) molecule.\r\n(b)\r\n    • Each cell has two copies of each chromosome, one from male and the other from female parents, which get halved during the formation of germ cells/gametes.\r\n    • After fusion of the germ cells a zygote is formed which restores the normal number of chromosomes and the same amount of DNA in the progeny.",
-     "explanation": "(a)\r\n    • Chromosomes are thread-like structures in the cell nucleus that carry genes controlling an organism's traits, in the form of DNA.\r\n(b)\r\n    • Each cell has two copies of every chromosome; gamete formation halves this number.\r\n    • Fusion of two gametes at fertilisation restores the normal chromosome number and DNA content in the zygote, keeping it stable across generations.",
-     "truncated": false
-    }
-   ]
-  },
-  {
    "chapter": "How Do Organisms Reproduce?",
    "total": 107,
    "byType": {
-    "VSA": 10,
     "Assertion-Reason": 7,
+    "VSA": 10,
     "LA": 36,
-    "SA": 8,
+    "MCQ": 42,
     "Case-based": 4,
-    "MCQ": 42
+    "SA": 8
    },
    "years": [
     2023,
@@ -533,11 +542,11 @@
     2026
    ],
    "subtopics": [
-    "Asexual Reproduction",
-    "Human Reproductive System",
     "Introduction to Reproduction",
-    "Reproductive Health",
-    "Sexual Reproduction in Plants"
+    "Asexual Reproduction",
+    "Sexual Reproduction in Plants",
+    "Human Reproductive System",
+    "Reproductive Health"
    ],
    "samples": [
     {
@@ -602,15 +611,14 @@
    ]
   },
   {
-   "chapter": "Life Processes",
-   "total": 162,
+   "chapter": "Heredity",
+   "total": 82,
    "byType": {
-    "VSA": 47,
-    "SA": 34,
-    "Case-based": 5,
-    "LA": 6,
-    "Assertion-Reason": 18,
-    "MCQ": 52
+    "Assertion-Reason": 10,
+    "MCQ": 27,
+    "VSA": 16,
+    "Case-based": 8,
+    "SA": 21
    },
    "years": [
     2023,
@@ -619,69 +627,60 @@
     2026
    ],
    "subtopics": [
-    "Excretion",
-    "Nutrition",
-    "Respiration",
-    "Transportation"
+    "Variations and Heredity",
+    "Mendel’s Experiments",
+    "Chromosomes, Genes and Trait Inheritance",
+    "Sex Determination"
    ],
    "samples": [
     {
      "type": "MCQ",
      "year": 2026,
      "marks": 1,
-     "text": "Which structure in a leaf is mainly responsible for gaseous exchange ?",
-     "answer": "B",
-     "explanation": "• Gaseous exchange in leaves (CO₂ in for photosynthesis, O₂ out) takes place through tiny pores on the leaf surface called stomata.\r\n• ✓ Option (b): Stomata are the main sites of gaseous exchange in a leaf.\r\n• Why the others are wrong: (a) xylem transports water and minerals; (c) phloem transports food; (d) cuticle is a waxy layer that reduces water loss.",
+     "text": "The genotype of green stemmed tomato plant is denoted by ‘GG’ and that of purple stemmed tomato plant as ‘gg’. Hybrid of a cross between these two were self-pollinated to obtain F2 progeny. What will be the ratio of GG, Gg and gg in this F2 progeny ?",
+     "answer": "D",
+     "explanation": "• GG × gg gives an F1 hybrid Gg; selfing Gg × Gg produces GG, Gg, Gg and gg — a genotypic ratio of 1 : 2 : 1.\r\n• ✓ Option (d): 1:2:1.\r\n• Why the others are wrong: (a) and (c) misplace the counts of homozygotes and heterozygotes; (b) 3:1 is the phenotypic ratio, and gg plants do appear in F2.",
      "truncated": false,
      "options": {
-      "A": "Xylem",
-      "B": "Stomata",
-      "C": "Phloem",
-      "D": "Cuticle"
+      "A": "2:1:1",
+      "B": "3:1:0",
+      "C": "1:1:2",
+      "D": "1:2:1"
      },
-     "answerText": "Stomata"
+     "answerText": "1:2:1"
     },
     {
      "type": "Assertion-Reason",
      "year": 2026,
      "marks": 1,
-     "text": "Assertion (A) : Arteries have valves as they have to withstand high pressure.\r\nReason (R) : Arteries are vessels which carry blood away from the heart to various organs.",
-     "answer": "D",
-     "explanation": "• Arteries carry blood away from the heart under high pressure, so they have thick, elastic walls; valves are found in veins, which carry blood at low pressure and need valves to prevent backflow.\r\n• ✓ Option (d): A is false (arteries do not have valves), but R is true.\r\n• Why the others are wrong: (a) and (b) treat A as true; (c) wrongly marks R false.",
+     "text": "Assertion (A) : Bacteria that can withstand heat have better chances of survival in a heat wave.\r\nReason (R) : Accumulation of variations in a species increases the chances of its survival in changing environment.",
+     "answer": "A",
+     "explanation": "• Variations among individuals mean some are better suited to a changed environment; heat-resistant bacteria are such a variant and survive a heat wave.\r\n• ✓ Option (a): Both A and R are true, and R (variations increase survival) explains A.\r\n• Why the others are wrong: (b) R does explain A; (c) and (d) wrongly mark one statement false.",
      "truncated": false,
      "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
       "C": "Assertion (A) is true, but Reason (R) is false.",
       "D": "Assertion (A) is false, but Reason (R) is true."
      },
-     "answerText": "Assertion (A) is false, but Reason (R) is true."
+     "answerText": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A)."
     },
     {
      "type": "VSA",
      "year": 2026,
      "marks": 2,
-     "text": "(a) Why is bile juice considered to be very important for digestion, even though it doesn’t contain any digestive enzymes ?\r\n(b) Name some substances present in initial filtrate and subsequently selectively reabsorbed in the tubules of nephron.",
-     "answer": "(a)\r\n    • Bile emulsifies fats for their digestion.\r\n    • It makes medium alkaline for further digestion by pancreatic and small intestinal enzymes.\r\n(b)\r\n    • Glucose, water, salt, amino acid",
-     "explanation": "(a)\r\n    • Bile breaks fat into tiny droplets (emulsification) and makes the food alkaline, so pancreatic and intestinal enzymes can act.\r\n(b)\r\n    • Glucose, amino acids, salts and water are reabsorbed in the nephron tubules.",
+     "text": "“Variation is useful for the survival of species over time.” Explain this statement with the help of an example.",
+     "answer": "• Variation provides chance for species to survive under unfavourable / changing environmental conditions. e.g. if there were a population of bacteria living in temperate waters and if water temperature increased by global warming, most of these bacteria would die but the few variants resistant to heat would survive and grow further.\r\n(or any other suitable example)",
+     "explanation": "• Variation gives some individuals traits that help them survive when the environment changes.\r\n• Example: if global warming heats temperate waters, most bacteria die, but a few heat-resistant variants survive and multiply.\r\n• Thus the species continues over time.",
      "truncated": false
     },
     {
      "type": "SA",
-     "year": 2026,
-     "marks": 3,
-     "text": "In xylem tissue, vessels and tracheids of the roots, stems and leaves are interconnected to form a continuous system of water-conducting channels reaching all parts of the plant. Explain how this is achieved.",
-     "answer": "• Root pressure: Cells in the contact of the soil actively take up ions and creates a difference in concentration between roots and soil, water moves from soil to root to eliminate this difference.\r\n• Transpirational pull: Water lost through transpiration from aerial parts of plants, creates a suction which pulls water column from xylem cells of roots.",
-     "explanation": "• Root pressure: Root cells in contact with soil actively take up ions, creating a concentration difference between root and soil. Water moves into the root to remove this difference, pushing a steady column of water upward through xylem.\r\n• Transpirational pull: Water evaporating from leaves through stomata creates suction that pulls the water column up from the roots. This is the main force, especially during the day.",
-     "truncated": false
-    },
-    {
-     "type": "LA",
      "year": 2025,
-     "marks": 5,
-     "text": "(i) State the role of rings of cartilage present in the throat.\r\n(ii) Discuss the role of the ribs and diaphragm when air is taken in during the breathing cycle.\r\n(iii) Why do we get muscle cramps during heavy exercise ? Explain.",
-     "answer": "(i)\r\n    • 'Rings of cartilage' ensure that the air passage does not collapse in the absence of air.\r\n(ii)\r\n    • Ribs are lifted → diaphragm flattens → chest cavity becomes larger → air is sucked into the lungs (alveoli) and we breathe in.\r\n(iii)\r\n    • Due to lack of oxygen in muscle cells (anaerobic respiration), pyruvate is converted into lactic acid; build-up of lactic acid in muscles causes cramps.",
-     "explanation": "(i)\r\n    • Rings of cartilage in the throat (trachea) keep the air passage from collapsing even when there's little air inside, ensuring a continuous, open pathway for airflow.\r\n(ii)\r\n    • During inhalation: the ribs move up and outward while the diaphragm contracts and flattens, together enlarging the chest cavity; this reduces internal pressure, drawing air into the lungs.\r\n(iii)\r\n    • During heavy exercise, muscle cells don't get enough oxygen and switch to anaerobic respiration, converting pyruvate into lactic acid instead of carbon dioxide; the resulting build-up of lactic acid in the muscles causes painful cramps.",
+     "marks": 3,
+     "text": "(a) What are chromosomes ?\r\n(b) Explain in brief how stability of DNA content of a species is ensured in sexually reproducing organisms ?",
+     "answer": "(a)\r\n    • Chromosomes carry genes which control the traits of an organism/chromosomes contain information for inheritance of features from parents to next generation in the form of DNA (Deoxy ribonucleic acid) molecule.\r\n(b)\r\n    • Each cell has two copies of each chromosome, one from male and the other from female parents, which get halved during the formation of germ cells/gametes.\r\n    • After fusion of the germ cells a zygote is formed which restores the normal number of chromosomes and the same amount of DNA in the progeny.",
+     "explanation": "(a)\r\n    • Chromosomes are thread-like structures in the cell nucleus that carry genes controlling an organism's traits, in the form of DNA.\r\n(b)\r\n    • Each cell has two copies of every chromosome; gamete formation halves this number.\r\n    • Fusion of two gametes at fertilisation restores the normal chromosome number and DNA content in the zygote, keeping it stable across generations.",
      "truncated": false
     }
    ]
@@ -691,9 +690,9 @@
    "total": 111,
    "byType": {
     "SA": 36,
-    "LA": 16,
     "MCQ": 20,
     "Case-based": 10,
+    "LA": 16,
     "VSA": 29
    },
    "years": [
@@ -704,13 +703,13 @@
    ],
    "subtopics": [
     "Laws of Reflection",
-    "Lens Formula and Magnification",
-    "Mirror Formula and Magnification",
-    "Power of Lens",
     "Reflection by Concave Mirror",
     "Reflection by Convex Mirror",
+    "Mirror Formula and Magnification",
+    "Refraction of Light",
     "Refraction by Spherical Lenses",
-    "Refraction of Light"
+    "Lens Formula and Magnification",
+    "Power of Lens"
    ],
    "samples": [
     {
@@ -759,15 +758,14 @@
    ]
   },
   {
-   "chapter": "Magnetic Effects of Electric Current",
-   "total": 99,
+   "chapter": "The Human Eye and the Colourful World",
+   "total": 101,
    "byType": {
-    "SA": 29,
-    "Assertion-Reason": 13,
-    "MCQ": 18,
-    "VSA": 12,
-    "Case-based": 2,
-    "LA": 25
+    "VSA": 25,
+    "SA": 33,
+    "Assertion-Reason": 9,
+    "MCQ": 32,
+    "Case-based": 2
    },
    "years": [
     2023,
@@ -776,10 +774,173 @@
     2026
    ],
    "subtopics": [
-    "Domestic Electric Circuits",
-    "Force on Current Carrying Conductor",
+    "Human Eye",
+    "Defects of Vision",
+    "Refraction Through Prism",
+    "Scattering of Light"
+   ],
+   "samples": [
+    {
+     "type": "MCQ",
+     "year": 2026,
+     "marks": 1,
+     "text": "The pair of eye parts responsible for admitting different amount of light in to the eyes is",
+     "answer": "A",
+     "explanation": "• The iris is a muscular diaphragm that adjusts the size of the pupil, and the pupil regulates how much light enters the eye.\r\n• ✓ Option (a): Iris and pupil.\r\n• Why the others are wrong: (b) and (d) ciliary muscles change the focal length of the lens; (c) the retina forms the image, it does not control light entry.",
+     "truncated": false,
+     "options": {
+      "A": "Iris and pupil",
+      "B": "Ciliary muscles and pupil",
+      "C": "Retina and Iris",
+      "D": "Ciliary muscles and cornea"
+     },
+     "answerText": "Iris and pupil"
+    },
+    {
+     "type": "Assertion-Reason",
+     "year": 2026,
+     "marks": 1,
+     "text": "Assertion (A) : When rays of white light pass through a prism, on emerging they give spectrum of seven colours.\r\nReason (R) : It is due to the scattering of light that red light bends minimum and violet light bends the maximum.",
+     "answer": "C",
+     "explanation": "• White light splits into seven colours through a prism because each colour refracts by a different amount — this is dispersion, not scattering; red bends least and violet most.\r\n• ✓ Option (c): Assertion is true, but Reason is false.\r\n• Why the others are wrong: (a) and (b) accept the wrong cause (scattering); (d) wrongly marks A as false.",
+     "truncated": false,
+     "options": {
+      "A": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
+      "B": "Both, Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
+      "C": "Assertion (A) is true, but Reason (R) is false.",
+      "D": "Assertion (A) is false, but Reason (R) is true."
+     },
+     "answerText": "Assertion (A) is true, but Reason (R) is false."
+    },
+    {
+     "type": "VSA",
+     "year": 2026,
+     "marks": 2,
+     "text": "(i) How does the change in curvature of the eye lens helps us in the process of seeing the nearby objects clearly ?\r\n(ii) State the range of the power of accommodation of a normal human eye.",
+     "answer": "(i)\r\n    • While looking at objects nearer to eye, the curvature of the eye lens increases. Consequently, the focal length of the eye lens decreases.\r\n(ii)\r\n    • From 25cm (near point) to infinity (far point)",
+     "explanation": "(i)\r\n    • For near objects ciliary muscles contract, the lens thickens, its curvature increases and focal length decreases, focusing the image on the retina.\r\n(ii)\r\n    • A normal eye sees clearly from 25 cm (near point) to infinity (far point).",
+     "truncated": false
+    },
+    {
+     "type": "SA",
+     "year": 2026,
+     "marks": 3,
+     "text": "What is scattering of light ? How is scattering of light different from reflection of light ? Explain.",
+     "answer": "• The phenomenon of spreading light in different directions on interaction with particles of the medium.\r\n• Light bounces back in a fixed direction after reflection while in scattering of light, it spreads in different directions. / Reflection of light is independent of the size of reflecting particles whereas the colour of the scattered light depends upon the size of scattering particles.",
+     "explanation": "• Scattering: when light strikes tiny particles of a medium, it spreads out in different directions.\r\n• Difference:\r\n    • Reflection sends light back in one fixed direction; scattering spreads it in all directions.\r\n    • Reflection does not depend on particle size, whereas the colour of scattered light depends on the size of the scattering particles (e.g. blue sky).",
+     "truncated": false
+    }
+   ]
+  },
+  {
+   "chapter": "Electricity",
+   "total": 118,
+   "byType": {
+    "LA": 27,
+    "Assertion-Reason": 3,
+    "SA": 19,
+    "Case-based": 8,
+    "MCQ": 27,
+    "VSA": 34
+   },
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "subtopics": [
+    "Electric Current and Potential Difference",
+    "Ohm’s Law",
+    "Resistance",
+    "Combination of Resistors",
+    "Heating Effect of Current",
+    "Electric Power and Energy"
+   ],
+   "samples": [
+    {
+     "type": "MCQ",
+     "year": 2026,
+     "marks": 1,
+     "text": "The correct way to connect an ammeter and a voltmeter in an electric circuit is :",
+     "answer": "C",
+     "explanation": "• An ammeter (low resistance) measures the current through a component, so it must be in series; a voltmeter (high resistance) measures potential difference across a component, so it must be in parallel.\r\n• ✓ Option (c): Ammeter in series, voltmeter in parallel.\r\n• Why the others are wrong: (a) swaps the connections; (b) and (d) connect both meters the same way, which gives wrong readings.",
+     "truncated": false,
+     "options": {
+      "A": "Ammeter in parallel and voltmeter in series",
+      "B": "Ammeter and voltmeter both in parallel",
+      "C": "Ammeter in series and voltmeter in parallel",
+      "D": "Ammeter and voltmeter both in series"
+     },
+     "answerText": "Ammeter in series and voltmeter in parallel"
+    },
+    {
+     "type": "Assertion-Reason",
+     "year": 2025,
+     "marks": 1,
+     "text": "Assertion (A) : The bending of a wire in the form of a coil of several turns does not affect its electrical resistance.\r\nReason (R) : The electrical resistance of a wire is directly proportional to its electrical resistivity.",
+     "answer": "C",
+     "explanation": "• Bending a wire into a coil changes only its shape, not its length, area of cross-section, or the material's resistivity, so its resistance stays unchanged — the Assertion is true.\r\n• ✓ Option (c): Assertion (A) is true, but Reason (R) is false — resistance depends on length and area too (R = ρl/A), not on resistivity alone.\r\n• Why the others are wrong: (a) and (b) wrongly treat Reason as true; (d) wrongly marks the Assertion as false.",
+     "truncated": false,
+     "options": {
+      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
+      "C": "Assertion (A) is true, but Reason (R) is false.",
+      "D": "Assertion (A) is false, but Reason (R) is true."
+     },
+     "answerText": "Assertion (A) is true, but Reason (R) is false."
+    },
+    {
+     "type": "VSA",
+     "year": 2026,
+     "marks": 2,
+     "text": "A fuse in electric circuit is rated 4 A. Can it be used with an electric heater of rating 2 kW, 200 V ? Explain your answer.",
+     "answer": "I = P/V\r\nI = 2000/200\r\nI = 10 A\r\n• Current passing through electric heater is 10A which is much more than rated value (4A) of fuse. Hence fuse will melt and break the circuit. So, it cannot be used.",
+     "explanation": "Given: P = 2000 W, V = 200 V\r\nI = P/V\r\nI = 2000/200\r\nI = 10 A\r\n∴ 10 A exceeds the 4 A rating, so the fuse melts; it cannot be used.",
+     "truncated": false
+    },
+    {
+     "type": "SA",
+     "year": 2026,
+     "marks": 3,
+     "text": "(a) Name a device which is used to :\r\n    (i) Maintain a constant potential difference in a circuit.\r\n    (ii) Change the electric current in an electric circuit.\r\n(b) When the potential difference between the terminals of an electric heater is 110 V, a current of 5 A flows through it. What will be the value of current flowing through it when the potential difference is increased to 220 V ?",
+     "answer": "(a)\r\n    (i)\r\n        • Battery / Electric cell\r\n    (ii)\r\n        • Rheostat / Variable resistance\r\n(b)\r\n    Resistance of the heater, R = V/I\r\n    R = 110/5\r\n    R = 22 Ω\r\n    Current through the heater, I′ = V′/R\r\n    = 220/22\r\n    = 10 A\r\n    /\r\n    Alternate answer for (b):\r\n    • According to Ohm’s law, potential difference is directly proportional to current.\r\n    • When the potential difference is doubled, current will also be doubled. So, value of current will be 10A.",
+     "explanation": "(a)\r\n    • (i) Battery / cell maintains a constant potential difference.\r\n    • (ii) Rheostat (variable resistance) changes the current.\r\n(b)\r\n    Given: V = 110 V, I = 5 A, V′ = 220 V\r\n    R = V/I\r\n    R = 110/5\r\n    R = 22 Ω\r\n    I′ = V′/R\r\n    I′ = 220/22\r\n    I′ = 10 A\r\n    ∴ Doubling the voltage doubles the current to 10 A (resistance unchanged).",
+     "truncated": false
+    },
+    {
+     "type": "LA",
+     "year": 2026,
+     "marks": 5,
+     "text": "(i) How many bulbs of resistance 8 Ω each should be connected in parallel combination to draw a current of 2 A from a battery of 4 V ?\r\n(ii) Name the device used for measuring electric current. How is it connected in a circuit ?\r\n(iii) State Joule’s law of heating.",
+     "answer": "(i)\r\n    V= 4V, I= 2A\r\n    Resistance of circuit R = V/I\r\n    R = 4/2\r\n    R = 2Ω\r\n    Let ‘n’ be the number of bulbs\r\n    1/R = 1/8 + 1/8 + 1/8 + 1/8 + ---n\r\n    1/R = n/8\r\n    1/2 = n/8\r\n    n = 4\r\n    Therefore, 4 bulbs of resistance 8 Ω should be connected in parallel.\r\n(ii)\r\n    • Ammeter\r\n    • In series\r\n(iii)\r\n    • Heat generated through a current carrying conductor is directly proportional to square of current, resistance of conductor and time for which current flows in conductor. / H = I²Rt",
+     "explanation": "(i)\r\n    Given: V = 4 V, I = 2 A, each bulb = 8 Ω\r\n    R = V/I\r\n    R = 4/2\r\n    R = 2 Ω\r\n    1/R = n/8\r\n    1/2 = n/8\r\n    n = 4\r\n    ∴ 4 bulbs must be connected in parallel.\r\n(ii)\r\n    • Ammeter, connected in series so the whole current passes through it.\r\n(iii)\r\n    • Heat produced in a conductor is directly proportional to the square of current, its resistance and the time of flow: H = I²Rt.",
+     "truncated": false
+    }
+   ]
+  },
+  {
+   "chapter": "Magnetic Effects of Electric Current",
+   "total": 99,
+   "byType": {
+    "SA": 29,
+    "MCQ": 18,
+    "VSA": 12,
+    "Assertion-Reason": 13,
+    "LA": 25,
+    "Case-based": 2
+   },
+   "years": [
+    2023,
+    2024,
+    2025,
+    2026
+   ],
+   "subtopics": [
+    "Magnetic Field of a Bar Magnet",
     "Magnetic Field due to Current",
-    "Magnetic Field of a Bar Magnet"
+    "Force on Current Carrying Conductor",
+    "Domestic Electric Circuits"
    ],
    "samples": [
     {
@@ -835,99 +996,13 @@
    ]
   },
   {
-   "chapter": "Metals and Non-Metals",
-   "total": 114,
-   "byType": {
-    "Assertion-Reason": 14,
-    "VSA": 13,
-    "SA": 32,
-    "MCQ": 41,
-    "Case-based": 10,
-    "LA": 4
-   },
-   "years": [
-    2023,
-    2024,
-    2025,
-    2026
-   ],
-   "subtopics": [
-    "Chemical Reactions of Metals",
-    "Extraction of Metals",
-    "Physical Properties of Metals and Non-Metals",
-    "Properties of Ionic Compounds",
-    "Reactivity Series"
-   ],
-   "samples": [
-    {
-     "type": "MCQ",
-     "year": 2026,
-     "marks": 1,
-     "text": "Which of the following is an amphoteric oxide ?",
-     "answer": "D",
-     "explanation": "• Amphoteric oxides react with both acids and bases to give salt and water.\r\n• ✓ Option (d): Al₂O₃ reacts with HCl and with NaOH (forming sodium aluminate).\r\n• Why the others are wrong: (a) Na₂O and (b) K₂O are basic oxides; (c) CO₂ is an acidic oxide.",
-     "truncated": false,
-     "options": {
-      "A": "Na2O",
-      "B": "K2O",
-      "C": "CO2",
-      "D": "Al2O3"
-     },
-     "answerText": "Al2O3"
-    },
-    {
-     "type": "Assertion-Reason",
-     "year": 2025,
-     "marks": 1,
-     "text": "Assertion (A) : The metals high up in the reactivity series cannot be obtained from their compounds by heating with carbon.\r\nReason (R) : Displacement reactions can also be used to obtain metal.",
-     "answer": "B",
-     "explanation": "• Metals high in the reactivity series (like Na, K, Ca) have too great an affinity for oxygen to be reduced by carbon — this makes Assertion true.\r\n• ✓ Option (b): Both statements are true, but displacement reactions (Reason) don't explain why carbon reduction fails for reactive metals — they're unrelated facts here.\r\n• Why the others are wrong: (a) wrongly claims a causal link; (c) and (d) incorrectly mark one statement false when both are actually true.",
-     "truncated": false,
-     "options": {
-      "A": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
-      "B": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A).",
-      "C": "Assertion (A) is true, but Reason (R) is false.",
-      "D": "Assertion (A) is false, but Reason (R) is true."
-     },
-     "answerText": "Both Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of Assertion (A)."
-    },
-    {
-     "type": "VSA",
-     "year": 2026,
-     "marks": 2,
-     "text": "Write balanced equations for the reactions of the following :\r\n(a) Iron with steam\r\n(b) Calcium with water",
-     "answer": "(a)\r\n    • 3Fe(s) + 4H2O(g) → Fe3O4(s) + 4H2(g)\r\n(b)\r\n    • Ca(s) + 2H2O(l) → Ca(OH)2(aq) + H2(g)\r\n(Deduct ½ mark for no/incorrect balancing in each case)",
-     "explanation": "(a)\r\n    • 3Fe(s) + 4H₂O(g) → Fe₃O₄(s) + 4H₂(g); iron does not react with cold water, only with steam.\r\n(b)\r\n    • Ca(s) + 2H₂O(l) → Ca(OH)₂(aq) + H₂(g); calcium reacts less violently, and hydrogen bubbles make it float.",
-     "truncated": false
-    },
-    {
-     "type": "SA",
-     "year": 2026,
-     "marks": 3,
-     "text": "Answer the following :\r\n(a) Why can the oxides of highly reactive metals not be reduced by carbon ?\r\n(b) Why do ionic compounds have high melting and boiling points ?\r\n(c) Why is a solder, an alloy of lead and tin, used for welding electrical wires together ?",
-     "answer": "(a)\r\n    • Highly reactive metals have more affinity for oxygen than carbon.\r\n(b)\r\n    • Because a considerable amount of energy is required to break the strong inter-ionic attraction /Because of strong forces of attraction between oppositely charged ions.\r\n(c)\r\n    • Because of its low melting point.",
-     "explanation": "(a)\r\n    • Metals like Na, Ca, Al have a greater affinity for oxygen than carbon, so carbon cannot remove oxygen from their oxides; electrolytic reduction is used instead.\r\n(b)\r\n    • Strong electrostatic forces hold oppositely charged ions together, so much energy is needed to break them.\r\n(c)\r\n    • Solder has a low melting point, so it melts easily to join wires.",
-     "truncated": false
-    },
-    {
-     "type": "LA",
-     "year": 2025,
-     "marks": 5,
-     "text": "(i) With the help of balanced chemical equations state the process of extracting (I) mercury from its ore called cinnabar, and (II) copper from its sulphide ore.\r\n(ii) Silver and copper articles slowly lose their shiny surfaces when exposed to air. Name the compounds formed on (I) silver articles, and (II) copper articles in the form of coating.",
-     "answer": "(i)\r\n    • (I) 2HgS(s) + 3O2(g) --[Heat]--> 2HgO(s) + 2SO2(s) (cinnabar); 2HgO(s) --[Heat]--> 2Hg(l) + O2(g)\r\n    • (II) 2CuS + 3O2(g) --[Heat]--> 2Cu2O(s) + 2SO2(g); 2Cu2O + Cu2S --[Heat]--> 6Cu(s) + SO2(g) (Deduct half mark each for unbalanced equation)\r\n(ii)\r\n    • (I) Silver sulphide / Ag2S\r\n    • (II) Basic Copper carbonate / Cu(OH)2.CuCO3",
-     "explanation": "(i)\r\n    • (I) Cinnabar (HgS) is roasted: 2HgS + 3O2 → 2HgO + 2SO2, then further heated: 2HgO → 2Hg + O2.\r\n    • (II) Copper sulphide ore is roasted: 2CuS + 3O2 → 2Cu2O + 2SO2, followed by self-reduction: 2Cu2O + Cu2S → 6Cu + SO2.\r\n(ii)\r\n    • (I) Silver tarnishes to form a black coating of silver sulphide (Ag2S) on reacting with sulphur compounds in air.\r\n    • (II) Copper develops a green coating of basic copper carbonate, Cu(OH)2·CuCO3, on prolonged exposure to moist air.",
-     "truncated": false
-    }
-   ]
-  },
-  {
    "chapter": "Our Environment",
    "total": 99,
    "byType": {
     "VSA": 31,
+    "Assertion-Reason": 16,
     "MCQ": 32,
-    "SA": 20,
-    "Assertion-Reason": 16
+    "SA": 20
    },
    "years": [
     2023,
@@ -937,8 +1012,8 @@
    ],
    "subtopics": [
     "Ecosystem",
-    "Environmental Problems",
-    "Food Chains and Food Webs"
+    "Food Chains and Food Webs",
+    "Environmental Problems"
    ],
    "samples": [
     {
@@ -989,81 +1064,6 @@
      "text": "(a) Mention any one harmful effect of using plastic bags on the environment. Suggest better alternatives to the usage of plastic bags.\r\n(b) Paddy fields require a large amount of water. The pesticides and chemical fertilizers used are washed down into the soil or waterbodies. How do these chemicals reach our bodies ? What is this phenomenon known as ?",
      "answer": "(a)\r\n    • Plastics being non - biodegradable persist in environment for a long time.\r\n    (any other harmful effect)\r\n    • Alternative - Jute or cloth bag\r\n    (any other suitable alternative)\r\n(b)\r\n    • Pesticides and chemical fertilizers are not biodegradable. They accumulate progressively at each trophic level. As human beings occupy the top level in any food chain the maximum concentration of these chemicals get accumulated in our bodies.\r\n    • This Phenomenon is biological magnification.",
      "explanation": "(a)\r\n    • Plastic is non-biodegradable, so it persists, clogs drains and harms animals that swallow it.\r\n    • Alternatives: jute or cloth bags.\r\n(b)\r\n    • Chemicals washed into soil and water are absorbed by plants and aquatic organisms and enter food chains.\r\n    • Not being degraded, they accumulate at each trophic level; humans at the top receive the highest concentration.\r\n    • This is biological magnification.",
-     "truncated": false
-    }
-   ]
-  },
-  {
-   "chapter": "The Human Eye and the Colourful World",
-   "total": 101,
-   "byType": {
-    "Case-based": 2,
-    "MCQ": 32,
-    "VSA": 25,
-    "SA": 33,
-    "Assertion-Reason": 9
-   },
-   "years": [
-    2023,
-    2024,
-    2025,
-    2026
-   ],
-   "subtopics": [
-    "Defects of Vision",
-    "Human Eye",
-    "Refraction Through Prism",
-    "Scattering of Light"
-   ],
-   "samples": [
-    {
-     "type": "MCQ",
-     "year": 2026,
-     "marks": 1,
-     "text": "The pair of eye parts responsible for admitting different amount of light in to the eyes is",
-     "answer": "A",
-     "explanation": "• The iris is a muscular diaphragm that adjusts the size of the pupil, and the pupil regulates how much light enters the eye.\r\n• ✓ Option (a): Iris and pupil.\r\n• Why the others are wrong: (b) and (d) ciliary muscles change the focal length of the lens; (c) the retina forms the image, it does not control light entry.",
-     "truncated": false,
-     "options": {
-      "A": "Iris and pupil",
-      "B": "Ciliary muscles and pupil",
-      "C": "Retina and Iris",
-      "D": "Ciliary muscles and cornea"
-     },
-     "answerText": "Iris and pupil"
-    },
-    {
-     "type": "Assertion-Reason",
-     "year": 2026,
-     "marks": 1,
-     "text": "Assertion (A) : When rays of white light pass through a prism, on emerging they give spectrum of seven colours.\r\nReason (R) : It is due to the scattering of light that red light bends minimum and violet light bends the maximum.",
-     "answer": "C",
-     "explanation": "• White light splits into seven colours through a prism because each colour refracts by a different amount — this is dispersion, not scattering; red bends least and violet most.\r\n• ✓ Option (c): Assertion is true, but Reason is false.\r\n• Why the others are wrong: (a) and (b) accept the wrong cause (scattering); (d) wrongly marks A as false.",
-     "truncated": false,
-     "options": {
-      "A": "Both, Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of the Assertion (A).",
-      "B": "Both, Assertion (A) and Reason (R) are true, but Reason (R) is not the correct explanation of the Assertion (A).",
-      "C": "Assertion (A) is true, but Reason (R) is false.",
-      "D": "Assertion (A) is false, but Reason (R) is true."
-     },
-     "answerText": "Assertion (A) is true, but Reason (R) is false."
-    },
-    {
-     "type": "VSA",
-     "year": 2026,
-     "marks": 2,
-     "text": "(i) How does the change in curvature of the eye lens helps us in the process of seeing the nearby objects clearly ?\r\n(ii) State the range of the power of accommodation of a normal human eye.",
-     "answer": "(i)\r\n    • While looking at objects nearer to eye, the curvature of the eye lens increases. Consequently, the focal length of the eye lens decreases.\r\n(ii)\r\n    • From 25cm (near point) to infinity (far point)",
-     "explanation": "(i)\r\n    • For near objects ciliary muscles contract, the lens thickens, its curvature increases and focal length decreases, focusing the image on the retina.\r\n(ii)\r\n    • A normal eye sees clearly from 25 cm (near point) to infinity (far point).",
-     "truncated": false
-    },
-    {
-     "type": "SA",
-     "year": 2026,
-     "marks": 3,
-     "text": "What is scattering of light ? How is scattering of light different from reflection of light ? Explain.",
-     "answer": "• The phenomenon of spreading light in different directions on interaction with particles of the medium.\r\n• Light bounces back in a fixed direction after reflection while in scattering of light, it spreads in different directions. / Reflection of light is independent of the size of reflecting particles whereas the colour of the scattered light depends upon the size of scattering particles.",
-     "explanation": "• Scattering: when light strikes tiny particles of a medium, it spreads out in different directions.\r\n• Difference:\r\n    • Reflection sends light back in one fixed direction; scattering spreads it in all directions.\r\n    • Reflection does not depend on particle size, whereas the colour of scattered light depends on the size of the scattering particles (e.g. blue sky).",
      "truncated": false
     }
    ]

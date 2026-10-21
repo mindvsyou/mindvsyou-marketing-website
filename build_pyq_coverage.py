@@ -209,10 +209,10 @@ def build(d):
     pretty_date = __import__("datetime").date.fromisoformat(date).strftime("%d %B %Y").lstrip("0")
     practice = practice_url()
 
-    title = f"CBSE Class 10 Science PYQs: {total} Practice Questions | MindVsYou"
-    desc = (f"{n} chapters of CBSE Class 10 Science PYQs: {total} practice questions, {y0}–{y1}, "
-            f"plus chapter PDFs with answers and explanations (some free).")
-    h1 = "CBSE Class 10 Science PYQs by chapter: what you can practise"
+    title = "CBSE Class 10 Science PYQs: Find & Fix Weak Chapters | MindVsYou"
+    desc = (f"Practise CBSE Class 10 Science PYQs chapter by chapter. Questions you get wrong come back for another shot. "
+            f"{n} chapters, board years {y0}–{y1}, plus chapter PDFs with answers.")
+    h1 = "CBSE Class 10 Science PYQs: know your weak chapters, fix them calmly"
 
     rows = []
     for c in chapters:
@@ -282,7 +282,7 @@ def build(d):
          "Multiple choice (MCQ), assertion-reason, very short answer (VSA), short answer (SA), long answer (LA) and case-based questions. "
          "Not every chapter has every type; the table above shows the exact counts."),
         ("Can I try PYQ practice without an account?",
-         "Yes. Guests can use both MCQ practice and written-question practice without creating an account. Sign in to save your progress and revise the questions you missed."),
+         "Yes. You can start as a guest with both MCQ practice and written-question practice, no account needed, and the questions you miss still come back for you to redo."),
         ("Are there chapter-wise PDFs of CBSE Class 10 Science PYQs with answers?",
          "Yes. Each chapter PDF has every practice question for that chapter with the official answers and Mindy's step-by-step explanations. "
          + (pdf_line + " " if pdf_line else "") + "More chapters are added over time."),
@@ -371,14 +371,14 @@ def build(d):
 {rail}
     <div class="container">
 
-      <p class="post-lede">Previous year questions (PYQs) from CBSE Class 10 Science board papers, ready to practise chapter by chapter. Here is exactly what is inside.</p>
+      <p class="post-lede">Real CBSE board questions, chapter by chapter. Get one wrong and it comes back later for another shot, so you stop re-reading what you already know and fix what you don&rsquo;t. Here&rsquo;s everything inside.</p>
       <div class="stat-row">
         <div class="stat stat-hero"><span class="stat-icon" aria-hidden="true">&#11088;</span><span class="stat-num">{total}</span><span class="stat-label">practice questions</span></div>
         <div class="stat"><span class="stat-icon" aria-hidden="true">&#128214;</span><span class="stat-num">{n}</span><span class="stat-label">chapters</span></div>
         <div class="stat"><span class="stat-icon" aria-hidden="true">&#128197;</span><span class="stat-num">{y0}&ndash;{y1}</span><span class="stat-label">board years</span></div>
         <div class="stat"><span class="stat-icon" aria-hidden="true">&#10024;</span><span class="stat-num">{n_types}</span><span class="stat-label">question types</span></div>
       </div>
-      <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I practise CBSE Class 10 Science PYQs chapter-wise?</strong> On <a href="{esc(practice)}">quiz.mindvsyou.io</a>: {total} practice questions from board years {y0}&ndash;{y1}, in MCQ, assertion-reason, very short, short, long and case-based formats, with instant marking for MCQs. Guests can try it without an account.</p></div>
+      <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I practise CBSE Class 10 Science PYQs chapter-wise?</strong> On <a href="{esc(practice)}">quiz.mindvsyou.io</a>: {total} practice questions from board years {y0}&ndash;{y1}, in MCQ, assertion-reason, very short, short, long and case-based formats, with instant marking for MCQs. Miss a question and it comes back for another shot, and you can see which chapters are pulling your score down. You can start as a guest, no account needed.</p></div>
       {pdf_block}
       <p>Some board questions have several parts, and each part can count as its own practice question.</p>
       <p>{top_line}</p>
@@ -390,7 +390,7 @@ def build(d):
       <div class="mindy-say">
         <svg class="mindy" viewBox="0 0 130 130" aria-hidden="true" focusable="false"><use href="mindy.svg#cheer"/></svg>
         <div class="mindy-say-b">
-          <p><strong>Why practise with Mindy?</strong> Mindy, the MindVsYou chat buddy, gives you one question at a time. MCQs are marked the moment you answer, with the official answer and an AI explanation. For written questions you attempt first, then compare with the official answer and rate yourself. Sign in to save your progress and get the questions you missed back for revision. Guests can start without an account.</p>
+          <p><strong>Why practise with Mindy?</strong> Mindy, the MindVsYou chat buddy, gives you one question at a time, so it never feels like a huge paper. MCQs are marked the second you answer, with the official answer and an AI explanation. For written questions you try first, then check the official answer and rate yourself. Missed one? It comes back. Your weak chapters show up too, so you know what to fix before boards. You can start as a guest.</p>
           <p>Pick MCQs, VSA, SA, LA or case-based questions for any chapter in the table above.</p>
           <a href="{esc(practice)}" class="btn btn-green">Start practising &rarr;</a>
         </div>
@@ -408,13 +408,13 @@ def build(d):
         <li><strong>MCQ practice:</strong> 10 questions per round, by chapter and optional subtopic, with instant marking, the official answer and an AI explanation. {ar_line}Guests can use it without an account.</li>
         <li><strong>Subjective practice:</strong> 10 questions per round by chapter, subtopic and type. You write your answer first, then rate yourself against the official answer.</li>
         <li><strong>Worksheets:</strong> chapter-wise worksheet PDFs for MCQ and subjective questions.</li>
-        <li><strong>Revision:</strong> sign in and the questions you answered wrong come back for revision.</li>
+        <li><strong>Redo what you missed:</strong> questions you got wrong come back for another shot, and your weak chapters show up so you know where to focus before boards.</li>
       </ul>
       <p>All practice is chat-style: one question at a time, with Mindy, the MindVsYou chat buddy.</p>
 
       <h2 id="faq">Frequently asked questions</h2><div class="post-faq">{faq_html}</div>
 
-      <div class="post-cta"><h3>Start with any chapter, free to try</h3><p>Open PYQ practice on quiz.mindvsyou.io and pick a chapter.</p><div class="btn-row"><a href="{esc(practice)}" class="btn btn-green">Practise Class 10 Science PYQs &rarr;</a></div><p class="cta-sub"><a href="cbse-class-10-science-pyq.html">What PYQs are and how to use them →</a> · <a href="class-10-science-previous-year-question-paper.html">Question paper PDFs →</a></p></div>
+      <div class="post-cta"><h3>Pick a chapter and start</h3><p>Open PYQ practice on quiz.mindvsyou.io. Miss one and it comes back.</p><div class="btn-row"><a href="{esc(practice)}" class="btn btn-green">Practise Class 10 Science PYQs &rarr;</a></div><p class="cta-sub"><a href="cbse-class-10-science-pyq.html">What PYQs are and how to use them →</a> · <a href="class-10-science-previous-year-question-paper.html">Question paper PDFs →</a></p></div>
 
 
     </div>
