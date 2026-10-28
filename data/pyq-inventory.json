@@ -1,7 +1,7 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-10-21T02:27:17.368Z",
+ "generatedAt": "2026-10-28T18:16:24.915Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
  "totalQuestions": 1467,
  "years": [
@@ -16,9 +16,9 @@
    "total": 135,
    "byType": {
     "Assertion-Reason": 6,
-    "VSA": 33,
-    "MCQ": 55,
     "SA": 37,
+    "MCQ": 55,
+    "VSA": 33,
     "LA": 4
    },
    "years": [
@@ -101,12 +101,12 @@
    "chapter": "Acids, Bases and Salts",
    "total": 131,
    "byType": {
-    "MCQ": 67,
+    "VSA": 20,
+    "SA": 28,
     "LA": 7,
     "Case-based": 7,
-    "SA": 28,
-    "VSA": 20,
-    "Assertion-Reason": 2
+    "Assertion-Reason": 2,
+    "MCQ": 67
    },
    "years": [
     2023,
@@ -187,10 +187,10 @@
    "total": 114,
    "byType": {
     "VSA": 13,
-    "Assertion-Reason": 14,
     "MCQ": 41,
-    "SA": 32,
+    "Assertion-Reason": 14,
     "Case-based": 10,
+    "SA": 32,
     "LA": 4
    },
    "years": [
@@ -272,11 +272,11 @@
    "chapter": "Carbon and Its Compounds",
    "total": 107,
    "byType": {
-    "LA": 54,
+    "Assertion-Reason": 10,
     "Case-based": 5,
+    "LA": 54,
     "MCQ": 28,
     "SA": 2,
-    "Assertion-Reason": 10,
     "VSA": 8
    },
    "years": [
@@ -329,9 +329,9 @@
      "type": "VSA",
      "year": 2024,
      "marks": 2,
-     "text": "A spatula full of sodium carbonate is taken in a test tube and 2 mL of dilute ethanoic acid is added to it.\r\n    (a) Write a chemical equation for the reaction.\r\n    (b) Suggest a method of testing the gas liberated in the reaction.",
-     "answer": "(a)\r\n    • 2CH3COOH + Na2CO3 → 2CH3COONa + H2O + CO2\r\n(b)\r\n    • Pass the gas through lime water. It turns lime water milky.",
-     "explanation": "(a)\r\n    • Sodium carbonate reacts with ethanoic acid to give sodium acetate, water and carbon dioxide.\r\n    • 2CH3COOH + Na2CO3 → 2CH3COONa + H2O + CO2\r\n(b)\r\n    • Pass the gas through lime water — it turns milky, confirming CO2.",
+     "text": "The melting and boiling points of carbon compounds are generally low and they are largely non-conductors of electricity. State two conclusions based on these two properties.",
+     "answer": "• Low melting and boiling points indicate weak intermolecular forces of attraction between molecules.\r\n• Being non-conductors of electricity indicates that bonding in these compounds does not give rise to any ions (covalent bonds/sharing of electrons do not form charged particles).",
+     "explanation": "• Low melting and boiling points show that carbon compounds are held together by weak intermolecular forces of attraction, unlike ionic compounds.\r\n• Being poor conductors shows their covalent bonding does not produce free ions or charged particles needed to carry current.",
      "truncated": false
     },
     {
@@ -359,11 +359,11 @@
    "total": 162,
    "byType": {
     "SA": 34,
-    "MCQ": 52,
-    "Case-based": 5,
     "LA": 6,
+    "VSA": 47,
+    "MCQ": 52,
     "Assertion-Reason": 18,
-    "VSA": 47
+    "Case-based": 5
    },
    "years": [
     2023,
@@ -432,9 +432,9 @@
      "type": "LA",
      "year": 2025,
      "marks": 5,
-     "text": "(i) State the role of rings of cartilage present in the throat.\r\n(ii) Discuss the role of the ribs and diaphragm when air is taken in during the breathing cycle.\r\n(iii) Why do we get muscle cramps during heavy exercise ? Explain.",
-     "answer": "(i)\r\n    • 'Rings of cartilage' ensure that the air passage does not collapse in the absence of air.\r\n(ii)\r\n    • Ribs are lifted → diaphragm flattens → chest cavity becomes larger → air is sucked into the lungs (alveoli) and we breathe in.\r\n(iii)\r\n    • Due to lack of oxygen in muscle cells (anaerobic respiration), pyruvate is converted into lactic acid; build-up of lactic acid in muscles causes cramps.",
-     "explanation": "(i)\r\n    • Rings of cartilage in the throat (trachea) keep the air passage from collapsing even when there's little air inside, ensuring a continuous, open pathway for airflow.\r\n(ii)\r\n    • During inhalation: the ribs move up and outward while the diaphragm contracts and flattens, together enlarging the chest cavity; this reduces internal pressure, drawing air into the lungs.\r\n(iii)\r\n    • During heavy exercise, muscle cells don't get enough oxygen and switch to anaerobic respiration, converting pyruvate into lactic acid instead of carbon dioxide; the resulting build-up of lactic acid in the muscles causes painful cramps.",
+     "text": "(i) \"The length of the small intestine in various animals depends on the food they eat.\" Justify the statement.\r\n(ii) Discuss the role of the pancreas and bile juice in the digestion of food in human beings.\r\n(iii) How is the small intestine designed to absorb digested food ?",
+     "answer": "(i)\r\n    • Herbivores eating grass need a longer small intestine to digest cellulose.\r\n    • Meat is easier to digest, so meat-eating animals (carnivores) have a shorter small intestine.\r\n(ii)\r\n    • Role of Pancreas: secretes pancreatic juice containing trypsin (for digesting proteins) and lipase (for breaking down emulsified fats).\r\n    • Role of Bile: emulsifies fats and makes the medium alkaline in the small intestine so that pancreatic enzymes can act.\r\n(iii)\r\n    • The inner lining of the small intestine has numerous finger-like projections called villi, which increase the surface area for absorption of food.\r\n    • The villi are richly supplied with blood vessels which carry the absorbed food to every cell of the body.",
+     "explanation": "(i)\r\n    • Herbivores need a longer small intestine to digest cellulose from grass, while carnivores, eating easily digestible meat, have a shorter small intestine.\r\n(ii)\r\n    • Pancreas: secretes pancreatic juice with trypsin (digests proteins) and lipase (breaks down emulsified fats).\r\n    • Bile: emulsifies fats and makes the intestinal medium alkaline so pancreatic enzymes can act effectively.\r\n(iii)\r\n    • The small intestine's lining has finger-like villi that increase surface area and are richly supplied with blood vessels to absorb and transport digested food to body cells.",
      "truncated": false
     }
    ]
@@ -444,10 +444,10 @@
    "total": 101,
    "byType": {
     "Assertion-Reason": 5,
-    "MCQ": 31,
-    "LA": 8,
     "SA": 19,
+    "MCQ": 31,
     "Case-based": 5,
+    "LA": 8,
     "VSA": 33
    },
    "years": [
@@ -528,12 +528,12 @@
    "chapter": "How Do Organisms Reproduce?",
    "total": 107,
    "byType": {
-    "Assertion-Reason": 7,
+    "Case-based": 4,
+    "SA": 8,
+    "MCQ": 42,
     "VSA": 10,
     "LA": 36,
-    "MCQ": 42,
-    "Case-based": 4,
-    "SA": 8
+    "Assertion-Reason": 7
    },
    "years": [
     2023,
@@ -594,9 +594,9 @@
      "type": "SA",
      "year": 2025,
      "marks": 3,
-     "text": "(a) Define fertilisation.\r\n(b) What happens to Zygote, Ovule, Ovary and Stamens after fertilisation in a flowering plant ?",
-     "answer": "(a) Fertilization is the fusion of male and female gametes to form zygote.\r\n(b) •Zygote forms embryo\r\n•Ovule forms seeds\r\n•Ovary forms fruits\r\n•Stamens withers away (shrivel and falls off)",
-     "explanation": "(a)\r\n    • Fertilisation is the fusion of a male gamete with a female gamete, forming a diploid zygote.\r\n(b)\r\n    • After fertilisation: the zygote develops into an embryo, the ovule becomes a seed, the ovary matures into a fruit, and the stamens wither and fall off since their pollen-producing role is now complete.",
+     "text": "(a) How many chromosomes are present in human beings ? Out of these how many are sex chromosomes ?\r\n(b) Explain how, in sexually reproducing organisms, the number of chromosomes in the progeny is maintained.",
+     "answer": "(a)\r\n    • 23 pairs or 46 chromosomes.\r\n    • 1 pair or 2 chromosomes.\r\n(b)\r\n    • In sexually reproducing organisms, chromosomes occur in pairs.\r\n    • The members of the pair separate at the time of gamete formation.\r\n    • The two germ cells fuse and form a zygote, thus restoring the same number of chromosomes as the parents.",
+     "explanation": "• Human beings have 23 pairs (46) chromosomes, of which 1 pair (2 chromosomes) are sex chromosomes.\r\n• In sexually reproducing organisms, chromosomes occur in pairs; these pairs separate when gametes form.\r\n• Fusion of the two germ cells restores the original number of chromosomes in the zygote, keeping it constant across generations.",
      "truncated": false
     },
     {
@@ -614,11 +614,11 @@
    "chapter": "Heredity",
    "total": 82,
    "byType": {
-    "Assertion-Reason": 10,
-    "MCQ": 27,
+    "SA": 21,
     "VSA": 16,
+    "Assertion-Reason": 10,
     "Case-based": 8,
-    "SA": 21
+    "MCQ": 27
    },
    "years": [
     2023,
@@ -689,11 +689,11 @@
    "chapter": "Light – Reflection and Refraction",
    "total": 111,
    "byType": {
-    "SA": 36,
+    "VSA": 29,
     "MCQ": 20,
-    "Case-based": 10,
+    "SA": 36,
     "LA": 16,
-    "VSA": 29
+    "Case-based": 10
    },
    "years": [
     2023,
@@ -761,11 +761,11 @@
    "chapter": "The Human Eye and the Colourful World",
    "total": 101,
    "byType": {
-    "VSA": 25,
+    "Case-based": 2,
     "SA": 33,
-    "Assertion-Reason": 9,
     "MCQ": 32,
-    "Case-based": 2
+    "VSA": 25,
+    "Assertion-Reason": 9
    },
    "years": [
     2023,
@@ -836,11 +836,11 @@
    "chapter": "Electricity",
    "total": 118,
    "byType": {
+    "MCQ": 27,
     "LA": 27,
+    "Case-based": 8,
     "Assertion-Reason": 3,
     "SA": 19,
-    "Case-based": 8,
-    "MCQ": 27,
     "VSA": 34
    },
    "years": [
@@ -924,11 +924,11 @@
    "total": 99,
    "byType": {
     "SA": 29,
-    "MCQ": 18,
-    "VSA": 12,
     "Assertion-Reason": 13,
+    "MCQ": 18,
+    "Case-based": 2,
     "LA": 25,
-    "Case-based": 2
+    "VSA": 12
    },
    "years": [
     2023,
@@ -1000,9 +1000,9 @@
    "total": 99,
    "byType": {
     "VSA": 31,
-    "Assertion-Reason": 16,
+    "SA": 20,
     "MCQ": 32,
-    "SA": 20
+    "Assertion-Reason": 16
    },
    "years": [
     2023,
