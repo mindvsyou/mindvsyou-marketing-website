@@ -1,7 +1,7 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-10-28T18:16:24.915Z",
+ "generatedAt": "2026-11-02T10:54:24.379Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
  "totalQuestions": 1467,
  "years": [
@@ -15,10 +15,10 @@
    "chapter": "Chemical Reactions and Equations",
    "total": 135,
    "byType": {
-    "Assertion-Reason": 6,
     "SA": 37,
-    "MCQ": 55,
     "VSA": 33,
+    "Assertion-Reason": 6,
+    "MCQ": 55,
     "LA": 4
    },
    "years": [
@@ -101,12 +101,12 @@
    "chapter": "Acids, Bases and Salts",
    "total": 131,
    "byType": {
-    "VSA": 20,
-    "SA": 28,
-    "LA": 7,
-    "Case-based": 7,
     "Assertion-Reason": 2,
-    "MCQ": 67
+    "MCQ": 67,
+    "LA": 7,
+    "VSA": 20,
+    "Case-based": 7,
+    "SA": 28
    },
    "years": [
     2023,
@@ -186,11 +186,11 @@
    "chapter": "Metals and Non-Metals",
    "total": 114,
    "byType": {
-    "VSA": 13,
     "MCQ": 41,
-    "Assertion-Reason": 14,
-    "Case-based": 10,
+    "VSA": 13,
     "SA": 32,
+    "Case-based": 10,
+    "Assertion-Reason": 14,
     "LA": 4
    },
    "years": [
@@ -272,12 +272,12 @@
    "chapter": "Carbon and Its Compounds",
    "total": 107,
    "byType": {
-    "Assertion-Reason": 10,
-    "Case-based": 5,
-    "LA": 54,
-    "MCQ": 28,
     "SA": 2,
-    "VSA": 8
+    "LA": 54,
+    "Case-based": 5,
+    "VSA": 8,
+    "MCQ": 28,
+    "Assertion-Reason": 10
    },
    "years": [
     2023,
@@ -358,12 +358,12 @@
    "chapter": "Life Processes",
    "total": 162,
    "byType": {
-    "SA": 34,
-    "LA": 6,
-    "VSA": 47,
-    "MCQ": 52,
     "Assertion-Reason": 18,
-    "Case-based": 5
+    "MCQ": 52,
+    "Case-based": 5,
+    "VSA": 47,
+    "LA": 6,
+    "SA": 34
    },
    "years": [
     2023,
@@ -443,12 +443,12 @@
    "chapter": "Control and Coordination",
    "total": 101,
    "byType": {
+    "VSA": 33,
     "Assertion-Reason": 5,
-    "SA": 19,
     "MCQ": 31,
-    "Case-based": 5,
     "LA": 8,
-    "VSA": 33
+    "SA": 19,
+    "Case-based": 5
    },
    "years": [
     2023,
@@ -528,12 +528,12 @@
    "chapter": "How Do Organisms Reproduce?",
    "total": 107,
    "byType": {
-    "Case-based": 4,
-    "SA": 8,
+    "LA": 36,
     "MCQ": 42,
     "VSA": 10,
-    "LA": 36,
-    "Assertion-Reason": 7
+    "Assertion-Reason": 7,
+    "Case-based": 4,
+    "SA": 8
    },
    "years": [
     2023,
@@ -614,11 +614,11 @@
    "chapter": "Heredity",
    "total": 82,
    "byType": {
-    "SA": 21,
-    "VSA": 16,
-    "Assertion-Reason": 10,
+    "MCQ": 27,
     "Case-based": 8,
-    "MCQ": 27
+    "Assertion-Reason": 10,
+    "VSA": 16,
+    "SA": 21
    },
    "years": [
     2023,
@@ -689,11 +689,11 @@
    "chapter": "Light – Reflection and Refraction",
    "total": 111,
    "byType": {
-    "VSA": 29,
-    "MCQ": 20,
-    "SA": 36,
     "LA": 16,
-    "Case-based": 10
+    "MCQ": 20,
+    "Case-based": 10,
+    "SA": 36,
+    "VSA": 29
    },
    "years": [
     2023,
@@ -761,11 +761,11 @@
    "chapter": "The Human Eye and the Colourful World",
    "total": 101,
    "byType": {
-    "Case-based": 2,
     "SA": 33,
-    "MCQ": 32,
     "VSA": 25,
-    "Assertion-Reason": 9
+    "Assertion-Reason": 9,
+    "MCQ": 32,
+    "Case-based": 2
    },
    "years": [
     2023,
@@ -836,12 +836,12 @@
    "chapter": "Electricity",
    "total": 118,
    "byType": {
+    "Assertion-Reason": 3,
     "MCQ": 27,
     "LA": 27,
-    "Case-based": 8,
-    "Assertion-Reason": 3,
+    "VSA": 34,
     "SA": 19,
-    "VSA": 34
+    "Case-based": 8
    },
    "years": [
     2023,
@@ -924,11 +924,11 @@
    "total": 99,
    "byType": {
     "SA": 29,
-    "Assertion-Reason": 13,
-    "MCQ": 18,
     "Case-based": 2,
+    "Assertion-Reason": 13,
     "LA": 25,
-    "VSA": 12
+    "VSA": 12,
+    "MCQ": 18
    },
    "years": [
     2023,
@@ -999,10 +999,10 @@
    "chapter": "Our Environment",
    "total": 99,
    "byType": {
-    "VSA": 31,
     "SA": 20,
+    "Assertion-Reason": 16,
     "MCQ": 32,
-    "Assertion-Reason": 16
+    "VSA": 31
    },
    "years": [
     2023,

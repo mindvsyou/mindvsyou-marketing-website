@@ -94,6 +94,8 @@ def load():
 #                   kept there as a record (the download button lives on the hand-made thank-you page)
 #   type empty   -> "Coming soon"
 PDF_CSV = ROOT / "data" / "chapter-pdfs.csv"
+# Question/page counts read from each PDF's cover (no links, safe to publish). Refresh it when a PDF changes.
+PDF_STATS = ROOT / "data" / "chapter-pdf-stats.json"
 PDF_PRICE = "₹49"  # shown in the copy; keep equal to the Razorpay payment pages
 PDF_LINKS = {}  # endpoint chapter name -> Razorpay payment page; filled by load_pdf_links()
 FREE_PDFS = {}  # endpoint chapter name -> direct-download URL; filled by load_pdf_links()
@@ -295,6 +297,73 @@ RAIL_JS = r'''
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
     Object.keys(links).forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  })();
+  </script>
+'''
+
+
+# Chapter PDFs page only: chapter cards and the preview gallery. Kept here (not in style.css) so other pages
+# and the style.css cache are untouched.
+PDF_CSS = r'''  <style>
+    .pdf-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin: 8px 0 32px; }
+    @media (min-width: 900px) { .post-body .pdf-cards { width: min(980px, calc(100vw - 48px)); position: relative; left: 50%; transform: translateX(-50%); } }
+    .pdf-card { display: flex; gap: 16px; padding: 16px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; }
+    .pdf-cover { flex: 0 0 96px; padding: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: #0f1b2a; cursor: zoom-in; align-self: flex-start; }
+    .pdf-cover img { display: block; width: 96px; height: auto; margin: 0; }
+    .pdf-cover-empty { height: 136px; cursor: default; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 10px; }
+    .pdf-info { min-width: 0; display: flex; flex-direction: column; }
+    .pdf-no { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--green-dark); }
+    .post-body .pdf-card h3 { font-size: 1.05rem; margin: 2px 0 6px; line-height: 1.3; }
+    .post-body .pdf-meta { font-size: 0.88rem; margin: 0 0 2px; color: var(--text-mid); }
+    .post-body .pdf-types { font-size: 0.8rem; margin: 0 0 10px; color: var(--text-light); }
+    .pdf-buy { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+    .pdf-price { font-weight: 800; font-size: 1.05rem; }
+    .pdf-preview-btn { background: none; border: 0; padding: 4px 0; font: inherit; font-size: 0.85rem; font-weight: 600; color: var(--green-dark); text-decoration: underline; cursor: pointer; }
+    .pdf-samples { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 8px 0 16px; }
+    .pdf-samples figure { margin: 0; }
+    .pdf-samples figcaption { font-size: 0.8rem; color: var(--text-light); margin-top: 6px; line-height: 1.35; }
+    .pdf-sample { display: block; width: 100%; padding: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: none; cursor: zoom-in; }
+    .pdf-sample img { display: block; width: 100%; height: auto; margin: 0; }
+    .pdf-lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+    .pdf-lightbox::backdrop { background: rgba(10, 16, 24, 0.88); }
+    .pdf-lightbox figure { margin: 0; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 56px 16px; box-sizing: border-box; }
+    .pdf-lightbox img { max-width: 100%; max-height: calc(100vh - 110px); width: auto; height: auto; border-radius: 6px; background: #fff; }
+    .pdf-lightbox figcaption { color: #fff; font-size: 0.9rem; margin-top: 10px; text-align: center; }
+    .pdf-lightbox button { position: absolute; background: rgba(255, 255, 255, 0.14); color: #fff; border: 0; border-radius: 50%; width: 44px; height: 44px; font-size: 1.8rem; line-height: 1; cursor: pointer; }
+    .pdf-lightbox .lb-close { top: 10px; right: 10px; }
+    .pdf-lightbox .lb-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+    .pdf-lightbox .lb-next { right: 8px; top: 50%; transform: translateY(-50%); }
+    @media (max-width: 600px) {
+      .pdf-cards { grid-template-columns: 1fr; }
+      .pdf-lightbox figure { padding: 52px 8px 72px; }
+      .pdf-lightbox .lb-prev, .pdf-lightbox .lb-next { top: auto; bottom: 14px; transform: none; }
+      .pdf-lightbox .lb-prev { left: calc(50% - 56px); } .pdf-lightbox .lb-next { right: calc(50% - 56px); }
+    }
+  </style>'''
+
+PDF_JS = r'''
+  <script>
+  (function () {
+    var box = document.getElementById('pdfLightbox'), data = document.getElementById('pdfGalleries');
+    if (!box || !data || typeof box.showModal !== 'function') return;
+    var galleries = JSON.parse(data.textContent), img = box.querySelector('img'), cap = box.querySelector('figcaption');
+    var list = [], i = 0;
+    function show() { img.src = list[i].src; img.alt = list[i].caption; cap.textContent = list[i].caption + '  (' + (i + 1) + ' of ' + list.length + ')'; }
+    function step(d) { i = (i + d + list.length) % list.length; show(); }
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-gallery]');
+      if (!t || !galleries[t.dataset.gallery]) return;
+      list = galleries[t.dataset.gallery]; i = Number(t.dataset.index) || 0; show(); box.showModal();
+      if (typeof gtag === 'function') gtag('event', 'pdf_preview_open', { pdf_chapter: t.dataset.gallery });
+    });
+    box.querySelector('.lb-close').addEventListener('click', function () { box.close(); });
+    box.querySelector('.lb-prev').addEventListener('click', function () { step(-1); });
+    box.querySelector('.lb-next').addEventListener('click', function () { step(1); });
+    box.addEventListener('click', function (e) { if (e.target === box || e.target.tagName === 'FIGURE') box.close(); });
+    box.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+    var x0 = null;
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) step(dx < 0 ? 1 : -1); x0 = null; });
   })();
   </script>
 '''
@@ -587,28 +656,95 @@ def build_pdf_page(d):
     has_paid = any(c["chapter"] in PDF_LINKS and c["chapter"] not in FREE_PDFS for c in chapters)
     practice = practice_url()
 
-    title = "CBSE Class 10 Science Chapter-wise PYQ PDFs with Answers | MindVsYou"
+    title = "CBSE Class 10 Science PYQ Chapter-wise PDFs with Answers | MindVsYou"
     h1 = "CBSE Class 10 Science PYQ: Chapter-wise PDFs with answers"
-    desc = (f"Printable chapter-wise PDFs of CBSE Class 10 Science previous year questions ({y0}–{y1}) "
-            f"with official answers and step-by-step explanations. {pdf_line}")
+    # Kept short (Google shows about 155 characters); the full chapter list is in the page and its FAQ.
+    n_free = sum(c["chapter"] in FREE_PDFS for c in chapters)
+    n_paid = len(chapters) - n_free
+    offer = " ".join(filter(None, [f"{n_free} free," if n_free else "", f"{n_paid} at {PDF_PRICE}." if n_paid else ""]))
+    desc = (f"CBSE Class 10 Science PYQ PDFs, chapter by chapter, with official answers and step-by-step "
+            f"explanations. {offer}").rstrip(",")
 
     def price(c):
         if c["chapter"] in FREE_PDFS:
             return "Free"
         return esc(PDF_PRICE) if c["chapter"] in PDF_LINKS else "Coming soon"
 
-    # Every chapter is listed; chapters without a PDF yet show "Coming soon" and no button.
-    rows = "".join(
-        f'<tr><td>{esc(label(c["chapter"]))}</td>'
-        f'<td data-label="Price">{price(c)}</td>'
-        f'<td class="row-actions">{pdf_button(c)}</td></tr>' for c in all_chapters)
-    table = ('<div class="table-scroll"><table class="cov-table"><thead><tr><th>Chapter</th><th>Price</th><th>PDF</th></tr></thead>'
-             f'<tbody>{rows}</tbody></table></div>')
+    # Every chapter gets a card; chapters without a PDF yet show "Coming soon" and no button.
+    # Counts and preview images come from data/chapter-pdf-stats.json (made by make_pdf_previews.py; no links in it).
+    stats = {norm(k): v for k, v in json.loads(PDF_STATS.read_text(encoding="utf-8")).items()} if PDF_STATS.exists() else {}
+
+    def stat(c, key):
+        return (stats.get(norm(c["chapter"])) or {}).get(key) if c in chapters else None
+
+    short = {"Multiple Choice Questions": "MCQ", "Very Short Answer Questions": "VSA", "Short Answer Questions": "SA",
+             "Long Answer Questions": "LA", "Case-Based Questions": "case-based"}
+    galleries = {}
+
+    def card(c):
+        name, sid = c["chapter"], slug(c["chapter"])
+        no = ncert_no(name)
+        previews = stat(c, "previews") or []
+        if previews:
+            galleries[sid] = [{"src": p["src"], "caption": f'{name} · page {p["page"]} · {p["caption"]}'} for p in previews]
+            cover = (f'<button type="button" class="pdf-cover" data-gallery="{sid}" aria-label="Preview pages of the {esc(name)} PDF">'
+                     f'<img src="{esc(stat(c, "thumb"))}" width="298" height="421" loading="lazy" '
+                     f'alt="Cover of the CBSE Class 10 Science {esc(name)} PYQ PDF" /></button>')
+            preview_btn = (f'<button type="button" class="pdf-preview-btn" data-gallery="{sid}">'
+                           f'Preview {len(previews)} pages</button>')
+        else:
+            cover = f'<div class="pdf-cover pdf-cover-empty" aria-hidden="true">{esc(name)}</div>'
+            preview_btn = ""
+        meta = " · ".join(filter(None, [f'{stat(c, "questions")} questions' if stat(c, "questions") else "",
+                                        f'{stat(c, "pages")} pages' if stat(c, "pages") else "",
+                                        f'{stat(c, "with_figures")} with figures' if stat(c, "with_figures") else ""]))
+        types = " · ".join(f"{n} {short.get(k, k)}" for k, n in (stat(c, "sections") or {}).items())
+        return (f'<article class="pdf-card" id="pdf-{sid}">{cover}<div class="pdf-info">'
+                f'<span class="pdf-no">{f"Chapter {no}" if no else "Chapter"}</span><h3>{esc(name)}</h3>'
+                + (f'<p class="pdf-meta">{meta}</p>' if meta else "")
+                + (f'<p class="pdf-types">{types}</p>' if types else "")
+                + f'<div class="pdf-buy"><span class="pdf-price">{price(c)}</span>{pdf_button(c)}{preview_btn}</div>'
+                f'</div></article>')
+
+    cards = '<div class="pdf-cards">' + "".join(card(c) for c in all_chapters) + "</div>"
+    lightbox = (
+        '<dialog class="pdf-lightbox" id="pdfLightbox" aria-label="PDF preview">'
+        '<button type="button" class="lb-close" aria-label="Close preview">&times;</button>'
+        '<button type="button" class="lb-prev" aria-label="Previous page">&lsaquo;</button>'
+        '<figure><img alt="" /><figcaption></figcaption></figure>'
+        '<button type="button" class="lb-next" aria-label="Next page">&rsaquo;</button></dialog>'
+        f'<script type="application/json" id="pdfGalleries">{json.dumps(galleries, ensure_ascii=False)}</script>')
+    n_questions = sum(stat(c, "questions") or 0 for c in chapters)
+    n_figures = sum(stat(c, "with_figures") or 0 for c in chapters)
+    free_sample = next((c for c in chapters if c["chapter"] in FREE_PDFS and stat(c, "previews")), None)
+    samples = ""
+    if free_sample:
+        figs = "".join(
+            f'<figure><button type="button" class="pdf-sample" data-gallery="{slug(free_sample["chapter"])}" data-index="{i}">'
+            f'<img src="{esc(p["src"])}" width="827" height="1170" loading="lazy" alt="{esc(free_sample["chapter"])} PYQ PDF, page {p["page"]}: {esc(p["caption"])}" />'
+            f'</button><figcaption>{esc(p["caption"])}</figcaption></figure>'
+            for i, p in enumerate(stat(free_sample, "previews")))
+        samples = (f'\n      <div class="pdf-samples">{figs}</div>\n'
+                   f'      <p>These pages are from the free {esc(free_sample["chapter"])} PDF. <a href="{esc(FREE_PDFS[free_sample["chapter"]])}" '
+                   f'data-free-pdf="{esc(free_sample["chapter"])}" rel="noopener">Download it</a> to see the whole thing, '
+                   f'or tap <strong>Preview pages</strong> on any chapter above.</p>')
+    inside = f'''
+      <h2 id="whats-inside">What&rsquo;s inside each chapter PDF</h2>
+      <ul>
+        <li><strong>Every board question on the chapter, {y0}&ndash;{y1}.</strong> {f"{n_questions:,} questions across {len(chapters)} chapters, " if n_questions else ""}grouped by type: multiple choice (MCQ), very short answer, short answer, long answer and case-based questions.</li>
+        <li><strong>Year, marks and subtopic</strong> on every question, so you know how often a topic comes up and how much it is worth.</li>
+        <li><strong>The official CBSE answer</strong> right under each question.</li>
+        <li><strong>Mindy&rsquo;s step-by-step explanation</strong> of the reasoning. For MCQs it also says why each wrong option is wrong.</li>
+        <li><strong>The original diagrams and figures</strong>{f" ({n_figures} questions with figures in all)" if n_figures else ""}, for ray diagrams, circuits, structures and experiments.</li>
+        <li><strong>QR codes on the last page</strong> to practise the same chapter online with Mindy, with instant marking.</li>
+      </ul>{samples}
+'''
 
     faqs = [
         ("What is in a CBSE Class 10 Science chapter PDF?",
-         "Every practice question for that chapter from the MindVsYou PYQ bank, with the official answers and Mindy's step-by-step explanations. "
-         "Print it or read it on your phone."),
+         f"Every CBSE board question on that chapter from {y0} to {y1}, grouped into MCQ, very short answer, short answer, "
+         "long answer and case-based questions. Each question shows its year, marks and subtopic, the official CBSE answer and "
+         "Mindy's step-by-step explanation, with the original diagrams. Print it or read it on your phone."),
         ("Which chapter PDFs are available?", pdf_line + more),
     ]
     if has_paid:
@@ -627,6 +763,22 @@ def build_pdf_page(d):
             {"@type": "ListItem", "position": 3, "name": "Class 10 Science chapter PDFs", "item": PDF_PAGE_URL}]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]},
+        # Each PDF with its price, so search engines and AI assistants can answer "how much / is it free".
+        {"@context": "https://schema.org", "@type": "ItemList", "name": h1, "url": PDF_PAGE_URL,
+         "itemListElement": [
+             {"@type": "ListItem", "position": i, "item": {
+                 "@type": "Product", "name": f"CBSE Class 10 Science {c['chapter']} PYQ PDF",
+                 "description": (f"{stat(c, 'questions')} " if stat(c, "questions") else "")
+                                + f"CBSE Class 10 Science previous year questions on {c['chapter']} ({y0}–{y1}), "
+                                "with official answers and Mindy's step-by-step explanations.",
+                 **({"numberOfPages": stat(c, "pages")} if stat(c, "pages") else {}),
+                 **({"image": f'{SITE}/{stat(c, "previews")[0]["src"]}'} if stat(c, "previews") else {}),
+                 "brand": {"@type": "Brand", "name": "MindVsYou"}, "category": "Study material",
+                 "offers": {"@type": "Offer", "priceCurrency": "INR",
+                            "price": "0" if c["chapter"] in FREE_PDFS else re.sub(r"[^0-9]", "", PDF_PRICE),
+                            "availability": "https://schema.org/InStock",
+                            "url": f"{PDF_PAGE_URL}#chapter-pdfs"}}}
+             for i, c in enumerate(chapters, 1)]},
     ]
     ld_html = "".join(
         f'  <script type="application/ld+json">\n  {json.dumps(x, indent=2, ensure_ascii=False)}\n  </script>\n' for x in ld)
@@ -664,7 +816,7 @@ def build_pdf_page(d):
   <meta name="twitter:description" content="{esc(desc)}" />
 
   <link rel="stylesheet" href="style.css?v=20261019" />
-
+{PDF_CSS}
 {ld_html}</head>
 <body>
 
@@ -688,15 +840,17 @@ def build_pdf_page(d):
       <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I get chapter-wise CBSE Class 10 Science PYQ PDFs with answers?</strong> Right here. {esc(pdf_line)}{more}</p></div>
 
       <h2 id="chapter-pdfs">Chapter PDFs</h2>
-      {table}
-{buy_steps}
+      <p>Tap a cover or <strong>Preview pages</strong> to look inside before you buy.</p>
+      {cards}
+      {lightbox}
+{inside}{buy_steps}
       <h2 id="faq">Frequently asked questions</h2><div class="post-faq">{faq_html}</div>
 
       <div class="post-cta"><h3>Rather practise online?</h3><p>Do the same questions one at a time with Mindy. Miss one and it comes back.</p><div class="btn-row"><a href="{esc(practice)}" class="btn btn-green">Practise Class 10 Science PYQs &rarr;</a></div><p class="cta-sub"><a href="class-10-science-pyq-coverage.html">See what each chapter covers →</a></p></div>
 
     </div>
   </section>
-
+{PDF_JS}
 {footer}"""
 
 

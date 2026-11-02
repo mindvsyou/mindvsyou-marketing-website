@@ -47,6 +47,11 @@ The same script also writes `class-10-science-chapter-pdfs.html`, the only page 
 (free and paid). All PDF links are kept in `data/chapter-pdfs.csv` (one row per chapter; the user edits it in Excel).
 That CSV is git-ignored and lives only on the user's laptop: every repo file is served on mindvsyou.io, so
 committing it would publish all paid Drive links. Never commit it or copy its links into other tracked files.
+The PDF page shows one card per chapter with counts and a preview gallery. `python make_pdf_previews.py`
+(needs pymupdf) downloads every PDF via the CSV and writes `data/chapter-pdf-stats.json` (counts, no links) and
+`images/pdf-previews/` (cover thumb + cover and up to 3 sample pages per chapter; the user approved previews of
+paid chapters on 2026-11-02). It prefers sample pages without "(see image file)" text (that text is fine in the PDFs, per the user). Rerun it when a PDF is
+replaced, then rerun build_pyq_coverage.py. Opening a preview sends GA event `pdf_preview_open` (`pdf_chapter`).
 The script also writes each paid chapter's `thanks-<random>.html` (one per chapter; a paid row with a Drive link
 but no `thank_you_page` gets a new random name written back to the CSV). The user sets that URL as the
 Razorpay payment page's redirect; a Buy PDF button appears only once `razorpay_link` is filled in. The coverage page stays facts + practice for students and
