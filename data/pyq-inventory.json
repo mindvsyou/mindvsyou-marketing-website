@@ -1,7 +1,7 @@
 {
  "class": "10",
  "subject": "Science",
- "generatedAt": "2026-11-02T10:54:24.379Z",
+ "generatedAt": "2026-11-02T18:01:26.675Z",
  "practiceUrl": "https://quiz.mindvsyou.io/pyq",
  "totalQuestions": 1467,
  "years": [
@@ -188,10 +188,10 @@
    "byType": {
     "MCQ": 41,
     "VSA": 13,
-    "SA": 32,
     "Case-based": 10,
-    "Assertion-Reason": 14,
-    "LA": 4
+    "SA": 32,
+    "LA": 4,
+    "Assertion-Reason": 14
    },
    "years": [
     2023,
@@ -274,8 +274,8 @@
    "byType": {
     "SA": 2,
     "LA": 54,
-    "Case-based": 5,
     "VSA": 8,
+    "Case-based": 5,
     "MCQ": 28,
     "Assertion-Reason": 10
    },
@@ -443,12 +443,12 @@
    "chapter": "Control and Coordination",
    "total": 101,
    "byType": {
-    "VSA": 33,
     "Assertion-Reason": 5,
     "MCQ": 31,
     "LA": 8,
     "SA": 19,
-    "Case-based": 5
+    "Case-based": 5,
+    "VSA": 33
    },
    "years": [
     2023,
@@ -528,9 +528,9 @@
    "chapter": "How Do Organisms Reproduce?",
    "total": 107,
    "byType": {
-    "LA": 36,
-    "MCQ": 42,
     "VSA": 10,
+    "MCQ": 42,
+    "LA": 36,
     "Assertion-Reason": 7,
     "Case-based": 4,
     "SA": 8
@@ -689,11 +689,11 @@
    "chapter": "Light – Reflection and Refraction",
    "total": 111,
    "byType": {
-    "LA": 16,
     "MCQ": 20,
     "Case-based": 10,
     "SA": 36,
-    "VSA": 29
+    "VSA": 29,
+    "LA": 16
    },
    "years": [
     2023,
@@ -761,8 +761,8 @@
    "chapter": "The Human Eye and the Colourful World",
    "total": 101,
    "byType": {
-    "SA": 33,
     "VSA": 25,
+    "SA": 33,
     "Assertion-Reason": 9,
     "MCQ": 32,
     "Case-based": 2
@@ -838,10 +838,10 @@
    "byType": {
     "Assertion-Reason": 3,
     "MCQ": 27,
-    "LA": 27,
     "VSA": 34,
-    "SA": 19,
-    "Case-based": 8
+    "LA": 27,
+    "Case-based": 8,
+    "SA": 19
    },
    "years": [
     2023,
@@ -923,9 +923,9 @@
    "chapter": "Magnetic Effects of Electric Current",
    "total": 99,
    "byType": {
-    "SA": 29,
     "Case-based": 2,
     "Assertion-Reason": 13,
+    "SA": 29,
     "LA": 25,
     "VSA": 12,
     "MCQ": 18

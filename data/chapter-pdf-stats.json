@@ -10,6 +10,7 @@
    "Long Answer Questions": 4
   },
   "thumb": "images/pdf-previews/chemical-reactions-and-equations-thumb.jpg",
+  "peek": "images/pdf-previews/chemical-reactions-and-equations-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/chemical-reactions-and-equations-0.jpg",
@@ -23,13 +24,13 @@
    },
    {
     "src": "images/pdf-previews/chemical-reactions-and-equations-2.jpg",
-    "caption": "Short answer questions",
-    "page": 55
+    "caption": "Short answer questions, with diagrams",
+    "page": 68
    },
    {
     "src": "images/pdf-previews/chemical-reactions-and-equations-3.jpg",
-    "caption": "Long answer questions",
-    "page": 83
+    "caption": "Long answer questions, with diagrams",
+    "page": 87
    }
   ]
  },
@@ -45,6 +46,7 @@
    "Long Answer Questions": 7
   },
   "thumb": "images/pdf-previews/acids-bases-and-salts-thumb.jpg",
+  "peek": "images/pdf-previews/acids-bases-and-salts-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/acids-bases-and-salts-0.jpg",
@@ -58,12 +60,12 @@
    },
    {
     "src": "images/pdf-previews/acids-bases-and-salts-2.jpg",
-    "caption": "Short answer questions",
-    "page": 53
+    "caption": "Short answer questions, with diagrams",
+    "page": 60
    },
    {
     "src": "images/pdf-previews/acids-bases-and-salts-3.jpg",
-    "caption": "Case-based questions",
+    "caption": "Case-based questions, with diagrams",
     "page": 75
    }
   ]
@@ -80,6 +82,7 @@
    "Long Answer Questions": 4
   },
   "thumb": "images/pdf-previews/metals-and-non-metals-thumb.jpg",
+  "peek": "images/pdf-previews/metals-and-non-metals-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/metals-and-non-metals-0.jpg",
@@ -93,13 +96,13 @@
    },
    {
     "src": "images/pdf-previews/metals-and-non-metals-2.jpg",
-    "caption": "Short answer questions",
-    "page": 42
+    "caption": "Short answer questions, with diagrams",
+    "page": 46
    },
    {
     "src": "images/pdf-previews/metals-and-non-metals-3.jpg",
-    "caption": "Case-based questions",
-    "page": 67
+    "caption": "Case-based questions, with diagrams",
+    "page": 76
    }
   ]
  },
@@ -115,6 +118,7 @@
    "Long Answer Questions": 54
   },
   "thumb": "images/pdf-previews/carbon-and-its-compounds-thumb.jpg",
+  "peek": "images/pdf-previews/carbon-and-its-compounds-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/carbon-and-its-compounds-0.jpg",
@@ -124,7 +128,7 @@
    {
     "src": "images/pdf-previews/carbon-and-its-compounds-1.jpg",
     "caption": "MCQs with the official answer and Mindy's explanation",
-    "page": 4
+    "page": 2
    },
    {
     "src": "images/pdf-previews/carbon-and-its-compounds-2.jpg",
@@ -133,8 +137,8 @@
    },
    {
     "src": "images/pdf-previews/carbon-and-its-compounds-3.jpg",
-    "caption": "Case-based questions",
-    "page": 33
+    "caption": "Case-based questions, with diagrams",
+    "page": 34
    }
   ]
  },
@@ -150,6 +154,7 @@
    "Long Answer Questions": 6
   },
   "thumb": "images/pdf-previews/life-processes-thumb.jpg",
+  "peek": "images/pdf-previews/life-processes-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/life-processes-0.jpg",
@@ -163,13 +168,13 @@
    },
    {
     "src": "images/pdf-previews/life-processes-2.jpg",
-    "caption": "Short answer questions",
-    "page": 68
+    "caption": "Short answer questions, with diagrams",
+    "page": 69
    },
    {
     "src": "images/pdf-previews/life-processes-3.jpg",
-    "caption": "Case-based questions",
-    "page": 95
+    "caption": "Case-based questions, with diagrams",
+    "page": 96
    }
   ]
  },
@@ -185,6 +190,7 @@
    "Long Answer Questions": 8
   },
   "thumb": "images/pdf-previews/control-and-coordination-thumb.jpg",
+  "peek": "images/pdf-previews/control-and-coordination-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/control-and-coordination-0.jpg",
@@ -198,13 +204,13 @@
    },
    {
     "src": "images/pdf-previews/control-and-coordination-2.jpg",
-    "caption": "Short answer questions",
-    "page": 41
+    "caption": "Short answer questions, with diagrams",
+    "page": 51
    },
    {
     "src": "images/pdf-previews/control-and-coordination-3.jpg",
-    "caption": "Case-based questions",
-    "page": 54
+    "caption": "Case-based questions, with diagrams",
+    "page": 56
    }
   ]
  },
@@ -220,6 +226,7 @@
    "Long Answer Questions": 36
   },
   "thumb": "images/pdf-previews/how-do-organisms-reproduce-thumb.jpg",
+  "peek": "images/pdf-previews/how-do-organisms-reproduce-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/how-do-organisms-reproduce-0.jpg",
@@ -229,17 +236,17 @@
    {
     "src": "images/pdf-previews/how-do-organisms-reproduce-1.jpg",
     "caption": "MCQs with the official answer and Mindy's explanation",
-    "page": 3
+    "page": 2
    },
    {
     "src": "images/pdf-previews/how-do-organisms-reproduce-2.jpg",
-    "caption": "Short answer questions",
-    "page": 37
+    "caption": "Short answer questions, with diagrams",
+    "page": 40
    },
    {
     "src": "images/pdf-previews/how-do-organisms-reproduce-3.jpg",
-    "caption": "Case-based questions",
-    "page": 42
+    "caption": "Case-based questions, with diagrams",
+    "page": 43
    }
   ]
  },
@@ -254,6 +261,7 @@
    "Case-Based Questions": 8
   },
   "thumb": "images/pdf-previews/heredity-thumb.jpg",
+  "peek": "images/pdf-previews/heredity-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/heredity-0.jpg",
@@ -267,13 +275,13 @@
    },
    {
     "src": "images/pdf-previews/heredity-2.jpg",
-    "caption": "Short answer questions",
-    "page": 38
+    "caption": "Short answer questions, with diagrams",
+    "page": 44
    },
    {
     "src": "images/pdf-previews/heredity-3.jpg",
-    "caption": "Case-based questions",
-    "page": 56
+    "caption": "Case-based questions, with diagrams",
+    "page": 69
    }
   ]
  },
@@ -289,6 +297,7 @@
    "Long Answer Questions": 16
   },
   "thumb": "images/pdf-previews/light-reflection-and-refraction-thumb.jpg",
+  "peek": "images/pdf-previews/light-reflection-and-refraction-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/light-reflection-and-refraction-0.jpg",
@@ -302,13 +311,13 @@
    },
    {
     "src": "images/pdf-previews/light-reflection-and-refraction-2.jpg",
-    "caption": "Short answer questions",
-    "page": 37
+    "caption": "Short answer questions, with diagrams",
+    "page": 58
    },
    {
     "src": "images/pdf-previews/light-reflection-and-refraction-3.jpg",
-    "caption": "Case-based questions",
-    "page": 74
+    "caption": "Case-based questions, with diagrams",
+    "page": 82
    }
   ]
  },
@@ -323,6 +332,7 @@
    "Case-Based Questions": 2
   },
   "thumb": "images/pdf-previews/the-human-eye-and-the-colourful-world-thumb.jpg",
+  "peek": "images/pdf-previews/the-human-eye-and-the-colourful-world-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/the-human-eye-and-the-colourful-world-0.jpg",
@@ -336,13 +346,13 @@
    },
    {
     "src": "images/pdf-previews/the-human-eye-and-the-colourful-world-2.jpg",
-    "caption": "Short answer questions",
-    "page": 44
+    "caption": "Short answer questions, with diagrams",
+    "page": 48
    },
    {
     "src": "images/pdf-previews/the-human-eye-and-the-colourful-world-3.jpg",
-    "caption": "Case-based questions",
-    "page": 72
+    "caption": "Case-based questions, with diagrams",
+    "page": 76
    }
   ]
  },
@@ -358,6 +368,7 @@
    "Long Answer Questions": 27
   },
   "thumb": "images/pdf-previews/electricity-thumb.jpg",
+  "peek": "images/pdf-previews/electricity-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/electricity-0.jpg",
@@ -371,13 +382,13 @@
    },
    {
     "src": "images/pdf-previews/electricity-2.jpg",
-    "caption": "Short answer questions",
-    "page": 44
+    "caption": "Short answer questions, with diagrams",
+    "page": 58
    },
    {
     "src": "images/pdf-previews/electricity-3.jpg",
-    "caption": "Case-based questions",
-    "page": 62
+    "caption": "Case-based questions, with diagrams",
+    "page": 65
    }
   ]
  },
@@ -393,6 +404,7 @@
    "Long Answer Questions": 25
   },
   "thumb": "images/pdf-previews/magnetic-effects-of-electric-current-thumb.jpg",
+  "peek": "images/pdf-previews/magnetic-effects-of-electric-current-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/magnetic-effects-of-electric-current-0.jpg",
@@ -406,13 +418,13 @@
    },
    {
     "src": "images/pdf-previews/magnetic-effects-of-electric-current-2.jpg",
-    "caption": "Short answer questions",
-    "page": 38
+    "caption": "Short answer questions, with diagrams",
+    "page": 51
    },
    {
     "src": "images/pdf-previews/magnetic-effects-of-electric-current-3.jpg",
-    "caption": "Case-based questions",
-    "page": 60
+    "caption": "Case-based questions, with diagrams",
+    "page": 62
    }
   ]
  },
@@ -426,6 +438,7 @@
    "Short Answer Questions": 20
   },
   "thumb": "images/pdf-previews/our-environment-thumb.jpg",
+  "peek": "images/pdf-previews/our-environment-peek.jpg",
   "previews": [
    {
     "src": "images/pdf-previews/our-environment-0.jpg",
@@ -439,8 +452,8 @@
    },
    {
     "src": "images/pdf-previews/our-environment-2.jpg",
-    "caption": "Short answer questions",
-    "page": 48
+    "caption": "Short answer questions, with diagrams",
+    "page": 63
    }
   ]
  }

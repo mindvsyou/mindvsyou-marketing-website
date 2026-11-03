@@ -25,7 +25,6 @@ OUT = ROOT / "images" / "pdf-previews"
 # Sample pages after the cover: the first MCQ page, then the first page of these sections (whichever exist).
 SECTIONS = ["Short Answer Questions", "Case-Based Questions", "Long Answer Questions"]
 MAX_SAMPLES = 3
-PLACEHOLDER = "see image file"  # leftover text in some PDFs; preview pages containing it are skipped
 CAPTIONS = {"Multiple Choice Questions": "MCQs with the official answer and Mindy's explanation",
             "Short Answer Questions": "Short answer questions",
             "Case-Based Questions": "Case-based questions",
@@ -64,16 +63,28 @@ def main():
             base = slug(name)
             order = sorted(starts.values()) + [doc.page_count]
 
-            def clean_page(section):
-                """First page of the section without leftover '(see image file)' placeholder text."""
+            def diagram_area(i):
+                """Area of the diagrams on a page (questions' figures are the only images in these PDFs)."""
+                return sum((b[2] - b[0]) * (b[3] - b[1]) for b in (x["bbox"] for x in doc[i].get_image_info())
+                           if b[2] - b[0] >= 60 and b[3] - b[1] >= 40)
+
+            def best_page(section):
+                """The page of the section with the most diagram area, so previews show the figures; else its first page."""
                 first = starts[section]
                 end = next(i for i in order if i > first)
-                return next((i for i in range(first, end) if PLACEHOLDER not in doc[i].get_text()), first)
+                best = max(range(first, end), key=lambda i: (diagram_area(i), -i))
+                return best if diagram_area(best) else first
 
+            def sample(section):
+                idx = best_page(section)
+                return idx, CAPTIONS[section] + (", with diagrams" if diagram_area(idx) else "")
+
+            # A mix: the cover, the clean first MCQ page (section heading, question, official answer, Mindy's
+            # explanation), then the most diagram-rich page of the later sections.
             pages = [(0, "Cover")]
             if "Multiple Choice Questions" in starts:
-                pages.append((clean_page("Multiple Choice Questions"), CAPTIONS["Multiple Choice Questions"]))
-            pages += [(clean_page(s), CAPTIONS[s]) for s in SECTIONS if s in starts]
+                pages.append((starts["Multiple Choice Questions"], CAPTIONS["Multiple Choice Questions"]))
+            pages += [sample(s) for s in SECTIONS if s in starts]
             pages = pages[:1 + MAX_SAMPLES]
             gallery = []
             for n, (idx, caption) in enumerate(pages):
@@ -81,10 +92,15 @@ def main():
                 doc[idx].get_pixmap(dpi=100).save(OUT / file, jpg_quality=75)
                 gallery.append({"src": f"images/pdf-previews/{file}", "caption": caption, "page": idx + 1})
             doc[0].get_pixmap(dpi=36).save(OUT / f"{base}-thumb.jpg", jpg_quality=80)
+            # "Peek" for the chapter card: top half of the first sample question page (question, answer, explanation)
+            peek_page = doc[pages[1][0]] if len(pages) > 1 else doc[0]
+            clip = pymupdf.Rect(0, 0, peek_page.rect.width, peek_page.rect.height * 0.5)
+            peek_page.get_pixmap(dpi=90, clip=clip).save(OUT / f"{base}-peek.jpg", jpg_quality=72)
 
             stats[name] = {"pages": doc.page_count, "questions": nums.get("Questions"),
                            "with_figures": nums.get("With figures"), "sections": sections,
-                           "thumb": f"images/pdf-previews/{base}-thumb.jpg", "previews": gallery}
+                           "thumb": f"images/pdf-previews/{base}-thumb.jpg",
+                           "peek": f"images/pdf-previews/{base}-peek.jpg", "previews": gallery}
             print(f"{name}: {doc.page_count} pages, {nums.get('Questions')} questions, {len(gallery)} preview images")
             doc.close()
     PDF_STATS.write_text(json.dumps(stats, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")

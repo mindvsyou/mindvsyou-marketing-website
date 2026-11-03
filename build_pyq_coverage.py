@@ -114,6 +114,8 @@ def drive_download(link):
     return f"https://drive.google.com/uc?export=download&id={m.group(1)}"
 
 
+# NCERT chapter numbers per subject, for grouping the chapter PDF cards.
+SUBJECTS = [("Chemistry", "chem", [1, 2, 3, 4]), ("Biology", "bio", [5, 6, 7, 8, 13]), ("Physics", "phy", [9, 10, 11, 12])]
 THANKS = {}  # endpoint chapter name -> (thank-you page file name, direct-download URL), paid chapters only
 
 
@@ -305,20 +307,64 @@ RAIL_JS = r'''
 # Chapter PDFs page only: chapter cards and the preview gallery. Kept here (not in style.css) so other pages
 # and the style.css cache are untouched.
 PDF_CSS = r'''  <style>
-    .pdf-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin: 8px 0 32px; }
-    @media (min-width: 900px) { .post-body .pdf-cards { width: min(980px, calc(100vw - 48px)); position: relative; left: 50%; transform: translateX(-50%); } }
-    .pdf-card { display: flex; gap: 16px; padding: 16px; background: var(--white); border: 1px solid var(--border); border-radius: 16px; }
-    .pdf-cover { flex: 0 0 96px; padding: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: #0f1b2a; cursor: zoom-in; align-self: flex-start; }
-    .pdf-cover img { display: block; width: 96px; height: auto; margin: 0; }
-    .pdf-cover-empty { height: 136px; cursor: default; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 10px; }
-    .pdf-info { min-width: 0; display: flex; flex-direction: column; }
-    .pdf-no { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--green-dark); }
-    .post-body .pdf-card h3 { font-size: 1.05rem; margin: 2px 0 6px; line-height: 1.3; }
-    .post-body .pdf-meta { font-size: 0.88rem; margin: 0 0 2px; color: var(--text-mid); }
-    .post-body .pdf-types { font-size: 0.8rem; margin: 0 0 10px; color: var(--text-light); }
-    .pdf-buy { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
-    .pdf-price { font-weight: 800; font-size: 1.05rem; }
-    .pdf-preview-btn { background: none; border: 0; padding: 4px 0; font: inherit; font-size: 0.85rem; font-weight: 600; color: var(--green-dark); text-decoration: underline; cursor: pointer; }
+    .post-hero.pdf-hero { padding: 32px 24px 30px; }
+    .pdf-hero .container { max-width: 1040px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; }
+    .pdf-hero-text { flex: 1 1 420px; }
+    .post-hero.pdf-hero h1 { margin: 10px 0 10px; }
+    .pdf-hero-text p { color: #c9d4e0; margin: 0; font-size: 1.02rem; line-height: 1.5; max-width: 560px; }
+    .pdf-hero-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(118px, 1fr)); gap: 10px; flex: 0 0 auto; }
+    .pdf-hero-stats li { margin: 0; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 10px 14px; font-size: 0.8rem; color: #c9d4e0; line-height: 1.3; }
+    .pdf-hero-stats b { display: block; font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; color: var(--green); }
+    .post-body.pdf-page { padding-top: 28px; }
+    .post-body.pdf-page h2#chapter-pdfs { margin-top: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+    .pdf-h2-note { font-family: var(--font-body); font-size: 0.92rem; font-weight: 500; color: var(--text-light); }
+    .post-body .pdf-trust { margin-top: 8px; }
+    .pdf-wide { margin: 8px 0 32px; }
+    @media (min-width: 900px) { .post-body .pdf-wide { width: min(1040px, calc(100vw - 48px)); position: relative; left: 50%; transform: translateX(-50%); } }
+    .post-body .pdf-trust { list-style: none; padding: 0; margin: 0 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .post-body .pdf-trust li { margin: 0; display: flex; gap: 10px; align-items: flex-start; background: var(--off-white); border-radius: 12px; padding: 12px 14px; font-size: 0.9rem; line-height: 1.4; color: var(--text-mid); }
+    .pdf-trust .ic { font-size: 1.2rem; line-height: 1.2; }
+    .pdf-trust b { color: var(--text-dark); display: block; }
+    .pdf-free { display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; justify-content: space-between; background: linear-gradient(135deg, #0D1B2A 0%, #14324a 100%); color: #fff; border-radius: 20px; padding: 24px 28px; margin: 0 0 36px; }
+    .pdf-free .tag { display: inline-block; background: var(--green); color: #0D1B2A; font-weight: 800; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+    .post-body .pdf-free h3 { color: #fff; font-size: 1.35rem; margin: 10px 0 6px; }
+    .post-body .pdf-free p { color: #c9d4e0; margin: 0; font-size: 0.95rem; max-width: 520px; }
+    .pdf-free .btns { display: flex; flex-direction: column; gap: 10px; min-width: 240px; }
+    .post-body .pdf-free .btns a.btn { justify-content: center; text-align: center; }
+    .pdf-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 8px 0 14px; }
+    .post-body .pdf-group-head h3 { margin: 0; font-size: 1.4rem; }
+    .pdf-group-head span { color: var(--text-light); font-size: 0.92rem; }
+    .pdf-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; margin: 0 0 36px; }
+    .pdf-card { --accent: var(--green); --tint: #E7F9EE; display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 10px rgba(13, 27, 42, 0.05); transition: transform .15s ease, box-shadow .15s ease; }
+    .pdf-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(13, 27, 42, 0.12); }
+    .pdf-card.subj-chem { --accent: #E8590C; --tint: #FFF1E8; }
+    .pdf-card.subj-bio { --accent: #1AAE54; --tint: #E7F9EE; }
+    .pdf-card.subj-phy { --accent: #2563EB; --tint: #EAF1FE; }
+    .pdf-peek { position: relative; display: block; width: 100%; height: 190px; padding: 0; border: 0; border-bottom: 1px solid var(--border); background: var(--tint); overflow: hidden; cursor: zoom-in; }
+    .pdf-peek img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; margin: 0; }
+    .pdf-peek::after { content: ""; position: absolute; inset: auto 0 0 0; height: 70px; background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.95)); }
+    .pdf-peek .look { position: absolute; z-index: 1; left: 50%; bottom: 12px; transform: translateX(-50%); white-space: nowrap; background: #0D1B2A; color: #fff; font-size: 0.8rem; font-weight: 700; padding: 7px 14px; border-radius: 999px; box-shadow: 0 4px 12px rgba(13, 27, 42, 0.25); }
+    .pdf-peek:hover .look { background: var(--accent); }
+    .pdf-peek-empty { cursor: default; display: flex; align-items: center; justify-content: center; color: var(--text-light); font-weight: 700; }
+    .pdf-body { display: flex; flex-direction: column; flex: 1; padding: 16px 18px 18px; }
+    .pdf-top { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 8px; }
+    .pdf-chip { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); background: var(--tint); padding: 4px 9px; border-radius: 999px; }
+    .pdf-badge { font-size: 0.72rem; font-weight: 800; color: #7A4B00; background: #FFE8A3; padding: 4px 9px; border-radius: 999px; }
+    .pdf-badge.free { color: #0D1B2A; background: var(--green); }
+    .post-body .pdf-card h3 { font-size: 1.12rem; margin: 0 0 10px; line-height: 1.3; }
+    .pdf-big { display: flex; align-items: baseline; gap: 8px; margin: 0 0 6px; }
+    .pdf-big b { font-family: var(--font-display); font-size: 2rem; font-weight: 800; line-height: 1; color: var(--text-dark); }
+    .pdf-big span { font-size: 0.9rem; color: var(--text-mid); line-height: 1.3; }
+    .post-body .pdf-types { list-style: none; padding: 0; margin: 0 0 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .post-body .pdf-types li { margin: 0; font-size: 0.78rem; color: var(--text-mid); background: var(--off-white); border-radius: 6px; padding: 3px 8px; }
+    .post-body .pdf-extra { font-size: 0.84rem; color: var(--text-mid); margin: 0 0 14px; }
+    .pdf-buy { margin-top: auto; border-top: 1px dashed var(--border); padding-top: 14px; }
+    .pdf-price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 10px; }
+    .pdf-price { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; color: var(--text-dark); line-height: 1; }
+    .pdf-ppq { font-size: 0.8rem; font-weight: 600; color: var(--accent); text-align: right; }
+    .post-body a.btn.pdf-cta { display: flex; justify-content: center; width: 100%; box-sizing: border-box; font-size: 1rem; padding: 13px 18px; }
+    .post-body .pdf-assure { font-size: 0.76rem; color: var(--text-light); text-align: center; margin: 8px 0 0; }
+    .pdf-soon { display: block; text-align: center; font-weight: 700; color: var(--text-light); background: var(--off-white); border-radius: 10px; padding: 12px; }
     .pdf-samples { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 8px 0 16px; }
     .pdf-samples figure { margin: 0; }
     .pdf-samples figcaption { font-size: 0.8rem; color: var(--text-light); margin-top: 6px; line-height: 1.35; }
@@ -334,7 +380,21 @@ PDF_CSS = r'''  <style>
     .pdf-lightbox .lb-prev { left: 8px; top: 50%; transform: translateY(-50%); }
     .pdf-lightbox .lb-next { right: 8px; top: 50%; transform: translateY(-50%); }
     @media (max-width: 600px) {
+      .post-hero.pdf-hero { padding: 18px 16px 18px; }
+      .post-hero.pdf-hero h1 { font-size: 1.5rem; margin: 8px 0 0; }
+      .pdf-hero-text p { display: none; }
+      .pdf-hero .container { gap: 14px; }
+      .post-body.pdf-page h2#chapter-pdfs { font-size: 1.35rem; margin-bottom: 8px; }
+      .pdf-group-head { margin: 4px 0 10px; }
+      .post-body .pdf-group-head h3 { font-size: 1.2rem; }
+      .pdf-hero-stats { grid-template-columns: repeat(4, 1fr); gap: 6px; width: 100%; }
+      .pdf-hero-stats li { padding: 8px 6px; font-size: 0.68rem; text-align: center; }
+      .pdf-hero-stats b { font-size: 1rem; }
+      .post-body.pdf-page { padding-top: 20px; }
       .pdf-cards { grid-template-columns: 1fr; }
+      .pdf-free { padding: 20px; }
+      .pdf-free .btns { min-width: 0; width: 100%; }
+      .pdf-peek { height: 170px; }
       .pdf-lightbox figure { padding: 52px 8px 72px; }
       .pdf-lightbox .lb-prev, .pdf-lightbox .lb-next { top: auto; bottom: 14px; transform: none; }
       .pdf-lightbox .lb-prev { left: calc(50% - 56px); } .pdf-lightbox .lb-next { right: calc(50% - 56px); }
@@ -354,7 +414,7 @@ PDF_JS = r'''
       var t = e.target.closest('[data-gallery]');
       if (!t || !galleries[t.dataset.gallery]) return;
       list = galleries[t.dataset.gallery]; i = Number(t.dataset.index) || 0; show(); box.showModal();
-      if (typeof gtag === 'function') gtag('event', 'pdf_preview_open', { pdf_chapter: t.dataset.gallery });
+      if (typeof gtag === 'function') gtag('event', 'pdf_preview_open', { pdf_chapter: t.dataset.chapter || t.dataset.gallery });
     });
     box.querySelector('.lb-close').addEventListener('click', function () { box.close(); });
     box.querySelector('.lb-prev').addEventListener('click', function () { step(-1); });
@@ -380,19 +440,20 @@ def action_links(c, cls, full=False):
     return out
 
 
-def pdf_button(c):
-    """'Free PDF' or 'Buy PDF' button for a chapter; empty until the chapter has a link."""
+def pdf_button(c, label=None, cls="btn btn-green pdf-cta"):
+    """'Download free PDF' or 'Get the PDF · ₹49' button for a chapter; empty until the chapter has a link.
+    Keep the data-* attributes: main.js uses them for the free_pdf_click / buy_pdf_click / begin_checkout events."""
     name = esc(c["chapter"])
     free = FREE_PDFS.get(c["chapter"])
     if free:
-        return (f'<a class="btn btn-green btn-sm" href="{esc(free)}" data-free-pdf="{name}" rel="noopener" '
-                f'aria-label="Download the free {name} PDF with Mindy explanations">Free PDF</a>')
+        return (f'<a class="{cls}" href="{esc(free)}" data-free-pdf="{name}" rel="noopener" '
+                f'aria-label="Download the free {name} PDF with Mindy explanations">{label or "Download free PDF &darr;"}</a>')
     url = PDF_LINKS.get(c["chapter"])
     if not url:
         return ""
     price = re.sub(r"[^0-9]", "", PDF_PRICE)
-    return (f'<a class="btn btn-green btn-sm" href="{esc(url)}" data-buy-pdf="{name}" data-price="{price}" '
-            f'aria-label="Buy {name} PDF with Mindy explanations">Buy PDF</a>')
+    return (f'<a class="{cls}" href="{esc(url)}" data-buy-pdf="{name}" data-price="{price}" '
+            f'aria-label="Buy the {name} PDF with Mindy explanations for {esc(PDF_PRICE)}">{label or f"Get the PDF &middot; {esc(PDF_PRICE)}"}</a>')
 
 
 def pdf_chapters(chapters):
@@ -677,36 +738,88 @@ def build_pdf_page(d):
     def stat(c, key):
         return (stats.get(norm(c["chapter"])) or {}).get(key) if c in chapters else None
 
-    short = {"Multiple Choice Questions": "MCQ", "Very Short Answer Questions": "VSA", "Short Answer Questions": "SA",
-             "Long Answer Questions": "LA", "Case-Based Questions": "case-based"}
+    short = {"Multiple Choice Questions": "MCQ", "Very Short Answer Questions": "very short", "Short Answer Questions": "short answer",
+             "Long Answer Questions": "long answer", "Case-Based Questions": "case-based"}
     galleries = {}
+    # Factual badges only (no invented popularity): the chapter with the most questions / most figures.
+    with_q = [c for c in chapters if stat(c, "questions")]
+    badges = {}
+    if with_q:
+        badges.setdefault(max(with_q, key=lambda c: stat(c, "questions"))["chapter"], "Most questions")
+        badges.setdefault(max(with_q, key=lambda c: stat(c, "with_figures") or 0)["chapter"], "Most diagrams")
+    price_paise = int(re.sub(r"[^0-9]", "", PDF_PRICE)) * 100
 
     def card(c):
         name, sid = c["chapter"], slug(c["chapter"])
         no = ncert_no(name)
-        previews = stat(c, "previews") or []
+        subj = next((s for s in SUBJECTS if no in s[2]), None)
+        previews, q = stat(c, "previews") or [], stat(c, "questions")
+        is_free = name in FREE_PDFS
+        is_paid = name in PDF_LINKS and not is_free
         if previews:
             galleries[sid] = [{"src": p["src"], "caption": f'{name} · page {p["page"]} · {p["caption"]}'} for p in previews]
-            cover = (f'<button type="button" class="pdf-cover" data-gallery="{sid}" aria-label="Preview pages of the {esc(name)} PDF">'
-                     f'<img src="{esc(stat(c, "thumb"))}" width="298" height="421" loading="lazy" '
-                     f'alt="Cover of the CBSE Class 10 Science {esc(name)} PYQ PDF" /></button>')
-            preview_btn = (f'<button type="button" class="pdf-preview-btn" data-gallery="{sid}">'
-                           f'Preview {len(previews)} pages</button>')
+            peek = (f'<button type="button" class="pdf-peek" data-gallery="{sid}" data-chapter="{esc(name)}" aria-label="Look inside the {esc(name)} PDF">'
+                    f'<img src="{esc(stat(c, "peek") or previews[0]["src"])}" width="744" height="526" loading="lazy" '
+                    f'alt="A page from the {esc(name)} PDF: a CBSE board question with its official answer and Mindy&rsquo;s explanation" />'
+                    f'<span class="look">&#128065; Look inside &middot; {len(previews)} pages</span></button>')
         else:
-            cover = f'<div class="pdf-cover pdf-cover-empty" aria-hidden="true">{esc(name)}</div>'
-            preview_btn = ""
-        meta = " · ".join(filter(None, [f'{stat(c, "questions")} questions' if stat(c, "questions") else "",
-                                        f'{stat(c, "pages")} pages' if stat(c, "pages") else "",
-                                        f'{stat(c, "with_figures")} with figures' if stat(c, "with_figures") else ""]))
-        types = " · ".join(f"{n} {short.get(k, k)}" for k, n in (stat(c, "sections") or {}).items())
-        return (f'<article class="pdf-card" id="pdf-{sid}">{cover}<div class="pdf-info">'
-                f'<span class="pdf-no">{f"Chapter {no}" if no else "Chapter"}</span><h3>{esc(name)}</h3>'
-                + (f'<p class="pdf-meta">{meta}</p>' if meta else "")
-                + (f'<p class="pdf-types">{types}</p>' if types else "")
-                + f'<div class="pdf-buy"><span class="pdf-price">{price(c)}</span>{pdf_button(c)}{preview_btn}</div>'
-                f'</div></article>')
+            peek = '<div class="pdf-peek pdf-peek-empty">Coming soon</div>'
+        tags = f'<span class="pdf-chip">{subj[0] + " · " if subj else ""}Ch {no or ""}</span>'
+        if is_free:
+            tags += '<span class="pdf-badge free">Free</span>'
+        if badges.get(name):
+            tags += f'<span class="pdf-badge">{badges[name]}</span>'
+        big = (f'<p class="pdf-big"><b>{q}</b><span>board questions<br>{y0}&ndash;{y1}</span></p>' if q else "")
+        types = "".join(f"<li>{n} {short.get(k, k)}</li>" for k, n in (stat(c, "sections") or {}).items())
+        extra = " · ".join(filter(None, [f'{stat(c, "with_figures")} with diagrams' if stat(c, "with_figures") else "",
+                                         f'{stat(c, "pages")} pages' if stat(c, "pages") else ""]))
+        if is_free:
+            price_row = '<span class="pdf-price">Free</span><span class="pdf-ppq">No payment, no sign-up</span>'
+            assure = "Instant download &middot; print or read on your phone"
+        elif is_paid:
+            ppq = f"under {price_paise // q + 1} paise a question" if q else ""
+            price_row = f'<span class="pdf-price">{esc(PDF_PRICE)}</span><span class="pdf-ppq">{ppq}</span>'
+            assure = "Instant download after payment &middot; UPI, card or netbanking"
+        else:
+            price_row, assure = "", ""
+        cta = pdf_button(c) or '<span class="pdf-soon">Coming soon</span>'
+        return (f'<article class="pdf-card{" subj-" + subj[1] if subj else ""}" id="pdf-{sid}">{peek}<div class="pdf-body">'
+                f'<div class="pdf-top">{tags}</div><h3>{esc(name)}</h3>{big}'
+                + (f'<ul class="pdf-types">{types}</ul>' if types else "")
+                + (f'<p class="pdf-extra">{extra}</p>' if extra else "")
+                + f'<div class="pdf-buy">' + (f'<div class="pdf-price-row">{price_row}</div>' if price_row else "")
+                + cta + (f'<p class="pdf-assure">{assure}</p>' if assure else "") + "</div></div></article>")
 
-    cards = '<div class="pdf-cards">' + "".join(card(c) for c in all_chapters) + "</div>"
+    groups = []
+    placed = set()
+    for subject_name, key, nos in SUBJECTS:
+        members = [c for c in all_chapters if ncert_no(c["chapter"]) in nos]
+        if not members:
+            continue
+        placed.update(c["chapter"] for c in members)
+        total = sum(stat(c, "questions") or 0 for c in members)
+        groups.append(f'<div class="pdf-group-head"><h3 id="pdf-{key}">{subject_name}</h3><span>{len(members)} chapters'
+                      + (f' &middot; {total:,} board questions' if total else "") + '</span></div>'
+                      f'<div class="pdf-cards">{"".join(card(c) for c in members)}</div>')
+    rest = [c for c in all_chapters if c["chapter"] not in placed]
+    if rest:
+        groups.append(f'<div class="pdf-group-head"><h3>More chapters</h3></div><div class="pdf-cards">{"".join(card(c) for c in rest)}</div>')
+    free_chapters = [c for c in chapters if c["chapter"] in FREE_PDFS]
+    free_banner = (
+        f'<div class="pdf-free"><div><span class="tag">Start free</span>'
+        f'<h3>Try {len(free_chapters)} chapter{"s" if len(free_chapters) != 1 else ""} free. No payment, no sign-up.</h3>'
+        f'<p>Download {" and ".join(esc(c["chapter"]) for c in free_chapters)} and see how Mindy explains every board question. '
+        f'Like it? Every other chapter is just {esc(PDF_PRICE)}.</p></div>'
+        f'<div class="btns">{"".join(pdf_button(c, esc(c['chapter']) + ' &darr;', "btn btn-green") for c in free_chapters)}</div></div>'
+    ) if free_chapters else ""
+    trust = ('<ul class="pdf-trust">'
+             '<li><span class="ic">&#9989;</span><span><b>Official CBSE answers</b>from the marking scheme</span></li>'
+             '<li><span class="ic">&#129302;</span><span><b>Every question explained</b>step by step by Mindy</span></li>'
+             '<li><span class="ic">&#9889;</span><span><b>Instant download</b>straight after payment</span></li>'
+             '<li><span class="ic">&#128274;</span><span><b>Secure Razorpay checkout</b>UPI, card or netbanking</span></li></ul>')
+    # Cards first (they sell); trust points and the free banner follow for anyone still deciding.
+    cards = (f'<div class="pdf-wide"><h2 id="chapter-pdfs">Pick your chapter <span class="pdf-h2-note">Tap any page to look inside</span></h2>'
+             f'{"".join(groups)}{trust}{free_banner}</div>')
     lightbox = (
         '<dialog class="pdf-lightbox" id="pdfLightbox" aria-label="PDF preview">'
         '<button type="button" class="lb-close" aria-label="Close preview">&times;</button>'
@@ -720,7 +833,7 @@ def build_pdf_page(d):
     samples = ""
     if free_sample:
         figs = "".join(
-            f'<figure><button type="button" class="pdf-sample" data-gallery="{slug(free_sample["chapter"])}" data-index="{i}">'
+            f'<figure><button type="button" class="pdf-sample" data-gallery="{slug(free_sample["chapter"])}" data-chapter="{esc(free_sample["chapter"])}" data-index="{i}">'
             f'<img src="{esc(p["src"])}" width="827" height="1170" loading="lazy" alt="{esc(free_sample["chapter"])} PYQ PDF, page {p["page"]}: {esc(p["caption"])}" />'
             f'</button><figcaption>{esc(p["caption"])}</figcaption></figure>'
             for i, p in enumerate(stat(free_sample, "previews")))
@@ -826,23 +939,28 @@ def build_pdf_page(d):
     </div>
   </div>
 
-  <section class="post-hero">
+  <section class="post-hero pdf-hero">
     <div class="container">
-      <span class="blog-tag">Chapter PDFs</span>
-      <h1>{esc(h1)}</h1>
+      <div class="pdf-hero-text">
+        <span class="blog-tag">Chapter PDFs</span>
+        <h1>{esc(h1)}</h1>
+        <p>Every board question from {y0}&ndash;{y1}, chapter by chapter, with the official answer and Mindy&rsquo;s step-by-step explanation.</p>
+      </div>
+      <ul class="pdf-hero-stats">
+        <li><b>{n_questions:,}</b>board questions</li>
+        <li><b>{len(chapters)}</b>chapters</li>
+        <li><b>{y0}&ndash;{str(y1)[2:]}</b>board years</li>
+        <li><b>{n_free} free</b>chapters to try</li>
+      </ul>
     </div>
   </section>
 
-  <section class="post-body">
+  <section class="post-body pdf-page">
     <div class="container">
 
-      <p class="post-lede">One printable PDF per chapter: every practice question for that chapter from CBSE board years {y0}&ndash;{y1}, with the official answers and Mindy&rsquo;s step-by-step explanations. Study offline, at your own pace.</p>
-      <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I get chapter-wise CBSE Class 10 Science PYQ PDFs with answers?</strong> Right here. {esc(pdf_line)}{more}</p></div>
-
-      <h2 id="chapter-pdfs">Chapter PDFs</h2>
-      <p>Tap a cover or <strong>Preview pages</strong> to look inside before you buy.</p>
       {cards}
       {lightbox}
+      <div class="quick-answer"><span class="qa-label">Quick answer</span><p><strong>Where can I get chapter-wise CBSE Class 10 Science PYQ PDFs with answers?</strong> Right here. {esc(pdf_line)}{more}</p></div>
 {inside}{buy_steps}
       <h2 id="faq">Frequently asked questions</h2><div class="post-faq">{faq_html}</div>
 
