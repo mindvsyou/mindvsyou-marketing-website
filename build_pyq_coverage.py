@@ -334,6 +334,15 @@ PDF_CSS = r'''  <style>
     .pdf-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 8px 0 14px; }
     .post-body .pdf-group-head h3 { margin: 0; font-size: 1.4rem; }
     .pdf-group-head span { color: var(--text-light); font-size: 0.92rem; }
+    .post-body .pdf-group-head h3 { scroll-margin-top: 90px; }
+    .pdf-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+    .post-body .pdf-jump a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 999px; font-size: 0.9rem; font-weight: 700; text-decoration: none; color: var(--accent); background: var(--tint); }
+    .pdf-jump span { font-size: 0.75rem; opacity: 0.75; }
+    .pdf-jump-chem { --accent: #E8590C; --tint: #FFF1E8; }
+    .pdf-jump-bio { --accent: #1AAE54; --tint: #E7F9EE; }
+    .pdf-jump-phy { --accent: #2563EB; --tint: #EAF1FE; }
+    .pdf-hero-short { display: none; }
+    .pdf-mindy { display: block; width: 24px; height: 24px; margin: 0; }
     .pdf-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; margin: 0 0 36px; }
     .pdf-card { --accent: var(--green); --tint: #E7F9EE; display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 10px rgba(13, 27, 42, 0.05); transition: transform .15s ease, box-shadow .15s ease; }
     .pdf-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(13, 27, 42, 0.12); }
@@ -382,7 +391,11 @@ PDF_CSS = r'''  <style>
     @media (max-width: 600px) {
       .post-hero.pdf-hero { padding: 18px 16px 18px; }
       .post-hero.pdf-hero h1 { font-size: 1.5rem; margin: 8px 0 0; }
-      .pdf-hero-text p { display: none; }
+      .pdf-hero-text p.pdf-hero-long { display: none; }
+      .pdf-hero-text p.pdf-hero-short { display: block; font-size: 0.92rem; margin-top: 8px; }
+      .post-body .pdf-types { display: none; }
+      .post-body .pdf-card h3 { margin-bottom: 6px; }
+      .pdf-body { padding: 14px 16px 16px; }
       .pdf-hero .container { gap: 14px; }
       .post-body.pdf-page h2#chapter-pdfs { font-size: 1.35rem; margin-bottom: 8px; }
       .pdf-group-head { margin: 4px 0 10px; }
@@ -394,7 +407,7 @@ PDF_CSS = r'''  <style>
       .pdf-cards { grid-template-columns: 1fr; }
       .pdf-free { padding: 20px; }
       .pdf-free .btns { min-width: 0; width: 100%; }
-      .pdf-peek { height: 170px; }
+      .pdf-peek { height: 140px; }
       .pdf-lightbox figure { padding: 52px 8px 72px; }
       .pdf-lightbox .lb-prev, .pdf-lightbox .lb-next { top: auto; bottom: 14px; transform: none; }
       .pdf-lightbox .lb-prev { left: calc(50% - 56px); } .pdf-lightbox .lb-next { right: calc(50% - 56px); }
@@ -747,7 +760,6 @@ def build_pdf_page(d):
     if with_q:
         badges.setdefault(max(with_q, key=lambda c: stat(c, "questions"))["chapter"], "Most questions")
         badges.setdefault(max(with_q, key=lambda c: stat(c, "with_figures") or 0)["chapter"], "Most diagrams")
-    price_paise = int(re.sub(r"[^0-9]", "", PDF_PRICE)) * 100
 
     def card(c):
         name, sid = c["chapter"], slug(c["chapter"])
@@ -777,8 +789,7 @@ def build_pdf_page(d):
             price_row = '<span class="pdf-price">Free</span><span class="pdf-ppq">No payment, no sign-up</span>'
             assure = "Instant download &middot; print or read on your phone"
         elif is_paid:
-            ppq = f"under {price_paise // q + 1} paise a question" if q else ""
-            price_row = f'<span class="pdf-price">{esc(PDF_PRICE)}</span><span class="pdf-ppq">{ppq}</span>'
+            price_row = f'<span class="pdf-price">{esc(PDF_PRICE)}</span>'
             assure = "Instant download after payment &middot; UPI, card or netbanking"
         else:
             price_row, assure = "", ""
@@ -790,7 +801,7 @@ def build_pdf_page(d):
                 + f'<div class="pdf-buy">' + (f'<div class="pdf-price-row">{price_row}</div>' if price_row else "")
                 + cta + (f'<p class="pdf-assure">{assure}</p>' if assure else "") + "</div></div></article>")
 
-    groups = []
+    groups, jumps = [], []
     placed = set()
     for subject_name, key, nos in SUBJECTS:
         members = [c for c in all_chapters if ncert_no(c["chapter"]) in nos]
@@ -798,6 +809,7 @@ def build_pdf_page(d):
             continue
         placed.update(c["chapter"] for c in members)
         total = sum(stat(c, "questions") or 0 for c in members)
+        jumps.append(f'<a class="pdf-jump-{key}" href="#pdf-{key}">{subject_name} <span>{len(members)}</span></a>')
         groups.append(f'<div class="pdf-group-head"><h3 id="pdf-{key}">{subject_name}</h3><span>{len(members)} chapters'
                       + (f' &middot; {total:,} board questions' if total else "") + '</span></div>'
                       f'<div class="pdf-cards">{"".join(card(c) for c in members)}</div>')
@@ -814,12 +826,14 @@ def build_pdf_page(d):
     ) if free_chapters else ""
     trust = ('<ul class="pdf-trust">'
              '<li><span class="ic">&#9989;</span><span><b>Official CBSE answers</b>from the marking scheme</span></li>'
-             '<li><span class="ic">&#129302;</span><span><b>Every question explained</b>step by step by Mindy</span></li>'
+             '<li><span class="ic"><svg class="pdf-mindy" viewBox="3 2 114 108" aria-hidden="true" focusable="false"><use href="mindy.svg#face"/></svg></span><span><b>Every question explained</b>step by step by Mindy</span></li>'
              '<li><span class="ic">&#9889;</span><span><b>Instant download</b>straight after payment</span></li>'
              '<li><span class="ic">&#128274;</span><span><b>Secure Razorpay checkout</b>UPI, card or netbanking</span></li></ul>')
     # Cards first (they sell); trust points and the free banner follow for anyone still deciding.
+    # A div, not <nav>: style.css makes every <nav> the sticky site header.
+    jump_nav = f'<div class="pdf-jump" role="navigation" aria-label="Jump to subject">{"".join(jumps)}</div>' if len(jumps) > 1 else ""
     cards = (f'<div class="pdf-wide"><h2 id="chapter-pdfs">Pick your chapter <span class="pdf-h2-note">Tap any page to look inside</span></h2>'
-             f'{"".join(groups)}{trust}{free_banner}</div>')
+             f'{jump_nav}{"".join(groups)}{trust}{free_banner}</div>')
     lightbox = (
         '<dialog class="pdf-lightbox" id="pdfLightbox" aria-label="PDF preview">'
         '<button type="button" class="lb-close" aria-label="Close preview">&times;</button>'
@@ -840,7 +854,7 @@ def build_pdf_page(d):
         samples = (f'\n      <div class="pdf-samples">{figs}</div>\n'
                    f'      <p>These pages are from the free {esc(free_sample["chapter"])} PDF. <a href="{esc(FREE_PDFS[free_sample["chapter"]])}" '
                    f'data-free-pdf="{esc(free_sample["chapter"])}" rel="noopener">Download it</a> to see the whole thing, '
-                   f'or tap <strong>Preview pages</strong> on any chapter above.</p>')
+                   f'or tap <strong>Look inside</strong> on any chapter above.</p>')
     inside = f'''
       <h2 id="whats-inside">What&rsquo;s inside each chapter PDF</h2>
       <ul>
@@ -849,7 +863,7 @@ def build_pdf_page(d):
         <li><strong>The official CBSE answer</strong> right under each question.</li>
         <li><strong>Mindy&rsquo;s step-by-step explanation</strong> of the reasoning. For MCQs it also says why each wrong option is wrong.</li>
         <li><strong>The original diagrams and figures</strong>{f" ({n_figures} questions with figures in all)" if n_figures else ""}, for ray diagrams, circuits, structures and experiments.</li>
-        <li><strong>QR codes on the last page</strong> to practise the same chapter online with Mindy, with instant marking.</li>
+        <li><strong>QR codes on the last page</strong> to practice the same chapter online with Mindy, with instant marking.</li>
       </ul>{samples}
 '''
 
@@ -862,10 +876,10 @@ def build_pdf_page(d):
     ]
     if has_paid:
         faqs.append(("How do I get a paid chapter PDF?",
-                     f"Click Buy PDF for the chapter, pay {PDF_PRICE} on the secure Razorpay page with UPI, card or netbanking, and you are taken straight to a page with your download button. "
+                     f"Click Get the PDF on the chapter, pay {PDF_PRICE} on the secure Razorpay page with UPI, card or netbanking, and you are taken straight to a page with your download button. "
                      "If anything goes wrong, email hello@mindvsyou.io with your payment id."))
-    faqs.append(("Can I practise the same questions online instead?",
-                 f"Yes. The same CBSE Class 10 Science PYQs can be practised chapter by chapter on quiz.mindvsyou.io, where questions you get wrong come back for another shot. "
+    faqs.append(("Can I practice the same questions online instead?",
+                 f"Yes. The same CBSE Class 10 Science PYQs can be practiced chapter by chapter on quiz.mindvsyou.io, where questions you get wrong come back for another shot. "
                  f"See {PAGE_URL} for what each chapter covers."))
     faq_html = "".join(f"<details><summary>{esc(q)}</summary><p>{esc(a)}</p></details>" for q, a in faqs)
 
@@ -899,12 +913,18 @@ def build_pdf_page(d):
     buy_steps = (f'''
       <h2 id="how-to-buy">How buying a chapter PDF works</h2>
       <ol>
-        <li>Click <strong>Buy PDF</strong> next to the chapter.</li>
+        <li>Click <strong>Get the PDF</strong> on the chapter.</li>
         <li>Pay {esc(PDF_PRICE)} on the secure Razorpay page with UPI, card or netbanking.</li>
         <li>You are taken straight to a page with your download button.</li>
       </ol>
       <p>Something went wrong? Email <a href="mailto:hello@mindvsyou.io">hello@mindvsyou.io</a> with the payment id from your Razorpay receipt. See also our <a href="refund-policy.html">refund policy</a>.</p>
 ''' if has_paid else "")
+
+    # Share preview (WhatsApp, Instagram): the free sample chapter's cover page.
+    og_src = stat(free_sample, "previews")[0]["src"] if free_sample else ""
+    og_image = (f'  <meta property="og:image" content="{SITE}/{esc(og_src)}" />\n'
+                f'  <meta property="og:image:alt" content="Cover of the free {esc(free_sample["chapter"])} CBSE Class 10 Science PYQ PDF" />\n'
+                f'  <meta name="twitter:image" content="{SITE}/{esc(og_src)}" />\n') if og_src else ""
 
     gtag, nav, footer = shared_chrome()
     return f"""<!DOCTYPE html>
@@ -924,7 +944,7 @@ def build_pdf_page(d):
   <meta property="og:description" content="{esc(desc)}" />
   <meta property="og:url" content="{PDF_PAGE_URL}" />
   <meta property="og:locale" content="en_IN" />
-  <meta name="twitter:card" content="summary" />
+{og_image}  <meta name="twitter:card" content="{"summary_large_image" if og_image else "summary"}" />
   <meta name="twitter:title" content="{esc(h1)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
 
@@ -944,7 +964,8 @@ def build_pdf_page(d):
       <div class="pdf-hero-text">
         <span class="blog-tag">Chapter PDFs</span>
         <h1>{esc(h1)}</h1>
-        <p>Every board question from {y0}&ndash;{y1}, chapter by chapter, with the official answer and Mindy&rsquo;s step-by-step explanation.</p>
+        <p class="pdf-hero-long">Every board question from {y0}&ndash;{y1}, chapter by chapter, with the official answer and Mindy&rsquo;s step-by-step explanation. For every MCQ, Mindy also shows why each wrong option is wrong.</p>
+        <p class="pdf-hero-short">Every board question, with the official answer, a step-by-step explanation and why each wrong MCQ option is wrong.</p>
       </div>
       <ul class="pdf-hero-stats">
         <li><b>{n_questions:,}</b>board questions</li>
@@ -964,7 +985,7 @@ def build_pdf_page(d):
 {inside}{buy_steps}
       <h2 id="faq">Frequently asked questions</h2><div class="post-faq">{faq_html}</div>
 
-      <div class="post-cta"><h3>Rather practise online?</h3><p>Do the same questions one at a time with Mindy. Miss one and it comes back.</p><div class="btn-row"><a href="{esc(practice)}" class="btn btn-green">Practise Class 10 Science PYQs &rarr;</a></div><p class="cta-sub"><a href="class-10-science-pyq-coverage.html">See what each chapter covers →</a></p></div>
+      <div class="post-cta"><h3>Rather practice online?</h3><p>Do the same questions one at a time with Mindy. Miss one and it comes back.</p><div class="btn-row"><a href="{esc(practice)}" class="btn btn-green">Practice Class 10 Science PYQs &rarr;</a></div><p class="cta-sub"><a href="class-10-science-pyq-coverage.html">See what each chapter covers →</a></p></div>
 
     </div>
   </section>
