@@ -213,8 +213,9 @@ def build_thanks_page(c, page, download):
   <meta name="robots" content="noindex, nofollow" />
   <meta name="referrer" content="no-referrer" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#25D366" />
-  <link rel="stylesheet" href="style.css?v=20261019" />
+  <link rel="stylesheet" href="style.css?v=20261107" />
   <style>.contact-body p {{ margin: 0 0 16px; line-height: 1.6; }}</style>
 </head>
 <body>
@@ -630,6 +631,7 @@ def build(d):
   <meta name="description" content="{esc(desc)}" />
   <link rel="canonical" href="{PAGE_URL}" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#25D366" />
 
   <meta property="og:type" content="article" />
@@ -642,7 +644,7 @@ def build(d):
   <meta name="twitter:title" content="{esc(h1)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
 
-  <link rel="stylesheet" href="style.css?v=20261019" />
+  <link rel="stylesheet" href="style.css?v=20261107" />
 
 {ld_html}</head>
 <body>
@@ -936,6 +938,7 @@ def build_pdf_page(d):
   <meta name="description" content="{esc(desc)}" />
   <link rel="canonical" href="{PDF_PAGE_URL}" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#25D366" />
 
   <meta property="og:type" content="article" />
@@ -948,7 +951,7 @@ def build_pdf_page(d):
   <meta name="twitter:title" content="{esc(h1)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
 
-  <link rel="stylesheet" href="style.css?v=20261019" />
+  <link rel="stylesheet" href="style.css?v=20261107" />
 {PDF_CSS}
 {ld_html}</head>
 <body>

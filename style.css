@@ -61,7 +61,9 @@ nav {
   font-family: var(--font-display);
   font-size: 1.4rem; font-weight: 800;
   color: var(--text-dark); text-decoration: none;
+  display: inline-flex; align-items: center;
 }
+.nav-logo img, .footer-brand .logo img { display: block; flex: none; margin-right: 9px; }
 .nav-logo span { color: var(--green); }
 .nav-links { display: flex; gap: 28px; list-style: none; }
 .nav-links a {
@@ -305,8 +307,10 @@ footer {
 }
 .footer-brand .logo {
   font-family: var(--font-display); font-size: 1.3rem; font-weight: 800;
-  color: var(--white); text-decoration: none; display: block; margin-bottom: 12px;
+  color: var(--white); text-decoration: none; margin-bottom: 12px;
+  display: flex; align-items: center; width: max-content;
 }
+.footer-brand .logo img { border-radius: 50%; box-shadow: 0 0 0 1.5px rgba(255,255,255,.28); }
 .footer-brand .logo span { color: var(--green); }
 .footer-brand p { font-size: 0.88rem; line-height: 1.7; }
 .footer-col h4 { color: var(--white); font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.08em; }

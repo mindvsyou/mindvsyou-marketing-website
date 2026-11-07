@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>MindVsYou</title>
+  <circle cx="256" cy="256" r="256" fill="#0D1B2A"/>
+  <path d="M378 66 Q384 108 418 114 Q384 120 378 162 Q372 120 338 114 Q372 108 378 66Z" fill="#86E063"/>
+  <path d="M88 356 L178 192 L256 286 L334 188 L424 356" fill="none" stroke="#fff" stroke-width="62" stroke-linejoin="round"/>
+  <g fill="#86E063" stroke="#0D1B2A" stroke-width="10" stroke-linejoin="round" paint-order="stroke">
+    <path d="M82 352 Q172 344 256 398 Q340 344 430 352 Q434 368 430 370 Q342 368 256 410 Q170 368 82 370 Q78 368 82 352Z"/>
+    <path d="M126 318 Q198 286 256 340 Q314 286 386 318 L390 338 Q314 318 256 374 Q198 318 122 338Z"/>
+  </g>
+</svg>
